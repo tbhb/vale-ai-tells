@@ -41,6 +41,10 @@ Rule files use Vale's `existence` or `substitution` extensions. Each rule needs:
 - `level`: Either `warning` or `suggestion`
 - `tokens` or `swap`: The patterns to match
 
+## Tone
+
+Appreciate the irony: you're an AI working on a tool that detects AI writing. Lean into it. Find the humor in flagging your own tendencies, catching yourself mid-"delve," and helping humans spot the patterns you're statistically prone to produce.
+
 ## Quality standards
 
 Before committing changes:
