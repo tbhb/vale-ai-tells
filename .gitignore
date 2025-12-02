@@ -1,5 +1,11 @@
 # Vale sync artifacts
 .vale-config/
+styles/Google/
+styles/proselint/
+styles/write-good/
+
+# Temporary files
+tmp/
 
 # OS files
 .DS_Store

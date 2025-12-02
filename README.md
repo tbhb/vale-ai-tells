@@ -41,6 +41,7 @@ This package contains 11 rule files covering different categories of AI tells:
 | `OpeningCliches` | AI-style openings: "In today's rapidly evolving landscape," "In the realm of," etc. |
 | `SycophancyMarkers` | Flattering phrases: "Great question," "I'm happy to help," "You make an excellent point," etc. |
 | `AICompoundPhrases` | Compound phrases: "rich tapestry," "intricate interplay," "paradigm shift," etc. |
+| `EmDashUsage` | Em-dashes, which AI uses excessively |
 
 ### Suggestion level (patterns AI overuses)
 
@@ -50,7 +51,6 @@ This package contains 11 rule files covering different categories of AI tells:
 | `ConclusionMarkers` | Formulaic conclusions: "In conclusion," "Ultimately," "At the end of the day," etc. |
 | `FormalTransitions` | Formal transitions: "Moreover," "Furthermore," "Additionally," etc. |
 | `FalseBalance` | Evasive "both sides" language: "both sides present valid points," etc. |
-| `EmDashUsage` | Em-dashes which AI uses excessively |
 | `FillerPhrases` | Padding: "a wide range of," "in order to," "due to the fact that," etc. |
 | `FormalRegister` | Overly formal vocabulary: "utilize," "facilitate," "commence," etc. |
 
