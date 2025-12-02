@@ -1,0 +1,6 @@
+extends: existence
+message: "Em-dash detected. Frequent em-dash use is associated with AI-generated text."
+level: suggestion
+raw:
+  - '—'
+  - '--'

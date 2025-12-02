@@ -1,0 +1,36 @@
+extends: existence
+message: "Formal transition '%s' is frequently overused in AI-generated text. Consider varying your connectors."
+level: suggestion
+ignorecase: true
+tokens:
+  - Moreover
+  - Furthermore
+  - Additionally
+  - Consequently
+  - Subsequently
+  - Nevertheless
+  - Nonetheless
+  - Conversely
+  - Accordingly
+  - Hence
+  - Thus
+  - Therefore
+  - Thereby
+  - Henceforth
+  - Likewise
+  - Similarly
+  - In addition
+  - In contrast
+  - On the contrary
+  - By contrast
+  - As a result
+  - For instance
+  - For example
+  - In particular
+  - Specifically
+  - Notably
+  - Importantly
+  - Significantly
+  - Crucially
+  - Essentially
+  - Fundamentally
