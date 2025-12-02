@@ -1,9 +1,11 @@
 # vale-ai-tells
 
-A Vale package for detecting linguistic patterns commonly associated with AI-generated prose. Based on 2024-2025 research into vocabulary fingerprints, structural patterns, and rhetorical tells.
+A [Vale](https://vale.sh) package for detecting linguistic patterns commonly associated with AI-generated prose. Based on 2024-2025 research into vocabulary fingerprints, structural patterns, and rhetorical tells.
 
+<!-- vale proselint.Annotations = NO -->
 > [!NOTE]
-> This package was created to help clean up AI-assisted technical documentation, not to disguise AI-generated content as human-written.
+> The author created this package to help clean up AI-assisted technical documentation, not to disguise AI-generated content as human-written.
+<!-- vale proselint.Annotations = YES -->
 
 ## Installation
 
@@ -13,7 +15,7 @@ Add the package to your `.vale.ini`:
 StylesPath = styles
 MinAlertLevel = suggestion
 
-Packages = https://github.com/tbhb/vale-ai-tells/releases/latest/download/ai-tells.zip
+Packages = https://github.com/tbhb/vale-ai-tells/releases/download/v0.1.0/ai-tells.zip
 
 [*.md]
 BasedOnStyles = ai-tells
@@ -28,6 +30,8 @@ vale sync
 ## Rules included
 
 This package contains 11 rule files covering different categories of AI tells:
+
+<!-- vale off -->
 
 ### Warning level (strong indicators)
 
@@ -50,6 +54,8 @@ This package contains 11 rule files covering different categories of AI tells:
 | `FillerPhrases` | Padding: "a wide range of," "in order to," "due to the fact that," etc. |
 | `FormalRegister` | Overly formal vocabulary: "utilize," "facilitate," "commence," etc. |
 
+<!-- vale on -->
+
 ## Customization
 
 Disable specific rules:
@@ -71,9 +77,9 @@ ai-tells.HedgingPhrases = error
 
 ## Limitations
 
-This package catches lexical and phrasal patterns. It cannot detect:
+This package catches lexical and phrasal patterns. It can't detect:
 
-- Sentence-length uniformity (burstiness)
+- Sentence-length uniformity, or burstiness
 - Perplexity scores
 - Paragraph-length patterns
 - Semantic analysis
@@ -85,10 +91,10 @@ For comprehensive detection, combine this package with statistical analysis tool
 
 Based on research including:
 
-- "Delving into ChatGPT usage in academic writing through excess vocabulary" (arXiv, 2024)
-- "Distinguishing academic science writing from humans or ChatGPT" (PMC, 2023)
-- Wikipedia's "Signs of AI writing" documentation
-- Various practitioner guides from 2024-2025
+- [Delving into ChatGPT usage in academic writing through excess vocabulary](https://arxiv.org/abs/2406.07016) (arXiv, 2024)
+- [Distinguishing academic science writing from humans or ChatGPT with over 99% accuracy](https://pmc.ncbi.nlm.nih.gov/articles/PMC10328544/) (PMC, 2023)
+- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
+- Practitioner guides from 2024 and 2025
 
 ## License
 

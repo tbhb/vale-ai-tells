@@ -1,0 +1,8 @@
+# Project terminology
+vale-ai-tells
+ai-tells
+
+# Acronyms
+PMC
+MIT
+arXiv
