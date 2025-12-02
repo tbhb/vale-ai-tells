@@ -2,6 +2,9 @@
 
 A Vale package for detecting linguistic patterns commonly associated with AI-generated prose. Based on 2024-2025 research into vocabulary fingerprints, structural patterns, and rhetorical tells.
 
+> [!NOTE]
+> This package was created to help clean up AI-assisted technical documentation, not to disguise AI-generated content as human-written.
+
 ## Installation
 
 Add the package to your `.vale.ini`:
