@@ -96,6 +96,10 @@ Based on research including:
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 - Practitioner guides from 2024 and 2025
 
+## Acknowledgments
+
+Yes, Claude wrote most of this repository. It passed Vale.
+
 ## License
 
 MIT
