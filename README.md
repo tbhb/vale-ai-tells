@@ -29,7 +29,7 @@ vale sync
 
 ## Rules included
 
-This package contains 11 rule files covering different categories of AI tells:
+This package contains 13 rule files covering different categories of AI tells:
 
 <!-- vale off -->
 
@@ -42,6 +42,8 @@ This package contains 11 rule files covering different categories of AI tells:
 | `SycophancyMarkers` | Flattering phrases: "Great question," "I'm happy to help," "You make an excellent point," etc. |
 | `AICompoundPhrases` | Compound phrases: "rich tapestry," "intricate interplay," "paradigm shift," etc. |
 | `EmDashUsage` | Em-dashes, which AI uses excessively |
+| `ContrastiveFormulas` | Rhetorical contrasts: "It's not just X; it's Y," "The real question isn't X; it's Y," etc. |
+| `AffirmativeFormulas` | Revelation patterns: "Here's the thing," "And that's the beauty of it," "Let that sink in," etc. |
 
 ### Suggestion level (patterns AI overuses)
 
