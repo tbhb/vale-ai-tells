@@ -2,6 +2,8 @@
 
 A [Vale](https://vale.sh) package for detecting linguistic patterns commonly associated with AI-generated prose. Based on 2024-2025 research into vocabulary fingerprints, structural patterns, and rhetorical tells.
 
+This package is designed for **technical documentation**, where clarity and directness matter more than style. It's less useful for creative writing, marketing copy, or other contexts where some of these patterns may be intentional choices.
+
 <!-- vale proselint.Annotations = NO -->
 > [!NOTE]
 > The author created this package to help clean up AI-assisted technical documentation, not to disguise AI-generated content as human-written.
