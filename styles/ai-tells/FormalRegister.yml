@@ -1,5 +1,5 @@
 extends: existence
-message: "Formal term '%s' may indicate AI's tendency toward academic register."
+message: "AI formalism: '%s'. Use a simpler word (e.g., 'use' instead of 'utilize')."
 level: suggestion
 tokens:
   - utilize

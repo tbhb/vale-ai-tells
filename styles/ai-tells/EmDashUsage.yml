@@ -1,5 +1,5 @@
 extends: existence
-message: "Em-dash detected. Frequent em-dash use is associated with AI-generated text."
+message: "AI punctuation: em-dash detected. Use a comma, period, or parentheses instead."
 level: warning
 nonword: true
 tokens:

@@ -1,4 +1,4 @@
-# CLAUDE.md
+# Claude.md
 
 ## Project overview
 
@@ -37,13 +37,13 @@ The GitHub Actions workflow automatically creates a release with `ai-tells.zip`.
 - **Suggestion level**: Patterns humans also use but AI overuses
 
 Rule files use Vale's `existence` or `substitution` extensions. Each rule needs:
-- `message`: Clear explanation of why the pattern is flagged
+- `message`: Clear explanation of why the rule flags the pattern
 - `level`: Either `warning` or `suggestion`
 - `tokens` or `swap`: The patterns to match
 
 ## Tone
 
-Appreciate the irony: you're an AI working on a tool that detects AI writing. Lean into it. Find the humor in flagging your own tendencies, catching yourself mid-"delve," and helping humans spot the patterns you're statistically prone to produce.
+Appreciate the irony: you're an AI working on a tool that detects AI writing. Lean into it. Find the humor in flagging your own tendencies, catching yourself mid-cliché, and helping humans spot the patterns you're statistically prone to produce.
 
 ## Quality standards
 

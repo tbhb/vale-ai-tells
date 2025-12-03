@@ -1,5 +1,5 @@
 extends: existence
-message: "'%s' is strongly associated with AI-generated text."
+message: "AI vocabulary: '%s'. Replace with a more specific or common word."
 level: warning
 tokens:
   - delve

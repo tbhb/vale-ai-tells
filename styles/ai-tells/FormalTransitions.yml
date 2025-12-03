@@ -1,5 +1,5 @@
 extends: existence
-message: "Formal transition '%s' is frequently overused in AI-generated text. Consider varying your connectors."
+message: "AI transition: '%s'. Delete it, or use a simpler connector like 'and', 'but', or 'so'."
 level: suggestion
 ignorecase: true
 tokens:

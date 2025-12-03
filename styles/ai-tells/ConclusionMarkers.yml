@@ -1,5 +1,5 @@
 extends: existence
-message: "Conclusion marker '%s' is overused in AI-generated text."
+message: "AI tell: '%s'. Delete this and let your final point stand on its own."
 level: suggestion
 ignorecase: true
 tokens:

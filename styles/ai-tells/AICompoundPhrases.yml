@@ -1,5 +1,5 @@
 extends: existence
-message: "Phrase '%s' is strongly associated with AI-generated text."
+message: "AI fingerprint: '%s'. Rewrite with concrete specifics instead of this clichéd phrase."
 level: warning
 ignorecase: true
 tokens:

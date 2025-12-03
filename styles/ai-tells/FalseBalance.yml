@@ -1,5 +1,5 @@
 extends: existence
-message: "Evasive phrase '%s' may indicate AI-style false balance."
+message: "AI evasion: '%s'. Take a clear position or remove the hedge."
 level: suggestion
 ignorecase: true
 tokens:

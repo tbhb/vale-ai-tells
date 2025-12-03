@@ -1,5 +1,5 @@
 extends: existence
-message: "Opening cliché '%s' is strongly associated with AI-generated text."
+message: "AI opening: '%s'. Start with your actual point instead of this generic lead-in."
 level: warning
 ignorecase: true
 tokens:

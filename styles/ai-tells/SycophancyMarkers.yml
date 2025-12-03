@@ -1,5 +1,5 @@
 extends: existence
-message: "Phrase '%s' has a sycophantic tone associated with AI text."
+message: "AI sycophancy: '%s'. Delete this—it sounds robotic and insincere."
 level: warning
 ignorecase: true
 tokens:

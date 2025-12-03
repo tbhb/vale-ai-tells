@@ -1,5 +1,5 @@
 extends: existence
-message: "Filler phrase '%s' adds little meaning and is common in AI text."
+message: "AI filler: '%s'. Delete this phrase—it adds no meaning."
 level: suggestion
 ignorecase: true
 tokens:

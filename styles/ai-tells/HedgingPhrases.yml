@@ -1,5 +1,5 @@
 extends: existence
-message: "Hedging phrase '%s' appears frequently in AI-generated text."
+message: "AI hedge: '%s'. Delete this throat-clearing and state your point directly."
 level: suggestion
 ignorecase: true
 tokens:

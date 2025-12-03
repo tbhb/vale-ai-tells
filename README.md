@@ -15,7 +15,7 @@ Add the package to your `.vale.ini`:
 StylesPath = styles
 MinAlertLevel = suggestion
 
-Packages = https://github.com/tbhb/vale-ai-tells/releases/download/v0.1.0/ai-tells.zip
+Packages = https://github.com/tbhb/vale-ai-tells/releases/download/v0.4.0/ai-tells.zip
 
 [*.md]
 BasedOnStyles = ai-tells
@@ -57,6 +57,37 @@ This package contains 13 rule files covering different categories of AI tells:
 | `FormalRegister` | Overly formal vocabulary: "utilize," "facilitate," "commence," etc. |
 
 <!-- vale on -->
+
+## Using with AI agents
+
+Each error message provides actionable guidance for AI agents (or humans) to fix issues immediately. Messages include:
+
+- A short prefix for quick identification (`AI hedge:`, `AI filler:`, etc.)
+- The matched text
+- A concrete action (delete, rewrite, replace, use simpler word)
+
+Example workflow with an AI coding assistant:
+
+```text
+You: Run `vale docs/` and fix any warnings or errors you find.
+
+Agent: Running vale... Found 4 issues:
+
+1. docs/intro.md:5 - AI opening: 'In today's rapidly evolving'.
+   Start with your actual point instead of this generic lead-in.
+2. docs/intro.md:12 - AI vocabulary: 'delve'.
+   Replace with a more specific or common word.
+3. docs/intro.md:12 - AI punctuation: em-dash detected.
+   Use a comma, period, or parentheses instead.
+4. docs/guide.md:8 - AI filler: 'in order to'.
+   Delete this phrase—it adds no meaning.
+
+Fixing these now...
+
+[Agent edits the files, replacing generic phrases with specific content]
+
+Running vale again... No issues found.
+```
 
 ## Customization
 
@@ -100,7 +131,7 @@ Based on research including:
 
 ## Acknowledgments
 
-Yes, Claude wrote most of this repository. It passed Vale.
+Yes, Claude wrote most of this repository. It promised me all of these rules actually work because it "knows its own tendencies."
 
 ## License
 
