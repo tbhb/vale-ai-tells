@@ -2256,6 +2256,10 @@ Upstream owns their wording.
 
 The one owning rule keeps the phrase.
 
+DACP-008 owns the per-head Dependency Registry.
+
+PFAHR-2 owns the monitoring-host PermitOpen implementation.
+
 ## FigurativeClears
 
 The draft cleared every gate on the first try.
