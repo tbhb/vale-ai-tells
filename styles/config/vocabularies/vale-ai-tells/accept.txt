@@ -33,7 +33,15 @@ lowercased
 [Mm]etacommentary
 [Nn]ominalizations
 proselint
+[Rr]ebase
+[Rr]ebased
+[Rr]ebases
+[Rr]ebasing
 repotools
+[Rr]etarget
+[Rr]etargeted
+[Rr]etargeting
+[Rr]etargets
 rumdl
 cspell
 ryl
