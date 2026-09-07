@@ -46,6 +46,22 @@ deny() {
 # The newline has to be a real one: POSIX ERE reads \n as the letter n.
 readonly AT_START=$'(^|[;&|(]|&&|\\|\\||\n)[[:space:]]*'
 
+# `gh stack merge` is a different top-level command, so the gh pr rule
+# below never sees it, and what it does is worse than any single verb:
+# it merges every member of the stack at once and accepts no --subject
+# and no --body. That is one GitHub-generated squash message per member,
+# none of them linted, all of them permanent.
+if [[ $command =~ ${AT_START}gh[[:space:]]+stack[[:space:]]+merge ]]; then
+  deny "\`gh stack merge\` merges the whole stack in one atomic operation and takes
+no --subject and no --body. Every message it leaves behind is GitHub's
+concatenation of a branch's commits, once per member, and nothing lints a
+squash commit afterwards.
+
+A stack merges bottom-up, one member at a time, through the
+merge-pr-stack skill. Each member then merges here, under a message
+review-squash-message cleared and the commit-msg gates passed."
+fi
+
 [[ $command =~ ${AT_START}gh[[:space:]]+pr[[:space:]]+([a-z-]+) ]] || exit 0
 
 # Index 2, not 1: AT_START opens a group of its own, so the verb is the
