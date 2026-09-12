@@ -1616,3 +1616,23 @@ Each vertex is the point of a triangle.
 The marker is the point following the borrow.
 
 Floating point is the point type here.
+
+## UnderRegime: determiner-led, adjective-led, capitalized, and condition openers that should NOT trigger
+
+Under this proposal, the set of modules recorded in the file would not change.
+
+Under the new scheme, the output filenames change.
+
+Under these circumstances, the new release came to our attention.
+
+Under normal circumstances the buffer is flushed on close.
+
+Under heavy load, the queue backs up.
+
+Under Windows, the DEFAULT parameter sets the icon for the widget.
+
+Under load, the write still completes.
+
+Under review, the patch changed twice.
+
+The same text is configurable twice under cog.
