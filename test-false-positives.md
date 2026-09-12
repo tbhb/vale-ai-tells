@@ -1640,3 +1640,13 @@ The same text is configurable twice under cog.
 ## FigurativeOwns: thread-local state that should NOT trigger
 
 Each thread of the interpreter keeps its own stack of assignment objects.
+
+## AnthropomorphicCognition: the noun sense of answer that should NOT trigger
+
+The current answers to these two questions are yes and no.
+
+The primary sources for finding answers to Go questions are the web site and Stack Overflow.
+
+The standard library's answer to thread local storage was a module.
+
+There are two sub-questions we have to answer to make progress here.

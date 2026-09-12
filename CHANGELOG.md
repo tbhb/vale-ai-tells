@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **FigurativeOwns** (`ai-tells`): Possession spelled with "keep" ("a snapshot keeps its own task," "the consumer keeps its own config," "each layer keeps its own reasoning") reports under the ownership message. Four hits across the seven pre-LLM corpora, each a thread or a library keeping its own state; the stack lands in the existing exceptions and the other three sit in the runtime register that already disables the rule.
+- **AnthropomorphicCognition** (`ai-tells`): The accountable artifact, "answers to" with a rule, a style, or a gate as the authority ("the sentence-case rule that every other heading here answers to," "a squash message answers to the same styles," "a draft under the scratch directory answers to nothing," "what a commit answers to"), joins the judgment family. A lookahead refuses the noun sense, an answer to a question or a problem ("the answers to these two questions," "finding answers to Go questions"), the singular spelling keeps "an answer to the query" out, and a stranded token reads the relative-clause tail. The verb matches nowhere across the seven pre-LLM corpora.
 - **Metacommentary** and **MicDrop** (`ai-tells`): The "This is the point" token and the "And that's the point." coda moved to `PointVerdict`, which reads the whole copula family, so one span reports under one rule.
 
 ### Fixed
