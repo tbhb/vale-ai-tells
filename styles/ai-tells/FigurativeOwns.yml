@@ -88,3 +88,13 @@ tokens:
   # owning component"). "The owning goroutine" lands in the exceptions
   # with its resource sibling nouns.
   - "\\b(?:a|an|the|this|that|its|their|one|each|every|no) owning [a-z]+\\b"
+
+  # --- Possession spelled with "keep": a mechanism that "keeps its own"
+  # thing ("a snapshot keeps its own task," "the consumer keeps its own
+  # config," "each layer keeps its own reasoning"). Four hits across the
+  # seven pre-LLM corpora (2026-09), each a thread or a library keeping
+  # its own state ("each thread keeps its own stack," "keep their own
+  # cache," "keep its own side table"); the stack lands in the exceptions
+  # and the other three report in the runtime register that already
+  # disables the rule.
+  - "\\bke(?:eps?|eping|pt) (?:its|their) own (?:[a-z]+ )?[a-z]+"

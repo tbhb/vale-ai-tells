@@ -3399,3 +3399,11 @@ Under `cog` the same text is configurable twice.
 Under D15 the endpoint stays on the loopback interface.
 
 - Under layout the file lands in the vendored directory.
+
+## FigurativeOwns, possession spelled with keep
+
+A snapshot keeps its own task.
+
+The consumer keeps its own config in the manifest.
+
+Each layer keeps its own reasoning in its own squash commit.

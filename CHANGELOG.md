@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **FigurativeOwns** (`ai-tells`): Possession spelled with "keep" ("a snapshot keeps its own task," "the consumer keeps its own config," "each layer keeps its own reasoning") reports under the ownership message. Four hits across the seven pre-LLM corpora, each a thread or a library keeping its own state; the stack lands in the existing exceptions and the other three sit in the runtime register that already disables the rule.
 - **Metacommentary** and **MicDrop** (`ai-tells`): The "This is the point" token and the "And that's the point." coda moved to `PointVerdict`, which reads the whole copula family, so one span reports under one rule.
 
 ### Fixed
