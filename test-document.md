@@ -3387,3 +3387,15 @@ And that's the point.
 This is the point.
 
 Isolation is precisely the point here.
+
+## UnderRegime
+
+Under cog the same text is configurable twice, once in each file.
+
+Under mise, the mechanism is chosen by where vendir writes the file.
+
+Under `cog` the same text is configurable twice.
+
+Under D15 the endpoint stays on the loopback interface.
+
+- Under layout the file lands in the vendored directory.
