@@ -1636,3 +1636,7 @@ Under load, the write still completes.
 Under review, the patch changed twice.
 
 The same text is configurable twice under cog.
+
+## FigurativeOwns: thread-local state that should NOT trigger
+
+Each thread of the interpreter keeps its own stack of assignment objects.
