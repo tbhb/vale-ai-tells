@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Metacommentary** and **MicDrop** (`ai-tells`): The "This is the point" token and the "And that's the point." coda moved to `PointVerdict`, which reads the whole copula family, so one span reports under one rule.
 
+### Fixed
+
+- **EnforcementMetaphors** (`ai-tells`): The kept-honest family now reads a bare demonstrative, a second-person or first-person object, and the reflexives ("keeps this honest," "keeps that honest," "keeps you honest," "keep ourselves honest," "keep everything honest"). The pronoun token listed five words and the determiner token required a noun after "this," so the bare demonstrative passed between them. The new forms match twice across the seven pre-LLM corpora, a Go proposal's linker that will "keep everything honest" and a Go comment stripping a variable "to keep ourselves honest," each the figure.
+
 <!-- vale on -->
 
 ## [1.34.0] - 2026-09-07

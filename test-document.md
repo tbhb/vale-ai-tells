@@ -2254,6 +2254,12 @@ The gates keep them honest between releases.
 
 The hooks keep the whole pipeline honest.
 
+The corpus check keeps this honest.
+
+The linker will keep everything honest.
+
+We strip it out to keep ourselves honest.
+
 No fingerprint stands behind that grant.
 
 One skill stood in the way of a documented command.
