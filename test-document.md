@@ -3407,3 +3407,13 @@ A snapshot keeps its own task.
 The consumer keeps its own config in the manifest.
 
 Each layer keeps its own reasoning in its own squash commit.
+
+## AnthropomorphicCognition, the accountable artifact
+
+Every generated changelog failed the sentence-case rule that every other heading here answers to.
+
+A squash message answers to the same styles as any commit.
+
+A draft under the scratch directory answers to nothing.
+
+The hook runs whatever a commit answers to.
