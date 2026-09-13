@@ -13,7 +13,7 @@
 # joins the auxiliary list after a documentation-corpus audit (2026-09)
 # found every one of those escaping; the participle slot is unchanged.
 extends: sequence
-message: "AI passive voice: '%[1]s %[2]s'. Name the actor and use an active verb."
+message: "AI passive voice: '%[1]s %[2]s'. Say who acts and use an active verb."
 level: warning
 tokens:
   - pattern: \b(?:am|is|are|was|were|be|been|being|get|gets|got|gotten|getting)\b

@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI motion metaphor: '%s'. Name the literal operation: is passed to, or depends on."
+message: "AI motion metaphor: '%s'. Use the literal operation: is passed to, or depends on."
 level: error
 nonword: true
 ignorecase: true

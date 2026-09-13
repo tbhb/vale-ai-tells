@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI figurative anchor: '%s'. Name what actually grounds it, or disable this rule when the anchor is literal."
+message: "AI figurative anchor: '%s'. Say what grounds it, or disable this rule when the anchor is literal."
 level: warning
 nonword: true
 ignorecase: true

@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI abstraction subject: '%s'. Name the thing the demonstrative stands for, then say what it does."
+message: "AI abstraction subject: '%s'. State what the demonstrative stands for, then say what it does."
 level: error
 nonword: true
 # The anaphoric abstraction subject: the prior sentence compressed into an

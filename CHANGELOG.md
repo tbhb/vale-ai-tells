@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+<!-- vale off -->
+
+### Changed
+
+- **BareNames** (`ai-tells`): The imperative, an instruction to state or give a thing ("Name the version in the changelog," "Name the command behind every reported figure," "name what you tried," "Name every path," "then name the grant this merge goes under"), reports under the designation message, at the start of a sentence or after a comma, a semicolon, or a coordinator. The plain verb is "state," "give," or "say which." Agent-written skill and runbook prose puts it at three to five per ten thousand words. The seven pre-LLM corpora have it eleven times, every one the literal act of giving a name ("Name the new file `pep-9999.rst`," "Name the logger after the package," "name the result parameter `_`"); a lookahead keeps out the object that a code span, a quoted name, or "after" follows within three words, which reads eight of the eleven, and the three that fire ("Name these methods along the lines of," "name the result parameter, and use a naked return," "Name all the threads to the emitter") are the literal act with the name out of a regex's reach, flagged on the maintainer's call. The message now says to tell the reader to state the thing, and the thirty-nine rule messages that opened their own instruction with the verb ("Name the actor and use an active verb," "Name the literal action") now say, state, give, use, or describe instead.
+
+<!-- vale on -->
+
 ## [1.35.0] - 2026-09-12
 
 <!-- vale off -->

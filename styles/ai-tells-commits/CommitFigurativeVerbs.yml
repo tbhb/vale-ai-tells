@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI commit tell: '%s'. Name the literal action the change performs."
+message: "AI commit tell: '%s'. Say what the change literally does."
 level: error
 nonword: true
 ignorecase: true

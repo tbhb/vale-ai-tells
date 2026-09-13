@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI commit tell: '%s'. Name the thing, such as the working tree or the staging area."
+message: "AI commit tell: '%s'. Say which thing, such as the working tree or the staging area."
 level: error
 nonword: true
 ignorecase: true

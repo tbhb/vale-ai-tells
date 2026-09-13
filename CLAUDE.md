@@ -104,7 +104,7 @@ All rules use `error` level by default. Users can override this in their `.vale.
 - `tokens` or `swap`: The patterns to match
 - A comment recording what the tokens cost on the pre-LLM corpora and what was measured out, from the corpus tasks above
 
-Messages must pass the `ai-tells` style themselves. Avoid em-dashes and anthropomorphic or cliché idioms. Name the good word rather than quoting the flagged one. Write each message as `AI <label>: '%s'. <concrete action>.` so agents can act on it. `mise run lint-messages` enforces this via the `RuleMessage` View (selects the `message` field with Dasel and lints it as prose). It runs as part of `mise run lint`.
+Messages must pass the `ai-tells` style themselves. Avoid em-dashes and anthropomorphic or cliché idioms. Give the good word rather than quoting the flagged one. Write each message as `AI <label>: '%s'. <concrete action>.` so agents can act on it. `mise run lint-messages` enforces this via the `RuleMessage` View (selects the `message` field with Dasel and lints it as prose). It runs as part of `mise run lint`.
 
 ## Tone
 

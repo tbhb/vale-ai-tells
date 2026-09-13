@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI overused verb: '%s'. Name what it contains or entails directly. Disable this rule for freight or logistics prose."
+message: "AI overused verb: '%s'. Say what it contains or entails. Disable this rule for freight or logistics prose."
 level: error
 nonword: true
 ignorecase: true

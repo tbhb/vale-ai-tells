@@ -18,7 +18,7 @@ That hook stage is the real gate. `mise run lint-commit-msg` only previews it, s
 
 ## Prose lint output
 
-The toolchain defaults to the agent template: `mise run lint-prose`, `mise run lint-messages`, and the vale pre-commit hook all pass `--output=ai-tells-agent.tmpl`. Name the flag yourself only when invoking `vale` directly. The template prints one self-contained line per finding (location, severity, rule, the exact matched text, and the replacement parameter when the rule defines one) plus a totals line, so you can apply fixes without re-reading context through separate commands. Empty output means a clean run, and the exit code reports the result.
+The toolchain defaults to the agent template: `mise run lint-prose`, `mise run lint-messages`, and the vale pre-commit hook all pass `--output=ai-tells-agent.tmpl`. Pass the flag yourself only when invoking `vale` directly. The template prints one self-contained line per finding (location, severity, rule, the exact matched text, and the replacement parameter when the rule defines one) plus a totals line, so you can apply fixes without re-reading context through separate commands. Empty output means a clean run, and the exit code reports the result.
 
 `ai-tells.zip` includes the template, tracked here at `styles/config/templates/ai-tells-agent.tmpl`, so a repository syncing the core style alone can pass the flag. A `vale sync` puts it under `StylesPath/config/templates/`, where vale looks up an `--output` name.
 

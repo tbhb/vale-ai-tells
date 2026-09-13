@@ -2944,6 +2944,14 @@ No setup, no config, no fuss.
 
 ## BareNames
 
+Name the version in the changelog entry.
+
+Name what you tried, and leave the text correct.
+
+Set the pin, name the version, and push.
+
+Report the figure and name the reading that differed.
+
 The manifest names the tag it resolved to.
 
 The field names the target table.

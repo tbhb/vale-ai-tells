@@ -1265,6 +1265,12 @@ There is essentially no demand for this.
 
 ## BareNames: literal naming that should NOT trigger
 
+Name the new file `pep-9999.rst` if you don't yet have a PEP number.
+
+Name the logger after the package.
+
+For results only, name the result parameter `_`.
+
 The committee names the release after a constellation.
 
 The complaint names the contractor as a defendant.

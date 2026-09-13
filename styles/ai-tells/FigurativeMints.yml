@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI coinage metaphor: '%s'. Name the literal action: creates an identifier, or requests a token. Disable this rule for currency prose."
+message: "AI coinage metaphor: '%s'. Use the literal action: creates an identifier, or requests a token. Disable this rule for currency prose."
 level: error
 ignorecase: true
 # The coinage figure applied to anything a program creates: a step that

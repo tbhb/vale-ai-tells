@@ -1,6 +1,6 @@
 ---
 extends: occurrence
-message: "AI negation monotony: %d negated noun phrases in one paragraph. Recast some positively or name what is absent."
+message: "AI negation monotony: %d negated noun phrases in one paragraph. Recast some positively or say what is absent."
 level: warning
 scope: paragraph
 max: 2
