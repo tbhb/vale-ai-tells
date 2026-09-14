@@ -20,7 +20,7 @@ Vale masks a Markdown code span before matching, replacing what it holds with as
 
 Paragraphs bound this, not lines. Moving the loose token down a line keeps the extra finding. A blank line clears it.
 
-The `nonword` setting does not cause this. The same experiment with a word token draws one correctly placed finding under `nonword: true` and under the default. Punctuation is what separates the two, and `ai-tells.DoubleHyphen` carries `nonword` only so its token can match at all.
+The `nonword` setting does not cause this. The same experiment with a word token draws one correctly placed finding under `nonword: true` and under the default. Punctuation is what separates the two, and `ai-tells.DoubleHyphen` sets `nonword` only so its token can match at all.
 
 A commit message meets this through `DoubleHyphen`. One that puts a command-line flag in a code span and also holds a loose pair of hyphens elsewhere draws a finding on the flag that no rewording of the flag clears. The parser work that made code spans mask at all is part of `repotools` v0.4.0, which this repo now pins, and this misplaced finding is the one piece of that work still open.
 

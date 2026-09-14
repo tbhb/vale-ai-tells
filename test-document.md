@@ -2588,6 +2588,54 @@ The change splits only the blobs that carry no state rows.
 
 The staleness tier other stages carry stays empty here.
 
+Expanded forms carry a negation a reader must not misread.
+
+These carry offsets rather than line and column.
+
+Wrap on the hyphens the names already carry, so a long name stays inside its cell.
+
+Today's assets carry only two of these forms.
+
+## FigurativeCarries, the open subject
+
+No set carries the name.
+
+Gravity's badge carries a leading icon.
+
+The virtual config module carries the option.
+
+An inline suppression always carries an adjacent comment stating why.
+
+The `Match` comparison carries the weight here.
+
+The list's own `start` attribute carries through, which suits a split procedure.
+
+`Icon` carries its own box on the element instead.
+
+`.mdx` pages carry JSX components such as tabs and cards.
+
+No `z-index` it carries changes that.
+
+This carries more risk than the last approach.
+
+A list rather than two loose paragraphs is what carries the choice.
+
+Your own npmrc has to carry the scope already.
+
+Pages will not carry the scroll-to-top control.
+
+The badge can carry a leading icon.
+
+Suppression comments the target didn't carry before.
+
+Tool names the base dictionaries don't carry, plus a few domain terms.
+
+Again would pin a value the cascade should carry.
+
+A 63-unit brand glyph carries detail that disappears at 24px.
+
+The label already carries a per-illustration prefix.
+
 ## FigurativeSurfaces, FigurativeClears, FigurativeQuiet, and FigurativeFires additions
 
 Surfaces skills whose definition matches a canonical version.

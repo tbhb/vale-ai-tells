@@ -757,6 +757,22 @@ The truck carries no more than three pallets.
 
 Each bus carries zero or more passengers.
 
+Copy the high bit to carry.
+
+Output 0 is carry/borrow, output 1 is the low 32 bits.
+
+The truck can carry three pallets at once.
+
+It dedicates one register each to carry and carryAlt.
+
+The argument in the paper carries through for swap operations.
+
+A little bit of carrying is possible for microseconds and seconds.
+
+The Context type, which carries deadlines and values, is passed first.
+
+The only side effect carried on explicitly by the matcher is the binding.
+
 ## FigurativeLands: achievements and aircraft that should NOT trigger
 
 The plane has already landed.
