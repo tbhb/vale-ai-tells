@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "AI regime opener: '%s'. Lead with the subject and name the tool after the verb, with 'with' or 'when using'."
+message: "AI regime opener: '%s'. Lead with the subject and put the tool after the verb, with 'with' or 'when using'."
 level: error
 nonword: true
 # A sentence opened with "Under" and a bare name, which makes a tool, a
