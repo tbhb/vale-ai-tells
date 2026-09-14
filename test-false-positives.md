@@ -259,7 +259,7 @@ The building plan, the meeting agenda, and the ceiling height were all wrong.
 
 New techniques, better processes, and fast workflows enable better outcomes.
 
-Paris attractions, London landmarks, and Tokyo highlights are all worth visiting.
+Paris attractions, London landmarks, and Tokyo highlights are all on the itinerary.
 
 The morning shift, the evening shift, and the weekend shift all need coverage.
 
@@ -1656,3 +1656,15 @@ The primary sources for finding answers to Go questions are the web site and Sta
 The standard library's answer to thread local storage was a module.
 
 There are two sub-questions we have to answer to make progress here.
+
+## FigurativeWorth: the quantity idiom and the finance compounds that should NOT trigger
+
+Reads up to a buffer's worth of data if size is negative.
+
+The encoder uses an extra kilobyte's worth of scratch space.
+
+The service keeps two days' worth of logs.
+
+The founder's net worth fell with the stock.
+
+The survey measures self-worth on a five-point scale.

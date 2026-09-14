@@ -40,7 +40,7 @@ tokens:
   # ---- "This/That/It + copula + adjective" emphatic declarations ----
   # "This is key." "That's intentional." "It was deliberate."
   - "\\b(?:It|This|That)(?:'s| is| was) (?:key|crucial|critical|intentional|deliberate|powerful|elegant|subtle|clean|simple|clear|important|significant|telling|striking|notable|profound|revealing|transformative|remarkable|essential|fundamental|beautiful|paramount|vital|obvious|neat|real|enough)\\."
-  - "\\b(?:It|This|That)(?:'s| is| was) (?:by design|on purpose|no accident|no coincidence|worth it|worth noting|not optional)\\."
+  - "\\b(?:It|This|That)(?:'s| is| was) (?:by design|on purpose|no accident|no coincidence|not optional)\\."
 
   # ---- "They/These/Those + copula + adjective" ----
   # "These are thin." "Those were deliberate."

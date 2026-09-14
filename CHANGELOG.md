@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+<!-- vale off -->
+
+### Added
+
+- **FigurativeWorth** (`ai-tells`): New rule. Every spelling of "worth," banned outright: a subject graded as deserving the reader's attention or the writer's effort, with the grade standing in for the fact ("Naming is worth knowing about," "the migration is worth the effort," "the complexity is worth it," "whether a fix is worth making," "one thing worth pointing out," "a tool worth its weight," a sentence-initial "Worth noting"). Four rules had each read an edge of the figure, and a real noun as the subject or any complement outside their short lists fell through all four. The reader-directed complements agent prose writes ("worth knowing," "worth understanding," "worth remembering," "worth a closer look," "worth your time") measure zero across the seven pre-LLM corpora. The hedge band is established there ("worth noting" forty-four times, "worth pointing out" ten, most under a dummy "it" the hedge rules already flagged), and so is the tradeoff band ("worth it" sixty-four times, "worth the effort" and "worth the complexity" about twenty, "worth making," "worth having," and "worth adding" about forty); every one is the construction, so every one fires on the maintainer's call. The quantity idiom ("a buffer's worth of data," "two days' worth of logs"), the corpora's only other use at twenty-four hits, stays quiet through a lookahead, and "net worth" and "self-worth" through lookbehinds; disable the rule for finance or commerce writing. Up to two words of complement ride along in the finding so it shows which spelling fired.
+
+### Changed
+
+- **HedgingPhrases**, **MicDrop**, **FormalTransitions**, **AnthropomorphicJustification** (`ai-tells`): The worth tokens moved to `FigurativeWorth`, so a finding reports once. `HedgingPhrases` gave up the "It's worth noting that" family, `MicDrop` the sentence-final "It's worth it." and "This is worth noting.", `FormalTransitions` the sentence-initial "Worth noting," and `AnthropomorphicJustification` "worth its weight." The comma appositive that closes with the figure (", a detail worth noting") still reports under `SummativeAppositive` as well, which reads the appositive rather than the word.
+
+<!-- vale on -->
+
 ## [1.36.0] - 2026-09-14
 
 <!-- vale off -->

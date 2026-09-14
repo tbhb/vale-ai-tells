@@ -33,7 +33,7 @@ tokens:
   - "\\bThe important thing here is\\b"
 
   # The "It's worth [verb]ing" hedged-assertion family is owned by
-  # HedgingPhrases.
+  # FigurativeWorth.
 
   # Bold callout phrases (in markdown)
   - "\\*\\*Key insight:?\\*\\*"

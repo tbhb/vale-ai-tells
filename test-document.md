@@ -3425,3 +3425,23 @@ A squash message answers to the same styles as any commit.
 A draft under the scratch directory answers to nothing.
 
 The hook runs whatever a commit answers to.
+
+## FigurativeWorth
+
+Naming is worth knowing about.
+
+The migration is worth the effort.
+
+Whether a fix is worth making is the reviewer's call.
+
+The complexity is worth it.
+
+One thing worth pointing out is the retry budget.
+
+The pretty-printer is worth singling out.
+
+Worth noting: the cache never sees a cold read.
+
+The helper is a tool worth its weight.
+
+What is the old index worth after a rebuild?
