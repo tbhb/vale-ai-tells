@@ -123,12 +123,12 @@ tokens:
   # --- The imperative ("Name the version in the changelog," "Name what
   # you tried," "Name every path," ", name the grant this merge goes
   # under," "then name the tag"), at the start of a sentence or after a
-  # comma, a semicolon, or a coordinator. The boundary sits in a
-  # lookbehind so both tokens start on the verb and Vale keeps one alert
-  # per sentence. The lookahead leaves the literal act alone where the
-  # name itself follows the object within three words: a code span
-  # (masked to asterisks in Markdown, literal backticks in plain text),
-  # a quoted name, or "after" ("Name the new file `pep-9999.rst`," "Name
-  # the logger after the package").
+  # colon, a comma, a semicolon, or a coordinator. The boundary sits in
+  # a lookbehind so both tokens start on the verb and Vale keeps one
+  # alert per sentence. The lookahead leaves the literal act alone
+  # where the name itself follows the object within three words: a code
+  # span (masked to asterisks in Markdown, literal backticks in plain
+  # text), a quoted name, or "after" ("Name the new file
+  # `pep-9999.rst`," "Name the logger after the package").
   - "(?<=^|[.!?:;]['\")\\]]* )name (?:a|an|the|its|their|this|these|those|every|each|all|any|some|one|both|what|whatever|which|whichever|exactly|only)\\b(?!(?: [a-z'-]+){0,3} (?:\\*|[`'\"‘“]|after\\b))"
   - "(?<=, |; |\\b(?:and|then|or) )name (?:a|an|the|its|their|this|these|those|every|each|all|any|some|one|both|what|whatever|which|whichever|exactly|only)\\b(?!(?: [a-z'-]+){0,3} (?:\\*|[`'\"‘“]|after\\b))"
