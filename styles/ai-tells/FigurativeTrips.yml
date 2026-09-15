@@ -17,9 +17,9 @@ tokens:
   # --- Object-gated: a checking noun set off by the verb, with an optional
   # modifier word between the determiner and the head noun ("trips the
   # commit-message gate").
-  - "(?<!-)\\btrip(?:s|ped|ping)? (?:the|a|an|this|that|every|its|another|each) (?:[a-z]+ )?(?:rule|check|checker|linter|lint|gate|guard|hook|alarm|filter|validator|validation|threshold|alert|heuristic)s?\\b"
+  - "(?<!-)\\btrip(?:s|ped|ping)?\\s+(?:the|a|an|this|that|every|its|another|each)\\s+(?:[a-z]+\\s+)?(?:rule|check|checker|linter|lint|gate|guard|hook|alarm|filter|validator|validation|threshold|alert|heuristic)s?\\b"
 
   # --- Pronoun object: the check named in a previous clause ("writing
   # about the rule still trips it"). Measured at zero across the Go and
   # Python standard libraries.
-  - "(?<!-)\\btrip(?:s|ped|ping) (?:it|them)\\b"
+  - "(?<!-)\\btrip(?:s|ped|ping)\\s+(?:it|them)\\b"

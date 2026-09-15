@@ -58,6 +58,7 @@ Reinhart
 
 # Common words
 repo
+[Rr]ewrap(?:s|ped|ping)?
 [Tt]odo
 
 # File names

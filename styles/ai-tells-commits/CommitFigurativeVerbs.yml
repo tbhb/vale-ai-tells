@@ -57,10 +57,10 @@ tokens:
   # --- Agency and obligation given to an inanimate subject: a gate "demands"
   # a clean run, files "answer to" a scope, a recipe "names" a gate.
   - '\b(?:a|an|the|this|that|these|those|its|their|both|all)\s+\w+\s+demands?\b'
-  - '\b(?:a|an|the|this|that|these|those|its|their|both|all)\s+\w+\s+answers? to\b'
+  - '\b(?:a|an|the|this|that|these|those|its|their|both|all)\s+\w+\s+answers?\s+to\b'
   - '\b(?:a|an|the|this|that|these|those|its|their|both|all)\s+\w+\s+asks?\s+(?:for|that)\b'
   - '\b(?:a|an|the|this|that|these|those|its|their|both|all)\s+\w+\s+(?:joins?|joined)\b'
-  - '\bnever sees?\b'
+  - '\bnever\s+sees?\b'
   # Residence: a config "lives in" a file rather than being defined there.
   # The prose style's FigurativeLives carries the broad token with literal
   # exceptions; this determiner-gated form backstops the commit register,
@@ -76,4 +76,4 @@ tokens:
   # --- Hand-work applied to software. The objection is literal: none of
   # these has hands. Say who edited the file, or that the edit was manual.
   - '\bhand-(?:edited|authored|written|rolled)\b'
-  - '\b(?:by|per) hand\b'
+  - '\b(?:by|per)\s+hand\b'

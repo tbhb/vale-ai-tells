@@ -11,40 +11,40 @@ tokens:
   # arrival-verb sense (a request lands on a node, a PR lands in main) lives in
   # FigurativeLands, which exempts these assessment nouns and literal landings.
   # ==========================================================================
-  - "\\b[Tt]he (?:joke|point|argument|line|metaphor|analogy|comparison|critique|distinction|observation|framing|insight|takeaway|punchline|callback|bit|reference|callout) (?:really |actually |just |finally )?lands?\\b"
-  - "\\b[Tt]he (?:joke|point|argument|line|metaphor|analogy|comparison|critique|distinction|observation|framing|insight|takeaway|punchline|callback|bit|reference|callout) (?:really|actually|just|finally) landed\\b"
-  - "\\b(?:really|actually) lands\\b"
-  - "\\b(?:really|actually) landed\\b"
+  - "\\b[Tt]he\\s+(?:joke|point|argument|line|metaphor|analogy|comparison|critique|distinction|observation|framing|insight|takeaway|punchline|callback|bit|reference|callout)\\s+(?:really\\s+|actually\\s+|just\\s+|finally\\s+)?lands?\\b"
+  - "\\b[Tt]he\\s+(?:joke|point|argument|line|metaphor|analogy|comparison|critique|distinction|observation|framing|insight|takeaway|punchline|callback|bit|reference|callout)\\s+(?:really|actually|just|finally)\\s+landed\\b"
+  - "\\b(?:really|actually)\\s+lands\\b"
+  - "\\b(?:really|actually)\\s+landed\\b"
   # Figurative "lands" beyond the curated nouns: abstract subjects and
   # assessment completions that can't be a literal landing.
-  - "\\bland(?:s|ed)? flat\\b"
-  - "\\bwhere (?:it|this|that|everything|the whole thing) (?:really |finally |ultimately |just |all )?lands?\\b"
+  - "\\bland(?:s|ed)?\\s+flat\\b"
+  - "\\bwhere\\s+(?:it|this|that|everything|the\\s+whole\\s+thing)\\s+(?:really\\s+|finally\\s+|ultimately\\s+|just\\s+|all\\s+)?lands?\\b"
 
   # ==========================================================================
   # "X is the move" — anchored verdict. Bare "the move" is too broad (chess,
   # dance, real-estate), so we only catch the assessment construction.
   # ==========================================================================
-  - "\\bis the move\\b"
-  - "\\bwas the move\\b"
-  - "\\b(?:that|this)'?s the move\\b"
-  - "\\b(?:that|this) is the move\\b"
-  - "\\bthe right move\\b"
-  - "\\bthe smart move\\b"
-  - "\\bthe obvious move\\b"
-  - "\\bthe play here\\b"
-  - "\\bthe move here\\b"
+  - "\\bis\\s+the\\s+move\\b"
+  - "\\bwas\\s+the\\s+move\\b"
+  - "\\b(?:that|this)'?s\\s+the\\s+move\\b"
+  - "\\b(?:that|this)\\s+is\\s+the\\s+move\\b"
+  - "\\bthe\\s+right\\s+move\\b"
+  - "\\bthe\\s+smart\\s+move\\b"
+  - "\\bthe\\s+obvious\\s+move\\b"
+  - "\\bthe\\s+play\\s+here\\b"
+  - "\\bthe\\s+move\\s+here\\b"
 
   # ==========================================================================
   # "What really matters" — the knowing-tone matters phrase. Bare "matters" is
   # ordinary English; this targets the rhetorical wind-up.
   # ==========================================================================
-  - "\\bwhat really matters\\b"
-  - "\\bwhat truly matters\\b"
-  - "\\bwhat actually matters\\b"
-  - "\\bwhat genuinely matters\\b"
-  - "\\bwhat matters most\\b"
-  - "\\ball that (?:really |truly |actually )?matters\\b"
-  - "\\bthe only thing that (?:really |truly |actually )?matters\\b"
+  - "\\bwhat\\s+really\\s+matters\\b"
+  - "\\bwhat\\s+truly\\s+matters\\b"
+  - "\\bwhat\\s+actually\\s+matters\\b"
+  - "\\bwhat\\s+genuinely\\s+matters\\b"
+  - "\\bwhat\\s+matters\\s+most\\b"
+  - "\\ball\\s+that\\s+(?:really\\s+|truly\\s+|actually\\s+)?matters\\b"
+  - "\\bthe\\s+only\\s+thing\\s+that\\s+(?:really\\s+|truly\\s+|actually\\s+)?matters\\b"
 
   # ==========================================================================
   # "Handy" — the folksy usefulness grade ("Handy for auditing which items
@@ -53,6 +53,6 @@ tokens:
   # its corpus. Six hits across the Go and Python standard libraries
   # ("Handy for external data analysis"), each the figure itself.
   # ==========================================================================
-  - "\\bhandy (?:for|when|if|to have|in|as)\\b"
-  - "\\bcomes? in handy\\b"
-  - "\\bcame in handy\\b"
+  - "\\bhandy\\s+(?:for|when|if|to\\s+have|in|as)\\b"
+  - "\\bcomes?\\s+in\\s+handy\\b"
+  - "\\bcame\\s+in\\s+handy\\b"

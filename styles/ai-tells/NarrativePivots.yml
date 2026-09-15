@@ -4,56 +4,56 @@ message: "AI narrative pivot: '%s'. State your point directly."
 level: error
 ignorecase: true
 tokens:
-  - something shifted
-  - something changed
-  - something clicked
-  - something snapped
-  - everything changed
-  - everything shifted
-  - everything clicked
-  - and then everything changed
-  - and then it clicked
-  - and then it hit me
-  - that changed everything
-  - that changes everything
-  - this changes everything
-  - this changed everything
-  - and that made all the difference
-  - and that makes all the difference
-  - but then something interesting happened
-  - but then something unexpected happened
-  - but then I realized
-  - and that's when it hit me
-  - and that's when I realized
-  - it was a turning point
-  - it was an inflection point
-  - it was a watershed moment
-  - it was a game-changer
-  - it was a wake-up call
-  - a light bulb went off
-  - a lightbulb went off
-  - the penny dropped
-  - it all came together
-  - it all made sense
-  - things started to click
-  - things fell into place
-  - changed the game
-  - changes the game
-  - changing the game
-  - change the game
-  - changed the game forever
-  - changes the game forever
-  - changed everything forever
-  - changed the landscape
-  - changes the landscape
-  - rewrote the rules
-  - rewrites the rules
-  - rewriting the rules
-  - rewrote the playbook
-  - rewrites the playbook
-  - rewriting the playbook
-  - flipped the script
-  - flips the script
-  - flipping the script
-  - moved the goalposts
-  - shifted the paradigm
+  - something\s+shifted
+  - something\s+changed
+  - something\s+clicked
+  - something\s+snapped
+  - everything\s+changed
+  - everything\s+shifted
+  - everything\s+clicked
+  - and\s+then\s+everything\s+changed
+  - and\s+then\s+it\s+clicked
+  - and\s+then\s+it\s+hit\s+me
+  - that\s+changed\s+everything
+  - that\s+changes\s+everything
+  - this\s+changes\s+everything
+  - this\s+changed\s+everything
+  - and\s+that\s+made\s+all\s+the\s+difference
+  - and\s+that\s+makes\s+all\s+the\s+difference
+  - but\s+then\s+something\s+interesting\s+happened
+  - but\s+then\s+something\s+unexpected\s+happened
+  - but\s+then\s+I\s+realized
+  - and\s+that's\s+when\s+it\s+hit\s+me
+  - and\s+that's\s+when\s+I\s+realized
+  - it\s+was\s+a\s+turning\s+point
+  - it\s+was\s+an\s+inflection\s+point
+  - it\s+was\s+a\s+watershed\s+moment
+  - it\s+was\s+a\s+game-changer
+  - it\s+was\s+a\s+wake-up\s+call
+  - a\s+light\s+bulb\s+went\s+off
+  - a\s+lightbulb\s+went\s+off
+  - the\s+penny\s+dropped
+  - it\s+all\s+came\s+together
+  - it\s+all\s+made\s+sense
+  - things\s+started\s+to\s+click
+  - things\s+fell\s+into\s+place
+  - changed\s+the\s+game
+  - changes\s+the\s+game
+  - changing\s+the\s+game
+  - change\s+the\s+game
+  - changed\s+the\s+game\s+forever
+  - changes\s+the\s+game\s+forever
+  - changed\s+everything\s+forever
+  - changed\s+the\s+landscape
+  - changes\s+the\s+landscape
+  - rewrote\s+the\s+rules
+  - rewrites\s+the\s+rules
+  - rewriting\s+the\s+rules
+  - rewrote\s+the\s+playbook
+  - rewrites\s+the\s+playbook
+  - rewriting\s+the\s+playbook
+  - flipped\s+the\s+script
+  - flips\s+the\s+script
+  - flipping\s+the\s+script
+  - moved\s+the\s+goalposts
+  - shifted\s+the\s+paradigm

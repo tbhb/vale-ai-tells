@@ -62,14 +62,14 @@ tokens:
   # determiner and the subject ("the generated prose reaches for the same
   # verb"). Inflected forms only, so the noun homograph ("a reach for
   # power") and the bare-verb human idiom the corpora attest stay out.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all) (?:[a-z]+ )?[a-z]+ reach(?:es|ed|ing) for\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all)\\s+(?:[a-z]+\\s+)?[a-z]+\\s+reach(?:es|ed|ing)\\s+for\\b"
 
   # --- Determiner-less subjects at a sentence or clause start ("AI
   # reaches for this structure," "agents reach for the passive voice").
   # The subject set is curated because there is no determiner to gate on;
   # every noun in it measured zero across the Go and Python standard
   # libraries, and the bare verb form is safe behind them.
-  - "\\b(?:AI|LLMs?|models?|agents?|prose|writing|copy|documentation|docs|drafts?) reach(?:es|ed|ing)? for\\b"
+  - "\\b(?:AI|LLMs?|models?|agents?|prose|writing|copy|documentation|docs|drafts?)\\s+reach(?:es|ed|ing)?\\s+for\\b"
 
   # --- The writing-device complement, whatever the subject: a writer
   # reaching for a metaphor is the same substitution figure with a human
@@ -77,16 +77,16 @@ tokens:
   # "reaching for a superlative"). The head nouns are language devices
   # with no physical sense, so a hand reaching for an object never
   # matches this token.
-  - "\\breach(?:es|ed|ing)? for (?:(?:a|an|the|this|that|its|their|the same) )?(?:[a-z]+ )?(?:word|verb|noun|adjective|phrase|phrasing|metaphor|simile|idiom|cliché|cliche|superlative|intensifier|qualifier|hedge|euphemism|trope|formula|template|structure|construction|crutch|shorthand)s?\\b"
+  - "\\breach(?:es|ed|ing)?\\s+for\\s+(?:(?:a|an|the|this|that|its|their|the\\s+same)\\s+)?(?:[a-z]+\\s+)?(?:word|verb|noun|adjective|phrase|phrasing|metaphor|simile|idiom|cliché|cliche|superlative|intensifier|qualifier|hedge|euphemism|trope|formula|template|structure|construction|crutch|shorthand)s?\\b"
 
   # --- The imperative: "use" as an instruction to grab ("Reach for it in
   # a script," "Reach for a slice when the skip doesn't cover it"). The
   # sentence or list-item start is the gate, since a verb there has no
   # subject to check.
-  - "(?:^|(?<=[.!?:;] )|(?<=^[-*] )|(?<=^\\d+\\. ))reach for\\b"
+  - "(?:^|(?<=[.!?:;]\\s+)|(?<=^[-*]\\s+)|(?<=^\\d+\\.\\s+))reach\\s+for\\b"
 
   # --- Second-person and generic-human subjects choosing a tool ("you
   # might reach for a git dependency," "users reach for the path form,"
   # "one reaches for the same helper"), with an optional modal or adverb
   # between subject and verb.
-  - "\\b(?:you|you'd|you'll|we|we'd|one|people|users|developers|programmers|engineers|maintainers|authors|readers|teams|folks|someone|anyone|everyone) (?:(?:might|may|could|would|should|can|will|often|usually|typically|naturally|instinctively|immediately|first|just|simply|then|always|never|tend to|want to|need to|have to|had to|used to) )?reach(?:es|ed|ing)? for\\b"
+  - "\\b(?:you|you'd|you'll|we|we'd|one|people|users|developers|programmers|engineers|maintainers|authors|readers|teams|folks|someone|anyone|everyone)\\s+(?:(?:might|may|could|would|should|can|will|often|usually|typically|naturally|instinctively|immediately|first|just|simply|then|always|never|tend\\s+to|want\\s+to|need\\s+to|have\\s+to|had\\s+to|used\\s+to)\\s+)?reach(?:es|ed|ing)?\\s+for\\b"

@@ -4,76 +4,76 @@ message: "AI hedge: '%s'. Delete this throat-clearing and state your point direc
 level: error
 ignorecase: true
 tokens:
-  - It's important to note that
-  - It is important to note that
-  - It is important to understand
-  - It is important to consider
-  - It is important to recognize
-  - It is important to acknowledge
-  - It is important to emphasize
-  - It is important to highlight
-  - It is important to mention
+  - It's\s+important\s+to\s+note\s+that
+  - It\s+is\s+important\s+to\s+note\s+that
+  - It\s+is\s+important\s+to\s+understand
+  - It\s+is\s+important\s+to\s+consider
+  - It\s+is\s+important\s+to\s+recognize
+  - It\s+is\s+important\s+to\s+acknowledge
+  - It\s+is\s+important\s+to\s+emphasize
+  - It\s+is\s+important\s+to\s+highlight
+  - It\s+is\s+important\s+to\s+mention
   # The "It's worth <verb>ing" family lives in FigurativeWorth, which flags
   # every spelling of the word.
-  - It is essential to note
-  - It is essential to understand
-  - It is essential to recognize
-  - It is essential to acknowledge
-  - It is essential to emphasize
-  - It is crucial to note
-  - It is crucial to understand
-  - It is crucial to recognize
-  - It is critical to note
-  - It is critical to understand
-  - It is critical to recognize
-  - It is necessary to note
-  - It is necessary to understand
-  - It is necessary to recognize
-  - It should be noted that
-  - It should be emphasized that
-  - It should be mentioned that
-  - It bears mentioning
-  - It goes without saying
-  - Needless to say
-  - Generally speaking
-  - Broadly speaking
-  - For the most part
-  - By and large
-  - All things considered
-  - That being said
-  - That said
-  - With that said
-  - Having said that
-  - On the other hand
-  - At the same time
-  - To be sure
-  - To some extent
-  - In some ways
-  - In many ways
-  - In a sense
-  - As such
-  - As it were
-  - One thing is clear
-  - One thing is certain
-  - One thing is for sure
-  - One thing is for certain
-  - This much is clear
-  - This much is certain
-  - raises important questions
-  - raises serious questions
-  - raises questions about
-  - begs the question
-  - forces us to ask
-  - forces us to consider
-  - invites us to consider
-  - invites us to ask
-  - invites us to reflect
-  - prompts us to ask
-  - prompts us to consider
-  - calls into question
-  - calls on us to
-  - reminds us that
-  - reminds us of the importance
-  - as you might expect
-  - as you'd expect
-  - as one might expect
+  - It\s+is\s+essential\s+to\s+note
+  - It\s+is\s+essential\s+to\s+understand
+  - It\s+is\s+essential\s+to\s+recognize
+  - It\s+is\s+essential\s+to\s+acknowledge
+  - It\s+is\s+essential\s+to\s+emphasize
+  - It\s+is\s+crucial\s+to\s+note
+  - It\s+is\s+crucial\s+to\s+understand
+  - It\s+is\s+crucial\s+to\s+recognize
+  - It\s+is\s+critical\s+to\s+note
+  - It\s+is\s+critical\s+to\s+understand
+  - It\s+is\s+critical\s+to\s+recognize
+  - It\s+is\s+necessary\s+to\s+note
+  - It\s+is\s+necessary\s+to\s+understand
+  - It\s+is\s+necessary\s+to\s+recognize
+  - It\s+should\s+be\s+noted\s+that
+  - It\s+should\s+be\s+emphasized\s+that
+  - It\s+should\s+be\s+mentioned\s+that
+  - It\s+bears\s+mentioning
+  - It\s+goes\s+without\s+saying
+  - Needless\s+to\s+say
+  - Generally\s+speaking
+  - Broadly\s+speaking
+  - For\s+the\s+most\s+part
+  - By\s+and\s+large
+  - All\s+things\s+considered
+  - That\s+being\s+said
+  - That\s+said
+  - With\s+that\s+said
+  - Having\s+said\s+that
+  - On\s+the\s+other\s+hand
+  - At\s+the\s+same\s+time
+  - To\s+be\s+sure
+  - To\s+some\s+extent
+  - In\s+some\s+ways
+  - In\s+many\s+ways
+  - In\s+a\s+sense
+  - As\s+such
+  - As\s+it\s+were
+  - One\s+thing\s+is\s+clear
+  - One\s+thing\s+is\s+certain
+  - One\s+thing\s+is\s+for\s+sure
+  - One\s+thing\s+is\s+for\s+certain
+  - This\s+much\s+is\s+clear
+  - This\s+much\s+is\s+certain
+  - raises\s+important\s+questions
+  - raises\s+serious\s+questions
+  - raises\s+questions\s+about
+  - begs\s+the\s+question
+  - forces\s+us\s+to\s+ask
+  - forces\s+us\s+to\s+consider
+  - invites\s+us\s+to\s+consider
+  - invites\s+us\s+to\s+ask
+  - invites\s+us\s+to\s+reflect
+  - prompts\s+us\s+to\s+ask
+  - prompts\s+us\s+to\s+consider
+  - calls\s+into\s+question
+  - calls\s+on\s+us\s+to
+  - reminds\s+us\s+that
+  - reminds\s+us\s+of\s+the\s+importance
+  - as\s+you\s+might\s+expect
+  - as\s+you'd\s+expect
+  - as\s+one\s+might\s+expect

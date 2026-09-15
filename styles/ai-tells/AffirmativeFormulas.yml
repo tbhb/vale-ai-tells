@@ -4,98 +4,98 @@ message: "AI affirmation: '%s'. Cut the flourish and state the point plainly."
 level: error
 tokens:
   # "And that's [the/what] X" patterns
-  - "[Aa]nd that'?s the beauty of it"
-  - "[Aa]nd that'?s what makes it [^.!?]+"
-  - "[Aa]nd that'?s what makes this [^.!?]+"
-  - "[Aa]nd that'?s exactly (?:what|why|how) [^.!?]+"
-  - "[Aa]nd that'?s the (?:key|real|true) [^.!?]+"
-  - "[Aa]nd that'?s precisely (?:what|why|how) [^.!?]+"
+  - "[Aa]nd\\s+that'?s\\s+the\\s+beauty\\s+of\\s+it"
+  - "[Aa]nd\\s+that'?s\\s+what\\s+makes\\s+it\\s+[^.!?]+"
+  - "[Aa]nd\\s+that'?s\\s+what\\s+makes\\s+this\\s+[^.!?]+"
+  - "[Aa]nd\\s+that'?s\\s+exactly\\s+(?:what|why|how)\\s+[^.!?]+"
+  - "[Aa]nd\\s+that'?s\\s+the\\s+(?:key|real|true)\\s+[^.!?]+"
+  - "[Aa]nd\\s+that'?s\\s+precisely\\s+(?:what|why|how)\\s+[^.!?]+"
 
   # "That's the X" standalone affirmations
-  - "[Tt]hat'?s the key (?:insight|takeaway|point|difference)"
-  - "[Tt]hat'?s the beauty of [^.!?]+"
-  - "[Tt]hat'?s the power of [^.!?]+"
-  - "[Tt]hat'?s the magic of [^.!?]+"
-  - "[Tt]hat'?s the essence of [^.!?]+"
-  - "[Tt]hat'?s the heart of [^.!?]+"
-  - "[Tt]hat'?s the crux of [^.!?]+"
-  - "[Tt]hat'?s the real (?:question|issue|challenge|opportunity)"
+  - "[Tt]hat'?s\\s+the\\s+key\\s+(?:insight|takeaway|point|difference)"
+  - "[Tt]hat'?s\\s+the\\s+beauty\\s+of\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+the\\s+power\\s+of\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+the\\s+magic\\s+of\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+the\\s+essence\\s+of\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+the\\s+heart\\s+of\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+the\\s+crux\\s+of\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+the\\s+real\\s+(?:question|issue|challenge|opportunity)"
 
   # "This is what X looks like" patterns
-  - "[Tt]his is what [^.!?]+ looks like"
-  - "[Tt]hat'?s what [^.!?]+ looks like"
-  - "[Tt]his is what it means to [^.!?]+"
-  - "[Tt]hat'?s what it means to [^.!?]+"
+  - "[Tt]his\\s+is\\s+what\\s+[^.!?]+\\s+looks\\s+like"
+  - "[Tt]hat'?s\\s+what\\s+[^.!?]+\\s+looks\\s+like"
+  - "[Tt]his\\s+is\\s+what\\s+it\\s+means\\s+to\\s+[^.!?]+"
+  - "[Tt]hat'?s\\s+what\\s+it\\s+means\\s+to\\s+[^.!?]+"
 
   # "Here's the thing" and variants
-  - "[Hh]ere'?s the thing"
-  - "[Hh]ere'?s the deal"
-  - "[Hh]ere'?s the truth"
-  - "[Hh]ere'?s the reality"
-  - "[Hh]ere'?s the kicker"
-  - "[Hh]ere'?s the catch"
-  - "[Hh]ere'?s the secret"
-  - "[Hh]ere'?s what (?:most people|many|few) [^.!?]+"
-  - "[Hh]ere'?s why (?:this|that|it) matters"
+  - "[Hh]ere'?s\\s+the\\s+thing"
+  - "[Hh]ere'?s\\s+the\\s+deal"
+  - "[Hh]ere'?s\\s+the\\s+truth"
+  - "[Hh]ere'?s\\s+the\\s+reality"
+  - "[Hh]ere'?s\\s+the\\s+kicker"
+  - "[Hh]ere'?s\\s+the\\s+catch"
+  - "[Hh]ere'?s\\s+the\\s+secret"
+  - "[Hh]ere'?s\\s+what\\s+(?:most\\s+people|many|few)\\s+[^.!?]+"
+  - "[Hh]ere'?s\\s+why\\s+(?:this|that|it)\\s+matters"
 
   # "The [adjective] X is" revelation patterns
-  - "[Tt]he (?:key|fundamental|crucial|core|central|critical|essential|main|primary|underlying|basic|real|true) (?:insight|point|takeaway|lesson|idea|observation|realization|understanding|truth|message|principle) is"
+  - "[Tt]he\\s+(?:key|fundamental|crucial|core|central|critical|essential|main|primary|underlying|basic|real|true)\\s+(?:insight|point|takeaway|lesson|idea|observation|realization|understanding|truth|message|principle)\\s+is"
   # "[Adjective] Xs are" revelation patterns (optional article)
-  - "(?:[Tt]he )?(?:[Kk]ey|[Ff]undamental|[Cc]rucial|[Cc]ore|[Cc]entral|[Cc]ritical|[Ee]ssential|[Mm]ain|[Pp]rimary|[Uu]nderlying|[Bb]asic|[Rr]eal|[Tt]rue) (?:insights|points|takeaways|lessons|ideas|observations|realizations|understandings|truths|messages|principles) are"
+  - "(?:[Tt]he\\s+)?(?:[Kk]ey|[Ff]undamental|[Cc]rucial|[Cc]ore|[Cc]entral|[Cc]ritical|[Ee]ssential|[Mm]ain|[Pp]rimary|[Uu]nderlying|[Bb]asic|[Rr]eal|[Tt]rue)\\s+(?:insights|points|takeaways|lessons|ideas|observations|realizations|understandings|truths|messages|principles)\\s+are"
   # Simpler "The X is" patterns
   # "The takeaway ... is" is owned by StructureAnnouncements; "The bottom line
   # is" is owned by ConclusionMarkers. Both removed here to avoid double alerts.
-  - "[Tt]he lesson (?:here )?is [^.!?]+"
-  - "[Tt]he point (?:here )?is [^.!?]+"
-  - "[Tt]he insight (?:here )?is [^.!?]+"
+  - "[Tt]he\\s+lesson\\s+(?:here\\s+)?is\\s+[^.!?]+"
+  - "[Tt]he\\s+point\\s+(?:here\\s+)?is\\s+[^.!?]+"
+  - "[Tt]he\\s+insight\\s+(?:here\\s+)?is\\s+[^.!?]+"
 
   # "And X is [exactly/precisely] what/why" patterns
-  - "[Aa]nd (?:this|that) is (?:exactly|precisely) (?:what|why|how) [^.!?]+"
-  - "[Aa]nd (?:this|that)'?s (?:exactly|precisely) (?:what|why|how) [^.!?]+"
+  - "[Aa]nd\\s+(?:this|that)\\s+is\\s+(?:exactly|precisely)\\s+(?:what|why|how)\\s+[^.!?]+"
+  - "[Aa]nd\\s+(?:this|that)'?s\\s+(?:exactly|precisely)\\s+(?:what|why|how)\\s+[^.!?]+"
 
   # "Think about it" and "Let that sink in" patterns
-  - "[Tt]hink about (?:it|that) for a (?:moment|second)"
-  - "[Ll]et that sink in"
-  - "[Rr]ead that again"
-  - "[Ll]et me say that again"
+  - "[Tt]hink\\s+about\\s+(?:it|that)\\s+for\\s+a\\s+(?:moment|second)"
+  - "[Ll]et\\s+that\\s+sink\\s+in"
+  - "[Rr]ead\\s+that\\s+again"
+  - "[Ll]et\\s+me\\s+say\\s+that\\s+again"
 
   # "X, and that's [rare/powerful/significant]"
-  - ", and that'?s (?:rare|powerful|significant|remarkable|important|huge|massive)"
-  - "—and that'?s (?:rare|powerful|significant|remarkable|important|huge|massive)"
+  - ",\\s+and\\s+that'?s\\s+(?:rare|powerful|significant|remarkable|important|huge|massive)"
+  - "—and\\s+that'?s\\s+(?:rare|powerful|significant|remarkable|important|huge|massive)"
 
   # "The real X is Y" revelation
-  - "[Tt]he real (?:secret|trick|key|answer|solution) is [^.!?]+"
-  - "[Tt]he real (?:question|issue|problem|challenge) isn'?t [^.!?]+"
+  - "[Tt]he\\s+real\\s+(?:secret|trick|key|answer|solution)\\s+is\\s+[^.!?]+"
+  - "[Tt]he\\s+real\\s+(?:question|issue|problem|challenge)\\s+isn'?t\\s+[^.!?]+"
 
   # "What X really means" patterns
-  - "[Ww]hat (?:this|that) really means is [^.!?]+"
-  - "[Ww]hat (?:this|that) tells us is [^.!?]+"
-  - "[Ww]hat (?:this|that) shows us is [^.!?]+"
+  - "[Ww]hat\\s+(?:this|that)\\s+really\\s+means\\s+is\\s+[^.!?]+"
+  - "[Ww]hat\\s+(?:this|that)\\s+tells\\s+us\\s+is\\s+[^.!?]+"
+  - "[Ww]hat\\s+(?:this|that)\\s+shows\\s+us\\s+is\\s+[^.!?]+"
 
   # "And here's why" / "And here's the thing"
-  - "[Aa]nd here'?s (?:why|the thing|the kicker|the catch)"
-  - "[Bb]ut here'?s (?:why|the thing|the kicker|the catch)"
+  - "[Aa]nd\\s+here'?s\\s+(?:why|the\\s+thing|the\\s+kicker|the\\s+catch)"
+  - "[Bb]ut\\s+here'?s\\s+(?:why|the\\s+thing|the\\s+kicker|the\\s+catch)"
 
   # "Let me be clear/honest" patterns
-  - "[Ll]et me be (?:clear|honest|direct|frank|real)"
-  - "[Ll]et'?s be (?:clear|honest|direct|frank|real)"
-  - "[Tt]o be (?:clear|honest|direct|frank)"
+  - "[Ll]et\\s+me\\s+be\\s+(?:clear|honest|direct|frank|real)"
+  - "[Ll]et'?s\\s+be\\s+(?:clear|honest|direct|frank|real)"
+  - "[Tt]o\\s+be\\s+(?:clear|honest|direct|frank)"
 
   # "Have no doubt" / "Rest assured" patterns
-  - "[Hh]ave no doubt"
-  - "[Rr]est assured"
+  - "[Hh]ave\\s+no\\s+doubt"
+  - "[Rr]est\\s+assured"
 
   # "The truth is" patterns
-  - "[Tt]he truth is"
-  - "[Tt]he reality is"
-  - "[Tt]he fact is"
-  - "[Tt]he simple truth is"
-  - "[Tt]he hard truth is"
-  - "[Tt]he uncomfortable truth is"
+  - "[Tt]he\\s+truth\\s+is"
+  - "[Tt]he\\s+reality\\s+is"
+  - "[Tt]he\\s+fact\\s+is"
+  - "[Tt]he\\s+simple\\s+truth\\s+is"
+  - "[Tt]he\\s+hard\\s+truth\\s+is"
+  - "[Tt]he\\s+uncomfortable\\s+truth\\s+is"
 
   # "Spoiler alert" / meta-commentary
-  - "[Ss]poiler alert"
-  - "[Pp]lot twist"
-  - "[Ff]un fact"
-  - "[Pp]ro tip"
-  - "[Hh]ot take"
+  - "[Ss]poiler\\s+alert"
+  - "[Pp]lot\\s+twist"
+  - "[Ff]un\\s+fact"
+  - "[Pp]ro\\s+tip"
+  - "[Hh]ot\\s+take"

@@ -38,26 +38,26 @@ ignorecase: true
 # no fuss"; zero).
 tokens:
   # --- Two prepositional absences ("with no database and no network").
-  - "\\bwith no (?:[a-z-]+,? ){1,3}(?:and|or) no\\b"
+  - "\\bwith\\s+no\\s+(?:[a-z-]+,?\\s+){1,3}(?:and|or)\\s+no\\b"
 
   # --- The determiner-gated "without" pair ("without a database or a
   # round-trip"). The determiners are the gate; see the comment above.
-  - "\\bwithout (?:a|an|the|any) (?:[a-z-]+ ){1,2}or (?:a|an|the|any) [a-z-]+\\b"
+  - "\\bwithout\\s+(?:a|an|the|any)\\s+(?:[a-z-]+\\s+){1,2}or\\s+(?:a|an|the|any)\\s+[a-z-]+\\b"
 
   # --- The verb-gated "neither" ("needs neither the database nor a
   # round-trip," "supports neither").
-  - "\\b(?:needs?|needed|requires?|required|takes?|took|wants?|wanted|uses?|used|calls?|called|makes?|made|touches|touched|involves?|involved|reads?|writes?|wrote|opens?|opened|creates?|created|runs?|ran|starts?|started|spawns?|spawned|accepts?|accepted|expects?|expected|returns?|returned|produces?|produced|holds?|held|keeps?|kept|carries|carry|carried|knows?|knew|owns?|owned|sees?|saw|contains?|contained|offers?|offered|provides?|provided|supports?|supported|allows?|allowed|permits?|permitted|assumes?|assumed|checks?|checked|emits?|emitted|sends?|sent|stores?|stored|loads?|loaded) neither\\b"
+  - "\\b(?:needs?|needed|requires?|required|takes?|took|wants?|wanted|uses?|used|calls?|called|makes?|made|touches|touched|involves?|involved|reads?|writes?|wrote|opens?|opened|creates?|created|runs?|ran|starts?|started|spawns?|spawned|accepts?|accepted|expects?|expected|returns?|returned|produces?|produced|holds?|held|keeps?|kept|carries|carry|carried|knows?|knew|owns?|owned|sees?|saw|contains?|contained|offers?|offered|provides?|provided|supports?|supported|allows?|allowed|permits?|permitted|assumes?|assumed|checks?|checked|emits?|emitted|sends?|sent|stores?|stored|loads?|loaded)\\s+neither\\b"
 
   # --- The doubled negated verb ("doesn't need credentials and doesn't
   # call the network," "never reads the file and never writes it") and
   # its "nor" continuation ("nor does it call the network").
-  - "\\b(?:doesn't|does not|don't|do not|didn't|did not|won't|will not|never) [a-z]+ (?:[a-z-]+ ){0,5}and (?:doesn't|does not|don't|do not|didn't|did not|won't|will not|never)\\b"
-  - "\\b, nor (?:does|do|did|will|would|can|could|should|is|are|was|were|has|have|had) (?:it|they|this|that|the [a-z]+|a [a-z]+|an [a-z]+)\\b"
+  - "\\b(?:doesn't|does\\s+not|don't|do\\s+not|didn't|did\\s+not|won't|will\\s+not|never)\\s+[a-z]+\\s+(?:[a-z-]+\\s+){0,5}and\\s+(?:doesn't|does\\s+not|don't|do\\s+not|didn't|did\\s+not|won't|will\\s+not|never)\\b"
+  - "\\b,\\s+nor\\s+(?:does|do|did|will|would|can|could|should|is|are|was|were|has|have|had)\\s+(?:it|they|this|that|the\\s+[a-z]+|a\\s+[a-z]+|an\\s+[a-z]+)\\b"
 
   # --- The sentence-initial pair with its own verb ("Neither the database
   # nor the network is required," "Neither source nor sink survives").
-  - "\\bNeither (?:[a-z-]+ ){1,3}nor (?:[a-z-]+ ){1,3}(?:is|are|was|were|gets?|got|will be|has been|have been|can be|needs?|requires?|matters|applies|exists|changes|runs|touches|writes|reads|calls|holds|carries|breaks|blocks|survives|appears|comes)\\b"
+  - "\\bNeither\\s+(?:[a-z-]+\\s+){1,3}nor\\s+(?:[a-z-]+\\s+){1,3}(?:is|are|was|were|gets?|got|will\\s+be|has\\s+been|have\\s+been|can\\s+be|needs?|requires?|matters|applies|exists|changes|runs|touches|writes|reads|calls|holds|carries|breaks|blocks|survives|appears|comes)\\b"
 
   # --- The asyndetic list of absences, the badge copy of a feature page
   # ("no setup, no config, no fuss," "no database, no network").
-  - "\\bno (?:[a-z-]+ ){1,2}, (?:and |or )?no (?:[a-z-]+ ){1,2}(?:, (?:and |or )?no (?:[a-z-]+ ){1,2})?"
+  - "\\bno\\s+(?:[a-z-]+\\s+){1,2},\\s+(?:and\\s+|or\\s+)?no\\s+(?:[a-z-]+\\s+){1,2}(?:,\\s+(?:and\\s+|or\\s+)?no\\s+(?:[a-z-]+\\s+){1,2})?"

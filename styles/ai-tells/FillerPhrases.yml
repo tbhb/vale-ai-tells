@@ -4,75 +4,75 @@ message: "AI filler: '%s'. Delete this phrase. The sentence reads the same witho
 level: error
 ignorecase: true
 tokens:
-  - a wide range of
-  - a broad range of
-  - a variety of
-  - an abundance of
-  - a multitude of
+  - a\s+wide\s+range\s+of
+  - a\s+broad\s+range\s+of
+  - a\s+variety\s+of
+  - an\s+abundance\s+of
+  - a\s+multitude\s+of
   - countless
   - numerous
   - innumerable
-  - in order to
-  - for the purpose of
-  - with the aim of
-  - with a view to
-  - so as to
-  - serves to
-  - tends to
-  - has the potential to
-  - has the ability to
-  - is capable of
-  - is able to
-  - due to the fact that
-  - owing to the fact that
-  - in light of the fact that
-  - given the fact that
-  - despite the fact that
-  - regardless of the fact that
-  - the fact that
-  - it is clear that
-  - it is evident that
-  - it is apparent that
-  - it is obvious that
-  - it can be seen that
-  - it can be observed that
+  - in\s+order\s+to
+  - for\s+the\s+purpose\s+of
+  - with\s+the\s+aim\s+of
+  - with\s+a\s+view\s+to
+  - so\s+as\s+to
+  - serves\s+to
+  - tends\s+to
+  - has\s+the\s+potential\s+to
+  - has\s+the\s+ability\s+to
+  - is\s+capable\s+of
+  - is\s+able\s+to
+  - due\s+to\s+the\s+fact\s+that
+  - owing\s+to\s+the\s+fact\s+that
+  - in\s+light\s+of\s+the\s+fact\s+that
+  - given\s+the\s+fact\s+that
+  - despite\s+the\s+fact\s+that
+  - regardless\s+of\s+the\s+fact\s+that
+  - the\s+fact\s+that
+  - it\s+is\s+clear\s+that
+  - it\s+is\s+evident\s+that
+  - it\s+is\s+apparent\s+that
+  - it\s+is\s+obvious\s+that
+  - it\s+can\s+be\s+seen\s+that
+  - it\s+can\s+be\s+observed\s+that
 
   # Performative sincerity markers. "to be honest," overlaps DefensiveHedges'
   # fuller "To be honest, X, but Y" concessive frame on purpose: this rule owns
   # the bare filler, DefensiveHedges owns the hedged-concession reading, and a
   # sentence that is both gets both alerts by design.
-  - and honestly
-  - and honestly,
+  - and\s+honestly
+  - and\s+honestly,
   - honestly,
   - honestly?
-  - to be honest,
-  - to be honest?
-  - and frankly
-  - and frankly,
+  - to\s+be\s+honest,
+  - to\s+be\s+honest?
+  - and\s+frankly
+  - and\s+frankly,
   - frankly,
   - frankly?
-  - and truthfully
+  - and\s+truthfully
   - truthfully,
-  - if i'm being honest
-  - if i'm being frank
-  - to be frank,
-  - to tell you the truth
-  - the truth is,
-  - in all honesty
-  - in all honesty,
-  - quite honestly
-  - quite frankly
-  - i'll be honest
-  - i will be honest
-  - to be perfectly honest
-  - to be completely honest
-  - to be totally honest
-  - to be brutally honest
-  - to be 100% honest
-  - the honest truth
-  - the honest answer
-  - the honest take
-  - honest answer
-  - honest take
-  - my honest take
-  - my honest opinion
+  - if\s+i'm\s+being\s+honest
+  - if\s+i'm\s+being\s+frank
+  - to\s+be\s+frank,
+  - to\s+tell\s+you\s+the\s+truth
+  - the\s+truth\s+is,
+  - in\s+all\s+honesty
+  - in\s+all\s+honesty,
+  - quite\s+honestly
+  - quite\s+frankly
+  - i'll\s+be\s+honest
+  - i\s+will\s+be\s+honest
+  - to\s+be\s+perfectly\s+honest
+  - to\s+be\s+completely\s+honest
+  - to\s+be\s+totally\s+honest
+  - to\s+be\s+brutally\s+honest
+  - to\s+be\s+100%\s+honest
+  - the\s+honest\s+truth
+  - the\s+honest\s+answer
+  - the\s+honest\s+take
+  - honest\s+answer
+  - honest\s+take
+  - my\s+honest\s+take
+  - my\s+honest\s+opinion

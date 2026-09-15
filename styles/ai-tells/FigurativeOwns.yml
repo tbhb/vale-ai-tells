@@ -63,31 +63,31 @@ tokens:
   # owns that directory," "git owns the commit," "one rule owns the
   # phrase"). An optional modifier word sits between the determiner and the
   # object.
-  - "\\bown(?:s|ing) (?:a|an|the|this|that|its|their|each|every) (?:[a-z]+ )?[a-z]+"
+  - "\\bown(?:s|ing)\\s+(?:a|an|the|this|that|its|their|each|every)\\s+(?:[a-z]+\\s+)?[a-z]+"
 
   # --- The object fronted: a relative clause with the owner after its
   # table ("the table it owns," "the columns each stage owns," "the
   # directory that vendir owns"). The lookahead refuses a following object,
   # which the possession token above reads instead.
-  - "\\b(?:the|a|an|each|every|its|their|this|that|these|those|which|what|whatever) (?:[a-z]+ )?[a-z]+ (?:it|they|each [a-z]+|every [a-z]+|this [a-z]+|that [a-z]+|the [a-z]+|a [a-z]+|an [a-z]+|no [a-z]+|which|who) (?:(?!(?:its|their|our|your|my|his|her)\\b)[a-z]+ )?owns?\\b(?! (?:a|an|the|its|their|this|that|no|one|two|three|several|many|some|all|every|each|zero|[a-z]+s)\\b)"
+  - "\\b(?:the|a|an|each|every|its|their|this|that|these|those|which|what|whatever)\\s+(?:[a-z]+\\s+)?[a-z]+\\s+(?:it|they|each\\s+[a-z]+|every\\s+[a-z]+|this\\s+[a-z]+|that\\s+[a-z]+|the\\s+[a-z]+|a\\s+[a-z]+|an\\s+[a-z]+|no\\s+[a-z]+|which|who)\\s+(?:(?!(?:its|their|our|your|my|his|her)\\b)[a-z]+\\s+)?owns?\\b(?!\\s+(?:a|an|the|its|their|this|that|no|one|two|three|several|many|some|all|every|each|zero|[a-z]+s)\\b)"
 
   # --- The counted or bare-plural object, and the owned question ("it
   # owns three tables," "the pass owns one table," "the grading pass owns
   # where the signal applies"). One token takes a pronoun or relative
   # subject and the other a determiner-fronted one.
-  - "\\b(?:it|they|which|that|this|who|each|every|one|both) (?:[a-z]+ )?owns? (?:one|two|three|four|five|several|many|multiple|some|both|all|every|each|zero|just|only|where|what|which|how|whether|[a-z]+s)\\b"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ owns (?:one|two|three|four|five|several|many|multiple|some|both|all|every|each|zero|just|only|where|what|which|how|whether|[a-z]+s)\\b"
+  - "\\b(?:it|they|which|that|this|who|each|every|one|both)\\s+(?:[a-z]+\\s+)?owns?\\s+(?:one|two|three|four|five|several|many|multiple|some|both|all|every|each|zero|just|only|where|what|which|how|whether|[a-z]+s)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+owns\\s+(?:one|two|three|four|five|several|many|multiple|some|both|all|every|each|zero|just|only|where|what|which|how|whether|[a-z]+s)\\b"
 
   # --- The bare "own" after a relative pronoun or plural subject ("the
   # docs that own the decision cut," "they own three tables"). No modifier
   # slot, so a possessive can never sit in front of the verb. "Own no
   # table" is NegatedObject's.
-  - "\\b(?:that|which|who|they|these|those|both|all) own (?:a|an|the|this|that|its|their|each|every|one|two|three|several|[a-z]+s)\\b"
+  - "\\b(?:that|which|who|they|these|those|both|all)\\s+own\\s+(?:a|an|the|this|that|its|their|each|every|one|two|three|several|[a-z]+s)\\b"
 
   # --- The owner as a title ("the owning rule," "one owning package," "no
   # owning component"). "The owning goroutine" lands in the exceptions
   # with its resource sibling nouns.
-  - "\\b(?:a|an|the|this|that|its|their|one|each|every|no) owning [a-z]+\\b"
+  - "\\b(?:a|an|the|this|that|its|their|one|each|every|no)\\s+owning\\s+[a-z]+\\b"
 
   # --- Possession spelled with "keep": a mechanism that "keeps its own"
   # thing ("a snapshot keeps its own task," "the consumer keeps its own
@@ -97,4 +97,4 @@ tokens:
   # cache," "keep its own side table"); the stack lands in the exceptions
   # and the other three report in the runtime register that already
   # disables the rule.
-  - "\\bke(?:eps?|eping|pt) (?:its|their) own (?:[a-z]+ )?[a-z]+"
+  - "\\bke(?:eps?|eping|pt)\\s+(?:its|their)\\s+own\\s+(?:[a-z]+\\s+)?[a-z]+"

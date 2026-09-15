@@ -17,18 +17,18 @@ ignorecase: true
 tokens:
   # --- Usage witness: an artifact experiencing its own popularity ("sees
   # heavy use," "sees widespread adoption").
-  - "\\bsees? (?:heavy|light|little|wide|widespread|broad|frequent|regular|daily|active|production|real-world|significant|substantial|increasing|growing|renewed|continued|limited|occasional) (?:use|usage|adoption|traffic|activity)\\b"
+  - "\\bsees?\\s+(?:heavy|light|little|wide|widespread|broad|frequent|regular|daily|active|production|real-world|significant|substantial|increasing|growing|renewed|continued|limited|occasional)\\s+(?:use|usage|adoption|traffic|activity)\\b"
 
   # --- Metric witness: a number watching itself move ("sees a spike in
   # errors," "saw a drop in latency").
-  - "\\bs(?:ees?|aw) (?:a|an) (?:spike|surge|uptick|bump|dip|drop|decline|rise|jump) in\\b"
+  - "\\bs(?:ees?|aw)\\s+(?:a|an)\\s+(?:spike|surge|uptick|bump|dip|drop|decline|rise|jump)\\s+in\\b"
 
   # --- Historical witness: a span of time given eyes ("2024 saw the
   # introduction of," "the year saw record growth," "an era that saw").
-  - "\\bsaw the (?:introduction|arrival|rise|emergence|addition|launch|birth|release) of\\b"
-  - "\\b(?:19|20)\\d\\d (?:also |famously )?saw\\b"
-  - "\\b(?:year|quarter|month|decade|era|release|version) (?:that )?(?:saw|has seen|will see)\\b"
+  - "\\bsaw\\s+the\\s+(?:introduction|arrival|rise|emergence|addition|launch|birth|release)\\s+of\\b"
+  - "\\b(?:19|20)\\d\\d\\s+(?:also\\s+|famously\\s+)?saw\\b"
+  - "\\b(?:year|quarter|month|decade|era|release|version)\\s+(?:that\\s+)?(?:saw|has\\s+seen|will\\s+see)\\b"
 
   # --- Weathered-veteran idiom ("has seen its fair share," "has seen
   # better days").
-  - "\\bhas seen (?:its (?:fair )?share|better days)\\b"
+  - "\\bhas\\s+seen\\s+(?:its\\s+(?:fair\\s+)?share|better\\s+days)\\b"

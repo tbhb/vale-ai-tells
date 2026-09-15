@@ -19,12 +19,12 @@ ignorecase: true
 action:
   name: replace
 swap:
-  (?<!-)house style: project style
-  (?<!-)house styles: project styles
-  house tic: project tic
-  house tics: project tics
-  house formula: project formula
-  house formulas: project formulas
-  house voice: project voice
-  house idiom: project idiom
-  house idioms: project idioms
+  (?<!-)house\s+style: project style
+  (?<!-)house\s+styles: project styles
+  house\s+tic: project tic
+  house\s+tics: project tics
+  house\s+formula: project formula
+  house\s+formulas: project formulas
+  house\s+voice: project voice
+  house\s+idiom: project idiom
+  house\s+idioms: project idioms

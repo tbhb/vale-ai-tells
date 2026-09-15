@@ -28,4 +28,4 @@ exceptions:
   - "(?i)namely"
   - "(?i)instead"
 tokens:
-  - "; [^,;\\n]*[.!?]"
+  - ";\\s+[^,;\\n]*[.!?]"

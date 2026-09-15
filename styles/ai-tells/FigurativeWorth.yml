@@ -54,4 +54,4 @@ ignorecase: true
 tokens:
   # Up to two words of complement ride along so the finding shows which
   # spelling fired: "worth knowing about," "worth the effort," "worth it."
-  - "(?<!net )(?<!-)\\bworth\\b(?! of\\b)(?: [a-z']+){0,2}"
+  - "(?<!net\\s+)(?<!-)\\bworth\\b(?!\\s+of\\b)(?:\\s+[a-z']+){0,2}"

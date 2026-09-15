@@ -5,116 +5,116 @@ level: error
 ignorecase: true
 tokens:
   # "I hope this helps" variants
-  - I hope this helps
-  - I hope this was helpful
-  - I hope this is helpful
-  - I hope this proves helpful
-  - I hope this will be helpful
-  - Hope this helps
-  - Hope this was helpful
-  - I hope this clears things up
-  - I hope this cleared things up
-  - I hope this answers your question
-  - I hope that answers your question
-  - I hope this helps clarify
-  - I hope this gives you a better understanding
-  - I hope you find this helpful
-  - I hope you found this helpful
-  - I hope you find this useful
-  - I hope you found this useful
-  - I hope this is what you were looking for
-  - I hope this pointed you in the right direction
-  - I hope this sheds some light
-  - I hope this makes things clearer
-  - Hopefully this helps
-  - Hopefully this is helpful
+  - I\s+hope\s+this\s+helps
+  - I\s+hope\s+this\s+was\s+helpful
+  - I\s+hope\s+this\s+is\s+helpful
+  - I\s+hope\s+this\s+proves\s+helpful
+  - I\s+hope\s+this\s+will\s+be\s+helpful
+  - Hope\s+this\s+helps
+  - Hope\s+this\s+was\s+helpful
+  - I\s+hope\s+this\s+clears\s+things\s+up
+  - I\s+hope\s+this\s+cleared\s+things\s+up
+  - I\s+hope\s+this\s+answers\s+your\s+question
+  - I\s+hope\s+that\s+answers\s+your\s+question
+  - I\s+hope\s+this\s+helps\s+clarify
+  - I\s+hope\s+this\s+gives\s+you\s+a\s+better\s+understanding
+  - I\s+hope\s+you\s+find\s+this\s+helpful
+  - I\s+hope\s+you\s+found\s+this\s+helpful
+  - I\s+hope\s+you\s+find\s+this\s+useful
+  - I\s+hope\s+you\s+found\s+this\s+useful
+  - I\s+hope\s+this\s+is\s+what\s+you\s+were\s+looking\s+for
+  - I\s+hope\s+this\s+pointed\s+you\s+in\s+the\s+right\s+direction
+  - I\s+hope\s+this\s+sheds\s+some\s+light
+  - I\s+hope\s+this\s+makes\s+things\s+clearer
+  - Hopefully\s+this\s+helps
+  - Hopefully\s+this\s+is\s+helpful
 
   # "Feel free to" variants
-  - Feel free to ask
-  - Feel free to reach out
-  - Feel free to let me know
-  - Feel free to contact
-  - Feel free to ask questions
-  - Feel free to ask if you
-  - Feel free to ask if there
-  - Feel free to drop
-  - Please feel free to ask
-  - Please feel free to reach out
+  - Feel\s+free\s+to\s+ask
+  - Feel\s+free\s+to\s+reach\s+out
+  - Feel\s+free\s+to\s+let\s+me\s+know
+  - Feel\s+free\s+to\s+contact
+  - Feel\s+free\s+to\s+ask\s+questions
+  - Feel\s+free\s+to\s+ask\s+if\s+you
+  - Feel\s+free\s+to\s+ask\s+if\s+there
+  - Feel\s+free\s+to\s+drop
+  - Please\s+feel\s+free\s+to\s+ask
+  - Please\s+feel\s+free\s+to\s+reach\s+out
 
   # "Don't hesitate" variants
-  - Don't hesitate to ask
-  - Don't hesitate to reach out
-  - Don't hesitate to contact
-  - Don't hesitate to get in touch
-  - Don't hesitate to drop
-  - Please don't hesitate to ask
-  - Please don't hesitate to reach out
-  - Please don't hesitate to contact
+  - Don't\s+hesitate\s+to\s+ask
+  - Don't\s+hesitate\s+to\s+reach\s+out
+  - Don't\s+hesitate\s+to\s+contact
+  - Don't\s+hesitate\s+to\s+get\s+in\s+touch
+  - Don't\s+hesitate\s+to\s+drop
+  - Please\s+don't\s+hesitate\s+to\s+ask
+  - Please\s+don't\s+hesitate\s+to\s+reach\s+out
+  - Please\s+don't\s+hesitate\s+to\s+contact
 
   # "Let me know if" variants
-  - Let me know if you have any questions
-  - Let me know if you have further questions
-  - Let me know if you have any other questions
-  - Let me know if you have additional questions
-  - Let me know if you need anything else
-  - Let me know if you need further clarification
-  - Let me know if you need any clarification
-  - Let me know if you'd like more information
-  - Let me know if you'd like me to elaborate
-  - Let me know if you'd like me to clarify
-  - Let me know if you'd like me to expand
-  - Let me know if there's anything else
-  - Let me know if there's anything I can help with
-  - Let me know if anything is unclear
-  - Let me know if that makes sense
-  - Let me know if you want me to
+  - Let\s+me\s+know\s+if\s+you\s+have\s+any\s+questions
+  - Let\s+me\s+know\s+if\s+you\s+have\s+further\s+questions
+  - Let\s+me\s+know\s+if\s+you\s+have\s+any\s+other\s+questions
+  - Let\s+me\s+know\s+if\s+you\s+have\s+additional\s+questions
+  - Let\s+me\s+know\s+if\s+you\s+need\s+anything\s+else
+  - Let\s+me\s+know\s+if\s+you\s+need\s+further\s+clarification
+  - Let\s+me\s+know\s+if\s+you\s+need\s+any\s+clarification
+  - Let\s+me\s+know\s+if\s+you'd\s+like\s+more\s+information
+  - Let\s+me\s+know\s+if\s+you'd\s+like\s+me\s+to\s+elaborate
+  - Let\s+me\s+know\s+if\s+you'd\s+like\s+me\s+to\s+clarify
+  - Let\s+me\s+know\s+if\s+you'd\s+like\s+me\s+to\s+expand
+  - Let\s+me\s+know\s+if\s+there's\s+anything\s+else
+  - Let\s+me\s+know\s+if\s+there's\s+anything\s+I\s+can\s+help\s+with
+  - Let\s+me\s+know\s+if\s+anything\s+is\s+unclear
+  - Let\s+me\s+know\s+if\s+that\s+makes\s+sense
+  - Let\s+me\s+know\s+if\s+you\s+want\s+me\s+to
 
   # "If you have any questions" standalone variants
-  - If you have any questions, feel free
-  - If you have any further questions
-  - If you have any additional questions
-  - If you have any more questions
-  - If you need any clarification
-  - If you need more information
-  - If anything is unclear
-  - If you'd like more details
-  - If you'd like me to elaborate
-  - If you want me to expand
+  - If\s+you\s+have\s+any\s+questions,\s+feel\s+free
+  - If\s+you\s+have\s+any\s+further\s+questions
+  - If\s+you\s+have\s+any\s+additional\s+questions
+  - If\s+you\s+have\s+any\s+more\s+questions
+  - If\s+you\s+need\s+any\s+clarification
+  - If\s+you\s+need\s+more\s+information
+  - If\s+anything\s+is\s+unclear
+  - If\s+you'd\s+like\s+more\s+details
+  - If\s+you'd\s+like\s+me\s+to\s+elaborate
+  - If\s+you\s+want\s+me\s+to\s+expand
 
   # "Happy to" variants
-  - Happy to help
-  - Happy to answer
-  - Happy to clarify
-  - Happy to elaborate
-  - Happy to explain
-  - Happy to assist
-  - Happy to walk you through
-  - I'm happy to help
-  - I'd be happy to help
-  - I'm happy to clarify
-  - I'd be happy to clarify
-  - I'm happy to elaborate
-  - I'd be happy to elaborate
-  - I'm happy to answer
-  - I'd be happy to answer
-  - I'm happy to walk you through
-  - I'd be happy to walk you through
+  - Happy\s+to\s+help
+  - Happy\s+to\s+answer
+  - Happy\s+to\s+clarify
+  - Happy\s+to\s+elaborate
+  - Happy\s+to\s+explain
+  - Happy\s+to\s+assist
+  - Happy\s+to\s+walk\s+you\s+through
+  - I'm\s+happy\s+to\s+help
+  - I'd\s+be\s+happy\s+to\s+help
+  - I'm\s+happy\s+to\s+clarify
+  - I'd\s+be\s+happy\s+to\s+clarify
+  - I'm\s+happy\s+to\s+elaborate
+  - I'd\s+be\s+happy\s+to\s+elaborate
+  - I'm\s+happy\s+to\s+answer
+  - I'd\s+be\s+happy\s+to\s+answer
+  - I'm\s+happy\s+to\s+walk\s+you\s+through
+  - I'd\s+be\s+happy\s+to\s+walk\s+you\s+through
 
   # "I'm here to help" variants
-  - I'm here to help
-  - I'm here if you need
-  - I'm here if you have
-  - I'm always here to help
-  - We're here to help
-  - We're always happy to help
+  - I'm\s+here\s+to\s+help
+  - I'm\s+here\s+if\s+you\s+need
+  - I'm\s+here\s+if\s+you\s+have
+  - I'm\s+always\s+here\s+to\s+help
+  - We're\s+here\s+to\s+help
+  - We're\s+always\s+happy\s+to\s+help
 
   # Encouragement/well-wishing closers
-  - Best of luck
-  - Good luck with your
-  - Good luck on your
-  - You've got this
-  - Happy coding
-  - Happy learning
-  - Happy building
-  - Happy exploring
-  - Enjoy the journey
+  - Best\s+of\s+luck
+  - Good\s+luck\s+with\s+your
+  - Good\s+luck\s+on\s+your
+  - You've\s+got\s+this
+  - Happy\s+coding
+  - Happy\s+learning
+  - Happy\s+building
+  - Happy\s+exploring
+  - Enjoy\s+the\s+journey

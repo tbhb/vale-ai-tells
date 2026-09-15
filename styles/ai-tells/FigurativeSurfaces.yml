@@ -38,19 +38,19 @@ tokens:
   # object or adverb ("the audit surfaced a defect," "surfaces skills
   # whose definition matches," "the difference surfaces only when
   # somebody reads the object").
-  - "\\bsurfac(?:es|ed|ing) (?!(?:of|on|in|at|to|from|for|with|by|and|or|but|is|are|was|were|that|which|it|they|have|has|had|do|does|did|can|will|would|should|may|might|must|not|also|so|area|areas|roughness|finish|tension|treatment|mount|layer|water|temperature|level|texture|normal|normals|type|types|exposed|available|provided|defined|used)\\b)[a-z][a-z-]+\\b"
+  - "\\bsurfac(?:es|ed|ing)\\s+(?!(?:of|on|in|at|to|from|for|with|by|and|or|but|is|are|was|were|that|which|it|they|have|has|had|do|does|did|can|will|would|should|may|might|must|not|also|so|area|areas|roughness|finish|tension|treatment|mount|layer|water|temperature|level|texture|normal|normals|type|types|exposed|available|provided|defined|used)\\b)[a-z][a-z-]+\\b"
 
   # --- Subject-gated emergence: a defect-family noun that rises ("drift
   # surfaces on the change that caused it," "the failure surfaced in CI").
   # An auxiliary or adverb may sit between subject and verb.
-  - "\\b(?:defects?|drift|findings?|failures?|differences?|mistakes?|errors?|gaps?|bugs?|tells?|regressions?|problems?|issues?|questions?) (?:[a-z]+ )?surfac(?:es|ed)\\b"
+  - "\\b(?:defects?|drift|findings?|failures?|differences?|mistakes?|errors?|gaps?|bugs?|tells?|regressions?|problems?|issues?|questions?)\\s+(?:[a-z]+\\s+)?surfac(?:es|ed)\\b"
 
   # --- The negative report ("nothing surfaced this earlier").
-  - "\\bnothing surfaced\\b"
+  - "\\bnothing\\s+surfaced\\b"
 
   # --- The bare verb behind a modal, an infinitive marker, or a negation
   # ("tooling to surface changes," "will surface reports," "can surface
   # bugs," "doesn't surface the failure," "never surface in CI"). The
   # lookahead refuses only the compounds, since nothing else after "to"
   # or "will" is the noun.
-  - "\\b(?:to|will|would|may|might|can|could|should|must|shall|also|never|not|doesn't|don't|didn't|won't|can't|cannot) surface (?!(?:area|areas|api|apis|syntax|syntaxes|rust|roughness|finish|tension|treatment|mount|mounts|layer|layers|water|temperature|temperatures|level|levels|texture|textures|normal|normals|type|types)\\b)[a-z][a-z-]+\\b"
+  - "\\b(?:to|will|would|may|might|can|could|should|must|shall|also|never|not|doesn't|don't|didn't|won't|can't|cannot)\\s+surface\\s+(?!(?:area|areas|api|apis|syntax|syntaxes|rust|roughness|finish|tension|treatment|mount|mounts|layer|layers|water|temperature|temperatures|level|levels|texture|textures|normal|normals|type|types)\\b)[a-z][a-z-]+\\b"

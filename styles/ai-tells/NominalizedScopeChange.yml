@@ -28,5 +28,5 @@ ignorecase: true
 # tolerance in this package; prose about type narrowing or compiler
 # conversions disables the rule.
 tokens:
-  - '\b(?:the|this|that|its|a|an|each) (?:widening|narrowing|tightening|loosening|broadening)(?=[,.;:!?)]|\s+(?:of|to|in|on|for|with|at|by|from|into|over|across|against|around)\b|\s+(?:is|was|does|did|covers?|covered|catches|caught|keeps?|kept|drops?|dropped|adds?|added|applies|applied|holds?|held|survives?|survived|stays?|stayed|lands?|landed|flags?|flagged|fires?|fired|matches|matched|misses|missed|costs?|means|meant|makes|made|leaves?|left|brings?|brought|touches|touched|remains?|remained|needs?|needed|trades?|traded|turns?|turned|extends?|extended|loses|lost|gains?|gained)\b)'
+  - '\b(?:the|this|that|its|a|an|each)\s+(?:widening|narrowing|tightening|loosening|broadening)(?=[,.;:!?)]|\s+(?:of|to|in|on|for|with|at|by|from|into|over|across|against|around)\b|\s+(?:is|was|does|did|covers?|covered|catches|caught|keeps?|kept|drops?|dropped|adds?|added|applies|applied|holds?|held|survives?|survived|stays?|stayed|lands?|landed|flags?|flagged|fires?|fired|matches|matched|misses|missed|costs?|means|meant|makes|made|leaves?|left|brings?|brought|touches|touched|remains?|remained|needs?|needed|trades?|traded|turns?|turned|extends?|extended|loses|lost|gains?|gained)\b)'
 ---

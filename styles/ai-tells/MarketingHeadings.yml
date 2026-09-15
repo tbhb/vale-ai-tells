@@ -5,15 +5,15 @@ level: error
 ignorecase: true
 scope: heading
 tokens:
-  - The Ultimate Guide
-  - Everything You Need to Know
+  - The\s+Ultimate\s+Guide
+  - Everything\s+You\s+Need\s+to\s+Know
   - Mastering
   - Unlocking
-  - The Power of
-  - The Magic of
-  - Why Choose
-  - The Future of
-  - The Art of
-  - The Science of
-  - A Game-Changer
+  - The\s+Power\s+of
+  - The\s+Magic\s+of
+  - Why\s+Choose
+  - The\s+Future\s+of
+  - The\s+Art\s+of
+  - The\s+Science\s+of
+  - A\s+Game-Changer
   - Revolutionizing

@@ -24,33 +24,33 @@ tokens:
   # scaffold noun with a small count is the tell on its own. Literal senses of
   # a few nouns can fire ("Three levers control the press."); disable the rule
   # for hardware or mechanical writing.
-  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten) (?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic) )?(?:pillars|principles|tenets|cornerstones|throughlines|through-lines|personas|archetypes|imperatives|superpowers|levers|horizons|motifs|paradigms)\\b"
+  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten)\\s+(?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic)\\s+)?(?:pillars|principles|tenets|cornerstones|throughlines|through-lines|personas|archetypes|imperatives|superpowers|levers|horizons|motifs|paradigms)\\b"
 
   # --- Pattern B: capitalized cardinal + one- or two-word noun phrase + a verb
   # that forecasts the items ("Four user journeys define the experience.").
   # The forward-pointing verb is the tell, so the noun need not be curated. A
   # literal count subject can fire ("Four wheels drive the axle."); the verb
   # list stays to cataphoric senses to hold that down.
-  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten) (?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic) )?(?:\\w+ ){1,2}(?:define|shape|drive|guide|underpin|govern|anchor|frame|characterize|distinguish|separate|comprise|structure|determine|dominate|inform|explain|power|fuel|motivate|unite)\\b"
+  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten)\\s+(?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic)\\s+)?(?:\\w+\\s+){1,2}(?:define|shape|drive|guide|underpin|govern|anchor|frame|characterize|distinguish|separate|comprise|structure|determine|dominate|inform|explain|power|fuel|motivate|unite)\\b"
 
   # --- Pattern C: the listicle pivot — announcing the enumeration by count.
   # "Here are the four ...," "Below are the three ...," "The following five ...."
-  - "\\b(?:[Hh]ere are|[Bb]elow are|[Tt]hese are|[Tt]he following are) (?:the )?(?:two|three|four|five|six|seven|eight|nine|ten|\\d+)\\b"
-  - "\\b[Tt]he following (?:two|three|four|five|six|seven|eight|nine|ten|\\d+)\\b"
+  - "\\b(?:[Hh]ere\\s+are|[Bb]elow\\s+are|[Tt]hese\\s+are|[Tt]he\\s+following\\s+are)\\s+(?:the\\s+)?(?:two|three|four|five|six|seven|eight|nine|ten|\\d+)\\b"
+  - "\\b[Tt]he\\s+following\\s+(?:two|three|four|five|six|seven|eight|nine|ten|\\d+)\\b"
 
   # --- Pattern C: existential announcement gated by an enumeration noun, so
   # "There are three reasons ..." fires but "There are three files ..." does
   # not.
-  - "\\b(?:[Tt]here are|[Ww]e have|[Yy]ou have) (?:two|three|four|five|six|seven|eight|nine|ten) (?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic) )?(?:reasons|ways|things|factors|points|steps|categories|types|kinds|benefits|advantages|aspects|elements|components|considerations|questions|lessons|takeaways|pillars|principles|tenets|cornerstones|personas|archetypes|dimensions|themes|drivers|forces)\\b"
+  - "\\b(?:[Tt]here\\s+are|[Ww]e\\s+have|[Yy]ou\\s+have)\\s+(?:two|three|four|five|six|seven|eight|nine|ten)\\s+(?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic)\\s+)?(?:reasons|ways|things|factors|points|steps|categories|types|kinds|benefits|advantages|aspects|elements|components|considerations|questions|lessons|takeaways|pillars|principles|tenets|cornerstones|personas|archetypes|dimensions|themes|drivers|forces)\\b"
 
   # --- Pattern C: a short capitalized cardinal-led clause ending in a colon,
   # the colon itself introducing the list ("Three reasons stand out:"). Kept
   # short and sentence-punctuation-free so it does not span past the lead-in.
-  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten) [^.!?:\\n]{0,60}:"
+  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten)\\s+[^.!?:\\n]{0,60}:"
 
   # --- Demonstrative + cardinal + framework noun ("These three pillars," "the
   # four personas"), the count-led reference the capitalized tokens miss.
-  - "\\b(?:[Tt]hese|[Tt]hose|[Tt]he) (?:two|three|four|five|six|seven|eight|nine|ten) (?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic) )?(?:pillars|principles|tenets|cornerstones|throughlines|through-lines|personas|archetypes|imperatives|superpowers|levers|horizons|motifs|paradigms)\\b"
+  - "\\b(?:[Tt]hese|[Tt]hose|[Tt]he)\\s+(?:two|three|four|five|six|seven|eight|nine|ten)\\s+(?:(?:key|main|core|central|critical|essential|guiding|foundational|distinct|broad|common|primary|fundamental|overarching|major|underlying|driving|crucial|basic)\\s+)?(?:pillars|principles|tenets|cornerstones|throughlines|through-lines|personas|archetypes|imperatives|superpowers|levers|horizons|motifs|paradigms)\\b"
 
   # --- Pattern D: process decomposition — progression or split verb, then a
   # preposition, then a mid-sentence cardinal and a sequential-structure noun
@@ -61,7 +61,7 @@ tokens:
   # files," a "three-tier" architecture). The sequential noun set stays to
   # phase-like scaffolding, so a literal split into physical "parts" or "pieces"
   # does not fire.
-  - "\\b(?:expands?|unfolds?|proceeds?|progresses?|evolves?|rolls? out|breaks?(?: down)?|splits?|happens?|occurs?|plays? out|(?:is|are|gets?) (?:split|divided|broken|separated|partitioned)) (?:in|into|across|over|through) (?:two|three|four|five|six|seven|eight|nine|ten) (?:(?:distinct|broad|main|key|core|central|critical|essential|major|separate|discrete|successive|sequential|iterative|overlapping|logical|clear|simple|easy|manageable|high-level|rough|initial|final) )?(?:phases|stages|steps|waves|rounds|movements|acts|chapters|iterations|sprints|passes|tranches|installments)\\b"
+  - "\\b(?:expands?|unfolds?|proceeds?|progresses?|evolves?|rolls?\\s+out|breaks?(?:\\s+down)?|splits?|happens?|occurs?|plays?\\s+out|(?:is|are|gets?)\\s+(?:split|divided|broken|separated|partitioned))\\s+(?:in|into|across|over|through)\\s+(?:two|three|four|five|six|seven|eight|nine|ten)\\s+(?:(?:distinct|broad|main|key|core|central|critical|essential|major|separate|discrete|successive|sequential|iterative|overlapping|logical|clear|simple|easy|manageable|high-level|rough|initial|final)\\s+)?(?:phases|stages|steps|waves|rounds|movements|acts|chapters|iterations|sprints|passes|tranches|installments)\\b"
 
   # --- Pattern E: the categorizing companion to Pattern D. Same grammar — a
   # grouping or split verb, a preposition, a mid-sentence cardinal — but a
@@ -69,7 +69,7 @@ tokens:
   # into four groups," "is sorted into two buckets"). The verb and the grouping
   # noun are the same double gate, so the ordinary count stays out. The noun
   # set is disjoint from Pattern D, so the two tokens never fire on one clause.
-  - "\\b(?:falls?|divides?|splits?|breaks?(?: down)?|sorts?|groups?|classifies?|categori[sz]es?|(?:is|are|gets?) (?:grouped|divided|split|sorted|classified|categori[sz]ed|separated|broken)) (?:into|in) (?:two|three|four|five|six|seven|eight|nine|ten) (?:(?:distinct|broad|main|key|core|central|critical|essential|major|separate|discrete|logical|clear|simple|basic|rough|high-level|general|overarching) )?(?:categories|groups|buckets|types|kinds|camps|classes|classifications|clusters|families|cohorts)\\b"
+  - "\\b(?:falls?|divides?|splits?|breaks?(?:\\s+down)?|sorts?|groups?|classifies?|categori[sz]es?|(?:is|are|gets?)\\s+(?:grouped|divided|split|sorted|classified|categori[sz]ed|separated|broken))\\s+(?:into|in)\\s+(?:two|three|four|five|six|seven|eight|nine|ten)\\s+(?:(?:distinct|broad|main|key|core|central|critical|essential|major|separate|discrete|logical|clear|simple|basic|rough|high-level|general|overarching)\\s+)?(?:categories|groups|buckets|types|kinds|camps|classes|classifications|clusters|families|cohorts)\\b"
 
   # --- Pattern F: sentence- or heading-initial "The <cardinal> <noun>" ("The
   # three axes," "The four dials that matter"). The capitalized "The" is the
@@ -79,7 +79,7 @@ tokens:
   # "The three of us"), excluded by the lookahead. A legitimate
   # back-reference fires too ("The two functions return different types.");
   # drop the count or add a project exception.
-  - "\\bThe (?:[Tt]wo|[Tt]hree|[Ff]our|[Ff]ive|[Ss]ix|[Ss]even|[Ee]ight|[Nn]ine|[Tt]en) (?!(?:of|or|to|and|in|out|percent|dozen|hundred|thousand|million|billion|seconds?|minutes?|hours?|days?|weeks?|months?|quarters?|years?|decades?|times)\\b)[A-Za-z][a-z]+"
+  - "\\bThe\\s+(?:[Tt]wo|[Tt]hree|[Ff]our|[Ff]ive|[Ss]ix|[Ss]even|[Ee]ight|[Nn]ine|[Tt]en)\\s+(?!(?:of|or|to|and|in|out|percent|dozen|hundred|thousand|million|billion|seconds?|minutes?|hours?|days?|weeks?|months?|quarters?|years?|decades?|times)\\b)[A-Za-z][a-z]+"
 
   # --- Pattern G: sentence-initial bare cardinal subject ("Eight repos seed
   # the list," "Two options exist"). The broad companion to Patterns A and B:
@@ -90,10 +90,10 @@ tokens:
   # fires as well ("Three Mile Island"), so add a project exception for
   # those. A temporal opener is a different construction ("Three years
   # ago ..."), excluded by the case-insensitive lookahead.
-  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Eleven|Twelve) (?!(?i:of|or|to|and|in|out|more|percent|dozen|hundred|thousand|million|billion|seconds?|minutes?|hours?|days?|weeks?|months?|quarters?|years?|decades?|times)\\b)[A-Za-z][a-z]+ [A-Za-z][a-z]+"
+  - "\\b(?:Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Eleven|Twelve)\\s+(?!(?i:of|or|to|and|in|out|more|percent|dozen|hundred|thousand|million|billion|seconds?|minutes?|hours?|days?|weeks?|months?|quarters?|years?|decades?|times)\\b)[A-Za-z][a-z]+\\s+[A-Za-z][a-z]+"
 
   # --- Pattern H: the folksy proportion ("Three of every four skills," "nine
   # out of every ten runs"). The spelled-out ratio gives an estimate the
   # look of data; give the measured figure instead.
-  - "\\b(?:[Oo]ne|[Tt]wo|[Tt]hree|[Ff]our|[Ff]ive|[Ss]ix|[Ss]even|[Ee]ight|[Nn]ine) (?:of|out of|in) every (?:two|three|four|five|six|seven|eight|nine|ten|dozen|hundred|thousand|million)\\b"
-  - "\\b[Nn]ine times out of ten\\b"
+  - "\\b(?:[Oo]ne|[Tt]wo|[Tt]hree|[Ff]our|[Ff]ive|[Ss]ix|[Ss]even|[Ee]ight|[Nn]ine)\\s+(?:of|out\\s+of|in)\\s+every\\s+(?:two|three|four|five|six|seven|eight|nine|ten|dozen|hundred|thousand|million)\\b"
+  - "\\b[Nn]ine\\s+times\\s+out\\s+of\\s+ten\\b"

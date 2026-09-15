@@ -17,11 +17,11 @@ tokens:
   # --- Notice-verb + object + "without" + gerund + back-reference. The
   # object is one to three words; the closing pronoun ("it," "them") or a
   # short "the <noun>" is what makes the clause self-cancel.
-  - "\\b(?:names?|identifies|identified|describes?|described|raises?|raised|poses?|posed|flags?|flagged|lists?|listed|catalog(?:s|ues|ued)?|catalogues?|surfaces?|surfaced|diagnoses|diagnosed|enumerates?|enumerated|notes?|noted|acknowledges?|acknowledged|highlights?|highlighted|maps?|mapped|gestures? at|points? out) (?:the|a|an|its|this|that|these|those|their) (?:\\w+ ){0,2}\\w+ without (?:ever |actually |really |truly |once )?\\w+ing (?:it|them|that|those|these|the \\w+)\\b"
+  - "\\b(?:names?|identifies|identified|describes?|described|raises?|raised|poses?|posed|flags?|flagged|lists?|listed|catalog(?:s|ues|ued)?|catalogues?|surfaces?|surfaced|diagnoses|diagnosed|enumerates?|enumerated|notes?|noted|acknowledges?|acknowledged|highlights?|highlighted|maps?|mapped|gestures?\\s+at|points?\\s+out)\\s+(?:the|a|an|its|this|that|these|those|their)\\s+(?:\\w+\\s+){0,2}\\w+\\s+without\\s+(?:ever\\s+|actually\\s+|really\\s+|truly\\s+|once\\s+)?\\w+ing\\s+(?:it|them|that|those|these|the\\s+\\w+)\\b"
 
   # --- Symmetric shorthand: "all X, no Y" where both slots are the same
   # kind of noun of insight versus action ("all diagnosis, no treatment,"
   # "all analysis, no action"). Curated pairs keep the ordinary "all talk,
   # no action" cliche adjacent without flooding on every "all X, no Y."
-  - "\\ball (?:diagnosis|analysis|critique|description|observation|theory|talk|questions?|naming|labeling|labelling) and no (?:treatment|action|solutions?|answers?|prescription|remedy|remedies|fixes?|follow-through)\\b"
-  - "\\ball (?:diagnosis|analysis|critique|description|observation|theory|talk|questions?|naming|labeling|labelling), no (?:treatment|action|solutions?|answers?|prescription|remedy|remedies|fixes?|follow-through)\\b"
+  - "\\ball\\s+(?:diagnosis|analysis|critique|description|observation|theory|talk|questions?|naming|labeling|labelling)\\s+and\\s+no\\s+(?:treatment|action|solutions?|answers?|prescription|remedy|remedies|fixes?|follow-through)\\b"
+  - "\\ball\\s+(?:diagnosis|analysis|critique|description|observation|theory|talk|questions?|naming|labeling|labelling),\\s+no\\s+(?:treatment|action|solutions?|answers?|prescription|remedy|remedies|fixes?|follow-through)\\b"

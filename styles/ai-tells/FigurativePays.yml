@@ -37,16 +37,16 @@ tokens:
   # return on investment, with an optional modifier word between the
   # determiner and the subject ("the upfront work pays off," "each
   # rehearsal paid off").
-  - '\b(?:a|an|the|this|that|these|those|its|their|our|your|each|every) (?:[a-z]+ )?[a-z]+ (?:pays?|paid|paying) off\b'
+  - '\b(?:a|an|the|this|that|these|those|its|their|our|your|each|every)\s+(?:[a-z]+\s+)?[a-z]+\s+(?:pays?|paid|paying)\s+off\b'
 
   # --- The unnamed price: consequence as a bill with no line items
   # ("you pay the price later," "skip the check and pay a steep price").
   # The "of" complement is the named tradeoff pre-LLM prose writes, so
   # the lookahead leaves it alone.
-  - '\bpay(?:s|ing)? the price\b(?! of)'
-  - '\bpaid the price\b(?! of)'
-  - '\bpay(?:s|ing)? a (?:[a-z]+ )?price\b(?! of)'
-  - '\bpaid a (?:[a-z]+ )?price\b(?! of)'
+  - '\bpay(?:s|ing)?\s+the\s+price\b(?!\s+of)'
+  - '\bpaid\s+the\s+price\b(?!\s+of)'
+  - '\bpay(?:s|ing)?\s+a\s+(?:[a-z]+\s+)?price\b(?!\s+of)'
+  - '\bpaid\s+a\s+(?:[a-z]+\s+)?price\b(?!\s+of)'
 
   # --- The same invoice spelled with "cost," and the free lunch: "never
   # pays that cost," "at no cost," "costs nothing," "would pay to
@@ -58,9 +58,9 @@ tokens:
   # both corpora describe a cost they measured, and no complement separates
   # it from the AI grade. The negated-object spelling "costs nothing" is
   # NegatedObject's; this rule takes the prepositional and modal forms.
-  - '\bpay(?:s|ing)? (?:the|that|this|its|their|an?) (?:[a-z]+ )?cost\b(?! of)'
-  - '\bpaid (?:the|that|this|its|their|an?) (?:[a-z]+ )?cost\b(?! of)'
-  - '\bat no (?:cost|charge|expense)\b'
+  - '\bpay(?:s|ing)?\s+(?:the|that|this|its|their|an?)\s+(?:[a-z]+\s+)?cost\b(?!\s+of)'
+  - '\bpaid\s+(?:the|that|this|its|their|an?)\s+(?:[a-z]+\s+)?cost\b(?!\s+of)'
+  - '\bat\s+no\s+(?:cost|charge|expense)\b'
 
   # --- The count as an invoice: a false-positive tally, a line count,
   # or a match count presented as a price ("costs thirteen corpus
@@ -71,29 +71,29 @@ tokens:
   # rather than reported. Every spelling measures zero across the seven
   # pre-LLM corpora, which report a count as a count. The plain
   # sentence says what matched and how often.
-  - '\bcosts? (?:about |roughly |around |at most |at least |under |over |only |just |another |a further )?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a hundred|hundreds|dozens?|a few|several|no|nothing|zero) (?:[a-z-]+ ){0,2}(?:hits?|matches|alerts?|findings?|false positives|lines|sentences|paragraphs)\b'
-  - '\bthe cost (?:is|was|comes to|stays|remains) (?:(?:about |roughly |around |under |over )?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a hundred|hundreds)|a few|several|real|nonzero|zero)\b(?! (?:seconds?|minutes?|hours?|days?|weeks?|months?|years?|dollars?|cents?|bytes?|cycles?|percent|times (?:the|that|as))\b)'
-  - '\bat (?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a hundred|hundreds|zero|about \w+|roughly \w+|around \w+) (?:[a-z-]+ )?(?:corpus )?hits?\b(?! (?:per|a|an|each|every)\b)'
-  - '\bcosts? (?:about |roughly |around )?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a hundred)(?=[.,;:)(]| \(| (?:each|apiece|across|in the|on the|and|but|all|every|most|mostly|none)\b)'
-  - '\b(?:would|could|might|may) pay to\b'
-  - '\bspend(?:s|ing)? (?:work|effort|a budget|budget|attention|cycles|compute|tokens|a round-?trip|round-?trips)\b'
-  - '\bspent (?:work|effort|a budget|budget|attention|cycles|compute|tokens|a round-?trip|round-?trips)\b'
+  - '\bcosts?\s+(?:about\s+|roughly\s+|around\s+|at\s+most\s+|at\s+least\s+|under\s+|over\s+|only\s+|just\s+|another\s+|a\s+further\s+)?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a\s+hundred|hundreds|dozens?|a\s+few|several|no|nothing|zero)\s+(?:[a-z-]+\s+){0,2}(?:hits?|matches|alerts?|findings?|false\s+positives|lines|sentences|paragraphs)\b'
+  - '\bthe\s+cost\s+(?:is|was|comes\s+to|stays|remains)\s+(?:(?:about\s+|roughly\s+|around\s+|under\s+|over\s+)?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a\s+hundred|hundreds)|a\s+few|several|real|nonzero|zero)\b(?!\s+(?:seconds?|minutes?|hours?|days?|weeks?|months?|years?|dollars?|cents?|bytes?|cycles?|percent|times\s+(?:the|that|as))\b)'
+  - '\bat\s+(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a\s+hundred|hundreds|zero|about\s+\w+|roughly\s+\w+|around\s+\w+)\s+(?:[a-z-]+\s+)?(?:corpus\s+)?hits?\b(?!\s+(?:per|a|an|each|every)\b)'
+  - '\bcosts?\s+(?:about\s+|roughly\s+|around\s+)?(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?|a\s+hundred)(?=[.,;:)(]|\s+\(|\s+(?:each|apiece|across|in\s+the|on\s+the|and|but|all|every|most|mostly|none)\b)'
+  - '\b(?:would|could|might|may)\s+pay\s+to\b'
+  - '\bspend(?:s|ing)?\s+(?:work|effort|a\s+budget|budget|attention|cycles|compute|tokens|a\s+round-?trip|round-?trips)\b'
+  - '\bspent\s+(?:work|effort|a\s+budget|budget|attention|cycles|compute|tokens|a\s+round-?trip|round-?trips)\b'
 
   # --- The purchase: a change "buys" a beneficiary something, or buys an
   # abstract good no register sells ("this buys you flexibility," "the
   # cache buys us time," "the shim bought breathing room").
-  - '\b(?:buys?|bought|buying) (?:you|us|them)\b'
-  - '\b(?:buys?|bought|buying) (?:a little |some |extra |more )?(?:time|breathing room|headroom|goodwill|leeway|flexibility|slack)\b'
+  - '\b(?:buys?|bought|buying)\s+(?:you|us|them)\b'
+  - '\b(?:buys?|bought|buying)\s+(?:a\s+little\s+|some\s+|extra\s+|more\s+)?(?:time|breathing\s+room|headroom|goodwill|leeway|flexibility|slack)\b'
 
   # --- Fixed money idioms, all measured at zero across both standard
   # libraries: entry framed as a ticket, obligation as an invoice,
   # opportunism as a withdrawal, importance as a market signal.
-  - '\bprice of admission\b'
-  - '\bfoots? the bill\b'
-  - '\bfooting the bill\b'
-  - '\bputs? a premium on\b'
-  - '\bputting a premium on\b'
-  - '\bcash(?:es|ed|ing)? in on\b'
+  - '\bprice\s+of\s+admission\b'
+  - '\bfoots?\s+the\s+bill\b'
+  - '\bfooting\s+the\s+bill\b'
+  - '\bputs?\s+a\s+premium\s+on\b'
+  - '\bputting\s+a\s+premium\s+on\b'
+  - '\bcash(?:es|ed|ing)?\s+in\s+on\b'
 
   # --- The settled invoice, here with the other money figures now that
   # FigurativeSettles owns the rest of the verb: a measurement or a
@@ -107,7 +107,7 @@ tokens:
   # libraries. The negotiation sense takes "on" ("settled on a price")
   # and stays clear; the literal payment belongs to restaurant and
   # accounting prose, which disables the rule.
-  - '\bsettl(?:es?|ed|ing) (?:a|an|the|this|that|these|those|its|their|our|your|each|every) (?:[a-z]+(?:''s)? )?(?:costs?|prices?|bill|tab|debts?)\b'
-  - '\bsettl(?:es?|ed|ing) up\b'
-  - '\bsquar(?:es?|ed|ing) (?:the|that|this|its|each|every) (?:[a-z]+(?:''s)? )?(?:bill|ledger|books|account|debts?)\b'
-  - '\bbalanc(?:es?|ed|ing) the books\b'
+  - '\bsettl(?:es?|ed|ing)\s+(?:a|an|the|this|that|these|those|its|their|our|your|each|every)\s+(?:[a-z]+(?:''s)?\s+)?(?:costs?|prices?|bill|tab|debts?)\b'
+  - '\bsettl(?:es?|ed|ing)\s+up\b'
+  - '\bsquar(?:es?|ed|ing)\s+(?:the|that|this|its|each|every)\s+(?:[a-z]+(?:''s)?\s+)?(?:bill|ledger|books|account|debts?)\b'
+  - '\bbalanc(?:es?|ed|ing)\s+the\s+books\b'

@@ -9,29 +9,29 @@ ignorecase: true
 # users to layer both styles on commit messages.
 tokens:
   - production-ready
-  - production ready
+  - production\s+ready
   - enterprise-grade
-  - enterprise grade
+  - enterprise\s+grade
   - mission-critical
-  - mission critical
-  - world class
-  - state of the art
-  - cutting edge
-  - best in class
+  - mission\s+critical
+  - world\s+class
+  - state\s+of\s+the\s+art
+  - cutting\s+edge
+  - best\s+in\s+class
   - industry-standard
-  - industry standard
+  - industry\s+standard
   - battle-tested
-  - battle tested
+  - battle\s+tested
   - rock-solid
-  - rock solid
+  - rock\s+solid
   - bulletproof
   # 'first-class' / 'first class' omitted: standard CS terminology
   # (first-class functions, first-class support) with no marketing sense.
   - top-tier
-  - top tier
-  - highly scalable
+  - top\s+tier
+  - highly\s+scalable
   - fault-tolerant
-  - fault tolerant
-  - carefully crafted
-  - meticulously crafted
-  - elegantly designed
+  - fault\s+tolerant
+  - carefully\s+crafted
+  - meticulously\s+crafted
+  - elegantly\s+designed

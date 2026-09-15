@@ -27,17 +27,17 @@ tokens:
   # through the stack," "the precomputed digests travel into that bundle,"
   # "that identifier travels with the record"), with an optional modifier
   # word and an optional adverb inside the span.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always )?travel(?:s|l?ed|l?ing)? (?:into|to|with|between|from|through|across|down|up|along|out|onward|onwards|as|in|inside|alongside|via|by|over|past|beyond|toward|towards|unchanged|intact|together|well)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+)?travel(?:s|l?ed|l?ing)?\\s+(?:into|to|with|between|from|through|across|down|up|along|out|onward|onwards|as|in|inside|alongside|via|by|over|past|beyond|toward|towards|unchanged|intact|together|well)\\b"
 
   # --- Determiner-less data subjects at a clause start ("state travels
   # with the session," "data travels between services").
-  - "\\b(?:data|request|signal|message|information|payload|token|value|packet|traffic|event|change|write|read|state|digest|identifier|record|row|blob|hash|key)s? travels?\\b"
+  - "\\b(?:data|request|signal|message|information|payload|token|value|packet|traffic|event|change|write|read|state|digest|identifier|record|row|blob|hash|key)s?\\s+travels?\\b"
 
   # --- Route complement: the journey through the architecture ("travels
   # through the stack," "travels down the pipeline," "travels into the
   # export").
-  - "\\btravel(?:s|l?ed|l?ing)? (?:through|across|down|up|along|into|to|between|with|out of|from|inside|alongside|via|as) (?:the|a|an|its|their|this|that|each|every|one|both)\\b"
+  - "\\btravel(?:s|l?ed|l?ing)?\\s+(?:through|across|down|up|along|into|to|between|with|out\\s+of|from|inside|alongside|via|as)\\s+(?:the|a|an|its|their|this|that|each|every|one|both)\\b"
 
   # --- Portability idiom: an idea graded on how it ships ("the pattern
   # travels well").
-  - "\\btravels? (?:well|together)\\b"
+  - "\\btravels?\\s+(?:well|together)\\b"

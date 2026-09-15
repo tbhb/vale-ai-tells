@@ -4,23 +4,23 @@ message: "AI conclusion: '%s'. Delete this and end on your final point."
 level: error
 ignorecase: true
 tokens:
-  - In conclusion
-  - In summary
-  - To summarize
-  - To sum up
-  - To conclude
-  - In closing
+  - In\s+conclusion
+  - In\s+summary
+  - To\s+summarize
+  - To\s+sum\s+up
+  - To\s+conclude
+  - In\s+closing
   # Bare adverbs only as sentence-initial discourse markers with a trailing
   # comma; the mid-sentence adjective/adverb senses ("overall design",
   # "ultimately responsible") are not the closer tell.
   - '^Ultimately(?=,)'
-  - All in all
-  - At the end of the day
-  - When all is said and done
-  - The bottom line is
-  - In the final analysis
-  - Taking everything into account
-  - Taking all of this into account
+  - All\s+in\s+all
+  - At\s+the\s+end\s+of\s+the\s+day
+  - When\s+all\s+is\s+said\s+and\s+done
+  - The\s+bottom\s+line\s+is
+  - In\s+the\s+final\s+analysis
+  - Taking\s+everything\s+into\s+account
+  - Taking\s+all\s+of\s+this\s+into\s+account
   - '^Overall(?=,)'
-  - On the whole
-  - By way of conclusion
+  - On\s+the\s+whole
+  - By\s+way\s+of\s+conclusion

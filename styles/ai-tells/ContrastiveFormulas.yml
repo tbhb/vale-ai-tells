@@ -4,168 +4,168 @@ message: "AI contrast: '%s'. State the positive claim directly without the 'not 
 level: error
 tokens:
   # "It's not just X; it's Y" patterns
-  - "[Ii]t'?s not just [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t isn'?t just [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s not merely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s not simply [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s not only [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s not purely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s not solely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s not entirely [^;,—:]+[;,—:] it'?s [^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+just\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t\\s+isn'?t\\s+just\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+merely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+simply\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+only\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+purely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+solely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+entirely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
 
   # "It's not about X; it's about Y" patterns
-  - "[Ii]t'?s not about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t isn'?t about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not really about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not just about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not merely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not simply about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not only about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not purely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not solely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Ii]t'?s not entirely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t\\s+isn'?t\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+really\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+just\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+merely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+simply\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+only\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+purely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+solely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+entirely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
   # Period-separated versions (two sentences)
-  - "[Ii]t'?s not about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t isn'?t about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t'?s not really about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t'?s not just about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t'?s not merely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t'?s not purely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t'?s not solely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Ii]t'?s not entirely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t\\s+isn'?t\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+really\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+just\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+merely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+purely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+solely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+entirely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
 
   # "This isn't X; it's Y" patterns
-  - "[Tt]his isn'?t just [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t merely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t simply [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t only [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t purely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t solely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t entirely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not just [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not merely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not simply [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not only [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not purely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not solely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is not entirely [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his isn'?t merely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t just about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t simply about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t only about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t purely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t solely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t entirely about [^;,—:]+[;,—:] it'?s about [^.!?]+"
-  - "[Tt]his isn'?t about [^;,—:]+[;,—:] it'?s about [^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+just\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+merely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+simply\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+only\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+purely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+solely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+entirely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+just\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+merely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+simply\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+only\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+purely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+solely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+entirely\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+merely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+just\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+simply\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+only\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+purely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+solely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+entirely\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+about\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+about\\s+[^.!?]+"
   # Period-separated versions (two sentences)
-  - "[Tt]his isn'?t about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t merely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t just about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t simply about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t only about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t purely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t solely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his isn'?t entirely about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
-  - "[Tt]his is not about [^.!?]+\\. [Ii]t'?s about [^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+merely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+just\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+simply\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+only\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+purely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+solely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+isn'?t\\s+entirely\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+not\\s+about\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+about\\s+[^.!?]+"
 
   # "It's more than X; it's Y" patterns
-  - "[Ii]t'?s more than [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ii]t'?s more than just [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is more than [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]his is more than just [^;,—:]+[;,—:] it'?s [^.!?]+"
+  - "[Ii]t'?s\\s+more\\s+than\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+more\\s+than\\s+just\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+more\\s+than\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+more\\s+than\\s+just\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
 
   # "It's less about X and more about Y" patterns
-  - "[Ii]t'?s less about [^;,—:]+ and more about [^.!?]+"
-  - "[Ii]t'?s less about [^;,—:]+, more about [^.!?]+"
-  - "[Tt]his is less about [^;,—:]+ and more about [^.!?]+"
+  - "[Ii]t'?s\\s+less\\s+about\\s+[^;,—:]+\\s+and\\s+more\\s+about\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+less\\s+about\\s+[^;,—:]+,\\s+more\\s+about\\s+[^.!?]+"
+  - "[Tt]his\\s+is\\s+less\\s+about\\s+[^;,—:]+\\s+and\\s+more\\s+about\\s+[^.!?]+"
 
   # "X isn't the point; Y is" patterns
-  - "[^.!?]+ isn'?t the point[;,—:] [^.!?]+ is"
-  - "[^.!?]+ is not the point[;,—:] [^.!?]+ is"
+  - "[^.!?]+\\s+isn'?t\\s+the\\s+point[;,—:]\\s+[^.!?]+\\s+is"
+  - "[^.!?]+\\s+is\\s+not\\s+the\\s+point[;,—:]\\s+[^.!?]+\\s+is"
 
   # "The real X isn't Y; it's Z" patterns
-  - "[Tt]he real [^;,—:]+ isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]he true [^;,—:]+ isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
+  - "[Tt]he\\s+real\\s+[^;,—:]+\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+true\\s+[^;,—:]+\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
 
   # "What matters isn't X; it's Y" patterns
-  - "[Ww]hat matters isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ww]hat matters is not [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Ww]hat'?s important isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
+  - "[Ww]hat\\s+matters\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ww]hat\\s+matters\\s+is\\s+not\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Ww]hat'?s\\s+important\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
 
   # "The question isn't X; it's Y" patterns
-  - "[Tt]he question isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]he question is not [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]he issue isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]he problem isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
-  - "[Tt]he challenge isn'?t [^;,—:]+[;,—:] it'?s [^.!?]+"
+  - "[Tt]he\\s+question\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+question\\s+is\\s+not\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+issue\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+problem\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+challenge\\s+isn'?t\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+[^.!?]+"
 
   # "Yes, X, but Y" dismissive acknowledgment
-  - "[Yy]es, [^,]+, but the real [^.!?]+"
-  - "[Ss]ure, [^,]+, but what really [^.!?]+"
+  - "[Yy]es,\\s+[^,]+,\\s+but\\s+the\\s+real\\s+[^.!?]+"
+  - "[Ss]ure,\\s+[^,]+,\\s+but\\s+what\\s+really\\s+[^.!?]+"
 
   # "It's not whether X; it's how/why/when Y"
-  - "[Ii]t'?s not whether [^;,—:]+[;,—:] it'?s (?:how|why|when|what) [^.!?]+"
-  - "[Ii]t'?s not if [^;,—:]+[;,—:] it'?s (?:how|why|when|what) [^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+whether\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+(?:how|why|when|what)\\s+[^.!?]+"
+  - "[Ii]t'?s\\s+not\\s+if\\s+[^;,—:]+[;,—:]\\s+it'?s\\s+(?:how|why|when|what)\\s+[^.!?]+"
 
   # "[Noun] isn't X. It's Y." pattern (any subject)
-  - "[A-Z][a-z]+ isn'?t [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "[A-Z][a-z]+ is not [^.!?]+\\. [Ii]t'?s [^.!?]+"
+  - "[A-Z][a-z]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "[A-Z][a-z]+\\s+is\\s+not\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
 
   # "a Y, not a Z" bare appositive: the categorical assertion with
   # preemptive correction, verb optional ("a refinement, not a rivalry").
   # Verbless, so it also fires in headings, where the clause-level tokens
   # above never match. Subsumes the older single-word-subject
   # "X is a Y, not a Z" token.
-  - "\\b[Aa]n? [^,.;:!?\\n]{2,}, [Nn]ot [Aa]n? [^.!?;:,\\n]+"
-  - "[A-Z][a-z]+ are [^,]+, not [^.]+"
+  - "\\b[Aa]n?\\s+[^,.;:!?\\n]{2,},\\s+[Nn]ot\\s+[Aa]n?\\s+[^.!?;:,\\n]+"
+  - "[A-Z][a-z]+\\s+are\\s+[^,]+,\\s+not\\s+[^.]+"
 
   # "Not only X but also Y" patterns
-  - "[Nn]ot only [^,;—:]+,? but (?:also )?[^.!?]+"
+  - "[Nn]ot\\s+only\\s+[^,;—:]+,?\\s+but\\s+(?:also\\s+)?[^.!?]+"
 
   # "Not because X, but because Y" causal variant
-  - "[Nn]ot because [^,;—:]+,? but because [^.!?]+"
+  - "[Nn]ot\\s+because\\s+[^,;—:]+,?\\s+but\\s+because\\s+[^.!?]+"
 
   # === Plural subject negation-correction ===
 
   # "These aren't X. They're Y." — period-separated
-  - "[Tt]hese aren'?t [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[Tt]hose aren'?t [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[Tt]hese are not [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[Tt]hose are not [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[Tt]hese are not [^.!?]+\\. [Tt]hey are [^.!?]+"
-  - "[Tt]hose are not [^.!?]+\\. [Tt]hey are [^.!?]+"
+  - "[Tt]hese\\s+aren'?t\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[Tt]hose\\s+aren'?t\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[Tt]hese\\s+are\\s+not\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[Tt]hose\\s+are\\s+not\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[Tt]hese\\s+are\\s+not\\s+[^.!?]+\\.\\s+[Tt]hey\\s+are\\s+[^.!?]+"
+  - "[Tt]hose\\s+are\\s+not\\s+[^.!?]+\\.\\s+[Tt]hey\\s+are\\s+[^.!?]+"
 
   # With modifiers
-  - "[Tt]hese aren'?t just [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[Tt]hese aren'?t merely [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[Tt]hese aren'?t simply [^.!?]+\\. [Tt]hey'?re [^.!?]+"
+  - "[Tt]hese\\s+aren'?t\\s+just\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[Tt]hese\\s+aren'?t\\s+merely\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[Tt]hese\\s+aren'?t\\s+simply\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
 
   # Semicolon/em-dash-joined
-  - "[Tt]hese aren'?t [^;,—:]+[;,—:] they'?re [^.!?]+"
-  - "[Tt]hose aren'?t [^;,—:]+[;,—:] they'?re [^.!?]+"
-  - "[Tt]hese are not [^;,—:]+[;,—:] they'?re [^.!?]+"
-  - "[Tt]hose are not [^;,—:]+[;,—:] they'?re [^.!?]+"
+  - "[Tt]hese\\s+aren'?t\\s+[^;,—:]+[;,—:]\\s+they'?re\\s+[^.!?]+"
+  - "[Tt]hose\\s+aren'?t\\s+[^;,—:]+[;,—:]\\s+they'?re\\s+[^.!?]+"
+  - "[Tt]hese\\s+are\\s+not\\s+[^;,—:]+[;,—:]\\s+they'?re\\s+[^.!?]+"
+  - "[Tt]hose\\s+are\\s+not\\s+[^;,—:]+[;,—:]\\s+they'?re\\s+[^.!?]+"
 
   # Generic "[Noun] aren't X. They're Y." catch-all
-  - "[A-Z][a-z]+ aren'?t [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[A-Z][a-z]+ are not [^.!?]+\\. [Tt]hey'?re [^.!?]+"
-  - "[A-Z][a-z]+ are not [^.!?]+\\. [Tt]hey are [^.!?]+"
+  - "[A-Z][a-z]+\\s+aren'?t\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[A-Z][a-z]+\\s+are\\s+not\\s+[^.!?]+\\.\\s+[Tt]hey'?re\\s+[^.!?]+"
+  - "[A-Z][a-z]+\\s+are\\s+not\\s+[^.!?]+\\.\\s+[Tt]hey\\s+are\\s+[^.!?]+"
 
   # === "Doesn't mean X. It means Y." ===
 
   # Period-separated
-  - "[Tt]his doesn'?t mean [^.!?]+\\. [Ii]t means [^.!?]+"
-  - "[Tt]hat doesn'?t mean [^.!?]+\\. [Ii]t means [^.!?]+"
-  - "[Tt]his does not mean [^.!?]+\\. [Ii]t means [^.!?]+"
-  - "[Tt]hat does not mean [^.!?]+\\. [Ii]t means [^.!?]+"
+  - "[Tt]his\\s+doesn'?t\\s+mean\\s+[^.!?]+\\.\\s+[Ii]t\\s+means\\s+[^.!?]+"
+  - "[Tt]hat\\s+doesn'?t\\s+mean\\s+[^.!?]+\\.\\s+[Ii]t\\s+means\\s+[^.!?]+"
+  - "[Tt]his\\s+does\\s+not\\s+mean\\s+[^.!?]+\\.\\s+[Ii]t\\s+means\\s+[^.!?]+"
+  - "[Tt]hat\\s+does\\s+not\\s+mean\\s+[^.!?]+\\.\\s+[Ii]t\\s+means\\s+[^.!?]+"
 
   # Semicolon/em-dash-joined
-  - "[Tt]his doesn'?t mean [^;,—:]+[;,—:] it means [^.!?]+"
-  - "[Tt]hat doesn'?t mean [^;,—:]+[;,—:] it means [^.!?]+"
+  - "[Tt]his\\s+doesn'?t\\s+mean\\s+[^;,—:]+[;,—:]\\s+it\\s+means\\s+[^.!?]+"
+  - "[Tt]hat\\s+doesn'?t\\s+mean\\s+[^;,—:]+[;,—:]\\s+it\\s+means\\s+[^.!?]+"
 
   # Generic "[Noun] doesn't mean X. It means Y."
-  - "[A-Z][a-z]+ doesn'?t mean [^.!?]+\\. [Ii]t means [^.!?]+"
-  - "[A-Z][a-z]+ does not mean [^.!?]+\\. [Ii]t means [^.!?]+"
+  - "[A-Z][a-z]+\\s+doesn'?t\\s+mean\\s+[^.!?]+\\.\\s+[Ii]t\\s+means\\s+[^.!?]+"
+  - "[A-Z][a-z]+\\s+does\\s+not\\s+mean\\s+[^.!?]+\\.\\s+[Ii]t\\s+means\\s+[^.!?]+"
 
   # === Multi-word subject "isn't X. It's Y." ===
   # Catches "The colophon isn't a disclaimer. It's a feature."
@@ -173,20 +173,20 @@ tokens:
   # single capitalized-word subjects.
 
   # "The [noun] isn't X. It's Y."
-  - "[Tt]he [a-z]+ isn'?t [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "[Tt]he [a-z]+ is not [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "[Tt]he [a-z]+ isn'?t [^.!?]+\\. [Ii]t is [^.!?]+"
+  - "[Tt]he\\s+[a-z]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+[a-z]+\\s+is\\s+not\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "[Tt]he\\s+[a-z]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t\\s+is\\s+[^.!?]+"
 
   # "A/An [noun] isn't X. It's Y."
-  - "[Aa]n? [a-z]+ isn'?t [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "[Aa]n? [a-z]+ is not [^.!?]+\\. [Ii]t'?s [^.!?]+"
+  - "[Aa]n?\\s+[a-z]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "[Aa]n?\\s+[a-z]+\\s+is\\s+not\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
 
   # "Our/Your/Their [noun] isn't X. It's Y."
-  - "(?:Our|Your|Their|Its) [a-z]+ isn'?t [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "(?:Our|Your|Their|Its) [a-z]+ is not [^.!?]+\\. [Ii]t'?s [^.!?]+"
+  - "(?:Our|Your|Their|Its)\\s+[a-z]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "(?:Our|Your|Their|Its)\\s+[a-z]+\\s+is\\s+not\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
 
   # Multi-word/acronym subjects — catch-all with "isn't...It's" anchor
   # "WCAG 2.1 AA isn't a checkbox. It's a constraint."
-  - "[^.!?]+ isn'?t [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "[^.!?]+ is not [^.!?]+\\. [Ii]t'?s [^.!?]+"
-  - "[^.!?]+ isn'?t [^.!?]+\\. [Ii]t is [^.!?]+"
+  - "[^.!?]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "[^.!?]+\\s+is\\s+not\\s+[^.!?]+\\.\\s+[Ii]t'?s\\s+[^.!?]+"
+  - "[^.!?]+\\s+isn'?t\\s+[^.!?]+\\.\\s+[Ii]t\\s+is\\s+[^.!?]+"

@@ -27,35 +27,35 @@ tokens:
   # --- Displacement: the change removes something wholesale ("sweeps away
   # the old behavior," "swept aside the objection"). Literal housekeeping
   # ("sweep away the crumbs") fires, so cleaning prose disables the rule.
-  - "\\b(?:sweep|sweeps|sweeping|swept) (?:away|aside)\\b"
-  - "\\b(?:sweep|sweeps|sweeping|swept) (?:every|each|all|any|the|a|an|its|this|that|these|those|both) (?:[a-z-]+ )?(?:rows?|records?|entries|entry|files?|failures?|errors?|findings?|tables?|blobs?|columns?|orphans?|leftovers|stale|dead|old|unused|remaining|derived|stranded)\\b"
+  - "\\b(?:sweep|sweeps|sweeping|swept)\\s+(?:away|aside)\\b"
+  - "\\b(?:sweep|sweeps|sweeping|swept)\\s+(?:every|each|all|any|the|a|an|its|this|that|these|those|both)\\s+(?:[a-z-]+\\s+)?(?:rows?|records?|entries|entry|files?|failures?|errors?|findings?|tables?|blobs?|columns?|orphans?|leftovers|stale|dead|old|unused|remaining|derived|stranded)\\b"
 
   # --- Engulfment: a participant carried off by a current ("swept up in the
   # excitement," "swept up in the migration").
-  - "\\bswept up in\\b"
+  - "\\bswept\\s+up\\s+in\\b"
 
   # --- Pervasion: the change moves through the territory like weather ("the
   # rewrite swept through the codebase," "a trend sweeping across the
   # industry"). Literal storms and fires take the same phrase, so weather and
   # disaster writing disables the rule.
-  - "\\b(?:sweep|sweeps|sweeping|swept) (?:through|across)\\b"
+  - "\\b(?:sweep|sweeps|sweeping|swept)\\s+(?:through|across)\\b"
 
   # --- The adjective: breadth asserted instead of enumerated ("sweeping
   # changes," "a sweeping generalization," "sweeping implications"). Gated on
   # the rhetoric-and-revision noun because the bare word floods on the
   # garbage-collector gerund; a scenic vista stays quiet by the same gate.
-  - "\\bsweeping (?:change|rewrite|refactor|reform|claim|generalization|generalisation|statement|overhaul|redesign|revision|simplification|assertion|conclusion|update|edit|implication|power)s?\\b"
+  - "\\bsweeping\\s+(?:change|rewrite|refactor|reform|claim|generalization|generalisation|statement|overhaul|redesign|revision|simplification|assertion|conclusion|update|edit|implication|power)s?\\b"
   - "\\bsweepingly\\b"
 
   # --- Concealment: the problem hidden rather than fixed ("swept under the
   # rug," "sweeping the failure under the carpet"). The optional words cover
   # an object between the verb and the idiom.
-  - "\\b(?:sweep|sweeps|sweeping|swept) (?:[a-z]+ ){0,3}under the (?:rug|carpet)\\b"
+  - "\\b(?:sweep|sweeps|sweeping|swept)\\s+(?:[a-z]+\\s+){0,3}under\\s+the\\s+(?:rug|carpet)\\b"
 
   # --- Totality idioms: everything at once, count unstated ("a clean
   # sweep," "in one sweep," "in one fell swoop"). The one match across the
   # Go and Python standard libraries is a Go comment copying registers "in
   # one fell swoop," which is the tell itself.
-  - "\\bclean sweep\\b"
-  - "\\bin (?:a|one|a single) sweep\\b"
-  - "\\bone fell swoop\\b"
+  - "\\bclean\\s+sweep\\b"
+  - "\\bin\\s+(?:a|one|a\\s+single)\\s+sweep\\b"
+  - "\\bone\\s+fell\\s+swoop\\b"

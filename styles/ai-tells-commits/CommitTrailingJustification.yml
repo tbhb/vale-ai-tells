@@ -5,85 +5,85 @@ level: error
 ignorecase: true
 tokens:
   # "ensuring" justifications
-  - ensuring consistency
-  - ensuring correctness
-  - ensuring compatibility
-  - ensuring proper handling
-  - ensuring proper validation
-  - ensuring type safety
-  - ensuring that the
-  - ensuring the application
-  - ensuring the code
-  - ensuring all tests
-  - ensuring a clean
-  - ensuring a consistent
+  - ensuring\s+consistency
+  - ensuring\s+correctness
+  - ensuring\s+compatibility
+  - ensuring\s+proper\s+handling
+  - ensuring\s+proper\s+validation
+  - ensuring\s+type\s+safety
+  - ensuring\s+that\s+the
+  - ensuring\s+the\s+application
+  - ensuring\s+the\s+code
+  - ensuring\s+all\s+tests
+  - ensuring\s+a\s+clean
+  - ensuring\s+a\s+consistent
 
   # "improving" justifications
-  - improving performance
-  - improving readability
-  - improving maintainability
-  - improving reliability
-  - improving testability
-  - improving type safety
-  - improving code quality
-  - improving the overall
-  - improving developer experience
-  - improving error handling
+  - improving\s+performance
+  - improving\s+readability
+  - improving\s+maintainability
+  - improving\s+reliability
+  - improving\s+testability
+  - improving\s+type\s+safety
+  - improving\s+code\s+quality
+  - improving\s+the\s+overall
+  - improving\s+developer\s+experience
+  - improving\s+error\s+handling
 
   # "enhancing" justifications
-  - enhancing the overall
-  - enhancing readability
-  - enhancing maintainability
-  - enhancing performance
-  - enhancing the user experience
-  - enhancing code quality
-  - enhancing type safety
-  - enhancing developer experience
+  - enhancing\s+the\s+overall
+  - enhancing\s+readability
+  - enhancing\s+maintainability
+  - enhancing\s+performance
+  - enhancing\s+the\s+user\s+experience
+  - enhancing\s+code\s+quality
+  - enhancing\s+type\s+safety
+  - enhancing\s+developer\s+experience
 
   # "maintaining" justifications
-  - maintaining consistency
-  - maintaining compatibility
-  - maintaining backwards compatibility
-  - maintaining backward compatibility
-  - maintaining type safety
-  - maintaining a clean
+  - maintaining\s+consistency
+  - maintaining\s+compatibility
+  - maintaining\s+backwards\s+compatibility
+  - maintaining\s+backward\s+compatibility
+  - maintaining\s+type\s+safety
+  - maintaining\s+a\s+clean
 
   # "providing" justifications
-  - providing better error
-  - providing a better
-  - providing a more robust
-  - providing a cleaner
-  - providing more flexibility
-  - providing a consistent
+  - providing\s+better\s+error
+  - providing\s+a\s+better
+  - providing\s+a\s+more\s+robust
+  - providing\s+a\s+cleaner
+  - providing\s+more\s+flexibility
+  - providing\s+a\s+consistent
 
   # "for improved/better" justifications
-  - for improved performance
-  - for improved readability
-  - for improved maintainability
-  - for improved reliability
-  - for improved type safety
-  - for improved clarity
-  - for better performance
-  - for better readability
-  - for better maintainability
-  - for better type safety
-  - for better error handling
-  - for better developer experience
-  - for better clarity
-  - for greater clarity
-  - for greater flexibility
+  - for\s+improved\s+performance
+  - for\s+improved\s+readability
+  - for\s+improved\s+maintainability
+  - for\s+improved\s+reliability
+  - for\s+improved\s+type\s+safety
+  - for\s+improved\s+clarity
+  - for\s+better\s+performance
+  - for\s+better\s+readability
+  - for\s+better\s+maintainability
+  - for\s+better\s+type\s+safety
+  - for\s+better\s+error\s+handling
+  - for\s+better\s+developer\s+experience
+  - for\s+better\s+clarity
+  - for\s+greater\s+clarity
+  - for\s+greater\s+flexibility
 
   # "which ensures/allows/enables" relative clauses
-  - which ensures that
-  - which ensures the
-  - which allows for
-  - which allows the
-  - which enables the
-  - which enables us to
-  - which improves the
-  - which improves overall
-  - which provides a
-  - which provides better
-  - which makes the code
-  - which makes it easier
-  - which results in
+  - which\s+ensures\s+that
+  - which\s+ensures\s+the
+  - which\s+allows\s+for
+  - which\s+allows\s+the
+  - which\s+enables\s+the
+  - which\s+enables\s+us\s+to
+  - which\s+improves\s+the
+  - which\s+improves\s+overall
+  - which\s+provides\s+a
+  - which\s+provides\s+better
+  - which\s+makes\s+the\s+code
+  - which\s+makes\s+it\s+easier
+  - which\s+results\s+in

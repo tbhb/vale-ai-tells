@@ -4,71 +4,71 @@ message: "AI participial padding: '%s'. Delete it or make the point concrete."
 level: error
 ignorecase: true
 tokens:
-  - highlighting its importance
-  - highlighting its significance
-  - highlighting its role
-  - highlighting the importance
-  - highlighting the need
-  - highlighting the growing
-  - underscoring its importance
-  - underscoring its significance
-  - underscoring its role
-  - underscoring the importance
-  - underscoring the need
-  - underscoring its commitment
-  - emphasizing the importance
-  - emphasizing the need
-  - emphasizing its role
-  - emphasizing its commitment
-  - reflecting broader trends
-  - reflecting broader changes
-  - reflecting a broader
-  - reflecting the broader
-  - reflecting its commitment
-  - reflecting a growing
-  - reflecting the growing
-  - symbolizing its
-  - symbolizing the
-  - contributing to its
-  - contributing to the development
-  - contributing to the growth
-  - contributing to the overall
-  - contributing to a more
-  - contributing to the region
-  - showcasing its
-  - showcasing the
-  - showcasing a
-  - demonstrating its commitment
-  - demonstrating its dedication
-  - demonstrating a commitment
-  - demonstrating the importance
-  - underscoring its enduring
-  - underscoring its lasting
-  - reinforcing its position
-  - reinforcing its role
-  - reinforcing its commitment
-  - reinforcing the importance
-  - solidifying its position
-  - solidifying its role
-  - solidifying its place
-  - cementing its position
-  - cementing its role
-  - cementing its place
-  - ensuring a seamless
-  - ensuring a smooth
-  - ensuring a more
-  - fostering a sense of
-  - fostering a culture of
-  - fostering a more
-  - fostering an environment
-  - cultivating a sense of
-  - cultivating a culture of
-  - shaping the future
-  - shaping the trajectory
-  - shaping the direction
-  - paving the way for a
-  - setting the stage for a
-  - marking a significant
-  - marking a pivotal
-  - marking a turning
-  - marking a new
+  - highlighting\s+its\s+importance
+  - highlighting\s+its\s+significance
+  - highlighting\s+its\s+role
+  - highlighting\s+the\s+importance
+  - highlighting\s+the\s+need
+  - highlighting\s+the\s+growing
+  - underscoring\s+its\s+importance
+  - underscoring\s+its\s+significance
+  - underscoring\s+its\s+role
+  - underscoring\s+the\s+importance
+  - underscoring\s+the\s+need
+  - underscoring\s+its\s+commitment
+  - emphasizing\s+the\s+importance
+  - emphasizing\s+the\s+need
+  - emphasizing\s+its\s+role
+  - emphasizing\s+its\s+commitment
+  - reflecting\s+broader\s+trends
+  - reflecting\s+broader\s+changes
+  - reflecting\s+a\s+broader
+  - reflecting\s+the\s+broader
+  - reflecting\s+its\s+commitment
+  - reflecting\s+a\s+growing
+  - reflecting\s+the\s+growing
+  - symbolizing\s+its
+  - symbolizing\s+the
+  - contributing\s+to\s+its
+  - contributing\s+to\s+the\s+development
+  - contributing\s+to\s+the\s+growth
+  - contributing\s+to\s+the\s+overall
+  - contributing\s+to\s+a\s+more
+  - contributing\s+to\s+the\s+region
+  - showcasing\s+its
+  - showcasing\s+the
+  - showcasing\s+a
+  - demonstrating\s+its\s+commitment
+  - demonstrating\s+its\s+dedication
+  - demonstrating\s+a\s+commitment
+  - demonstrating\s+the\s+importance
+  - underscoring\s+its\s+enduring
+  - underscoring\s+its\s+lasting
+  - reinforcing\s+its\s+position
+  - reinforcing\s+its\s+role
+  - reinforcing\s+its\s+commitment
+  - reinforcing\s+the\s+importance
+  - solidifying\s+its\s+position
+  - solidifying\s+its\s+role
+  - solidifying\s+its\s+place
+  - cementing\s+its\s+position
+  - cementing\s+its\s+role
+  - cementing\s+its\s+place
+  - ensuring\s+a\s+seamless
+  - ensuring\s+a\s+smooth
+  - ensuring\s+a\s+more
+  - fostering\s+a\s+sense\s+of
+  - fostering\s+a\s+culture\s+of
+  - fostering\s+a\s+more
+  - fostering\s+an\s+environment
+  - cultivating\s+a\s+sense\s+of
+  - cultivating\s+a\s+culture\s+of
+  - shaping\s+the\s+future
+  - shaping\s+the\s+trajectory
+  - shaping\s+the\s+direction
+  - paving\s+the\s+way\s+for\s+a
+  - setting\s+the\s+stage\s+for\s+a
+  - marking\s+a\s+significant
+  - marking\s+a\s+pivotal
+  - marking\s+a\s+turning
+  - marking\s+a\s+new

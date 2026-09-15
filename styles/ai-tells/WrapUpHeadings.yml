@@ -5,18 +5,18 @@ level: error
 ignorecase: true
 scope: heading
 tokens:
-  - Final Thoughts
-  - Closing Thoughts
-  - Parting Thoughts
-  - Wrapping Up
+  - Final\s+Thoughts
+  - Closing\s+Thoughts
+  - Parting\s+Thoughts
+  - Wrapping\s+Up
   - Wrap-Up
-  - Wrap Up
-  - Putting It All Together
-  - Bringing It All Together
-  - Tying It All Together
-  - The Big Picture
-  - The Bottom Line
-  - The Takeaway
-  - Final Word
-  - Last Word
-  - Final Take
+  - Wrap\s+Up
+  - Putting\s+It\s+All\s+Together
+  - Bringing\s+It\s+All\s+Together
+  - Tying\s+It\s+All\s+Together
+  - The\s+Big\s+Picture
+  - The\s+Bottom\s+Line
+  - The\s+Takeaway
+  - Final\s+Word
+  - Last\s+Word
+  - Final\s+Take

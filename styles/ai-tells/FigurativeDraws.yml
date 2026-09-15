@@ -12,24 +12,24 @@ ignorecase: true
 tokens:
   # --- Sourcing: the work borrows from a wellspring ("draws on," "draws
   # upon," "draws from," "draws inspiration from," "draws heavily on").
-  - "\\bdraw(?:s|ing)? (?:heavily |largely |partly |loosely )?(?:on|upon) (?:the |its |a |an |our |their |years of |decades of |a rich |a long )?\\w+"
-  - "\\bdrew (?:heavily |largely |partly |loosely )?(?:on|upon)\\b"
-  - "\\bdraw(?:s|ing)? inspiration from\\b"
-  - "\\bdrew inspiration from\\b"
+  - "\\bdraw(?:s|ing)?\\s+(?:heavily\\s+|largely\\s+|partly\\s+|loosely\\s+)?(?:on|upon)\\s+(?:the\\s+|its\\s+|a\\s+|an\\s+|our\\s+|their\\s+|years\\s+of\\s+|decades\\s+of\\s+|a\\s+rich\\s+|a\\s+long\\s+)?\\w+"
+  - "\\bdrew\\s+(?:heavily\\s+|largely\\s+|partly\\s+|loosely\\s+)?(?:on|upon)\\b"
+  - "\\bdraw(?:s|ing)?\\s+inspiration\\s+from\\b"
+  - "\\bdrew\\s+inspiration\\s+from\\b"
 
   # --- Comparison and demarcation: the section sets terms side by side or
   # marks a boundary ("draws a distinction," "draws a parallel," "draws a
   # line," "draws comparisons," "draws an analogy").
-  - "\\bdraw(?:s|ing)? (?:a|an|the|clear|sharp) (?:distinction|parallel|comparison|analogy|contrast|line|connection)\\b"
-  - "\\bdrew (?:a|an|the|clear|sharp) (?:distinction|parallel|comparison|analogy|contrast|line|connection)\\b"
-  - "\\bdraw(?:s|ing)? comparisons\\b"
+  - "\\bdraw(?:s|ing)?\\s+(?:a|an|the|clear|sharp)\\s+(?:distinction|parallel|comparison|analogy|contrast|line|connection)\\b"
+  - "\\bdrew\\s+(?:a|an|the|clear|sharp)\\s+(?:distinction|parallel|comparison|analogy|contrast|line|connection)\\b"
+  - "\\bdraw(?:s|ing)?\\s+comparisons\\b"
 
   # --- Salience: the artifact tugs the eye or the mind ("draws attention
   # to," "draws the eye," "draws scrutiny," "draws criticism").
-  - "\\bdraw(?:s|ing)? (?:attention|scrutiny|criticism|praise|fire|the eye|the reader'?s eye|focus) (?:to|toward|towards)?\\b"
-  - "\\bdrew (?:attention|scrutiny|criticism|praise|fire|the eye|focus)\\b"
+  - "\\bdraw(?:s|ing)?\\s+(?:attention|scrutiny|criticism|praise|fire|the\\s+eye|the\\s+reader'?s\\s+eye|focus)\\s+(?:to|toward|towards)?\\b"
+  - "\\bdrew\\s+(?:attention|scrutiny|criticism|praise|fire|the\\s+eye|focus)\\b"
 
   # --- Closure: the piece winds down ("draws to a close," "draws to an
   # end").
-  - "\\bdraw(?:s|ing)? to a (?:close|end)\\b"
-  - "\\bdrew to a (?:close|end)\\b"
+  - "\\bdraw(?:s|ing)?\\s+to\\s+a\\s+(?:close|end)\\b"
+  - "\\bdrew\\s+to\\s+a\\s+(?:close|end)\\b"

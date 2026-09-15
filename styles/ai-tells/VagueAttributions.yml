@@ -4,67 +4,67 @@ message: "AI vague attribution: '%s'. Give the specific source or delete the cla
 level: error
 ignorecase: true
 tokens:
-  - experts argue
-  - experts suggest
-  - experts believe
-  - experts say
-  - experts agree
-  - experts warn
-  - experts note
-  - experts predict
-  - experts contend
-  - experts recommend
-  - experts have noted
-  - experts have argued
-  - experts have suggested
-  - experts have warned
-  - industry reports suggest
-  - industry reports indicate
-  - industry reports show
-  - industry experts
-  - industry observers
-  - industry analysts
-  - observers have cited
-  - observers have noted
-  - observers note
-  - critics argue
-  - critics suggest
-  - critics contend
-  - critics have noted
-  - critics have argued
-  - some critics argue
-  - some experts argue
-  - some experts suggest
-  - some experts believe
-  - some analysts
-  - some observers
-  - some researchers
-  - many experts
-  - many analysts
-  - many observers
-  - many researchers
-  - studies show that
-  - studies suggest that
-  - studies indicate that
-  - studies have shown that
-  - studies have found that
-  - research shows that
-  - research suggests that
-  - research indicates that
-  - research has shown that
-  - research has found that
-  - several studies
-  - several experts
-  - several analysts
-  - several observers
-  - numerous studies
-  - numerous experts
-  - a growing body of research
-  - a growing body of evidence
-  - a growing number of experts
-  - the evidence suggests
-  - the data suggests
-  - the research suggests
+  - experts\s+argue
+  - experts\s+suggest
+  - experts\s+believe
+  - experts\s+say
+  - experts\s+agree
+  - experts\s+warn
+  - experts\s+note
+  - experts\s+predict
+  - experts\s+contend
+  - experts\s+recommend
+  - experts\s+have\s+noted
+  - experts\s+have\s+argued
+  - experts\s+have\s+suggested
+  - experts\s+have\s+warned
+  - industry\s+reports\s+suggest
+  - industry\s+reports\s+indicate
+  - industry\s+reports\s+show
+  - industry\s+experts
+  - industry\s+observers
+  - industry\s+analysts
+  - observers\s+have\s+cited
+  - observers\s+have\s+noted
+  - observers\s+note
+  - critics\s+argue
+  - critics\s+suggest
+  - critics\s+contend
+  - critics\s+have\s+noted
+  - critics\s+have\s+argued
+  - some\s+critics\s+argue
+  - some\s+experts\s+argue
+  - some\s+experts\s+suggest
+  - some\s+experts\s+believe
+  - some\s+analysts
+  - some\s+observers
+  - some\s+researchers
+  - many\s+experts
+  - many\s+analysts
+  - many\s+observers
+  - many\s+researchers
+  - studies\s+show\s+that
+  - studies\s+suggest\s+that
+  - studies\s+indicate\s+that
+  - studies\s+have\s+shown\s+that
+  - studies\s+have\s+found\s+that
+  - research\s+shows\s+that
+  - research\s+suggests\s+that
+  - research\s+indicates\s+that
+  - research\s+has\s+shown\s+that
+  - research\s+has\s+found\s+that
+  - several\s+studies
+  - several\s+experts
+  - several\s+analysts
+  - several\s+observers
+  - numerous\s+studies
+  - numerous\s+experts
+  - a\s+growing\s+body\s+of\s+research
+  - a\s+growing\s+body\s+of\s+evidence
+  - a\s+growing\s+number\s+of\s+experts
+  - the\s+evidence\s+suggests
+  - the\s+data\s+suggests
+  - the\s+research\s+suggests
 
   # Candidate not yet implemented: the inverted attribution, where the claim
   # rests on unnamed people failing to act rather than on unnamed people

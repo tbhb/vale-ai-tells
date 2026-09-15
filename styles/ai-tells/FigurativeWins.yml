@@ -51,40 +51,40 @@ tokens:
   # "wins" where the plain sentence names the rule that picks it ("a
   # lower index wins," "the exact match wins as primary," "which source
   # won"). The trailing lookahead keeps "won't" out.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|first|last|lower|higher|lowest|highest|earlier|later|earliest|latest|longer|shorter|longest|shortest|most|least) (?:[a-z'-]+ ){0,2}[a-z]+ (?:then |also |never |still |only |always |usually |simply |just )?(?:wins|won|winning)\\b(?!')"
-  - "\\bwhich (?:[a-z]+ )?(?:wins|won)\\b(?!')"
-  - "\\bpick(?:s|ed|ing)? (?:a|the) winner\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|first|last|lower|higher|lowest|highest|earlier|later|earliest|latest|longer|shorter|longest|shortest|most|least)\\s+(?:[a-z'-]+\\s+){0,2}[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+|usually\\s+|simply\\s+|just\\s+)?(?:wins|won|winning)\\b(?!')"
+  - "\\bwhich\\s+(?:[a-z]+\\s+)?(?:wins|won)\\b(?!')"
+  - "\\bpick(?:s|ed|ing)?\\s+(?:a|the)\\s+winner\\b"
   - "\\blosers?\\b"
   - "\\boutrank(?:s|ed|ing)?\\b"
-  - "\\bbeats? (?:a|an|the|its|their|this|that|each|every|both|all|any|some|most|out|it|them)\\b(?! (?:per|by)\\b)"
+  - "\\bbeats?\\s+(?:a|an|the|its|their|this|that|each|every|both|all|any|some|most|out|it|them)\\b(?!\\s+(?:per|by)\\b)"
 
   # --- The starting whistle ("before a later run kicks off," "kick off
   # the migration").
-  - "\\bkick(?:s|ed|ing)? off\\b"
+  - "\\bkick(?:s|ed|ing)?\\s+off\\b"
 
   # --- Victory idioms: the choice triumphs ("wins the day," "wins out,"
   # "wins hands down," "comes out on top," "takes the crown").
-  - "\\bwin(?:s|ning)? the day\\b"
-  - "\\bwon the day\\b"
-  - "\\bwin(?:s|ning)? out\\b"
-  - "\\bwon out\\b"
-  - "\\bwin(?:s|ning)? hands down\\b"
-  - "\\bcom(?:es|ing)? out on top\\b"
-  - "\\bcame out on top\\b"
-  - "\\bwin(?:s|ning)? hearts and minds\\b"
+  - "\\bwin(?:s|ning)?\\s+the\\s+day\\b"
+  - "\\bwon\\s+the\\s+day\\b"
+  - "\\bwin(?:s|ning)?\\s+out\\b"
+  - "\\bwon\\s+out\\b"
+  - "\\bwin(?:s|ning)?\\s+hands\\s+down\\b"
+  - "\\bcom(?:es|ing)?\\s+out\\s+on\\s+top\\b"
+  - "\\bcame\\s+out\\s+on\\s+top\\b"
+  - "\\bwin(?:s|ning)?\\s+hearts\\s+and\\s+minds\\b"
 
   # --- Scored-point framing: progress tallied like a scoreboard ("a quick
   # win," "an easy win," "chalks up a win," "notch a win," "rack up wins,"
   # "for the win"). "Quick win" is the strongest tell here.
-  - "\\ban? (?:quick|easy|clear|big|huge|major|real|cheap|early|guaranteed|obvious) win\\b"
-  - "\\b(?:quick|easy|cheap|early) wins\\b"
-  - "\\b(?:chalk|notch|score|rack|bank|log)(?:s|ed|ing)? up (?:a|another|some|several)? ?wins?\\b"
-  - "\\bfor the win\\b"
+  - "\\ban?\\s+(?:quick|easy|clear|big|huge|major|real|cheap|early|guaranteed|obvious)\\s+win\\b"
+  - "\\b(?:quick|easy|cheap|early)\\s+wins\\b"
+  - "\\b(?:chalk|notch|score|rack|bank|log)(?:s|ed|ing)?\\s+up\\s+(?:a|another|some|several)?\\s*wins?\\b"
+  - "\\bfor\\s+the\\s+win\\b"
 
   # --- Superlative framing: the choice branded a champion ("a winning
   # formula," "the winning combination," "a winning strategy," "a winning
   # streak," "a win-win").
-  - "\\ba winning (?:formula|combination|combo|strategy|streak|hand|recipe|play|move)\\b"
-  - "\\bthe winning (?:formula|combination|combo|strategy|hand|recipe|play|move)\\b"
+  - "\\ba\\s+winning\\s+(?:formula|combination|combo|strategy|streak|hand|recipe|play|move)\\b"
+  - "\\bthe\\s+winning\\s+(?:formula|combination|combo|strategy|hand|recipe|play|move)\\b"
   - "\\bwin-win\\b"
   - "\\bwin/win\\b"

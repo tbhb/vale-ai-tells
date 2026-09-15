@@ -52,45 +52,45 @@ tokens:
   # --- Feeding: one stage as the mouth of the next ("the pipeline feeds
   # the stage," "nothing upstream feeds the stage," "the output feeds into
   # the ranker").
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|nothing) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always )?feeds? (?:the|a|an|its|their|this|that|these|those|each|every|into|both|all)\\b"
-  - "\\bfeeds? (?:directly |straight |back )?into (?:the|a|an|its|their|this|that|each|every)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|nothing)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+)?feeds?\\s+(?:the|a|an|its|their|this|that|these|those|each|every|into|both|all)\\b"
+  - "\\bfeeds?\\s+(?:directly\\s+|straight\\s+|back\\s+)?into\\s+(?:the|a|an|its|their|this|that|each|every)\\b"
 
   # --- Stranding: a row or record as a shipwreck ("a row strands," "the
   # stranded rows," "nothing strands there").
-  - "\\bstrand(?:s|ed|ing)\\b(?! (?:of|from)\\b)"
+  - "\\bstrand(?:s|ed|ing)\\b(?!\\s+(?:of|from)\\b)"
 
   # --- Force and scale: the bigger thing as weather or crowd ("the extra
   # rows swamp the index," "the big table dwarfs the rest," "the stage
   # crowds out the rest").
-  - "\\bswamp(?:s|ed|ing)?\\b(?! (?:of|land|water|cooler|cabbage|thing)\\b)"
+  - "\\bswamp(?:s|ed|ing)?\\b(?!\\s+(?:of|land|water|cooler|cabbage|thing)\\b)"
   - "\\bdwarf(?:s|ed|ing)\\b"
-  - "\\b(?:crowds?|crowded|crowding) out\\b"
+  - "\\b(?:crowds?|crowded|crowding)\\s+out\\b"
 
   # --- Dependence as posture ("the planner leans on the index," "leans
   # heavily on the cache").
-  - "\\blean(?:s|ed|ing)? (?:on|heavily on|hard on|entirely on) (?:the|a|an|its|their|this|that|each|every|one|[a-z]+)\\b(?! (?:wall|walls|fence|fences|railing|railings|counter|doorframe|post|posts|tree|trees|car|truck|desk|table|shoulder|shoulders|arm|arms)\\b)"
+  - "\\blean(?:s|ed|ing)?\\s+(?:on|heavily\\s+on|hard\\s+on|entirely\\s+on)\\s+(?:the|a|an|its|their|this|that|each|every|one|[a-z]+)\\b(?!\\s+(?:wall|walls|fence|fences|railing|railings|counter|doorframe|post|posts|tree|trees|car|truck|desk|table|shoulder|shoulders|arm|arms)\\b)"
 
   # --- Manufacture: a default as pastry ("the default is baked in,"
   # "bakes the path into the image").
-  - "\\bbak(?:es?|ed|ing) (?:in|into)\\b(?! (?:the oven|a pan|an oven)\\b)"
-  - "\\bbak(?:es?|ed|ing) (?:the|a|an|its|this|that|every|each) (?:[a-z]+ )?[a-z]+ (?:in|into)\\b"
+  - "\\bbak(?:es?|ed|ing)\\s+(?:in|into)\\b(?!\\s+(?:the\\s+oven|a\\s+pan|an\\s+oven)\\b)"
+  - "\\bbak(?:es?|ed|ing)\\s+(?:the|a|an|its|this|that|every|each)\\s+(?:[a-z]+\\s+)?[a-z]+\\s+(?:in|into)\\b"
 
   # --- Steering and sculpting: a value as the driver or the sculptor of
   # what follows ("the config drives the build," "the pass shapes the
   # output"). Determiner-gated on both sides, so "drives the car" and
   # "shapes the clay" fire only with an artifact in the driver's seat.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always )?(?:drives?|drove|driven|shapes?|shaped) (?:the|a|an|its|their|this|that|these|those|each|every|both|all|what|which|how|whether)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+)?(?:drives?|drove|driven|shapes?|shaped)\\s+(?:the|a|an|its|their|this|that|these|those|each|every|both|all|what|which|how|whether)\\b"
 
   # --- Breaking open and shedding ("the stage cracks open the record,"
   # "the pass sheds the derived columns," "sheds light on").
-  - "\\bcrack(?:s|ed|ing)? open\\b"
-  - "\\bsheds? (?:the|a|an|its|this|that|every|each|most|all|any|some|those|these|light|weight)\\b"
-  - "\\bshed light\\b"
+  - "\\bcrack(?:s|ed|ing)?\\s+open\\b"
+  - "\\bsheds?\\s+(?:the|a|an|its|this|that|every|each|most|all|any|some|those|these|light|weight)\\b"
+  - "\\bshed\\s+light\\b"
 
   # --- Seating and trailing: a value placed like a passenger or lagging
   # like a runner ("the loader seats the record in the cache," "the
   # mirror trails the newest release"). A documentation-corpus census
   # (2026-09) listed both among the verbs no rule read; each measures
   # zero across the seven pre-LLM corpora.
-  - "\\bseat(?:s|ed|ing)? (?:the|a|an|its|their|this|that|each|every|it|them)\\b"
-  - "\\btrail(?:s|ed|ing)? (?:the|a|an|its|their|this|that) (?:[a-z]+ )?(?:value|version|release|tag|pin|newest|latest|head|tip|main)\\b"
+  - "\\bseat(?:s|ed|ing)?\\s+(?:the|a|an|its|their|this|that|each|every|it|them)\\b"
+  - "\\btrail(?:s|ed|ing)?\\s+(?:the|a|an|its|their|this|that)\\s+(?:[a-z]+\\s+)?(?:value|version|release|tag|pin|newest|latest|head|tip|main)\\b"

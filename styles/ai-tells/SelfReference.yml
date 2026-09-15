@@ -4,49 +4,49 @@ message: "AI cross-reference: '%s'. Rewrite the passage to work without the cros
 level: error
 ignorecase: true
 tokens:
-  - as mentioned above
-  - as mentioned earlier
-  - as mentioned before
-  - as noted above
-  - as noted earlier
-  - as noted before
-  - as discussed above
-  - as discussed earlier
-  - as discussed before
-  - as stated above
-  - as stated earlier
-  - as stated before
-  - as outlined above
-  - as outlined earlier
-  - as described above
-  - as described earlier
-  - as referenced above
-  - as referenced earlier
-  - as we saw
-  - as we saw above
-  - as we saw earlier
-  - as we'll see
-  - as we'll explore
-  - as we'll discuss
-  - as we discussed
-  - as we explored
-  - as we covered
-  - as covered above
-  - as covered earlier
-  - as shown above
-  - as shown earlier
-  - as explained above
-  - as explained earlier
-  - as we noted
-  - recall that
-  - remember that
-  - as previously mentioned
-  - as previously noted
-  - as previously discussed
-  - as previously stated
-  - as previously described
-  - as I mentioned
-  - as I noted
-  - as I discussed
-  - as I said
-  - as I explained
+  - as\s+mentioned\s+above
+  - as\s+mentioned\s+earlier
+  - as\s+mentioned\s+before
+  - as\s+noted\s+above
+  - as\s+noted\s+earlier
+  - as\s+noted\s+before
+  - as\s+discussed\s+above
+  - as\s+discussed\s+earlier
+  - as\s+discussed\s+before
+  - as\s+stated\s+above
+  - as\s+stated\s+earlier
+  - as\s+stated\s+before
+  - as\s+outlined\s+above
+  - as\s+outlined\s+earlier
+  - as\s+described\s+above
+  - as\s+described\s+earlier
+  - as\s+referenced\s+above
+  - as\s+referenced\s+earlier
+  - as\s+we\s+saw
+  - as\s+we\s+saw\s+above
+  - as\s+we\s+saw\s+earlier
+  - as\s+we'll\s+see
+  - as\s+we'll\s+explore
+  - as\s+we'll\s+discuss
+  - as\s+we\s+discussed
+  - as\s+we\s+explored
+  - as\s+we\s+covered
+  - as\s+covered\s+above
+  - as\s+covered\s+earlier
+  - as\s+shown\s+above
+  - as\s+shown\s+earlier
+  - as\s+explained\s+above
+  - as\s+explained\s+earlier
+  - as\s+we\s+noted
+  - recall\s+that
+  - remember\s+that
+  - as\s+previously\s+mentioned
+  - as\s+previously\s+noted
+  - as\s+previously\s+discussed
+  - as\s+previously\s+stated
+  - as\s+previously\s+described
+  - as\s+I\s+mentioned
+  - as\s+I\s+noted
+  - as\s+I\s+discussed
+  - as\s+I\s+said
+  - as\s+I\s+explained

@@ -18,61 +18,61 @@ tokens:
   # --- Conceptual-location placement: an abstraction is located at a figurative
   # point ("sits at the intersection of," "sits at the core of"). The scaffold
   # noun is the tell, so the subject need not be curated.
-  - "\\bsit(?:s|ting)? (?:squarely |firmly |neatly |cleanly |comfortably |uncomfortably |uneasily |awkwardly |snugly )?at the (?:intersection|center|centre|core|nexus|crux|crossroads|confluence|junction|foundation|edge|apex|boundary) of\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:squarely\\s+|firmly\\s+|neatly\\s+|cleanly\\s+|comfortably\\s+|uncomfortably\\s+|uneasily\\s+|awkwardly\\s+|snugly\\s+)?at\\s+the\\s+(?:intersection|center|centre|core|nexus|crux|crossroads|confluence|junction|foundation|edge|apex|boundary)\\s+of\\b"
 
   # --- Range placement: a value or answer located along an implied spectrum
   # ("sits somewhere between," "sits somewhere in the middle").
-  - "\\bsit(?:s|ting)? somewhere (?:between|in|along|on|near|toward|around|beyond)\\b"
+  - "\\bsit(?:s|ting)?\\s+somewhere\\s+(?:between|in|along|on|near|toward|around|beyond)\\b"
 
   # --- Adverb + relational preposition. The figurative adverb marks the
   # placement as conceptual ("sits squarely within scope," "sits comfortably
   # alongside," "sits uneasily with"), which a literal object rarely does.
-  - "\\bsit(?:s|ting)? (?:squarely|firmly|neatly|cleanly|comfortably|uncomfortably|uneasily|awkwardly|snugly|precariously) (?:within|inside|in|at|on|alongside|atop|above|below|beneath|beside|between|with|next|among|amid|outside)\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:squarely|firmly|neatly|cleanly|comfortably|uncomfortably|uneasily|awkwardly|snugly|precariously)\\s+(?:within|inside|in|at|on|alongside|atop|above|below|beneath|beside|between|with|next|among|amid|outside)\\b"
 
   # --- Companion or stacked placement. "Alongside," "atop," and "astride" read
   # as figurative pairing, ranking, or straddling ("sits alongside the
   # incumbent," "sits atop the leaderboard," "sits astride two domains").
   # Literal senses (a fork alongside a plate) disable the rule for furniture
   # prose.
-  - "\\bsit(?:s|ting)? (?:alongside|atop|astride)\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:alongside|atop|astride)\\b"
 
   # --- Rests-with and within-scope: responsibility or membership assigned by
   # placement ("the decision sits with the board," "this sits within our
   # remit"). "Sit with it" for reflection rides along on purpose.
-  - "\\bsit(?:s|ting)? with\\b"
-  - "\\bsit(?:s|ting)? (?:squarely |firmly |neatly |comfortably )?within\\b"
+  - "\\bsit(?:s|ting)?\\s+with\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:squarely\\s+|firmly\\s+|neatly\\s+|comfortably\\s+)?within\\b"
 
   # --- Dormancy: work left unaddressed just "sits" ("the ticket sits idle,"
   # "the feature sits in isolation," "the draft just sits there").
-  - "\\bjust sit(?:s|ting)? there\\b"
-  - "\\bsit(?:s|ting)? in isolation\\b"
-  - "\\bsit(?:s|ting)? (?:idle|unused|untouched|unresolved|unaddressed|unfinished|dormant|neglected|stale|forgotten|abandoned)\\b"
+  - "\\bjust\\s+sit(?:s|ting)?\\s+there\\b"
+  - "\\bsit(?:s|ting)?\\s+in\\s+isolation\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:idle|unused|untouched|unresolved|unaddressed|unfinished|dormant|neglected|stale|forgotten|abandoned)\\b"
 
   # --- Acceptance idiom: an idea that "doesn't sit right" or "sits well." A
   # literal "sit still" is not in the set, so it stays quiet.
-  - "\\bsit(?:s|ting)? (?:right|well|poorly|badly|wrong)\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:right|well|poorly|badly|wrong)\\b"
 
   # --- Emotional weight: news or a verdict that "sits heavy."
-  - "\\bsit(?:s|ting)? (?:heavy|heavily)\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:heavy|heavily)\\b"
 
   # --- Opposition placement ("sits at odds with," "sits in tension with").
-  - "\\bsit(?:s|ting)? (?:at odds|in tension|in conflict|in opposition) (?:with|to)\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:at\\s+odds|in\\s+tension|in\\s+conflict|in\\s+opposition)\\s+(?:with|to)\\b"
 
   # --- Limbo: work stranded in an abstract holding place ("sits in limbo").
-  - "\\bsit(?:s|ting)? in (?:limbo|purgatory|a holding pattern|the balance|a gr[ae]y area|no man's land)\\b"
+  - "\\bsit(?:s|ting)?\\s+in\\s+(?:limbo|purgatory|a\\s+holding\\s+pattern|the\\s+balance|a\\s+gr[ae]y\\s+area|no\\s+man's\\s+land)\\b"
 
   # --- Emphasis and indecision idioms ("sits front and center," "sits on the
   # fence").
-  - "\\bsit(?:s|ting)? front and cent(?:er|re)\\b"
-  - "\\bsit(?:s|ting)? on the fence\\b"
+  - "\\bsit(?:s|ting)?\\s+front\\s+and\\s+cent(?:er|re)\\b"
+  - "\\bsit(?:s|ting)?\\s+on\\s+the\\s+fence\\b"
 
   # --- Layer-stack placement, gated on a structure noun so a literal "the shelf
   # sits above the sink" stays quiet ("the cache sits above the database tier").
-  - "\\bsit(?:s|ting)? (?:just |right |directly )?(?:above|below|beneath|underneath|on top of) the (?:\\w+ )?(?:layer|stack|tier|level|hierarchy|pipeline|chain)\\b"
+  - "\\bsit(?:s|ting)?\\s+(?:just\\s+|right\\s+|directly\\s+)?(?:above|below|beneath|underneath|on\\s+top\\s+of)\\s+the\\s+(?:\\w+\\s+)?(?:layer|stack|tier|level|hierarchy|pipeline|chain)\\b"
 
   # --- Ranking placement, gated on a priority noun ("sits at the top of the
   # backlog"). Bare "atop" is already covered by the companion arm above.
-  - "\\bsit(?:s|ting)? at the top of the (?:agenda|priority|priorities|to-?do|backlog|pile|queue)\\b"
+  - "\\bsit(?:s|ting)?\\s+at\\s+the\\s+top\\s+of\\s+the\\s+(?:agenda|priority|priorities|to-?do|backlog|pile|queue)\\b"
 
   # --- Abstract-subject placement: a documentation or configuration element
   # located by "sits" where "is" would do ("the entry sits in the config
@@ -92,7 +92,7 @@ tokens:
   # the heap." Runtime, compiler, and memory-layout writing disables the rule.
   # The past-tense "sat" appears only here; the complement-gated tokens
   # above match "sits" and "sitting" alone.
-  - "\\b(?:the|this|that|each|every|a|an) (?:\\w+ )?(?:entry|word|rule|flag|setting|option|field|block|section|clause|token|value|default|exemption|convention|definition|pattern) (?:\\w+ )?(?:sits|sat|sitting) (?:in|on|at|above|below|under|beneath|within|inside|between|near|beside|alongside|behind)\\b"
+  - "\\b(?:the|this|that|each|every|a|an)\\s+(?:\\w+\\s+)?(?:entry|word|rule|flag|setting|option|field|block|section|clause|token|value|default|exemption|convention|definition|pattern)\\s+(?:\\w+\\s+)?(?:sits|sat|sitting)\\s+(?:in|on|at|above|below|under|beneath|within|inside|between|near|beside|alongside|behind)\\b"
 
   # --- The same placement with the subject left open. The curated token
   # above proved too narrow against a corpus of rejected commit messages,
@@ -112,24 +112,24 @@ tokens:
   # ("sits ahead of," "sits outside every fence"); the extra reach adds
   # three corpus hits, one of them a sail. The curated token stays because
   # it admits a modifier between the subject and the verb as well.
-  - "\\b(?:a|an|the|this|that|these|those|its|their|both|all)\\s+\\w+\\s+(?:\\w+\\s+)?(?:sits?|sat)\\s+(?:in|on|at|with|beside|under|behind|ahead of|outside|inside|beyond|among|across|atop|over|above|below|beneath|near|alongside|next to)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|its|their|both|all)\\s+\\w+\\s+(?:\\w+\\s+)?(?:sits?|sat)\\s+(?:in|on|at|with|beside|under|behind|ahead\\s+of|outside|inside|beyond|among|across|atop|over|above|below|beneath|near|alongside|next\\s+to)\\b"
 
   # --- Pronoun and quantifier subjects, the same placement with the
   # noun carried over from the previous sentence ("these sit ahead of the
   # subcommand name," "the rest sit up to date," "it sits between the two
   # stages"). Four corpus hits, each the figure ("it sits on the
   # quarantine list").
-  - "\\b(?:the rest|the others|these|those|they|it|both|all|most|some|each|several|which) (?:[a-z]+ )?sits? (?:up to date|idle|empty|unused|quoted|escaped|in|on|at|with|beside|under|behind|ahead of|outside|inside|beyond|among|across|atop|over|above|below|beneath|near|alongside|next to)\\b"
+  - "\\b(?:the\\s+rest|the\\s+others|these|those|they|it|both|all|most|some|each|several|which)\\s+(?:[a-z]+\\s+)?sits?\\s+(?:up\\s+to\\s+date|idle|empty|unused|quoted|escaped|in|on|at|with|beside|under|behind|ahead\\s+of|outside|inside|beyond|among|across|atop|over|above|below|beneath|near|alongside|next\\s+to)\\b"
 
   # --- Inverted word order, the preposition first and the subject after
   # the verb ("over each column sits an index," "beside it sit flat
   # columns"). Nothing subject-anchored can see this construction; anchoring on
   # the verb and a following determiner does. Measured at zero across both
   # standard libraries.
-  - "\\b(?:over|beside|below|above|beneath|under|behind|alongside|inside|atop|before|after|ahead of|next to|between|around|across|outside|within|upon|on|in|at) (?:it|them|each|every|the|a|an|this|that|these|those|its|their)(?: [a-z]+){0,2} sits? (?:a|an|the|its|their|one|two|three|no|every|each|another|flat|[a-z]+s)\\b"
+  - "\\b(?:over|beside|below|above|beneath|under|behind|alongside|inside|atop|before|after|ahead\\s+of|next\\s+to|between|around|across|outside|within|upon|on|in|at)\\s+(?:it|them|each|every|the|a|an|this|that|these|those|its|their)(?:\\s+[a-z]+){0,2}\\s+sits?\\s+(?:a|an|the|its|their|one|two|three|no|every|each|another|flat|[a-z]+s)\\b"
 
   # --- The state complement that describes a stored value by posture ("a
   # value sits quoted and escaped in the raw bytes," "the rest sit up to
   # date"). Three corpus hits, all the byte-layout sense the rule already
   # disables for ("a byte sits between the file data and the header").
-  - "\\bsits? (?:quoted|escaped|up to date|ahead of|outside|beyond|among|across)\\b"
+  - "\\bsits?\\s+(?:quoted|escaped|up\\s+to\\s+date|ahead\\s+of|outside|beyond|among|across)\\b"

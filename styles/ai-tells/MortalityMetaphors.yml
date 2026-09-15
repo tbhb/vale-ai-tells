@@ -73,18 +73,18 @@ tokens:
   # dies doesn't leave a half-written file," "the process can die
   # mid-write"). The lookahead keeps the fade idioms ("dies down," "dies
   # off") and the human phrases ("died of," "died peacefully") out.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:that |which |then |never |still |also |just |simply )?(?:dies|died|dying)\\b(?! (?:down|off|out|hard|young|old|of|peacefully)\\b)"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:that |which )?(?:can|could|may|might|will|would|should|must|to|cannot|can't) (?:not |never |also |still )?die\\b(?! (?:down|off|out|hard|young|old|of|peacefully)\\b)"
-  - "\\b(?:it|they|which|that) (?:then |never |still |also |just |simply )?(?:dies|died)\\b(?! (?:down|off|out|hard|young|old|of|peacefully)\\b)"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:that\\s+|which\\s+|then\\s+|never\\s+|still\\s+|also\\s+|just\\s+|simply\\s+)?(?:dies|died|dying)\\b(?!\\s+(?:down|off|out|hard|young|old|of|peacefully)\\b)"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:that\\s+|which\\s+)?(?:can|could|may|might|will|would|should|must|to|cannot|can't)\\s+(?:not\\s+|never\\s+|also\\s+|still\\s+)?die\\b(?!\\s+(?:down|off|out|hard|young|old|of|peacefully)\\b)"
+  - "\\b(?:it|they|which|that)\\s+(?:then\\s+|never\\s+|still\\s+|also\\s+|just\\s+|simply\\s+)?(?:dies|died)\\b(?!\\s+(?:down|off|out|hard|young|old|of|peacefully)\\b)"
 
   # --- Survival: the row or key that outlasts the operation ("every row
   # survives unchanged," "a primary key survives," "the blobs that repo
   # references survive too," "survives the rebase untouched"). The object
   # lookahead leaves "survives all restarts" to UniversalObject.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:that |which |then |never |still |also |just |simply )?(?:survives?|survived|surviving)\\b(?! (?:all|every)\\b)"
-  - "\\b(?:survives?|survived|surviving) (?:a|an|the|this|that|these|those|each|its|their|both|any|unchanged|intact|untouched|as|into|too|to|as-is)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:that\\s+|which\\s+|then\\s+|never\\s+|still\\s+|also\\s+|just\\s+|simply\\s+)?(?:survives?|survived|surviving)\\b(?!\\s+(?:all|every)\\b)"
+  - "\\b(?:survives?|survived|surviving)\\s+(?:a|an|the|this|that|these|those|each|its|their|both|any|unchanged|intact|untouched|as|into|too|to|as-is)\\b"
 
   # --- Outliving and the lifespan ("the cache entry outlives the
   # request," "kept for its whole life").
   - "\\boutliv(?:es?|ed|ing)\\b"
-  - "\\bfor (?:its|their|the) (?:whole|entire|full) (?:life|lifetime)\\b"
+  - "\\bfor\\s+(?:its|their|the)\\s+(?:whole|entire|full)\\s+(?:life|lifetime)\\b"

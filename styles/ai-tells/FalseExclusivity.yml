@@ -4,38 +4,38 @@ message: "AI false exclusivity: '%s'. State the point directly without claiming 
 level: error
 ignorecase: true
 tokens:
-  - nobody talks about
-  - no one talks about
-  - nobody mentions
-  - no one mentions
-  - nobody is talking about
-  - no one is talking about
-  - nobody discusses
-  - no one discusses
-  - the part nobody mentions
-  - the part no one mentions
-  - the part nobody talks about
-  - the part no one talks about
-  - what nobody tells you
-  - what no one tells you
-  - what nobody mentions
-  - what no one mentions
-  - what most people miss
-  - what most people don't
-  - what most people overlook
-  - what most people forget
-  - the dirty secret
-  - the dirty little secret
-  - the open secret
-  - the uncomfortable truth
-  - the inconvenient truth
-  - the elephant in the room
-  - the unspoken truth
-  - the unspoken reality
-  - the hidden truth
-  - the hidden cost
-  - the hidden costs
-  - the silent killer
-  - here's what most people miss
-  - here's what nobody tells you
-  - here's what no one tells you
+  - nobody\s+talks\s+about
+  - no\s+one\s+talks\s+about
+  - nobody\s+mentions
+  - no\s+one\s+mentions
+  - nobody\s+is\s+talking\s+about
+  - no\s+one\s+is\s+talking\s+about
+  - nobody\s+discusses
+  - no\s+one\s+discusses
+  - the\s+part\s+nobody\s+mentions
+  - the\s+part\s+no\s+one\s+mentions
+  - the\s+part\s+nobody\s+talks\s+about
+  - the\s+part\s+no\s+one\s+talks\s+about
+  - what\s+nobody\s+tells\s+you
+  - what\s+no\s+one\s+tells\s+you
+  - what\s+nobody\s+mentions
+  - what\s+no\s+one\s+mentions
+  - what\s+most\s+people\s+miss
+  - what\s+most\s+people\s+don't
+  - what\s+most\s+people\s+overlook
+  - what\s+most\s+people\s+forget
+  - the\s+dirty\s+secret
+  - the\s+dirty\s+little\s+secret
+  - the\s+open\s+secret
+  - the\s+uncomfortable\s+truth
+  - the\s+inconvenient\s+truth
+  - the\s+elephant\s+in\s+the\s+room
+  - the\s+unspoken\s+truth
+  - the\s+unspoken\s+reality
+  - the\s+hidden\s+truth
+  - the\s+hidden\s+cost
+  - the\s+hidden\s+costs
+  - the\s+silent\s+killer
+  - here's\s+what\s+most\s+people\s+miss
+  - here's\s+what\s+nobody\s+tells\s+you
+  - here's\s+what\s+no\s+one\s+tells\s+you

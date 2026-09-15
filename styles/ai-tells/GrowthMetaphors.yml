@@ -21,8 +21,8 @@ tokens:
   - "\\bembryonic\\b"
   - "\\bcultivat(?:e|es|ed|ing)\\b"
   - "\\bnurtur(?:e|es|ed|ing)\\b"
-  - "\\bin (?:its|their|the|early|relative|comparative|this) infancy\\b"
+  - "\\bin\\s+(?:its|their|the|early|relative|comparative|this)\\s+infancy\\b"
   # Finance and tech-overloaded words, scoped to the startup phrase
-  - "\\bminimum viable\\b"
-  - "\\bseed (?:funding|rounds?|stage|capital|money|investment|financing|investors?|backers?)\\b"
-  - "\\borganic growth\\b"
+  - "\\bminimum\\s+viable\\b"
+  - "\\bseed\\s+(?:funding|rounds?|stage|capital|money|investment|financing|investors?|backers?)\\b"
+  - "\\borganic\\s+growth\\b"

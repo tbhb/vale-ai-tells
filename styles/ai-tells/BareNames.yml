@@ -102,23 +102,23 @@ tokens:
   # the plural noun in a relative clause ("the type names that appear"),
   # and "the same," which follows the participle ("a variable named the
   # same as its type").
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|only|most|whatever|which) (?:[a-z'-]+ )?[a-z]+ (?:also |only |then |now |never |always |still |already |actually |simply |merely |just |each |all |both )?(?:names|named|naming) (?!the (?:same|way)\\b)(?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|only|most|whatever|which)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:also\\s+|only\\s+|then\\s+|now\\s+|never\\s+|always\\s+|still\\s+|already\\s+|actually\\s+|simply\\s+|merely\\s+|just\\s+|each\\s+|all\\s+|both\\s+)?(?:names|named|naming)\\s+(?!the\\s+(?:same|way)\\b)(?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
 
   # --- The pronoun and relative subject ("it names a kind of file,"
   # "which names the target," "a file that names the gate," "each
   # names one profile").
-  - "\\b(?:it|which|that|this|one|each|either|neither|none|nothing|something|everything|what) (?:also |only |then |now |never |always |still |already |actually |simply |merely |just )?(?:names|named) (?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
+  - "\\b(?:it|which|that|this|one|each|either|neither|none|nothing|something|everything|what)\\s+(?:also\\s+|only\\s+|then\\s+|now\\s+|never\\s+|always\\s+|still\\s+|already\\s+|actually\\s+|simply\\s+|merely\\s+|just\\s+)?(?:names|named)\\s+(?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
 
   # --- The bare plural subject ("recipes name the gate," "both files
   # name a scope") and the modal or negated verb ("must name a file,"
   # "an import path can also name a package," "never names the
   # target").
-  - "\\b[a-z]+s (?:also |only |then |now |never |always |still |already |actually |simply |merely |just |each |all |both )?name (?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
-  - "\\b(?:can|could|may|might|must|should|will|would|cannot|can't|won't|does not|doesn't|did not|didn't|do not|don't|never) (?:also |only |never |still |ever |actually |simply |just )?name (?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
+  - "\\b[a-z]+s\\s+(?:also\\s+|only\\s+|then\\s+|now\\s+|never\\s+|always\\s+|still\\s+|already\\s+|actually\\s+|simply\\s+|merely\\s+|just\\s+|each\\s+|all\\s+|both\\s+)?name\\s+(?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
+  - "\\b(?:can|could|may|might|must|should|will|would|cannot|can't|won't|does\\s+not|doesn't|did\\s+not|didn't|do\\s+not|don't|never)\\s+(?:also\\s+|only\\s+|never\\s+|still\\s+|ever\\s+|actually\\s+|simply\\s+|just\\s+)?name\\s+(?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
 
   # --- A file as the subject, which the determiner gate never sees
   # ("vendir.yml names the tag," "mise.toml names the pins").
-  - "\\b[a-z][a-z0-9_.-]*\\.[a-z]{1,5} (?:also |only |then |now |never |always |still |already |actually |simply |merely |just )?(?:names|named|naming) (?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
+  - "\\b[a-z][a-z0-9_.-]*\\.[a-z]{1,5}\\s+(?:also\\s+|only\\s+|then\\s+|now\\s+|never\\s+|always\\s+|still\\s+|already\\s+|actually\\s+|simply\\s+|merely\\s+|just\\s+)?(?:names|named|naming)\\s+(?:a|an|the|its|their|this|these|those|every|each|all|any|some|no|zero|one|two|three|both|what|whatever|which|whichever|exactly|only|nothing)\\b"
 
   # --- The imperative ("Name the version in the changelog," "Name what
   # you tried," "Name every path," ", name the grant this merge goes
@@ -130,5 +130,5 @@ tokens:
   # span (masked to asterisks in Markdown, literal backticks in plain
   # text), a quoted name, or "after" ("Name the new file
   # `pep-9999.rst`," "Name the logger after the package").
-  - "(?<=^|[.!?:;]['\")\\]]* )name (?:a|an|the|its|their|this|these|those|every|each|all|any|some|one|both|what|whatever|which|whichever|exactly|only)\\b(?!(?: [a-z'-]+){0,3} (?:\\*|[`'\"‘“]|after\\b))"
-  - "(?<=, |; |\\b(?:and|then|or) )name (?:a|an|the|its|their|this|these|those|every|each|all|any|some|one|both|what|whatever|which|whichever|exactly|only)\\b(?!(?: [a-z'-]+){0,3} (?:\\*|[`'\"‘“]|after\\b))"
+  - "(?<=^|[.!?:;]['\")\\]]*\\s+)name\\s+(?:a|an|the|its|their|this|these|those|every|each|all|any|some|one|both|what|whatever|which|whichever|exactly|only)\\b(?!(?:\\s+[a-z'-]+){0,3}\\s+(?:\\*|[`'\"‘“]|after\\b))"
+  - "(?<=,\\s+|;\\s+|\\b(?:and|then|or)\\s+)name\\s+(?:a|an|the|its|their|this|these|those|every|each|all|any|some|one|both|what|whatever|which|whichever|exactly|only)\\b(?!(?:\\s+[a-z'-]+){0,3}\\s+(?:\\*|[`'\"‘“]|after\\b))"

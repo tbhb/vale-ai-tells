@@ -52,18 +52,18 @@ ignorecase: true
 tokens:
   # --- The plain consequence participles, determiner-gated ("leaving the
   # cache cold," "giving the caller one row," "letting the reader skip").
-  - ", (?:thereby |thus )?(?:leaving|giving|letting|keeping|forcing|saving|costing|turning|ensuring|preventing) (?:the|a|an|it|them|you|every|each|all|no|one)\\b"
+  - ",\\s+(?:thereby\\s+|thus\\s+)?(?:leaving|giving|letting|keeping|forcing|saving|costing|turning|ensuring|preventing)\\s+(?:the|a|an|it|them|you|every|each|all|no|one)\\b"
 
   # --- "Making" without the indefinite article, which is "making a best
   # effort" and "making a guess" in the corpora; "making it possible"
   # stays out.
-  - ", (?:thereby |thus )?making (?:it|them|you|the|every|each|all|no|one)\\b(?! possible\\b)"
+  - ",\\s+(?:thereby\\s+|thus\\s+)?making\\s+(?:it|them|you|the|every|each|all|no|one)\\b(?!\\s+possible\\b)"
 
   # --- "Meaning" with the optional "that" ("meaning the index is stale,"
   # "meaning that each report can be a match").
-  - ", (?:thereby |thus )?meaning (?:that )?(?:the|a|an|it|them|you|every|each|all|no|one)\\b"
+  - ",\\s+(?:thereby\\s+|thus\\s+)?meaning\\s+(?:that\\s+)?(?:the|a|an|it|them|you|every|each|all|no|one)\\b"
 
   # --- The prepositional consequence phrases nothing else in the package
   # catches ("resulting in a second pass," "leading to a full scan,"
   # "ending up with an empty map").
-  - ", (?:thereby |thus )?(?:resulting in|leading to|ending up with) (?:the|a|an|it|them|you|every|each|all|no|one)\\b"
+  - ",\\s+(?:thereby\\s+|thus\\s+)?(?:resulting\\s+in|leading\\s+to|ending\\s+up\\s+with)\\s+(?:the|a|an|it|them|you|every|each|all|no|one)\\b"

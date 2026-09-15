@@ -15,4 +15,4 @@ level: error
 ignorecase: true
 nonword: true
 tokens:
-  - "(?<!\\b(?:than|compared|versus|vs\\.|relative)\\b[^.!?\\n]*)\\b(?:significantly|substantially|considerably|markedly|dramatically|vastly|notably)\\s+(?:higher|lower|better|worse|faster|slower|greater|smaller|larger|stronger|weaker|easier|harder|safer|cheaper|simpler|cleaner|more|less|fewer|improved|reduced|increased|decreased)\\b(?![^.!?\\n]*\\b(?:than|compared|versus|vs\\.|relative to)\\b)"
+  - "(?<!\\b(?:than|compared|versus|vs\\.|relative)\\b[^.!?\\n]*)\\b(?:significantly|substantially|considerably|markedly|dramatically|vastly|notably)\\s+(?:higher|lower|better|worse|faster|slower|greater|smaller|larger|stronger|weaker|easier|harder|safer|cheaper|simpler|cleaner|more|less|fewer|improved|reduced|increased|decreased)\\b(?![^.!?\\n]*\\b(?:than|compared|versus|vs\\.|relative\\s+to)\\b)"

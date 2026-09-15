@@ -17,13 +17,13 @@ tokens:
   # --- Subject-gated: a checking or alerting noun given the trigger-pull.
   # An optional adverb sits between subject and verb ("the hook still
   # fires," "the rule never fired").
-  - "\\b(?:rule|hook|check|checker|linter|lint|gate|guard|trigger|alert|alarm|warning|notification|webhook|workflow|action|validation|exemption|assertion)s? (?:never |still |always |only |then |also |actually |reliably |rarely |sometimes )?fir(?:es?|ed|ing)\\b"
+  - "\\b(?:rule|hook|check|checker|linter|lint|gate|guard|trigger|alert|alarm|warning|notification|webhook|workflow|action|validation|exemption|assertion)s?\\s+(?:never\\s+|still\\s+|always\\s+|only\\s+|then\\s+|also\\s+|actually\\s+|reliably\\s+|rarely\\s+|sometimes\\s+)?fir(?:es?|ed|ing)\\b"
 
   # --- The per-occasion token with the subject left open ("so the hooks
   # fire on every commit," "the alert fires on every push"). The complement
   # is the tell here, so no subject gate is needed. Measured at zero across
   # the Go and Python standard libraries.
-  - "\\bfir(?:es?|ed|ing) on every (?:commit|push|merge|save|run|line|match)\\b"
+  - "\\bfir(?:es?|ed|ing)\\s+on\\s+every\\s+(?:commit|push|merge|save|run|line|match)\\b"
 
   # --- Pronoun subjects: the checking noun from the previous sentence
   # carried by "it" or "they" ("they fire nothing and never reach the next
@@ -33,8 +33,8 @@ tokens:
   # rocket fired into orbit); the two corpus hits are timers ("to prove it
   # fires exactly once"), the register the subject gate excludes and this
   # token cannot see, so timer prose disables the rule.
-  - "\\b(?:it|they|these|those|each|one|both|all|none|neither|which|that) (?:never |still |always |only |then |also |actually |reliably |rarely |sometimes |may |can |will |would |could |should |might |must |to )?fir(?:es?|ed|ing)\\b(?! (?:up|off|at|a|an|the|him|her|them|me|us|you|people|employees|staff|workers|shots?|bullets?|rounds?|guns?|missiles?|rockets?|arrows?|torpedoes|weapons?|back|away|into|upon|on all)\\b)"
-  - "\\bfir(?:es?|ed|ing) nothing\\b"
+  - "\\b(?:it|they|these|those|each|one|both|all|none|neither|which|that)\\s+(?:never\\s+|still\\s+|always\\s+|only\\s+|then\\s+|also\\s+|actually\\s+|reliably\\s+|rarely\\s+|sometimes\\s+|may\\s+|can\\s+|will\\s+|would\\s+|could\\s+|should\\s+|might\\s+|must\\s+|to\\s+)?fir(?:es?|ed|ing)\\b(?!\\s+(?:up|off|at|a|an|the|him|her|them|me|us|you|people|employees|staff|workers|shots?|bullets?|rounds?|guns?|missiles?|rockets?|arrows?|torpedoes|weapons?|back|away|into|upon|on\\s+all)\\b)"
+  - "\\bfir(?:es?|ed|ing)\\s+nothing\\b"
 
   # --- The sibling verb ("where they misfire," "the rule misfired on the
   # heading"). Measured at zero across both standard libraries.

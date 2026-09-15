@@ -26,4 +26,4 @@ max: 2
 # Prose whose purpose is prohibition (specifications, license text, RFC language,
 # security controls stating what a system must not do) will exceed the max for
 # good reason and should disable the rule.
-token: '\bno (?!longer\b|one\b|matter\b)\.?[a-z][a-z''-]*'
+token: '\bno\s+(?!longer\b|one\b|matter\b)\.?[a-z][a-z''-]*'

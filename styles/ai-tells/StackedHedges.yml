@@ -9,17 +9,17 @@ message: "AI stacked hedge: '%s'. Drop one hedge, or give a number instead."
 level: error
 ignorecase: true
 tokens:
-  - could potentially
-  - can potentially
-  - may potentially
-  - might potentially
-  - could possibly
-  - can possibly
-  - may possibly
-  - might possibly
-  - could perhaps
-  - may perhaps
-  - might perhaps
-  - could conceivably
-  - may conceivably
-  - might conceivably
+  - could\s+potentially
+  - can\s+potentially
+  - may\s+potentially
+  - might\s+potentially
+  - could\s+possibly
+  - can\s+possibly
+  - may\s+possibly
+  - might\s+possibly
+  - could\s+perhaps
+  - may\s+perhaps
+  - might\s+perhaps
+  - could\s+conceivably
+  - may\s+conceivably
+  - might\s+conceivably

@@ -39,7 +39,7 @@ swap:
   streamline: simplify|speed up
   streamlines: simplifies|speeds up
   streamlining: simplifying|speeding up
-  # streamlined -ed key omitted on purpose: "streamlined process/pipeline"
+  #\s+streamlined\s+-ed\s+key\s+omitted\s+on\s+purpose: "streamlined process/pipeline"
   # is a settled technical adjective, so the past-tense swap would misfire.
   bolster: strengthen|support|boost
   bolsters: strengthens|supports|boosts
@@ -52,7 +52,7 @@ swap:
   elevate: raise|improve|increase
   elevates: raises|improves|increases
   elevating: raising|improving|increasing
-  # elevated -ed key omitted on purpose: "elevated privileges/permissions"
+  #\s+elevated\s+-ed\s+key\s+omitted\s+on\s+purpose: "elevated privileges/permissions"
   # is a settled technical adjective, so the past-tense swap would misfire.
   reimagine: rethink|redesign|redo
   reimagines: rethinks|redesigns|redoes

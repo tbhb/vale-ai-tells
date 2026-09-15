@@ -5,12 +5,12 @@ level: error
 ignorecase: true
 scope: heading
 tokens:
-  - What You'll Learn
-  - What You Will Learn
-  - What We'll Cover
-  - What We Will Cover
-  - What to Expect
-  - What We're Building
-  - What We Are Building
-  - Here's What You'll Get
-  - Here's What You Get
+  - What\s+You'll\s+Learn
+  - What\s+You\s+Will\s+Learn
+  - What\s+We'll\s+Cover
+  - What\s+We\s+Will\s+Cover
+  - What\s+to\s+Expect
+  - What\s+We're\s+Building
+  - What\s+We\s+Are\s+Building
+  - Here's\s+What\s+You'll\s+Get
+  - Here's\s+What\s+You\s+Get

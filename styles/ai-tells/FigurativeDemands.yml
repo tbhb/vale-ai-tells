@@ -16,8 +16,8 @@ ignorecase: true
 tokens:
   # --- Virtue complement: the abstraction requisitions a human quality
   # ("demands care," "demands careful attention," "demanding precision").
-  - "\\bdemand(?:s|ed|ing)? (?:attention|care|caution|scrutiny|precision|rigou?r|respect|discipline|vigilance|patience|humility|careful)\\b"
+  - "\\bdemand(?:s|ed|ing)?\\s+(?:attention|care|caution|scrutiny|precision|rigou?r|respect|discipline|vigilance|patience|humility|careful)\\b"
 
   # --- Inspection complement: the abstraction summons a reader ("demands a
   # closer look," "demands an explanation").
-  - "\\bdemand(?:s|ed|ing)? (?:a|an) (?:closer look|second look|explanation|answer|response)\\b"
+  - "\\bdemand(?:s|ed|ing)?\\s+(?:a|an)\\s+(?:closer\\s+look|second\\s+look|explanation|answer|response)\\b"

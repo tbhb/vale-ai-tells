@@ -12,17 +12,17 @@ tokens:
   # required words after it hold the pattern to subject + verb. A section
   # that genuinely poses a question fires too ("When the Interpreter
   # Starts"); rename it to the topic ("Interpreter startup").
-  - "(?:what|why|how|when|where|who) (?:the|this|that|these|those|a|an|each|every|your|our|its) [-'\\w]+ [-'\\w]+"
-  - Deep Dive
-  - Under the Hood
+  - "(?:what|why|how|when|where|who)\\s+(?:the|this|that|these|those|a|an|each|every|your|our|its)\\s+[-'\\w]+\\s+[-'\\w]+"
+  - Deep\s+Dive
+  - Under\s+the\s+Hood
   - Demystifying
-  - Why It Matters
-  - Why This Matters
-  - Why It Exists
-  - Why This Exists
-  - What It Solves
-  - What This Solves
-  - What It Does
-  - What This Does
-  - A Closer Look
-  - The Inner Workings
+  - Why\s+It\s+Matters
+  - Why\s+This\s+Matters
+  - Why\s+It\s+Exists
+  - Why\s+This\s+Exists
+  - What\s+It\s+Solves
+  - What\s+This\s+Solves
+  - What\s+It\s+Does
+  - What\s+This\s+Does
+  - A\s+Closer\s+Look
+  - The\s+Inner\s+Workings

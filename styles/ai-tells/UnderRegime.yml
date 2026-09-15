@@ -77,9 +77,9 @@ exceptions:
   - "(?i)\\bquarantine\\b"
   - "(?i)\\block(?:down)?\\b"
 tokens:
-  - "(?:^|(?<=[.!?:;] )|(?<=^[-*] )|(?<=^\\d+\\. ))Under (?!(?:is|was|are|were|it|them|us|him|her|you|me|and|or|but|which|what|that|this|these|those|the|a|an)\\b)(?:[a-z][A-Za-z0-9._-]*|[A-Z]+\\d+[A-Za-z0-9]*),? (?:the|a|an|this|that|these|those|each|every|it|its|they|their|no|any|there|you|we|both|all|nothing|none|one|neither)\\b"
+  - "(?:^|(?<=[.!?:;]\\s+)|(?<=^[-*]\\s+)|(?<=^\\d+\\.\\s+))Under\\s+(?!(?:is|was|are|were|it|them|us|him|her|you|me|and|or|but|which|what|that|this|these|those|the|a|an)\\b)(?:[a-z][A-Za-z0-9._-]*|[A-Z]+\\d+[A-Za-z0-9]*),?\\s+(?:the|a|an|this|that|these|those|each|every|it|its|they|their|no|any|there|you|we|both|all|nothing|none|one|neither)\\b"
   # The name in a code span. Markdown masks the span to an asterisk run
   # before matching, and an alert whose span crosses the mask never
   # reports, so this token keeps the span to the opener and reads the
   # rest in a lookahead.
-  - "(?:^|(?<=[.!?:;] )|(?<=^[-*] )|(?<=^\\d+\\. ))Under(?= \\*+,? (?:the|a|an|this|that|these|those|each|every|it|its|they|their|no|any|there|you|we|both|all|nothing|none|one|neither)\\b)"
+  - "(?:^|(?<=[.!?:;]\\s+)|(?<=^[-*]\\s+)|(?<=^\\d+\\.\\s+))Under(?=\\s+\\*+,?\\s+(?:the|a|an|this|that|these|those|each|every|it|its|they|their|no|any|there|you|we|both|all|nothing|none|one|neither)\\b)"

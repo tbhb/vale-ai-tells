@@ -99,47 +99,47 @@ exceptions:
   # A relative clause with "it" for a subject puts the wanter outside the
   # span ("the surface it wants" names a consumer's choice), so the token
   # says nothing about who wants.
-  - "(?i) it want(?:s|ed)?\\b"
+  - "(?i)\\s+it\\s+want(?:s|ed)?\\b"
 tokens:
   # --- Volition: a determiner-led artifact that wants ("the spec wants us
   # to retry," "a dependency bump wants merging," "the RFC wants a break").
   # An optional modifier word and an optional adverb sit inside the span.
   # The lookbehind drops the participle inversion, where a person does the
   # wanting ("somebody installing a binary wants an install line").
-  - "(?<!ing )\\b(?:a|an|the|this|that|these|those|each|every|its|their) (?:[a-z]+ )?[a-z]+ (?:really |only |always |never |still |also |just |often |actually )?want(?:s|ed)?\\b"
+  - "(?<!ing\\s+)\\b(?:a|an|the|this|that|these|those|each|every|its|their)\\s+(?:[a-z]+\\s+)?[a-z]+\\s+(?:really\\s+|only\\s+|always\\s+|never\\s+|still\\s+|also\\s+|just\\s+|often\\s+|actually\\s+)?want(?:s|ed)?\\b"
 
   # --- Teaching, the ditransitive frame first: the artifact as teacher and
   # a person as pupil ("would teach a reviewer the wrong contract," "it
   # teaches the reviewer a contract"). The span is the verb alone, so the
   # human pupil never reaches the exceptions; prose about people disables
   # the rule.
-  - "\\bt(?:each(?:es|ing)?|aught)(?= (?:the|a|an|its|this|that|every|each) (?:[a-z]+ )?[a-z]+ (?:a|an|the|its|this|that|which|what|how|to|about|nothing|something|everything|one)\\b)"
+  - "\\bt(?:each(?:es|ing)?|aught)(?=\\s+(?:the|a|an|its|this|that|every|each)\\s+(?:[a-z]+\\s+)?[a-z]+\\s+(?:a|an|the|its|this|that|which|what|how|to|about|nothing|something|everything|one)\\b)"
 
   # --- Teaching: a tool as the pupil ("teach the compiler that," "taught
   # that validator a new format," "teach Renovate to read the markers"). The
   # lookahead keeps the human idiom "taught in schools" out of the span,
   # and the object word stays inside it for the exceptions.
-  - "\\bt(?:each(?:es|ing)?|aught) (?:the |a |an |its |this |that |every |each )?(?!in |at |by |about |over |during |through |for |with |from )[a-z][a-z-]*"
-  - "\\b(?:can|could|must|has to|have to|had to) be taught\\b"
+  - "\\bt(?:each(?:es|ing)?|aught)\\s+(?:the\\s+|a\\s+|an\\s+|its\\s+|this\\s+|that\\s+|every\\s+|each\\s+)?(?!in\\s+|at\\s+|by\\s+|about\\s+|over\\s+|during\\s+|through\\s+|for\\s+|with\\s+|from\\s+)[a-z][a-z-]*"
+  - "\\b(?:can|could|must|has\\s+to|have\\s+to|had\\s+to)\\s+be\\s+taught\\b"
 
   # --- Learning: a tool as the student ("cspell learns the new slug"). The
   # third-person singular is the gate; "we learned the hard way" carries a
   # human subject the span never sees, so the past tense stays out.
-  - "\\blearns (?:a|an|the|its|this|that|these|those)\\b"
+  - "\\blearns\\s+(?:a|an|the|its|this|that|these|those)\\b"
 
   # --- Ignorance: a tool with a blind spot ("the manager knows nothing
   # about that format," "the hook has no idea the file moved").
-  - "\\bknows? nothing (?:about|of)\\b"
-  - "\\bha(?:s|ve|d) no idea\\b"
+  - "\\bknows?\\s+nothing\\s+(?:about|of)\\b"
+  - "\\bha(?:s|ve|d)\\s+no\\s+idea\\b"
 
   # --- Inquiry and trust: a script that asks and a reviewer's tool that
   # believes ("detection asks whether any package holds it," "the reviewer
   # trusts the inlined material," "the projections a query asks for").
   # Trust-anchor and certificate prose uses the verb literally; security
   # writing disables the rule.
-  - "\\basks whether\\b"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always |often |rarely |actually )?asks? (?:for|the|a|an|its|this|that|whether|if|what|which|how|when|where|why|about|it|them|nothing|only)\\b"
-  - "\\btrusts (?:the|its|a|an|this|that|whatever|inlined)\\b"
+  - "\\basks\\s+whether\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+|often\\s+|rarely\\s+|actually\\s+)?asks?\\s+(?:for|the|a|an|its|this|that|whether|if|what|which|how|when|where|why|about|it|them|nothing|only)\\b"
+  - "\\btrusts\\s+(?:the|its|a|an|this|that|whatever|inlined)\\b"
 
   # --- Judgment: the artifact as the one who decides, answers, forbids,
   # or arbitrates ("a record's bytes decide which extractor runs," "the
@@ -147,9 +147,9 @@ tokens:
   # can't," "determinism forbids a model on the decision path," "the band
   # the ensemble arbitrates," "a signal that cedes recall," "the create
   # arm adopts an open issue").
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always |itself |alone )?(?:decides?|decided|deciding) (?:which|whether|what|how|when|where|if|for itself|on|to|the|a|an|that|between|among)\\b"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always )?answers (?:questions?|a|an|the|its|this|that|every|each|from|with|by)\\b"
-  - "\\banswers? questions\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+|itself\\s+|alone\\s+)?(?:decides?|decided|deciding)\\s+(?:which|whether|what|how|when|where|if|for\\s+itself|on|to|the|a|an|that|between|among)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+)?answers\\s+(?:questions?|a|an|the|its|this|that|every|each|from|with|by)\\b"
+  - "\\banswers?\\s+questions\\b"
   # The accountable artifact: "answers to" with a rule, a style, or a gate
   # as the authority ("the sentence-case rule that every other heading here
   # answers to," "a squash message answers to the same styles," "a draft
@@ -160,45 +160,45 @@ tokens:
   # "have to answer to make progress" out, and the stranded token reads
   # the relative-clause tail. The verb matches nowhere across the seven
   # pre-LLM corpora (2026-09).
-  - "\\b(?:(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|which|what) (?:[a-z'-]+ ){0,2}[a-z]+|it|which|that|this|nothing|everything) (?:then |also |never |still |only |always )?answers to\\b(?! (?:(?:the |a |an |this |that |these |those |these two |those two |such |all |some |any |both |each |every |many |several |the same |those same |your |my |our |their |its |his |her |one |two |three |\\d+ )?(?:[a-z'-]+ )?(?:questions?|problems?|issues?|queries|requests?|riddles?|puzzles?|prompts?|objections?|concerns?|criticisms?)\\b|\\(|\\d|`))"
-  - "\\banswers? to (?:nothing|nobody|no one|none)\\b"
-  - "\\banswers? to(?= ?[.,;:!?]|$)"
-  - "\\b(?!(?:we|i|you|they|he|she|who|which|that|it|this)\\b)[a-z-]+ forbids\\b"
+  - "\\b(?:(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no|which|what)\\s+(?:[a-z'-]+\\s+){0,2}[a-z]+|it|which|that|this|nothing|everything)\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+)?answers\\s+to\\b(?!\\s+(?:(?:the\\s+|a\\s+|an\\s+|this\\s+|that\\s+|these\\s+|those\\s+|these\\s+two\\s+|those\\s+two\\s+|such\\s+|all\\s+|some\\s+|any\\s+|both\\s+|each\\s+|every\\s+|many\\s+|several\\s+|the\\s+same\\s+|those\\s+same\\s+|your\\s+|my\\s+|our\\s+|their\\s+|its\\s+|his\\s+|her\\s+|one\\s+|two\\s+|three\\s+|\\d+\\s+)?(?:[a-z'-]+\\s+)?(?:questions?|problems?|issues?|queries|requests?|riddles?|puzzles?|prompts?|objections?|concerns?|criticisms?)\\b|\\(|\\d|`))"
+  - "\\banswers?\\s+to\\s+(?:nothing|nobody|no\\s+one|none)\\b"
+  - "\\banswers?\\s+to(?=\\s*[.,;:!?]|$)"
+  - "\\b(?!(?:we|i|you|they|he|she|who|which|that|it|this)\\b)[a-z-]+\\s+forbids\\b"
   - "\\barbitrat(?:es?|ed|ing)\\b"
   - "\\bced(?:es?|ed|ing)\\b"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always |simply |just )?adopts? (?:a|an|the|its|this|that|these|those|every|each|any|no|whatever|what)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+|simply\\s+|just\\s+)?adopts?\\s+(?:a|an|the|its|this|that|these|those|every|each|any|no|whatever|what)\\b"
 
   # --- Instruction: the failure text as the one giving orders ("every
   # failure tells you to refresh it"). The span is the verb alone, since
   # "you" and "us" sit on the exception list above.
-  - "\\btells?(?= (?:you|us) to\\b)"
+  - "\\btells?(?=\\s+(?:you|us)\\s+to\\b)"
 
   # --- Fallibility: the artifact that could mistake, guess, or fail to
   # tell ("a file the loader could mistake for a complete capture," "one
   # scan can't prove a record left for good," "the parser guesses the
   # encoding"). The exceptions keep a caller who can't tell the difference
   # out of it.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:could|might|may|would|can|will|should) (?:easily |then |also |still )?mistake (?:a|an|the|its|this|that|these|those|it|them|one|for)\\b"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:can't|cannot|can not|couldn't|could not|won't|will not) (?:then |also |still |yet |always |reliably |easily )?(?:tell|prove|distinguish|guess|judge|decide)\\b"
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no) (?:[a-z'-]+ )?[a-z]+ (?:then |also |never |still |only |always |simply |just )?guess(?:es|ing)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:could|might|may|would|can|will|should)\\s+(?:easily\\s+|then\\s+|also\\s+|still\\s+)?mistake\\s+(?:a|an|the|its|this|that|these|those|it|them|one|for)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:can't|cannot|can\\s+not|couldn't|could\\s+not|won't|will\\s+not)\\s+(?:then\\s+|also\\s+|still\\s+|yet\\s+|always\\s+|reliably\\s+|easily\\s+)?(?:tell|prove|distinguish|guess|judge|decide)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|any|some|no)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:then\\s+|also\\s+|never\\s+|still\\s+|only\\s+|always\\s+|simply\\s+|just\\s+)?guess(?:es|ing)\\b"
 
   # --- Pretense and pursuit ("rather than pretending the item never
   # existed," "it pretends the row is gone," "the secret scanner hunts
   # secrets"). "Pretends otherwise" and "pretending to be" stay in
   # AnthropomorphicJustification and FigurativeDisguises.
-  - "\\b(?:rather than|instead of|without|while|by|before) pretending\\b"
-  - "\\b(?:it|they|which|that|this) (?:then |also |just |simply |still )?pretends?\\b(?! (?:otherwise|not to|to be)\\b)"
+  - "\\b(?:rather\\s+than|instead\\s+of|without|while|by|before)\\s+pretending\\b"
+  - "\\b(?:it|they|which|that|this)\\s+(?:then\\s+|also\\s+|just\\s+|simply\\s+|still\\s+)?pretends?\\b(?!\\s+(?:otherwise|not\\s+to|to\\s+be)\\b)"
   - "\\bhunt(?:s|ed)\\b"
 
   # --- Confusion and misconduct: the tool as a flustered or naughty actor
   # ("the parser gets confused," "if the release misbehaves," "characters
   # that only confuse tokenization," "would confuse the trace parser").
-  - "\\b(?:gets?|got|getting) confused\\b"
-  - "\\bconfus(?:es?|ed|ing) (?:the|a|an|its|this|that|every|each) (?:[a-z]+ )?[a-z]+\\b"
-  - "\\bconfus(?:es?|ing) (?:tokeni[sz]ation|parsing|matching|detection|scoring|ranking|indexing|rendering|resolution|lookup|dispatch)\\b"
+  - "\\b(?:gets?|got|getting)\\s+confused\\b"
+  - "\\bconfus(?:es?|ed|ing)\\s+(?:the|a|an|its|this|that|every|each)\\s+(?:[a-z]+\\s+)?[a-z]+\\b"
+  - "\\bconfus(?:es?|ing)\\s+(?:tokeni[sz]ation|parsing|matching|detection|scoring|ranking|indexing|rendering|resolution|lookup|dispatch)\\b"
   - "\\bmisbehav(?:es|ed)\\b"
 
   # --- Honesty: text or a tool credited with candor ("the refusal text was
   # telling the truth about what the task wanted").
-  - "\\btell(?:s|ing)? the truth\\b"
-  - "\\btold the truth\\b"
+  - "\\btell(?:s|ing)?\\s+the\\s+truth\\b"
+  - "\\btold\\s+the\\s+truth\\b"

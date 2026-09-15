@@ -4,19 +4,19 @@ message: "AI list intro: '%s'. Skip the announcement and present the content dir
 level: error
 ignorecase: true
 tokens:
-  - Below you'll find
-  - Below you will find
-  - Here's a breakdown of
-  - Here is a breakdown of
-  - Here's an overview of
-  - Here is an overview of
-  - Here's a summary of
-  - Here is a summary of
-  - Here's everything you need to know
-  - Here is everything you need to know
-  - Here's what you need to know about
-  - Here is what you need to know about
-  - The following sections will
-  - The following guide will
-  - The following tutorial will
-  - The following walkthrough will
+  - Below\s+you'll\s+find
+  - Below\s+you\s+will\s+find
+  - Here's\s+a\s+breakdown\s+of
+  - Here\s+is\s+a\s+breakdown\s+of
+  - Here's\s+an\s+overview\s+of
+  - Here\s+is\s+an\s+overview\s+of
+  - Here's\s+a\s+summary\s+of
+  - Here\s+is\s+a\s+summary\s+of
+  - Here's\s+everything\s+you\s+need\s+to\s+know
+  - Here\s+is\s+everything\s+you\s+need\s+to\s+know
+  - Here's\s+what\s+you\s+need\s+to\s+know\s+about
+  - Here\s+is\s+what\s+you\s+need\s+to\s+know\s+about
+  - The\s+following\s+sections\s+will
+  - The\s+following\s+guide\s+will
+  - The\s+following\s+tutorial\s+will
+  - The\s+following\s+walkthrough\s+will

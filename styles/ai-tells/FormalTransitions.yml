@@ -20,14 +20,14 @@ tokens:
   - Henceforth
   - Likewise
   - Similarly
-  - In addition
-  - In contrast
-  - On the contrary
-  - By contrast
-  - As a result
-  - For instance
-  - For example
-  - In particular
+  - In\s+addition
+  - In\s+contrast
+  - On\s+the\s+contrary
+  - By\s+contrast
+  - As\s+a\s+result
+  - For\s+instance
+  - For\s+example
+  - In\s+particular
   # Pure degree/manner adverbs flag only as sentence-initial transitions with a
   # trailing comma; mid-sentence senses ("runs significantly faster",
   # "specifically designed for") are not the transition tell.
@@ -38,42 +38,42 @@ tokens:
   - Crucially
   - '^Essentially(?=,)'
   - '^Fundamentally(?=,)'
-  - With that in mind
-  - With this in mind
-  - To that end
-  - In turn
-  - Building on this
-  - Building on that
-  - That's why
-  - This is why
-  - Which is why
-  - That's because
-  - This is because
-  - What's more
-  - What is more
-  - Not to mention
-  - To that point
-  - On that note
-  - On a related note
-  - Case in point
-  - A case in point
+  - With\s+that\s+in\s+mind
+  - With\s+this\s+in\s+mind
+  - To\s+that\s+end
+  - In\s+turn
+  - Building\s+on\s+this
+  - Building\s+on\s+that
+  - That's\s+why
+  - This\s+is\s+why
+  - Which\s+is\s+why
+  - That's\s+because
+  - This\s+is\s+because
+  - What's\s+more
+  - What\s+is\s+more
+  - Not\s+to\s+mention
+  - To\s+that\s+point
+  - On\s+that\s+note
+  - On\s+a\s+related\s+note
+  - Case\s+in\s+point
+  - A\s+case\s+in\s+point
   # Anchored sentence-initial: the bare opener is the tell, but mid-sentence
   # "a point of note" is not. "Worth noting" in any position belongs to
   # FigurativeWorth.
-  - '^Of note'
-  - Along the same lines
-  - In the same vein
-  - By extension
-  - To top it off
-  - That's not all
-  - Better yet
-  - Even better
-  - Equally important
-  - Equally crucial
-  - Equally significant
-  - That is to say
-  - In light of this
-  - In light of that
-  - Given this
-  - Given that
-  - Given the above
+  - '^Of\s+note'
+  - Along\s+the\s+same\s+lines
+  - In\s+the\s+same\s+vein
+  - By\s+extension
+  - To\s+top\s+it\s+off
+  - That's\s+not\s+all
+  - Better\s+yet
+  - Even\s+better
+  - Equally\s+important
+  - Equally\s+crucial
+  - Equally\s+significant
+  - That\s+is\s+to\s+say
+  - In\s+light\s+of\s+this
+  - In\s+light\s+of\s+that
+  - Given\s+this
+  - Given\s+that
+  - Given\s+the\s+above

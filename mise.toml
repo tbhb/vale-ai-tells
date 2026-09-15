@@ -259,6 +259,7 @@ description = "Run the fixture guard: tells fire, past-tense subjects smoke-test
 run = [
   "mise run test-fires",
   "mise run test-commit-past-tense",
+  "mise run test-wrapped",
   "mise run test-clean",
 ]
 
@@ -330,6 +331,86 @@ quiet = true
 run = '''
 echo "Checking for false positives..."
 vale --config=.vale-test.ini test-false-positives.md && vale --config=.vale-test-mdx.ini test-mdx.md && echo "Clean -- no false positives."
+'''
+
+# Assert a wrap changes nothing about what fires. Vale joins the lines of a
+# block before a rule runs. The newline the author typed stays in the text
+# it hands over. A token spelling the gap between two words as a literal
+# space stops matching once the author wraps the phrase. Most source-code
+# comments and every sentence-per-line document are written that way. Every
+# token now spells that gap `\s+`, and this recipe checks it: the tell
+# corpus is rewrapped to a narrow line width, and each rule has to report at
+# least as often as it did on the flat original.
+#
+# The comparison is per rule rather than on the total, so one rule that
+# regresses to a literal space fails the check rather than disappearing into
+# a count that stays above its floor.
+#
+# SemicolonUsage and NegatedObject are exempt, for reasons the whitespace
+# class does not address. SemicolonUsage spells its clause `[^,;\n]*`,
+# refusing a newline on purpose, which puts a clause the wrap splits outside
+# the pattern. NegatedObject keeps one fixture whose object is an inline
+# code span. Vale masks a code span with a run of asterisks, then drops the
+# alert over that run once the block covers more than one line. That happens
+# with or without this package.
+[tasks.test-wrapped]
+description = "Assert each rule still fires once a corpus is hard-wrapped"
+run = '''
+#!/usr/bin/env bash
+# Deliberately not -e: every rule is compared before the result is judged.
+set -uo pipefail
+dir=$(mktemp -d)
+trap 'rm -rf "$dir"' EXIT
+
+tally() {
+  vale --config="$1" --output=JSON "$2" \
+    | grep -o '"Check": "[^"]*"' | cut -d'"' -f4 | sort | uniq -c \
+    | awk '{ print $2, $1 }'
+}
+
+# Read one corpus twice, flat and hard-wrapped, and compare rule by rule.
+# $1 the corpus, $2 the styles bound to it, $3 the rules exempted.
+compare() {
+  awk -v WIDTH=40 -f tools/wrap-paragraphs.awk "$1" > "$dir/$1"
+  printf 'StylesPath = %s/styles\nMinAlertLevel = error\n\n[*.md]\nBasedOnStyles = %s\n' \
+    "$(pwd)" "$2" > "$dir/wrapped.ini"
+  tally .vale-test.ini "$1" > "$dir/flat"
+  tally "$dir/wrapped.ini" "$dir/$1" > "$dir/wrapped"
+
+  printf '%s: %s errors flat, %s wrapped\n' "$1" \
+    "$(awk '{ n += $2 } END { print n + 0 }' "$dir/flat")" \
+    "$(awk '{ n += $2 } END { print n + 0 }' "$dir/wrapped")"
+
+  awk -v exempt="$3" -v corpus="$1" '
+    BEGIN { split(exempt, e, " "); for (i in e) skip[e[i]] = 1 }
+    NR == FNR { wrapped[$1] = $2; next }
+    {
+      if ($1 in skip) next
+      if (wrapped[$1] + 0 < $2 + 0) {
+        printf "FAIL: %s fired %d times flat and %d wrapped\n", $1, $2, wrapped[$1] + 0
+        bad++
+      }
+    }
+    END {
+      if (bad) {
+        print "A token spelling a literal space goes quiet on wrapped prose."
+        exit 1
+      }
+      printf "Every rule fires as often on the wrapped %s.\n", corpus
+    }
+  ' "$dir/wrapped" "$dir/flat"
+}
+
+status=0
+# SemicolonUsage refuses a newline in its clause on purpose, and
+# NegatedObject loses a match to Vale's code-span masking once the block
+# covers more than one line.
+compare test-document.md 'ai-tells, ai-tells-experimental' \
+  'ai-tells.SemicolonUsage ai-tells.NegatedObject' || status=1
+# A commit body is hard-wrapped by Git convention. The commit rules answer
+# the same question, and nothing in them is exempt.
+compare test-commit-messages.md 'ai-tells-commits' '' || status=1
+exit $status
 '''
 
 # --- Package ---

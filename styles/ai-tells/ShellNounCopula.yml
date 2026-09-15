@@ -47,9 +47,9 @@ tokens:
   # copula ahead of "that" or "whether" ("The problem is that," "Another
   # difference is that," "The only reason was that," "Its downside is
   # that," "The question is whether").
-  - "\\b(?:the|a|an|one|another|its|their|our|my|this) (?:[a-z-]+ )?(?:problem|difference|reason|catch|trick|result|upshot|cost|point|issue|risk|effect|consequence|question|answer|key|idea|assumption|trade-off|tradeoff|downside|drawback|benefit|advantage|twist|kicker|payoff|lesson|takeaway|fact|truth|thing|caveat|complication|implication|concern|insight|distinction|challenge) (?:is|was) (?:simply |just )?(?:that|whether)\\b"
+  - "\\b(?:the|a|an|one|another|its|their|our|my|this)\\s+(?:[a-z-]+\\s+)?(?:problem|difference|reason|catch|trick|result|upshot|cost|point|issue|risk|effect|consequence|question|answer|key|idea|assumption|trade-off|tradeoff|downside|drawback|benefit|advantage|twist|kicker|payoff|lesson|takeaway|fact|truth|thing|caveat|complication|implication|concern|insight|distinction|challenge)\\s+(?:is|was)\\s+(?:simply\\s+|just\\s+)?(?:that|whether)\\b"
 
   # --- The same with "here" between the noun and the copula ("The
   # problem here is that," "The issue here was that"). The nouns
   # Metacommentary already takes with "here" are left out.
-  - "\\b(?:the|a|an|one|another|its|their|our|my|this) (?:[a-z-]+ )?(?:problem|difference|reason|catch|trick|result|upshot|cost|issue|risk|effect|consequence|question|answer|assumption|trade-off|tradeoff|downside|drawback|benefit|advantage|twist|kicker|payoff|lesson|takeaway|fact|truth|caveat|complication|implication|concern|distinction|challenge) here (?:is|was) (?:simply |just )?(?:that|whether)\\b"
+  - "\\b(?:the|a|an|one|another|its|their|our|my|this)\\s+(?:[a-z-]+\\s+)?(?:problem|difference|reason|catch|trick|result|upshot|cost|issue|risk|effect|consequence|question|answer|assumption|trade-off|tradeoff|downside|drawback|benefit|advantage|twist|kicker|payoff|lesson|takeaway|fact|truth|caveat|complication|implication|concern|distinction|challenge)\\s+here\\s+(?:is|was)\\s+(?:simply\\s+|just\\s+)?(?:that|whether)\\b"

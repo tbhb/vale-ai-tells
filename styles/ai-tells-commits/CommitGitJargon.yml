@@ -23,12 +23,12 @@ ignorecase: true
 # tree, or an array index. Enabling it for Markdown or source comments would
 # bury a reader in noise.
 tokens:
-  - '\bthe tree(?:\b(?!\s+(?:of|structure)))'
-  - '\bthe index\b'
+  - '\bthe\s+tree(?:\b(?!\s+(?:of|structure)))'
+  - '\bthe\s+index\b'
   - '\bin-tree\b'
   - '\b(?:an?|the)\s+empty\s+tree\b'
 exceptions:
-  - '(?i)the working tree'
-  - '(?i)the source tree'
-  - '(?i)the git index'
-  - '(?i)the staging index'
+  - '(?i)the\s+working\s+tree'
+  - '(?i)the\s+source\s+tree'
+  - '(?i)the\s+git\s+index'
+  - '(?i)the\s+staging\s+index'

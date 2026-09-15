@@ -4,9 +4,9 @@ message: "AI inevitability: '%s'. Say the choice was designed that way."
 level: error
 tokens:
   # "falls out naturally" and variants
-  - falls out naturally
-  - fell out naturally
-  - fall out naturally
+  - falls\s+out\s+naturally
+  - fell\s+out\s+naturally
+  - fall\s+out\s+naturally
 
   # Effortless emergence: a result "falls straight out of" its premise, the
   # derivation presented as inevitable. The manner adverb (straight, right,
@@ -14,34 +14,34 @@ tokens:
   # out of my pocket" without the adverb stays quiet; with the adverb, a
   # literal "fell straight out of my bag" fires, so disable the rule where
   # that is common.
-  - "\\b(?:falls?|fell|falling) (?:straight|right|cleanly|directly|naturally|neatly) out of\\b"
-  - "\\b(?:drops?|dropped|drop) (?:straight|right|cleanly|directly) out of\\b"
+  - "\\b(?:falls?|fell|falling)\\s+(?:straight|right|cleanly|directly|naturally|neatly)\\s+out\\s+of\\b"
+  - "\\b(?:drops?|dropped|drop)\\s+(?:straight|right|cleanly|directly)\\s+out\\s+of\\b"
 
   # "emerges naturally" and variants
-  - emerges naturally
-  - emerged naturally
-  - emerge naturally
-  - emerges organically
-  - emerged organically
+  - emerges\s+naturally
+  - emerged\s+naturally
+  - emerge\s+naturally
+  - emerges\s+organically
+  - emerged\s+organically
 
   # "arises naturally" and variants
-  - arises naturally
-  - arose naturally
-  - arise naturally
-  - arises organically
+  - arises\s+naturally
+  - arose\s+naturally
+  - arise\s+naturally
+  - arises\s+organically
 
   # "flows naturally" and variants
-  - flows naturally
-  - flowed naturally
-  - flow naturally
+  - flows\s+naturally
+  - flowed\s+naturally
+  - flow\s+naturally
 
   # Other organic-sounding consequence language
-  - a natural consequence
-  - the natural consequence
-  - a natural result
-  - the natural result
-  - naturally follows
-  - naturally leads to
-  - naturally results in
-  - follows naturally from
-  - results naturally from
+  - a\s+natural\s+consequence
+  - the\s+natural\s+consequence
+  - a\s+natural\s+result
+  - the\s+natural\s+result
+  - naturally\s+follows
+  - naturally\s+leads\s+to
+  - naturally\s+results\s+in
+  - follows\s+naturally\s+from
+  - results\s+naturally\s+from

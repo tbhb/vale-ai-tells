@@ -32,30 +32,30 @@ tokens:
   # --- State complement: an artifact holding a personified pose ("stays
   # green," "stays honest," "stays dormant," "stays complete," "stays
   # put").
-  - "\\bstay(?:s|ed|ing)? (?:clean|green|red|dark|dormant|hidden|honest|frozen|complete|incomplete|optional|safe|unsafe|high|low|stable|unstable|empty|current|legible|visible|invisible|deterministic|pristine|settled|immutable|mutable|whole|put|small|fast|slow|cheap|intact|valid|invalid|correct|incorrect|accurate|readable|portable|simple|flat|thin|lean|tight|light|sharp|fresh|stale|idle|open|closed|alive|dead|untouched|unchanged|constant|fixed|static|separate|distinct|exact|exempt|eligible|opaque|transparent|private|public|local|remote|true|false|null|nil|zero|nonzero|sorted|ordered|balanced|healthy|responsive|reachable|unreachable|available|unavailable|compatible|unaffected|unresolved|undefined|anonymous|generic|abstract|concrete|explicit|implicit|literal|figurative|robust|aggregated|blocked|associated|deleted|model-free|free|bounded|unbounded|finite|linear|positive|negative)\\b"
+  - "\\bstay(?:s|ed|ing)?\\s+(?:clean|green|red|dark|dormant|hidden|honest|frozen|complete|incomplete|optional|safe|unsafe|high|low|stable|unstable|empty|current|legible|visible|invisible|deterministic|pristine|settled|immutable|mutable|whole|put|small|fast|slow|cheap|intact|valid|invalid|correct|incorrect|accurate|readable|portable|simple|flat|thin|lean|tight|light|sharp|fresh|stale|idle|open|closed|alive|dead|untouched|unchanged|constant|fixed|static|separate|distinct|exact|exempt|eligible|opaque|transparent|private|public|local|remote|true|false|null|nil|zero|nonzero|sorted|ordered|balanced|healthy|responsive|reachable|unreachable|available|unavailable|compatible|unaffected|unresolved|undefined|anonymous|generic|abstract|concrete|explicit|implicit|literal|figurative|robust|aggregated|blocked|associated|deleted|model-free|free|bounded|unbounded|finite|linear|positive|negative)\\b"
 
   # --- The determiner-gated subject with the complement left open ("the
   # value stays complete across runs," "each field stays optional," "the
   # index stayed small"). The lookahead refuses the prepositions, places,
   # times, and human conditions that make the verb literal, so a guest
   # who stays at the hotel or stays overnight is never read.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|any|some|most) (?:(?!(?:one|nobody|somebody|anybody|everybody|someone|anyone|everyone)\\b)[a-z'-]+ )?[a-z]+ (?:always |still |also |then |never |now |otherwise |thus |therefore )?stay(?:s|ed|ing)? (?!(?:in|on|at|with|for|until|till|there|here|away|home|out|behind|inside|outside|near|by|under|over|up|off|the|a|an|to|as|around|after|ahead|within|where|late|longer|overnight|awake|asleep|tuned|and|or|but|so|that|when|if|while|because|of|from|between|among|across|through|into|onto|upon|beyond|above|below|beneath|down|back|close|closer|nearby|indoors|outdoors|abroad|forever|together|apart|calm|cool|warm|hot|cold|dry|wet|rough|smooth|bumpy|slippery|icy|muddy|healthy|fit|alert|focused|humble|positive|strong|young|sober|single|married|friends|connected|logged|signed|quiet|silent|mute)\\b)[a-z][a-z-]+\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|any|some|most)\\s+(?:(?!(?:one|nobody|somebody|anybody|everybody|someone|anyone|everyone)\\b)[a-z'-]+\\s+)?[a-z]+\\s+(?:always\\s+|still\\s+|also\\s+|then\\s+|never\\s+|now\\s+|otherwise\\s+|thus\\s+|therefore\\s+)?stay(?:s|ed|ing)?\\s+(?!(?:in|on|at|with|for|until|till|there|here|away|home|out|behind|inside|outside|near|by|under|over|up|off|the|a|an|to|as|around|after|ahead|within|where|late|longer|overnight|awake|asleep|tuned|and|or|but|so|that|when|if|while|because|of|from|between|among|across|through|into|onto|upon|beyond|above|below|beneath|down|back|close|closer|nearby|indoors|outdoors|abroad|forever|together|apart|calm|cool|warm|hot|cold|dry|wet|rough|smooth|bumpy|slippery|icy|muddy|healthy|fit|alert|focused|humble|positive|strong|young|sober|single|married|friends|connected|logged|signed|quiet|silent|mute)\\b)[a-z][a-z-]+\\b"
 
   # --- Avoidance complement: the artifact keeping a polite distance
   # ("stays out of the way," "stays clear of the hot path").
-  - "\\bstay(?:s|ed|ing)? out of the (?:way|picture|diff|loop)\\b"
-  - "\\bstay(?:s|ed|ing)? clear of\\b"
+  - "\\bstay(?:s|ed|ing)?\\s+out\\s+of\\s+the\\s+(?:way|picture|diff|loop)\\b"
+  - "\\bstay(?:s|ed|ing)?\\s+clear\\s+of\\b"
 
   # --- Left waiting: work personified as the one not picked ("the test
   # family stayed behind on an assumption"). Measured at zero across the
   # Go and Python standard libraries; a pupil kept after class takes the
   # disable note in the message.
-  - "\\bstay(?:s|ed|ing)? behind\\b"
+  - "\\bstay(?:s|ed|ing)?\\s+behind\\b"
 
   # --- Membership idioms: presence framed as loyalty ("stays in the
   # picture," "stays in lockstep").
-  - "\\bstay(?:s|ed|ing)? in (?:the loop|the picture|play|lockstep|force)\\b"
+  - "\\bstay(?:s|ed|ing)?\\s+in\\s+(?:the\\s+loop|the\\s+picture|play|lockstep|force)\\b"
 
   # --- Scoping triage: content sorted by residence ("what stays in, what
   # stays out," "what stays and what goes").
-  - "\\bwhat stays (?:in|out|and)\\b"
+  - "\\bwhat\\s+stays\\s+(?:in|out|and)\\b"

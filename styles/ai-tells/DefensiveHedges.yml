@@ -5,59 +5,59 @@ level: error
 nonword: true
 tokens:
   # "This is more of X than Y, but..." pattern
-  - "\\b[Tt]his is more of [^,]+ than [^,]+, but [^.!?]+"
-  - "\\b[Ii]t'?s more of [^,]+ than [^,]+, but [^.!?]+"
+  - "\\b[Tt]his\\s+is\\s+more\\s+of\\s+[^,]+\\s+than\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Ii]t'?s\\s+more\\s+of\\s+[^,]+\\s+than\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "Not the most X, but..." pattern
-  - "\\b[Ii]t'?s not the most [^,]+, but [^.!?]+"
-  - "\\b[Tt]his isn'?t the most [^,]+, but [^.!?]+"
+  - "\\b[Ii]t'?s\\s+not\\s+the\\s+most\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Tt]his\\s+isn'?t\\s+the\\s+most\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "May seem/might seem X, but..." pattern
-  - "\\b[Tt]his may seem [^,]+, but [^.!?]+"
-  - "\\b[Tt]his might seem [^,]+, but [^.!?]+"
-  - "\\b[Ii]t may seem [^,]+, but [^.!?]+"
-  - "\\b[Ii]t might seem [^,]+, but [^.!?]+"
+  - "\\b[Tt]his\\s+may\\s+seem\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Tt]his\\s+might\\s+seem\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Ii]t\\s+may\\s+seem\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Ii]t\\s+might\\s+seem\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "Might sound X, but..." pattern
-  - "\\b[Tt]his might sound [^,]+, but [^.!?]+"
-  - "\\b[Ii]t might sound [^,]+, but [^.!?]+"
-  - "\\b[Tt]hat might sound [^,]+, but [^.!?]+"
+  - "\\b[Tt]his\\s+might\\s+sound\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Ii]t\\s+might\\s+sound\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Tt]hat\\s+might\\s+sound\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "Admittedly/Granted" openers
-  - "\\bAdmittedly, [^,]+, but [^.!?]+"
-  - "\\bGranted, [^,]+, but [^.!?]+"
+  - "\\bAdmittedly,\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bGranted,\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "To be fair" pattern
-  - "\\bTo be fair, [^,]+, but [^.!?]+"
-  - "\\bTo be honest, [^,]+, but [^.!?]+"
+  - "\\bTo\\s+be\\s+fair,\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bTo\\s+be\\s+honest,\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "While this might/may appear" pattern
-  - "\\bWhile this might appear [^,]+, [^.!?]+"
-  - "\\bWhile this may appear [^,]+, [^.!?]+"
-  - "\\bWhile it might appear [^,]+, [^.!?]+"
-  - "\\bWhile it may appear [^,]+, [^.!?]+"
+  - "\\bWhile\\s+this\\s+might\\s+appear\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bWhile\\s+this\\s+may\\s+appear\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bWhile\\s+it\\s+might\\s+appear\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bWhile\\s+it\\s+may\\s+appear\\s+[^,]+,\\s+[^.!?]+"
 
   # "Not meant to be X, but..." pattern
-  - "\\b[Tt]his isn'?t meant to be [^,]+, but [^.!?]+"
-  - "\\b[Ii]t'?s not meant to be [^,]+, but [^.!?]+"
+  - "\\b[Tt]his\\s+isn'?t\\s+meant\\s+to\\s+be\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\b[Ii]t'?s\\s+not\\s+meant\\s+to\\s+be\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "On the surface X, but..." pattern
-  - "\\bOn the surface, [^,]+, but [^.!?]+"
-  - "\\bOn the surface this [^,]+, but [^.!?]+"
+  - "\\bOn\\s+the\\s+surface,\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bOn\\s+the\\s+surface\\s+this\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "At first glance" pattern
-  - "\\bAt first glance, [^,]+, but [^.!?]+"
-  - "\\bAt first glance this [^,]+, but [^.!?]+"
+  - "\\bAt\\s+first\\s+glance,\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bAt\\s+first\\s+glance\\s+this\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "I know this seems/sounds" pattern
-  - "\\bI know this seems [^,]+, but [^.!?]+"
-  - "\\bI know this sounds [^,]+, but [^.!?]+"
-  - "\\bI know it seems [^,]+, but [^.!?]+"
-  - "\\bI know it sounds [^,]+, but [^.!?]+"
+  - "\\bI\\s+know\\s+this\\s+seems\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bI\\s+know\\s+this\\s+sounds\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bI\\s+know\\s+it\\s+seems\\s+[^,]+,\\s+but\\s+[^.!?]+"
+  - "\\bI\\s+know\\s+it\\s+sounds\\s+[^,]+,\\s+but\\s+[^.!?]+"
 
   # "While X, Y" hedged openers (preemptive concession)
-  - "\\bWhile [^,]+ can [^,]+, [^.!?]+"
-  - "\\bWhile [^,]+ is [^,]+, [^.!?]+"
-  - "\\bWhile [^,]+ are [^,]+, [^.!?]+"
-  - "\\bWhile [^,]+ may [^,]+, [^.!?]+"
-  - "\\bAlthough [^,]+, [^.!?]+"
+  - "\\bWhile\\s+[^,]+\\s+can\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bWhile\\s+[^,]+\\s+is\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bWhile\\s+[^,]+\\s+are\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bWhile\\s+[^,]+\\s+may\\s+[^,]+,\\s+[^.!?]+"
+  - "\\bAlthough\\s+[^,]+,\\s+[^.!?]+"

@@ -48,10 +48,10 @@ tokens:
   # SummativeAppositive's relative; the lookahead keeps out the literal
   # position and the possessive purpose ("the point of the cache"),
   # which the second token reads when it carries an intensifier.
-  - "(?<!\\b(?:[Ww]hat|[Ww]hich|[Ww]hy) )\\b(?:is|was|are|were|isn't|wasn't|is not|was not|'s) (?:exactly |precisely |really |very much )?(?:the|its|their) (?:whole |entire |very |real |only |actual |main |central |key |larger |bigger |broader |deeper )?point\\b(?! (?:at|where|when|in|on|from|to|of|that|which|after|before|between|beyond|past|behind|just|immediately|about|around|for|following|preceding|size|type|value|count|number|cloud|light|source|release|version|being|made|raised|I|we|you|they|he|she)\\b)"
+  - "(?<!\\b(?:[Ww]hat|[Ww]hich|[Ww]hy)\\s+)\\b(?:is|was|are|were|isn't|wasn't|is\\s+not|was\\s+not|'s)\\s+(?:exactly\\s+|precisely\\s+|really\\s+|very\\s+much\\s+)?(?:the|its|their)\\s+(?:whole\\s+|entire\\s+|very\\s+|real\\s+|only\\s+|actual\\s+|main\\s+|central\\s+|key\\s+|larger\\s+|bigger\\s+|broader\\s+|deeper\\s+)?point\\b(?!\\s+(?:at|where|when|in|on|from|to|of|that|which|after|before|between|beyond|past|behind|just|immediately|about|around|for|following|preceding|size|type|value|count|number|cloud|light|source|release|version|being|made|raised|I|we|you|they|he|she)\\b)"
 
   # --- The intensified purpose statement ("The whole point of the cache
   # is to avoid the read," "the entire point of the wrapper," "The whole
   # point is to keep the writer simple"). The bare "the point of" stays
   # out as ordinary English.
-  - "\\b(?:[Tt]he|its|their) (?:whole|entire) point (?:of|is|was|isn't|wasn't)\\b"
+  - "\\b(?:[Tt]he|its|their)\\s+(?:whole|entire)\\s+point\\s+(?:of|is|was|isn't|wasn't)\\b"

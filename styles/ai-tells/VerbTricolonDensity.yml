@@ -4,4 +4,4 @@ message: "AI tricolon: multiple verb tricolons in one paragraph (found %d). Rewr
 level: error
 scope: paragraph
 max: 1
-token: '((?:\w+ly )?\w+s [^,]+, (?:\w+ly )?\w+s [^,]+, (?:and|or) (?:\w+ly )?\w+s [^.!?]+|(?:\w+ly )?\w+ing [^,]+, (?:\w+ly )?\w+ing [^,]+, (?:and|or) (?:\w+ly )?\w+ing [^.!?]+|(?:\w+ly )?\w+ed [^,]+, (?:\w+ly )?\w+ed [^,]+, (?:and|or) (?:\w+ly )?\w+ed [^.!?]+)'
+token: '((?:\w+ly\s+)?\w+s\s+[^,]+,\s+(?:\w+ly\s+)?\w+s\s+[^,]+,\s+(?:and|or)\s+(?:\w+ly\s+)?\w+s\s+[^.!?]+|(?:\w+ly\s+)?\w+ing\s+[^,]+,\s+(?:\w+ly\s+)?\w+ing\s+[^,]+,\s+(?:and|or)\s+(?:\w+ly\s+)?\w+ing\s+[^.!?]+|(?:\w+ly\s+)?\w+ed\s+[^,]+,\s+(?:\w+ly\s+)?\w+ed\s+[^,]+,\s+(?:and|or)\s+(?:\w+ly\s+)?\w+ed\s+[^.!?]+)'

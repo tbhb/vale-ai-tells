@@ -51,11 +51,11 @@ nonword: true
 tokens:
   # --- Copula form: "All/Every <subject> is/are/was/were/has been
   # <participle>." Generic -ed predicate plus irregulars, optional adverb.
-  - "\\b(?:All|Every) (?:[A-Za-z][-A-Za-z']* ){1,3}(?:is|are|was|were|has been|have been|is being|are being|is now|are now) (?:[a-z]+ly |now |ever |being )?(?:[a-z][-a-z]*ed|done|made|met|caught|kept|held|run|swept|built|sent|set|taken|given|shown|seen|found|known|written|understood|gone|put|left|read|hidden|chosen|thrown|broken|frozen)\\b"
+  - "\\b(?:All|Every)\\s+(?:[A-Za-z][-A-Za-z']*\\s+){1,3}(?:is|are|was|were|has\\s+been|have\\s+been|is\\s+being|are\\s+being|is\\s+now|are\\s+now)\\s+(?:[a-z]+ly\\s+|now\\s+|ever\\s+|being\\s+)?(?:[a-z][-a-z]*ed|done|made|met|caught|kept|held|run|swept|built|sent|set|taken|given|shown|seen|found|known|written|understood|gone|put|left|read|hidden|chosen|thrown|broken|frozen)\\b"
   # --- Scoreboard form: the uncounted test-status claim ("All tests
   # pass," "All checks are green," "Every gate passes," "All suites
   # passing").
-  - "\\b(?:All|Every) (?:[A-Za-z][-A-Za-z']* ){0,2}(?:test|tests|check|checks|gate|gates|suite|suites|build|builds|pipeline|pipelines|case|cases|scenario|scenarios) (?:pass(?:es|ed|ing)?|(?:is|are) (?:passing|green)|green)\\b"
+  - "\\b(?:All|Every)\\s+(?:[A-Za-z][-A-Za-z']*\\s+){0,2}(?:test|tests|check|checks|gate|gates|suite|suites|build|builds|pipeline|pipelines|case|cases|scenario|scenarios)\\s+(?:pass(?:es|ed|ing)?|(?:is|are)\\s+(?:passing|green)|green)\\b"
   # --- Active form: the quantified subject doing something to one
   # object ("Every predicate reads a live root," "every membership row
   # counts as a live root," "All rows carry a timestamp"). Added after a
@@ -66,5 +66,5 @@ tokens:
   # the singular token shows nine corpus hits and the plural fifteen, led
   # by "All Go functions use the internal ABI." A modal in the subject
   # slot ("All arguments must have") is refused.
-  - "\\bEvery (?!(?:[A-Za-z'-]+ ){0,2}(?:must|should|can|could|may|might|will|would|shall) )(?:[A-Za-z][-A-Za-z']* ){1,3}(?:reads|writes|counts|checks|reaches|produces|yields|returns|holds|names|handles|covers|matches|takes|gets|needs|requires|carries|keeps|owns|runs|passes|survives|fires|touches|creates|emits|stores|loads|opens|uses|has|includes|contains|defines|declares|exposes|sets|records|tracks|maps|points|resolves|ends|starts|begins|feeds|lands|lives|sits|stays|wins) (?:a|an|the|its|one|all|every|no|zero|exactly|only|at least|at most|as|to|with|in|on|from|into|there|here)\\b"
-  - "\\bAll (?!(?:[A-Za-z'-]+ ){0,2}(?:must|should|can|could|may|might|will|would|shall) )(?:[A-Za-z][-A-Za-z']* ){1,3}(?:read|write|count|check|reach|produce|yield|return|hold|name|handle|cover|match|take|get|need|require|carry|keep|own|run|pass|survive|fire|touch|create|emit|store|load|open|use|have|include|contain|define|declare|expose|set|record|track|map|point|resolve|end|start|begin|feed|land|live|sit|stay|win) (?:a|an|the|its|one|all|every|no|zero|exactly|only|at least|at most|as|to|with|in|on|from|into|there|here)\\b"
+  - "\\bEvery\\s+(?!(?:[A-Za-z'-]+\\s+){0,2}(?:must|should|can|could|may|might|will|would|shall)\\s+)(?:[A-Za-z][-A-Za-z']*\\s+){1,3}(?:reads|writes|counts|checks|reaches|produces|yields|returns|holds|names|handles|covers|matches|takes|gets|needs|requires|carries|keeps|owns|runs|passes|survives|fires|touches|creates|emits|stores|loads|opens|uses|has|includes|contains|defines|declares|exposes|sets|records|tracks|maps|points|resolves|ends|starts|begins|feeds|lands|lives|sits|stays|wins)\\s+(?:a|an|the|its|one|all|every|no|zero|exactly|only|at\\s+least|at\\s+most|as|to|with|in|on|from|into|there|here)\\b"
+  - "\\bAll\\s+(?!(?:[A-Za-z'-]+\\s+){0,2}(?:must|should|can|could|may|might|will|would|shall)\\s+)(?:[A-Za-z][-A-Za-z']*\\s+){1,3}(?:read|write|count|check|reach|produce|yield|return|hold|name|handle|cover|match|take|get|need|require|carry|keep|own|run|pass|survive|fire|touch|create|emit|store|load|open|use|have|include|contain|define|declare|expose|set|record|track|map|point|resolve|end|start|begin|feed|land|live|sit|stay|win)\\s+(?:a|an|the|its|one|all|every|no|zero|exactly|only|at\\s+least|at\\s+most|as|to|with|in|on|from|into|there|here)\\b"

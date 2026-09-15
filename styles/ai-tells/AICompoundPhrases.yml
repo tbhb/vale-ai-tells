@@ -4,136 +4,136 @@ message: "AI fingerprint: '%s'. Rewrite with concrete specifics instead of this 
 level: error
 ignorecase: true
 tokens:
-  - rich tapestry
-  - rich tapestries
-  - tapestry of
-  - intricate tapestry
-  - complex and multifaceted
-  - multifaceted and complex
-  - intricate interplay
-  - delicate balance
-  - delicate interplay
-  - dynamic interplay
-  - crucial role
-  - played a crucial role
-  - plays a crucial role
-  - vital role
-  - pivotal role
-  - key role
-  - instrumental role
+  - rich\s+tapestry
+  - rich\s+tapestries
+  - tapestry\s+of
+  - intricate\s+tapestry
+  - complex\s+and\s+multifaceted
+  - multifaceted\s+and\s+complex
+  - intricate\s+interplay
+  - delicate\s+balance
+  - delicate\s+interplay
+  - dynamic\s+interplay
+  - crucial\s+role
+  - played\s+a\s+crucial\s+role
+  - plays\s+a\s+crucial\s+role
+  - vital\s+role
+  - pivotal\s+role
+  - key\s+role
+  - instrumental\s+role
   - cutting-edge
   - game-changer
   - game-changing
-  - paradigm shift
-  - sea change
-  - tipping point
-  - watershed moment
-  - double-edged sword
-  - slippery slope
-  - tip of the iceberg
-  - at the forefront
-  - on the cutting edge
-  - paving the way
-  - laid the groundwork
-  - lays the groundwork
-  - sets the stage
-  - set the stage
-  - a testament to
-  - stands as a testament
-  - serve as a reminder
-  - serves as a reminder
-  - it remains to be seen
-  - only time will tell
-  - the jury is still out
-  - takes center stage
-  - take center stage
-  - took center stage
-  - paints a picture of
-  - paint a picture of
-  - painted a picture of
-  - is not without its challenges
-  - are not without their challenges
-  - is not without challenges
-  - whether we like it or not
-  - whether you like it or not
-  - a cornerstone of
-  - the transformative power of
-  - deeply rooted in
-  - deeply rooted
-  - the hallmark of
-  - a hallmark of
-  - moving the needle
-  - moves the needle
-  - moved the needle
-  - move the needle
-  - nudge the needle
-  - nudges the needle
-  - nudged the needle
-  - unlocks new
-  - unlocked new
-  - unlocking new
-  - unlock new
-  - unlocks the potential
-  - unlock the potential
-  - unlocks the power
-  - unlock the power
-  - unlocks the value
-  - unlock the value
-  - unlocks capabilities
-  - unlock capabilities
-  - unlocks possibilities
-  - unlock possibilities
+  - paradigm\s+shift
+  - sea\s+change
+  - tipping\s+point
+  - watershed\s+moment
+  - double-edged\s+sword
+  - slippery\s+slope
+  - tip\s+of\s+the\s+iceberg
+  - at\s+the\s+forefront
+  - on\s+the\s+cutting\s+edge
+  - paving\s+the\s+way
+  - laid\s+the\s+groundwork
+  - lays\s+the\s+groundwork
+  - sets\s+the\s+stage
+  - set\s+the\s+stage
+  - a\s+testament\s+to
+  - stands\s+as\s+a\s+testament
+  - serve\s+as\s+a\s+reminder
+  - serves\s+as\s+a\s+reminder
+  - it\s+remains\s+to\s+be\s+seen
+  - only\s+time\s+will\s+tell
+  - the\s+jury\s+is\s+still\s+out
+  - takes\s+center\s+stage
+  - take\s+center\s+stage
+  - took\s+center\s+stage
+  - paints\s+a\s+picture\s+of
+  - paint\s+a\s+picture\s+of
+  - painted\s+a\s+picture\s+of
+  - is\s+not\s+without\s+its\s+challenges
+  - are\s+not\s+without\s+their\s+challenges
+  - is\s+not\s+without\s+challenges
+  - whether\s+we\s+like\s+it\s+or\s+not
+  - whether\s+you\s+like\s+it\s+or\s+not
+  - a\s+cornerstone\s+of
+  - the\s+transformative\s+power\s+of
+  - deeply\s+rooted\s+in
+  - deeply\s+rooted
+  - the\s+hallmark\s+of
+  - a\s+hallmark\s+of
+  - moving\s+the\s+needle
+  - moves\s+the\s+needle
+  - moved\s+the\s+needle
+  - move\s+the\s+needle
+  - nudge\s+the\s+needle
+  - nudges\s+the\s+needle
+  - nudged\s+the\s+needle
+  - unlocks\s+new
+  - unlocked\s+new
+  - unlocking\s+new
+  - unlock\s+new
+  - unlocks\s+the\s+potential
+  - unlock\s+the\s+potential
+  - unlocks\s+the\s+power
+  - unlock\s+the\s+power
+  - unlocks\s+the\s+value
+  - unlock\s+the\s+value
+  - unlocks\s+capabilities
+  - unlock\s+capabilities
+  - unlocks\s+possibilities
+  - unlock\s+possibilities
 
   # "real" as intensifier before an abstract noun.
   # AI reaches for "a real choice" / "a real difference" to inflate
   # weight where a plain noun would do. Bare "real" is too broad
   # (real-time, real estate, real world), so this is enumerated.
-  - a real choice
-  - a real option
-  - a real difference
-  - a real test
-  - a real question
-  - a real chance
-  - a real problem
-  - a real shot
-  - a real risk
-  - a real cost
-  - a real benefit
-  - real value
-  - real progress
-  - real flexibility
-  - real benefits
-  - real costs
-  - real impact
-  - real leverage
-  - real ownership
-  - real accountability
-  - real consequences
-  - real tradeoffs
-  - real trade-offs
-  - real choices
-  - real options
-  - real differences
+  - a\s+real\s+choice
+  - a\s+real\s+option
+  - a\s+real\s+difference
+  - a\s+real\s+test
+  - a\s+real\s+question
+  - a\s+real\s+chance
+  - a\s+real\s+problem
+  - a\s+real\s+shot
+  - a\s+real\s+risk
+  - a\s+real\s+cost
+  - a\s+real\s+benefit
+  - real\s+value
+  - real\s+progress
+  - real\s+flexibility
+  - real\s+benefits
+  - real\s+costs
+  - real\s+impact
+  - real\s+leverage
+  - real\s+ownership
+  - real\s+accountability
+  - real\s+consequences
+  - real\s+tradeoffs
+  - real\s+trade-offs
+  - real\s+choices
+  - real\s+options
+  - real\s+differences
 
   # Investigation-thread metaphors: AI's preferred way to describe
   # "open questions" or "loose ends." Tutorial-blog tone.
-  - threads to pull on
-  - thread to pull on
-  - threads to pull
-  - thread to pull
-  - loose threads to pull
-  - loose threads to chase
-  - another thread to pull
-  - more threads to pull
+  - threads\s+to\s+pull\s+on
+  - thread\s+to\s+pull\s+on
+  - threads\s+to\s+pull
+  - thread\s+to\s+pull
+  - loose\s+threads\s+to\s+pull
+  - loose\s+threads\s+to\s+chase
+  - another\s+thread\s+to\s+pull
+  - more\s+threads\s+to\s+pull
 
   # Solidification metaphors: the surface/design/contract "hardens"
   # before some deadline. AI reaches for this constantly when
   # describing in-progress work or pre-release windows.
   # Broad regex catches "before/after X hardens" for any 1-6
   # word X.
-  - (?:before|after) [^.,;:!?]{1,40} hardens
-  - (?:before|after) [^.,;:!?]{1,40} hardened
-  - (?:before|after) [^.,;:!?]{1,40} solidifies
-  - (?:before|after) [^.,;:!?]{1,40} solidified
-  - (?:before|after) [^.,;:!?]{1,40} ossifies
-  - (?:before|after) [^.,;:!?]{1,40} ossified
+  - (?:before|after)\s+[^.,;:!?]{1,40}\s+hardens
+  - (?:before|after)\s+[^.,;:!?]{1,40}\s+hardened
+  - (?:before|after)\s+[^.,;:!?]{1,40}\s+solidifies
+  - (?:before|after)\s+[^.,;:!?]{1,40}\s+solidified
+  - (?:before|after)\s+[^.,;:!?]{1,40}\s+ossifies
+  - (?:before|after)\s+[^.,;:!?]{1,40}\s+ossified

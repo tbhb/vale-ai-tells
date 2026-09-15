@@ -5,85 +5,85 @@ level: error
 ignorecase: true
 tokens:
   # "This commit" preambles
-  - This commit adds
-  - This commit fixes
-  - This commit updates
-  - This commit removes
-  - This commit introduces
-  - This commit implements
-  - This commit improves
-  - This commit resolves
-  - This commit addresses
-  - This commit refactors
-  - This commit cleans up
-  - This commit moves
-  - This commit renames
-  - This commit modifies
-  - This commit enhances
-  - This commit ensures
-  - This commit contains
+  - This\s+commit\s+adds
+  - This\s+commit\s+fixes
+  - This\s+commit\s+updates
+  - This\s+commit\s+removes
+  - This\s+commit\s+introduces
+  - This\s+commit\s+implements
+  - This\s+commit\s+improves
+  - This\s+commit\s+resolves
+  - This\s+commit\s+addresses
+  - This\s+commit\s+refactors
+  - This\s+commit\s+cleans\s+up
+  - This\s+commit\s+moves
+  - This\s+commit\s+renames
+  - This\s+commit\s+modifies
+  - This\s+commit\s+enhances
+  - This\s+commit\s+ensures
+  - This\s+commit\s+contains
 
   # "This change" preambles
-  - This change adds
-  - This change fixes
-  - This change updates
-  - This change removes
-  - This change introduces
-  - This change implements
-  - This change improves
-  - This change resolves
-  - This change addresses
-  - This change refactors
-  - This change ensures
-  - This change modifies
-  - This change enhances
+  - This\s+change\s+adds
+  - This\s+change\s+fixes
+  - This\s+change\s+updates
+  - This\s+change\s+removes
+  - This\s+change\s+introduces
+  - This\s+change\s+implements
+  - This\s+change\s+improves
+  - This\s+change\s+resolves
+  - This\s+change\s+addresses
+  - This\s+change\s+refactors
+  - This\s+change\s+ensures
+  - This\s+change\s+modifies
+  - This\s+change\s+enhances
 
   # "This PR" preambles
-  - This PR adds
-  - This PR fixes
-  - This PR updates
-  - This PR removes
-  - This PR introduces
-  - This PR implements
-  - This PR improves
-  - This PR resolves
-  - This PR addresses
-  - This PR refactors
-  - This PR contains
+  - This\s+PR\s+adds
+  - This\s+PR\s+fixes
+  - This\s+PR\s+updates
+  - This\s+PR\s+removes
+  - This\s+PR\s+introduces
+  - This\s+PR\s+implements
+  - This\s+PR\s+improves
+  - This\s+PR\s+resolves
+  - This\s+PR\s+addresses
+  - This\s+PR\s+refactors
+  - This\s+PR\s+contains
 
   # "This update" preambles
-  - This update adds
-  - This update fixes
-  - This update improves
-  - This update introduces
-  - This update implements
-  - This update resolves
-  - This update ensures
+  - This\s+update\s+adds
+  - This\s+update\s+fixes
+  - This\s+update\s+improves
+  - This\s+update\s+introduces
+  - This\s+update\s+implements
+  - This\s+update\s+resolves
+  - This\s+update\s+ensures
 
   # "These changes" preambles
-  - These changes add
-  - These changes fix
-  - These changes update
-  - These changes remove
-  - These changes introduce
-  - These changes implement
-  - These changes improve
-  - These changes resolve
-  - These changes address
-  - These changes ensure
+  - These\s+changes\s+add
+  - These\s+changes\s+fix
+  - These\s+changes\s+update
+  - These\s+changes\s+remove
+  - These\s+changes\s+introduce
+  - These\s+changes\s+implement
+  - These\s+changes\s+improve
+  - These\s+changes\s+resolve
+  - These\s+changes\s+address
+  - These\s+changes\s+ensure
 
   # "This patch" preambles
-  - This patch fixes
-  - This patch adds
-  - This patch updates
-  - This patch resolves
-  - This patch addresses
-  - This patch improves
+  - This\s+patch\s+fixes
+  - This\s+patch\s+adds
+  - This\s+patch\s+updates
+  - This\s+patch\s+resolves
+  - This\s+patch\s+addresses
+  - This\s+patch\s+improves
 
   # "In this commit/PR/change" preambles
-  - In this commit
-  - In this PR
-  - In this change
-  - In this update
-  - In this patch
-  - In this pull request
+  - In\s+this\s+commit
+  - In\s+this\s+PR
+  - In\s+this\s+change
+  - In\s+this\s+update
+  - In\s+this\s+patch
+  - In\s+this\s+pull\s+request

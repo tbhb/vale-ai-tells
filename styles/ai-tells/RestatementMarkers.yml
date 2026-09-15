@@ -41,59 +41,59 @@ ignorecase: true
 # "Holds true" stays in FigurativeHolds, so "The same holds true" fires
 # there and the parallel token steps around it.
 tokens:
-  - In other words
-  - Simply put
-  - Put simply
-  - Put differently
-  - To put it simply
-  - To put it another way
-  - Said differently
-  - To state it plainly
-  - To state this plainly
-  - To be more precise
-  - To be more specific
-  - To be more exact
-  - Or rather
-  - More precisely
-  - More specifically
-  - More accurately
-  - To clarify
-  - To rephrase
-  - To restate
-  - What I mean is
-  - What this means is
-  - What that means is
-  - In plainer terms
-  - In plain terms
-  - In plain English
-  - In simpler terms
-  - In simple terms
-  - To put it more simply
-  - To put it more directly
+  - In\s+other\s+words
+  - Simply\s+put
+  - Put\s+simply
+  - Put\s+differently
+  - To\s+put\s+it\s+simply
+  - To\s+put\s+it\s+another\s+way
+  - Said\s+differently
+  - To\s+state\s+it\s+plainly
+  - To\s+state\s+this\s+plainly
+  - To\s+be\s+more\s+precise
+  - To\s+be\s+more\s+specific
+  - To\s+be\s+more\s+exact
+  - Or\s+rather
+  - More\s+precisely
+  - More\s+specifically
+  - More\s+accurately
+  - To\s+clarify
+  - To\s+rephrase
+  - To\s+restate
+  - What\s+I\s+mean\s+is
+  - What\s+this\s+means\s+is
+  - What\s+that\s+means\s+is
+  - In\s+plainer\s+terms
+  - In\s+plain\s+terms
+  - In\s+plain\s+English
+  - In\s+simpler\s+terms
+  - In\s+simple\s+terms
+  - To\s+put\s+it\s+more\s+simply
+  - To\s+put\s+it\s+more\s+directly
 
   # --- The gloss openers ("Put another way, the offsets come from the
   # blob"; "which is to say, one read").
-  - Put another way
-  - Which is to say
+  - Put\s+another\s+way
+  - Which\s+is\s+to\s+say
 
   # --- The parallel restatement ("The same holds for writes," "The same
   # is true of the index," "The same applies to the reader," "The same
   # goes for every caller"). "The same value" and every other noun stay
   # quiet, since the verb is the gate.
-  - "the same (?:holds(?! true)|applies|goes|is true|is the case)"
+  - "the\\s+same\\s+(?:holds(?!\\s+true)|applies|goes|is\\s+true|is\\s+the\\s+case)"
 
   # --- The framing openers, gated on the capital and the comma ("In
   # practice, the index is one file"; "In effect, the join reverses";
   # "In the end, one read"). The (?-i:) group turns the rule's ignorecase
   # off for the opener, so "in practice tests" and a mid-sentence "in
   # effect" never fire.
-  - "(?-i:In practice)(?=,)"
-  - "(?-i:In effect)(?=,)"
-  - "(?-i:In the end)(?=,)"
+  - "(?-i:In\\s+practice)(?=,)"
+  - "(?-i:In\\s+effect)(?=,)"
+  - "(?-i:In\\s+the\\s+end)(?=,)"
 
   # --- The sentence-initial "Meaning" gloss, with its comma ("Meaning,
   # the cache is cold") or as the bare fragment ("Meaning the cache is
   # cold," "Meaning that one read suffices"). The capital plus the
   # determiner or pronoun keeps the noun ("the meaning of the flag")
   # out.
-  - "(?-i:Meaning)(?:(?=,)| (?:the|a|an|this|that|these|those|it|its|they|you|we|there|no|every|each|any|one|all|both|if|when|your|our|I)\\b)"
+  - "(?-i:Meaning)(?:(?=,)|\\s+(?:the|a|an|this|that|these|those|it|its|they|you|we|there|no|every|each|any|one|all|both|if|when|your|our|I)\\b)"

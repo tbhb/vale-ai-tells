@@ -5,66 +5,66 @@ level: error
 ignorecase: true
 tokens:
   # "Cannot be overstated" variants
-  - cannot be overstated
-  - can't be overstated
-  - cannot be understated
-  - can't be understated
-  - cannot be emphasized enough
-  - can't be emphasized enough
+  - cannot\s+be\s+overstated
+  - can't\s+be\s+overstated
+  - cannot\s+be\s+understated
+  - can't\s+be\s+understated
+  - cannot\s+be\s+emphasized\s+enough
+  - can't\s+be\s+emphasized\s+enough
 
   # "More important/critical/relevant than ever" variants
-  - more important than ever
-  - more critical than ever
-  - more relevant than ever
-  - more urgent than ever
-  - more necessary than ever
-  - more essential than ever
-  - more vital than ever
-  - more pressing than ever
-  - more significant than ever
+  - more\s+important\s+than\s+ever
+  - more\s+critical\s+than\s+ever
+  - more\s+relevant\s+than\s+ever
+  - more\s+urgent\s+than\s+ever
+  - more\s+necessary\s+than\s+ever
+  - more\s+essential\s+than\s+ever
+  - more\s+vital\s+than\s+ever
+  - more\s+pressing\s+than\s+ever
+  - more\s+significant\s+than\s+ever
 
   # "Has never been more X" variants
-  - has never been more important
-  - has never been more critical
-  - has never been more urgent
-  - has never been more relevant
-  - has never been more necessary
-  - has never been more essential
-  - has never been more vital
-  - has never been more pressing
-  - has never been more significant
-  - have never been more important
-  - have never been more critical
-  - have never been more urgent
-  - have never been more relevant
+  - has\s+never\s+been\s+more\s+important
+  - has\s+never\s+been\s+more\s+critical
+  - has\s+never\s+been\s+more\s+urgent
+  - has\s+never\s+been\s+more\s+relevant
+  - has\s+never\s+been\s+more\s+necessary
+  - has\s+never\s+been\s+more\s+essential
+  - has\s+never\s+been\s+more\s+vital
+  - has\s+never\s+been\s+more\s+pressing
+  - has\s+never\s+been\s+more\s+significant
+  - have\s+never\s+been\s+more\s+important
+  - have\s+never\s+been\s+more\s+critical
+  - have\s+never\s+been\s+more\s+urgent
+  - have\s+never\s+been\s+more\s+relevant
 
   # "The stakes have never been higher" variants
-  - the stakes have never been higher
-  - the stakes are higher than ever
-  - the stakes couldn't be higher
-  - the stakes are enormous
-  - the stakes are immense
+  - the\s+stakes\s+have\s+never\s+been\s+higher
+  - the\s+stakes\s+are\s+higher\s+than\s+ever
+  - the\s+stakes\s+couldn't\s+be\s+higher
+  - the\s+stakes\s+are\s+enormous
+  - the\s+stakes\s+are\s+immense
 
   # "At a crossroads" variants
-  - at a crossroads
-  - at an inflection point
-  - at a pivotal moment
-  - at a critical juncture
-  - at a defining moment
-  - at a turning point in history
-  - at a critical moment in history
-  - at a pivotal moment in history
+  - at\s+a\s+crossroads
+  - at\s+an\s+inflection\s+point
+  - at\s+a\s+pivotal\s+moment
+  - at\s+a\s+critical\s+juncture
+  - at\s+a\s+defining\s+moment
+  - at\s+a\s+turning\s+point\s+in\s+history
+  - at\s+a\s+critical\s+moment\s+in\s+history
+  - at\s+a\s+pivotal\s+moment\s+in\s+history
 
   # "Increasingly [adjective] world" variants
-  - in an increasingly complex world
-  - in an increasingly digital world
-  - in an increasingly connected world
-  - in an increasingly competitive world
-  - in an increasingly polarized world
-  - in an increasingly uncertain world
-  - in an increasingly fast-paced world
-  - in an increasingly globalized world
-  - in an increasingly data-driven world
-  - in an increasingly automated world
-  - in an ever more complex world
-  - in an ever more connected world
+  - in\s+an\s+increasingly\s+complex\s+world
+  - in\s+an\s+increasingly\s+digital\s+world
+  - in\s+an\s+increasingly\s+connected\s+world
+  - in\s+an\s+increasingly\s+competitive\s+world
+  - in\s+an\s+increasingly\s+polarized\s+world
+  - in\s+an\s+increasingly\s+uncertain\s+world
+  - in\s+an\s+increasingly\s+fast-paced\s+world
+  - in\s+an\s+increasingly\s+globalized\s+world
+  - in\s+an\s+increasingly\s+data-driven\s+world
+  - in\s+an\s+increasingly\s+automated\s+world
+  - in\s+an\s+ever\s+more\s+complex\s+world
+  - in\s+an\s+ever\s+more\s+connected\s+world

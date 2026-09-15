@@ -4,58 +4,58 @@ message: "AI puffery: '%s'. Use neutral, specific language."
 level: error
 ignorecase: true
 tokens:
-  - nestled in the
-  - nestled in a
-  - nestled between
-  - nestled among
-  - nestled alongside
-  - nestled within
-  - in the heart of
-  - at the heart of
-  - rich cultural heritage
-  - rich history and
-  - rich and diverse
-  - rich and vibrant
-  - vibrant community
-  - vibrant culture
-  - vibrant ecosystem
-  - vibrant atmosphere
-  - natural beauty
-  - a hub for
-  - a hub of
-  - a dynamic hub
-  - a thriving hub
-  - a cultural hub
-  - a beacon of
-  - a beacon for
-  - a treasure trove of
-  - a treasure trove for
-  - a shining example
-  - a prime example
-  - a masterclass in
-  - a testament to the
-  - a testament to its
-  - renowned for its
-  - renowned for their
-  - renowned for her
-  - renowned for his
-  - widely regarded as
-  - widely recognized as
-  - widely considered
-  - is home to
-  - has emerged as a
-  - has emerged as the
-  - has established itself as
-  - continues to evolve
-  - continues to thrive
-  - continues to grow
-  - continues to inspire
-  - left an indelible mark
-  - left an indelible impact
-  - leaving an indelible mark
-  - left a lasting impact
-  - left a lasting impression
-  - leaving a lasting impact
-  - a lasting legacy
-  - enduring legacy
-  - enduring impact
+  - nestled\s+in\s+the
+  - nestled\s+in\s+a
+  - nestled\s+between
+  - nestled\s+among
+  - nestled\s+alongside
+  - nestled\s+within
+  - in\s+the\s+heart\s+of
+  - at\s+the\s+heart\s+of
+  - rich\s+cultural\s+heritage
+  - rich\s+history\s+and
+  - rich\s+and\s+diverse
+  - rich\s+and\s+vibrant
+  - vibrant\s+community
+  - vibrant\s+culture
+  - vibrant\s+ecosystem
+  - vibrant\s+atmosphere
+  - natural\s+beauty
+  - a\s+hub\s+for
+  - a\s+hub\s+of
+  - a\s+dynamic\s+hub
+  - a\s+thriving\s+hub
+  - a\s+cultural\s+hub
+  - a\s+beacon\s+of
+  - a\s+beacon\s+for
+  - a\s+treasure\s+trove\s+of
+  - a\s+treasure\s+trove\s+for
+  - a\s+shining\s+example
+  - a\s+prime\s+example
+  - a\s+masterclass\s+in
+  - a\s+testament\s+to\s+the
+  - a\s+testament\s+to\s+its
+  - renowned\s+for\s+its
+  - renowned\s+for\s+their
+  - renowned\s+for\s+her
+  - renowned\s+for\s+his
+  - widely\s+regarded\s+as
+  - widely\s+recognized\s+as
+  - widely\s+considered
+  - is\s+home\s+to
+  - has\s+emerged\s+as\s+a
+  - has\s+emerged\s+as\s+the
+  - has\s+established\s+itself\s+as
+  - continues\s+to\s+evolve
+  - continues\s+to\s+thrive
+  - continues\s+to\s+grow
+  - continues\s+to\s+inspire
+  - left\s+an\s+indelible\s+mark
+  - left\s+an\s+indelible\s+impact
+  - leaving\s+an\s+indelible\s+mark
+  - left\s+a\s+lasting\s+impact
+  - left\s+a\s+lasting\s+impression
+  - leaving\s+a\s+lasting\s+impact
+  - a\s+lasting\s+legacy
+  - enduring\s+legacy
+  - enduring\s+impact

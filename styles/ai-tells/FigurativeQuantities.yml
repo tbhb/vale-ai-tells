@@ -23,71 +23,71 @@ ignorecase: true
 # "a ton of" two, "a flurry of" once, and everything else zero.
 tokens:
   # --- Small counts: the body-part and kitchen dodges for "a few."
-  - a handful
-  - the handful of
-  - handfuls of
-  - a fistful of
-  - an armful of
-  - a smattering
-  - a sprinkling of
-  - a sliver of
-  - a dash of
-  - a pinch of
-  - a dollop of
+  - a\s+handful
+  - the\s+handful\s+of
+  - handfuls\s+of
+  - a\s+fistful\s+of
+  - an\s+armful\s+of
+  - a\s+smattering
+  - a\s+sprinkling\s+of
+  - a\s+sliver\s+of
+  - a\s+dash\s+of
+  - a\s+pinch\s+of
+  - a\s+dollop\s+of
 
   # --- Large counts: the crowd nouns standing in for "many."
-  - a slew of
-  - a (?:whole )?host of
-  - a raft of
-  - a spate of
-  - a flurry of
-  - a litany of
-  - a laundry list of
-  - a bevy of
-  - a grab bag of
+  - a\s+slew\s+of
+  - a\s+(?:whole\s+)?host\s+of
+  - a\s+raft\s+of
+  - a\s+spate\s+of
+  - a\s+flurry\s+of
+  - a\s+litany\s+of
+  - a\s+laundry\s+list\s+of
+  - a\s+bevy\s+of
+  - a\s+grab\s+bag\s+of
 
   # --- Container, vehicle, and landform scale.
-  - a boatload of
-  - boatloads of
-  - a truckload of
-  - truckloads of
-  - a ton of
-  - tons of
-  - a heap of
-  - heaps of
-  - a pile of
-  - a mountain of
+  - a\s+boatload\s+of
+  - boatloads\s+of
+  - a\s+truckload\s+of
+  - truckloads\s+of
+  - a\s+ton\s+of
+  - tons\s+of
+  - a\s+heap\s+of
+  - heaps\s+of
+  - a\s+pile\s+of
+  - a\s+mountain\s+of
 
   # --- Weather and water scale.
-  - a sea of
-  - an ocean of
-  - a flood of
-  - a wave of
-  - a deluge of
-  - a torrent of
-  - an avalanche of
+  - a\s+sea\s+of
+  - an\s+ocean\s+of
+  - a\s+flood\s+of
+  - a\s+wave\s+of
+  - a\s+deluge\s+of
+  - a\s+torrent\s+of
+  - an\s+avalanche\s+of
 
   # --- The fancy vague quantities, migrated from FillerPhrases.
-  - a myriad of
-  - a plethora of
-  - a wealth of
-  - a trove of
+  - a\s+myriad\s+of
+  - a\s+plethora\s+of
+  - a\s+wealth\s+of
+  - a\s+trove\s+of
 
   # --- Variety in place of quantity: a mixture metaphor where a plain list
   # of what is actually in the mix would serve.
-  - a smorgasbord of
-  - a cornucopia of
-  - a medley of
-  - a patchwork of
-  - a mosaic of
-  - a constellation of
+  - a\s+smorgasbord\s+of
+  - a\s+cornucopia\s+of
+  - a\s+medley\s+of
+  - a\s+patchwork\s+of
+  - a\s+mosaic\s+of
+  - a\s+constellation\s+of
 
   # --- "Array" only when an adjective inflates it. The bare noun is
   # literal everywhere in technical prose, so it stays uncovered.
-  - an? (?:vast|wide|broad|whole|dizzying|impressive|endless|bewildering) array of
+  - an?\s+(?:vast|wide|broad|whole|dizzying|impressive|endless|bewildering)\s+array\s+of
 
   # --- Distance standing in for a count ("how far one label reaches,"
   # "how far the item copied across the corpus," "how far these numbers
   # travel"). Added after a documentation-corpus audit (2026-09); the
   # token measures zero across the Go and Python standard libraries.
-  - how far (?:a|an|the|this|that|these|those|each|every|its|their|one|any|some) (?:[a-z'-]+ )?[a-z]+ (?:reach(?:es|ed)?|travel(?:s|l?ed)?|copied|copies|spread|spreads|propagat(?:es|ed)|carr(?:ies|ied|y)|go(?:es)?|went|extends?|extended)
+  - how\s+far\s+(?:a|an|the|this|that|these|those|each|every|its|their|one|any|some)\s+(?:[a-z'-]+\s+)?[a-z]+\s+(?:reach(?:es|ed)?|travel(?:s|l?ed)?|copied|copies|spread|spreads|propagat(?:es|ed)|carr(?:ies|ied|y)|go(?:es)?|went|extends?|extended)

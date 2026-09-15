@@ -75,18 +75,18 @@ tokens:
   # ("carries weight in the review," "carries implications," "the term
   # carries baggage"). "Carries risk" is standard in medical and finance
   # registers; disable the rule for those files.
-  - "\\bcarr(?:y|ies|ied|ying) (?:significant |real |extra |added |considerable |serious |enormous |heavy )?(?:weight|significance|meaning|implications?|connotations?|baggage|risks?|consequences|urgency|stigma)\\b"
-  - "\\bcarr(?:y|ies|ied|ying) (?:the same|as much|more|less|little|no|equal|the|some) weight\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?:significant\\s+|real\\s+|extra\\s+|added\\s+|considerable\\s+|serious\\s+|enormous\\s+|heavy\\s+)?(?:weight|significance|meaning|implications?|connotations?|baggage|risks?|consequences|urgency|stigma)\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?:the\\s+same|as\\s+much|more|less|little|no|equal|the|some)\\s+weight\\b"
 
   # --- Attached fine print: the change ships with a warning label
   # ("carries a caveat," "carries a cost," "carries a penalty"). The
   # sibling of the earning figure in FigurativeEarns, which flags what
   # the artifact earns rather than what it lugs around.
-  - "\\bcarr(?:y|ies|ied|ying) (?:a|an|the) (?:caveat|warning|cost|price|price tag|penalty|footnote|asterisk|catch|downside|tradeoff|trade-off)\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?:a|an|the)\\s+(?:caveat|warning|cost|price|price\\s+tag|penalty|footnote|asterisk|catch|downside|tradeoff|trade-off)\\b"
 
   # --- Heroics: one component drags the rest across the finish line
   # ("the cache carries the team," "one test carries the suite").
-  - "\\bcarr(?:y|ies|ied|ying) the (?:day|team|torch|banner|mantle|load|conversation|narrative|argument|story|suite|whole \\w+)\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+the\\s+(?:day|team|torch|banner|mantle|load|conversation|narrative|argument|story|suite|whole\\s+\\w+)\\b"
 
   # --- Content possession: an inanimate component treated as a vessel that
   # hauls abstract cargo rather than one that contains or transmits it ("the
@@ -98,7 +98,7 @@ tokens:
   # the head-noun set excludes physical objects, so literal "carries freight"
   # stays quiet. An optional determiner and one modifier word sit between the
   # verb and the head noun.
-  - "\\bcarr(?:y|ies|ied|ying) (?!out\\b)(?:no |a |an |any |little |the |all the |its |their |extra |additional |significant |real |actual |meaningful |core )?(?:[a-z][-a-z]* )?(?:logic|functionality|behaviors?|behaviours?|semantics|side[ -]effects?|state|payloads?|data|traffic|tokens?|headers?|cookies?|signals?|metadata|information)\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?!out\\b)(?:no\\s+|a\\s+|an\\s+|any\\s+|little\\s+|the\\s+|all\\s+the\\s+|its\\s+|their\\s+|extra\\s+|additional\\s+|significant\\s+|real\\s+|actual\\s+|meaningful\\s+|core\\s+)?(?:[a-z][-a-z]*\\s+)?(?:logic|functionality|behaviors?|behaviours?|semantics|side[ -]effects?|state|payloads?|data|traffic|tokens?|headers?|cookies?|signals?|metadata|information)\\b"
 
   # --- Rule possession: a file or section treated as the bearer of a policy
   # rather than the place the policy is written ("the lower block carries the
@@ -116,7 +116,7 @@ tokens:
   # digit propagated to the next column rather than the verb of possession
   # ("carry the constraint" in a solver comment). Numeric and cryptographic
   # prose already disables this rule for the freight tokens above.
-  - "\\bcarr(?:y|ies|ied|ying) (?!out\\b|over\\b)(?:no |a |an |any |the |its |their |that |this |the same |every )?(?:[a-z][-a-z]* )?(?:pattern|rule|exemption|exception|convention|constraint|requirement|policy|contract|guarantee|invariant|override|precedent|assumption|default|setting)s?\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?!out\\b|over\\b)(?:no\\s+|a\\s+|an\\s+|any\\s+|the\\s+|its\\s+|their\\s+|that\\s+|this\\s+|the\\s+same\\s+|every\\s+)?(?:[a-z][-a-z]*\\s+)?(?:pattern|rule|exemption|exception|convention|constraint|requirement|policy|contract|guarantee|invariant|override|precedent|assumption|default|setting)s?\\b"
 
   # --- Typographic cargo: the freight is a mark on the page or in a name
   # ("carries a repotools: prefix," "none of the three carries a suffix,"
@@ -126,7 +126,7 @@ tokens:
   # documentation says a function "may carry a return annotation," so that
   # noun floods. The rest measured zero across the Go and Python standard
   # libraries.
-  - "\\bcarr(?:y|ies|ied|ying) (?!out\\b|over\\b)(?:no |a |an |any |the |its |their |that |this |every )?(?:[a-z][-a-z]* )?(?:prefix(?:es)?|suffix(?:es)?|tags?|labels?|markers?|trailers?|templates?|stamps?)\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?!out\\b|over\\b)(?:no\\s+|a\\s+|an\\s+|any\\s+|the\\s+|its\\s+|their\\s+|that\\s+|this\\s+|every\\s+)?(?:[a-z][-a-z]*\\s+)?(?:prefix(?:es)?|suffix(?:es)?|tags?|labels?|markers?|trailers?|templates?|stamps?)\\b"
 
   # --- Negated cargo: the spec-sheet negation with the object left open
   # ("it carries no counts and no dates," "carries zero overhead").
@@ -143,12 +143,12 @@ tokens:
   # parser masks the code span to, which is what the alternation matches
   # ("carries no `counts`"). Both spellings measure zero in the corpora,
   # like the bare one.
-  - "\\bcarr(?:y|ies|ied|ying) (?:no (?!(?:one|matter|more|less|fewer|longer|sooner|later|earlier|better|worse|faster|slower|higher|lower|further|deeper|closer|harder|easier)\\b)|zero (?!(?:or|value|values|to)\\b))(?:['\"‘“`]?[a-z][-a-z]*\\b|\\*+)"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?:no\\s+(?!(?:one|matter|more|less|fewer|longer|sooner|later|earlier|better|worse|faster|slower|higher|lower|further|deeper|closer|harder|easier)\\b)|zero\\s+(?!(?:or|value|values|to)\\b))(?:['\"‘“`]?[a-z][-a-z]*\\b|\\*+)"
 
   # --- Mirrored possession: the same-construction sibling of FigurativeHolds
   # ("carries the same caveat," "carries a similar risk"). The comparison
   # word is the tell, so the object stays open.
-  - "\\bcarr(?:y|ies|ied|ying) (?:the same|a similar|an identical|a matching)\\b"
+  - "\\bcarr(?:y|ies|ied|ying)\\s+(?:the\\s+same|a\\s+similar|an\\s+identical|a\\s+matching)\\b"
 
   # --- Open-subject conveyance: any determiner-gated subject as the
   # bearer, with the complement left open ("the manifest carries the pin,"
@@ -186,7 +186,7 @@ tokens:
   # verb ("a reverse butterfly and carries with it"). The preposition
   # lookahead refuses the gerund shape, and the contraction guard keeps
   # "it's not worth carrying" out of the possessive slot.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|no|one|any|some|(?!(?:it|that|there|what|here|let)'s)[a-z]+'s) (?:[a-z0-9][-a-z0-9']* ){0,2}(?!(?:of|in|for|by|with|from|at|on|to|worth|without|while|when|before|after) )[a-z][-a-z']* (?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply) )?carr(?:ies|ied|ying)(?!\\s+(?:out|over|on)\\b)\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|no|one|any|some|(?!(?:it|that|there|what|here|let)'s)[a-z]+'s)\\s+(?:[a-z0-9][-a-z0-9']*\\s+){0,2}(?!(?:of|in|for|by|with|from|at|on|to|worth|without|while|when|before|after)\\s+)[a-z][-a-z']*\\s+(?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply)\\s+)?carr(?:ies|ied|ying)(?!\\s+(?:out|over|on)\\b)\\b"
 
   # --- Pronoun subject: the bearer named by a pronoun, which no determiner
   # gate reaches ("no z-index it carries changes that," "this carries more
@@ -198,7 +198,7 @@ tokens:
   # exception; the six that remain are the figure itself ("It carries
   # significant complexity," "it carries a dependency on the previous
   # store," "which carries the following notice").
-  - "\\b(?:[a-z]+,? ){0,2}(?:it|which|that|what|who|this) (?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply) )?carr(?:ies|ied|ying)(?!\\s+(?:out|over|on)\\b)\\b"
+  - "\\b(?:[a-z]+,?\\s+){0,2}(?:it|which|that|what|who|this)\\s+(?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply)\\s+)?carr(?:ies|ied|ying)(?!\\s+(?:out|over|on)\\b)\\b"
 
   # --- Code-span subject: an identifier as the bearer ("`Icon` carries its
   # own box," "the `Match` comparison carries the option," "`caution`
@@ -210,8 +210,8 @@ tokens:
   # dropped and take the verb with it, leaving nothing for the verb-first
   # tokens. An identifier cannot carry anything literally, and the corpora
   # are plain text with no masking, so the shape measures nothing there.
-  - "(?<=\\*+ (?:[a-z][-a-z']* ){0,2})carr(?:ies|ied|ying)(?!\\s+(?:out|over|on)\\b)\\b"
-  - "(?<=\\*+ (?:[a-z][-a-z']* ){0,2})carry\\b(?! (?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|[.,;:)/])"
+  - "(?<=\\*+\\s+(?:[a-z][-a-z']*\\s+){0,2})carr(?:ies|ied|ying)(?!\\s+(?:out|over|on)\\b)\\b"
+  - "(?<=\\*+\\s+(?:[a-z][-a-z']*\\s+){0,2})carry\\b(?!\\s+(?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|[.,;:)/])"
 
   # --- Auxiliary before the bare verb: a modal, an infinitive marker, or a
   # negated "do" proves "carry" is the verb where the arithmetic noun could
@@ -232,7 +232,7 @@ tokens:
   # refusal, and "the names the dictionaries don't carry, plus" reports. The
   # words ahead of the auxiliary ride inside the span for the exceptions
   # ("the truck can carry" stays quiet).
-  - "\\b(?:[a-z]+ ){0,2}(?:(?:can|cannot|can't|could|may|might|must|shall|should|will|won't|would|do|does|did|don't|doesn't|didn't|not|never) carry\\b(?![- ]out\\b| (?:over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b| and carry| (?:its|their) (?:own )?weight\\b)|to carry\\b(?![- ]out\\b| (?:over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b| and carry| (?:its|their) (?:own )?weight\\b|[.,;:)/]))"
+  - "\\b(?:[a-z]+\\s+){0,2}(?:(?:can|cannot|can't|could|may|might|must|shall|should|will|won't|would|do|does|did|don't|doesn't|didn't|not|never)\\s+carry\\b(?![- ]out\\b|\\s+(?:over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|\\s+and\\s+carry|\\s+(?:its|their)\\s+(?:own\\s+)?weight\\b)|to\\s+carry\\b(?![- ]out\\b|\\s+(?:over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|\\s+and\\s+carry|\\s+(?:its|their)\\s+(?:own\\s+)?weight\\b|[.,;:)/]))"
 
   # --- The bare "carry" the tokens above leave out, admitted where a
   # plural subject or a relative pronoun proves it is the verb ("the
@@ -249,8 +249,8 @@ tokens:
   # ("the names already carry," "Today's assets carry only two forms") and
   # added the plural pronouns to the relative token ("These carry offsets"),
   # each at zero corpus cost.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|most|some|many|two|three|several|other|no|one|any|(?!(?:it|that|there|what|here|let)'s)[a-z]+'s) (?:[a-z0-9][-a-z0-9']* ){0,2}[a-z]+s (?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply) )?carry\\b(?! (?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b)"
-  - "\\b(?:that|which|who|what|they|these|those|both) (?:[a-z]+ )?carry\\b(?! (?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|[.,;:)/])"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|most|some|many|two|three|several|other|no|one|any|(?!(?:it|that|there|what|here|let)'s)[a-z]+'s)\\s+(?:[a-z0-9][-a-z0-9']*\\s+){0,2}[a-z]+s\\s+(?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply)\\s+)?carry\\b(?!\\s+(?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b)"
+  - "\\b(?:that|which|who|what|they|these|those|both)\\s+(?:[a-z]+\\s+)?carry\\b(?!\\s+(?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|[.,;:)/])"
 
   # --- The bare plural with no determiner, which the token above kept out
   # over the arithmetic noun ("returns the carry," "output 0 is
@@ -265,4 +265,4 @@ tokens:
   # ("object types carry a single lifetime bound," "Defaults always carry
   # some potential to surprise") and a clause-final relative the lookahead
   # refuses.
-  - "\\b(?!(?:this|is|was|has|as|does|thus|its|his|us|plus|minus|yes)\\b)[a-z]+s (?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply) )?carry\\b(?! (?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|[.,;:)/])"
+  - "\\b(?!(?:this|is|was|has|as|does|thus|its|his|us|plus|minus|yes)\\b)[a-z]+s\\s+(?:(?:already|also|always|never|still|then|now|only|just|otherwise|simply)\\s+)?carry\\b(?!\\s+(?:out|over|on|if|when|bits?|flags?|chains?|in|save|propagation|lookahead|select)\\b|[.,;:)/])"

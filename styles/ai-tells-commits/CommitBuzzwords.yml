@@ -5,101 +5,101 @@ level: error
 ignorecase: true
 tokens:
   # "comprehensive" combos
-  - comprehensive tests
-  - comprehensive test suite
-  - comprehensive test coverage
-  - comprehensive error handling
-  - comprehensive solution
-  - comprehensive coverage
-  - comprehensive validation
-  - comprehensive logging
-  - comprehensive documentation
-  - comprehensive refactor
-  - comprehensive set of
-  - comprehensive unit tests
-  - comprehensive e2e
+  - comprehensive\s+tests
+  - comprehensive\s+test\s+suite
+  - comprehensive\s+test\s+coverage
+  - comprehensive\s+error\s+handling
+  - comprehensive\s+solution
+  - comprehensive\s+coverage
+  - comprehensive\s+validation
+  - comprehensive\s+logging
+  - comprehensive\s+documentation
+  - comprehensive\s+refactor
+  - comprehensive\s+set\s+of
+  - comprehensive\s+unit\s+tests
+  - comprehensive\s+e2e
 
   # "robust" combos
-  - robust error handling
-  - robust solution
-  - robust validation
-  - robust implementation
-  - robust logging
-  - robust testing
-  - robust set of
-  - robust type checking
-  - more robust
+  - robust\s+error\s+handling
+  - robust\s+solution
+  - robust\s+validation
+  - robust\s+implementation
+  - robust\s+logging
+  - robust\s+testing
+  - robust\s+set\s+of
+  - robust\s+type\s+checking
+  - more\s+robust
 
   # "proper" combos
-  - proper validation
-  - proper handling
-  - proper error handling
-  - proper error messages
-  - proper type checking
-  - proper cleanup
-  - proper initialization
-  - properly handle
-  - properly validate
-  - properly initialize
-  - properly clean up
+  - proper\s+validation
+  - proper\s+handling
+  - proper\s+error\s+handling
+  - proper\s+error\s+messages
+  - proper\s+type\s+checking
+  - proper\s+cleanup
+  - proper\s+initialization
+  - properly\s+handle
+  - properly\s+validate
+  - properly\s+initialize
+  - properly\s+clean\s+up
 
   # "relevant" combos
-  - relevant components
-  - relevant tests
-  - relevant documentation
-  - relevant files
-  - relevant modules
-  - relevant sections
-  - update relevant
+  - relevant\s+components
+  - relevant\s+tests
+  - relevant\s+documentation
+  - relevant\s+files
+  - relevant\s+modules
+  - relevant\s+sections
+  - update\s+relevant
 
   # "appropriate" combos
-  - appropriate error messages
-  - appropriate error handling
-  - appropriate validation
-  - appropriate handling
-  - appropriate defaults
-  - appropriate types
+  - appropriate\s+error\s+messages
+  - appropriate\s+error\s+handling
+  - appropriate\s+validation
+  - appropriate\s+handling
+  - appropriate\s+defaults
+  - appropriate\s+types
 
   # "necessary" combos
-  - necessary changes
-  - necessary updates
-  - necessary tests
-  - necessary fixes
-  - necessary adjustments
-  - necessary modifications
-  - necessary refactoring
-  - necessary cleanup
+  - necessary\s+changes
+  - necessary\s+updates
+  - necessary\s+tests
+  - necessary\s+fixes
+  - necessary\s+adjustments
+  - necessary\s+modifications
+  - necessary\s+refactoring
+  - necessary\s+cleanup
 
   # "various" combos
-  - various improvements
-  - various fixes
-  - various updates
-  - various changes
-  - various issues
-  - various places
-  - various components
-  - various modules
+  - various\s+improvements
+  - various\s+fixes
+  - various\s+updates
+  - various\s+changes
+  - various\s+issues
+  - various\s+places
+  - various\s+components
+  - various\s+modules
 
   # "overall" combos
-  - overall performance
-  - overall quality
-  - overall readability
-  - overall structure
-  - overall code quality
-  - overall maintainability
-  - overall stability
-  - overall experience
+  - overall\s+performance
+  - overall\s+quality
+  - overall\s+readability
+  - overall\s+structure
+  - overall\s+code\s+quality
+  - overall\s+maintainability
+  - overall\s+stability
+  - overall\s+experience
 
   # "corresponding" combos
-  - corresponding tests
-  - corresponding changes
-  - corresponding updates
-  - corresponding documentation
-  - corresponding types
+  - corresponding\s+tests
+  - corresponding\s+changes
+  - corresponding\s+updates
+  - corresponding\s+documentation
+  - corresponding\s+types
 
   # "associated" and "related" combos
-  - and related changes
-  - and related updates
-  - and related tests
-  - and associated changes
-  - and associated tests
+  - and\s+related\s+changes
+  - and\s+related\s+updates
+  - and\s+related\s+tests
+  - and\s+associated\s+changes
+  - and\s+associated\s+tests

@@ -105,13 +105,13 @@ tokens:
   # separate commit," "both halves land together"). The one match across
   # the Go and Python standard libraries is a Go comment promising that
   # semantics "all land as expected," which is the tell itself.
-  - "\\b\\w+ land(?:s|ed)? (?:on|in|into|at|here|there|upstream|downstream|alongside|as|first|next|separately|together|soon|later|cleanly|safely|via|early|late)\\b"
+  - "\\b\\w+\\s+land(?:s|ed)?\\s+(?:on|in|into|at|here|there|upstream|downstream|alongside|as|first|next|separately|together|soon|later|cleanly|safely|via|early|late)\\b"
   # A temporal or conditional subordinator + <subject> + "lands" with no
   # destination ("once the feature lands," "when the PR lands," "until the fix
   # lands"). The subordinator is the tell: bare "X lands" is too broad to flag,
   # but "once/when/after X lands" reliably means ships or merges in prose. The
   # shared exceptions still fire, so "when the plane lands" stays quiet.
-  - "\\b(?:once|when|whenever|after|before|until|till|if|as soon as|the (?:moment|second|minute|day|instant)) (?:\\w+ ){1,4}land(?:s|ed)?\\b"
+  - "\\b(?:once|when|whenever|after|before|until|till|if|as\\s+soon\\s+as|the\\s+(?:moment|second|minute|day|instant))\\s+(?:\\w+\\s+){1,4}land(?:s|ed)?\\b"
   # Perfect and adverbial arrival with the subject in the span ("the fix
   # has landed," "support finally landed"). The subject word rides inside
   # the match so the shared exceptions still apply, and "the plane has
@@ -120,12 +120,12 @@ tokens:
   # exceptions can see it. The one match across the Go and Python standard
   # libraries is a Go comment waiting until "the multi-value proposal has
   # landed," which is the tell itself.
-  - "\\b\\w+ (?:has|have|had|hasn't|haven't|just|finally|already|eventually|recently|never) (?:just |finally |already |now |recently |not )?landed(?: (?:a|an|the|this|that) \\w+)?\\b"
+  - "\\b\\w+\\s+(?:has|have|had|hasn't|haven't|just|finally|already|eventually|recently|never)\\s+(?:just\\s+|finally\\s+|already\\s+|now\\s+|recently\\s+|not\\s+)?landed(?:\\s+(?:a|an|the|this|that)\\s+\\w+)?\\b"
   # Bare arrival at a clause boundary ("once merged, the fix lands." "the
   # rewrite landed, and everything broke"). The lookahead keeps the
   # punctuation out of the span while gating on it, and the subject word
   # stays inside the span for the exceptions.
-  - "\\b\\w+ land(?:s|ed)(?=[.,;:!?])"
+  - "\\b\\w+\\s+land(?:s|ed)(?=[.,;:!?])"
   # Transitive landing: the change as cargo to be set down ("land the
   # rule," "landed a fix," "landing this in v2 means"). Verb-first, so the
   # subject gate above cannot see it. The object rides inside the span,
@@ -137,7 +137,7 @@ tokens:
   # the Go and Python standard libraries. The known false positive is the
   # gerund noun read ("the landing the pilot made"); aviation writing
   # already disables the rule.
-  - "\\bland(?:s|ed|ing) (?:a|an|the|this|that|these|those|its|their|every|each|one|any|some) (?:[a-z]+ )?\\w+"
+  - "\\bland(?:s|ed|ing)\\s+(?:a|an|the|this|that|these|those|its|their|every|each|one|any|some)\\s+(?:[a-z]+\\s+)?\\w+"
   # The same transitive construction with a pronoun object ("landing it means
   # rewording this package first," "lands them separately").
-  - "\\bland(?:s|ed|ing) (?:it|them|everything|both)\\b"
+  - "\\bland(?:s|ed|ing)\\s+(?:it|them|everything|both)\\b"

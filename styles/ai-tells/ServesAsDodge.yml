@@ -4,56 +4,56 @@ message: "AI copula dodge: '%s'. Use 'is' or 'are' instead of this inflated cons
 level: error
 ignorecase: true
 tokens:
-  - serves as a
-  - serves as an
-  - serves as the
-  - served as a
-  - served as an
-  - served as the
-  - serving as a
-  - serving as an
-  - serving as the
-  - stands as a
-  - stands as an
-  - stands as the
-  - stood as a
-  - stood as an
-  - stood as the
-  - standing as a
-  - standing as an
-  - standing as the
-  - marks a pivotal
-  - marks a significant
-  - marks a crucial
-  - marks a key
-  - marks a turning
-  - marks a critical
-  - marks a major
-  - marks a defining
-  - marks a new
-  - represents a significant
-  - represents a pivotal
-  - represents a crucial
-  - represents a key
-  - represents a major
-  - represents a fundamental
-  - represents a paradigm
-  - boasts a vibrant
-  - boasts a rich
-  - boasts a diverse
-  - boasts a wide
-  - boasts a unique
-  - boasts a thriving
-  - boasts an impressive
-  - features a wide
-  - features a rich
-  - features a diverse
-  - features a unique
-  - features a vibrant
-  - offers a unique
-  - offers a wide
-  - offers a comprehensive
-  - offers a diverse
+  - serves\s+as\s+a
+  - serves\s+as\s+an
+  - serves\s+as\s+the
+  - served\s+as\s+a
+  - served\s+as\s+an
+  - served\s+as\s+the
+  - serving\s+as\s+a
+  - serving\s+as\s+an
+  - serving\s+as\s+the
+  - stands\s+as\s+a
+  - stands\s+as\s+an
+  - stands\s+as\s+the
+  - stood\s+as\s+a
+  - stood\s+as\s+an
+  - stood\s+as\s+the
+  - standing\s+as\s+a
+  - standing\s+as\s+an
+  - standing\s+as\s+the
+  - marks\s+a\s+pivotal
+  - marks\s+a\s+significant
+  - marks\s+a\s+crucial
+  - marks\s+a\s+key
+  - marks\s+a\s+turning
+  - marks\s+a\s+critical
+  - marks\s+a\s+major
+  - marks\s+a\s+defining
+  - marks\s+a\s+new
+  - represents\s+a\s+significant
+  - represents\s+a\s+pivotal
+  - represents\s+a\s+crucial
+  - represents\s+a\s+key
+  - represents\s+a\s+major
+  - represents\s+a\s+fundamental
+  - represents\s+a\s+paradigm
+  - boasts\s+a\s+vibrant
+  - boasts\s+a\s+rich
+  - boasts\s+a\s+diverse
+  - boasts\s+a\s+wide
+  - boasts\s+a\s+unique
+  - boasts\s+a\s+thriving
+  - boasts\s+an\s+impressive
+  - features\s+a\s+wide
+  - features\s+a\s+rich
+  - features\s+a\s+diverse
+  - features\s+a\s+unique
+  - features\s+a\s+vibrant
+  - offers\s+a\s+unique
+  - offers\s+a\s+wide
+  - offers\s+a\s+comprehensive
+  - offers\s+a\s+diverse
 
   # === Colon-cheat: copula-replacement remediation ===
   # AI evades weak-verb / passive-voice lints by replacing "is" or
@@ -63,4 +63,4 @@ tokens:
   # Triggered by a 4+ word definite-NP subject, indefinite article
   # after the colon, and 6+ token descriptive content (filters
   # short pedagogical "X is: Y" answers).
-  - "The [^,.:!?\\s]+(?: [^,.:!?\\s]+){2,}: an? [^,.:!?\\s]+(?: [^,.:!?\\s]+){4,}"
+  - "The\\s+[^,.:!?\\s]+(?:\\s+[^,.:!?\\s]+){2,}:\\s+an?\\s+[^,.:!?\\s]+(?:\\s+[^,.:!?\\s]+){4,}"

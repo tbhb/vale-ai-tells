@@ -35,56 +35,56 @@ tokens:
   # --- The way as progress: the project as a walk ("learned a lot
   # along the way," "supported every step of the way," "gets us most of
   # the way there," "halfway there").
-  - "\\balong the way\\b"
-  - "\\bevery step of the way\\b"
-  - "\\bof the way there\\b"
-  - "\\bhalfway there\\b"
+  - "\\balong\\s+the\\s+way\\b"
+  - "\\bevery\\s+step\\s+of\\s+the\\s+way\\b"
+  - "\\bof\\s+the\\s+way\\s+there\\b"
+  - "\\bhalfway\\s+there\\b"
 
   # --- The deliverable in transit ("a fix is on the way," "well on its
   # way to stable," "with more on the way," "en route to general
   # availability"). The copula and possessive gates keep the manner
   # sense of "way" out.
-  - "\\bon (?:its|their|our|your) way\\b"
-  - "\\b(?:is|are|was|were) on the way\\b"
-  - "\\bmore on the way\\b"
-  - "\\bwell on the way\\b"
-  - "\\ben route to\\b"
+  - "\\bon\\s+(?:its|their|our|your)\\s+way\\b"
+  - "\\b(?:is|are|was|were)\\s+on\\s+the\\s+way\\b"
+  - "\\bmore\\s+on\\s+the\\s+way\\b"
+  - "\\bwell\\s+on\\s+the\\s+way\\b"
+  - "\\ben\\s+route\\s+to\\b"
 
   # --- Finding a way: the change as a wanderer ("the bug found its way
   # into production," "the value makes its way through the queue,"
   # "this paves the way for streaming").
-  - "\\b(?:finds?|found|finding|makes?|made|making|works?|worked|working|winds?|wound|winding|weaves?|wove|weaving) (?:its|their) way\\b"
-  - "\\bpav(?:es?|ed) the way\\b"
+  - "\\b(?:finds?|found|finding|makes?|made|making|works?|worked|working|winds?|wound|winding|weaves?|wove|weaving)\\s+(?:its|their)\\s+way\\b"
+  - "\\bpav(?:es?|ed)\\s+the\\s+way\\b"
 
   # --- Making it: the record as a traveler who arrives ("items that
   # never made it through the first stage," "the value makes it into the
   # index," "made it to production"). Added after a documentation-corpus
   # audit (2026-09); eleven hits across the Go and Python standard
   # libraries ("won't make it into the final mantissa"), each the figure.
-  - "\\bma(?:de|kes?|king) it (?:through|past|to|into|out|in|over|across)\\b"
+  - "\\bma(?:de|kes?|king)\\s+it\\s+(?:through|past|to|into|out|in|over|across)\\b"
 
   # --- Walking the workflow: a reader or a tool taken along a path
   # ("walks the workflow," "walk the pipeline"). "Walks the tree" stays
   # out as the traversal term of art.
-  - "\\bwalk(?:s|ed|ing)? (?:the|each|every|all|its|their|up|down|two|three|four|five|\\d+) (?:[a-z]+ )?(?:workflow|pipeline|stages?|steps?|process|procedure|tiers?|levels?|ladder|rungs?|precedence)\\b"
+  - "\\bwalk(?:s|ed|ing)?\\s+(?:the|each|every|all|its|their|up|down|two|three|four|five|\\d+)\\s+(?:[a-z]+\\s+)?(?:workflow|pipeline|stages?|steps?|process|procedure|tiers?|levels?|ladder|rungs?|precedence)\\b"
 
   # --- Distance as progress ("goes a long way toward clean diffs,"
   # "has come a long way," "a long way to go").
-  - "\\ba long way\\b"
+  - "\\ba\\s+long\\s+way\\b"
 
   # --- Path and road ("a path forward," "on a path to stability," "on
   # the road to recovery," "a few bumps in the road," "bites us down
   # the road," "problems down the line").
-  - "\\bpath forward\\b"
-  - "\\bon a path to\\b"
-  - "\\bon the road to\\b"
-  - "\\b(?:the|a) (?:long )?road ahead\\b"
-  - "\\bbumps? in the road\\b"
-  - "\\bdown the road\\b"
-  - "\\bdown the line\\b"
+  - "\\bpath\\s+forward\\b"
+  - "\\bon\\s+a\\s+path\\s+to\\b"
+  - "\\bon\\s+the\\s+road\\s+to\\b"
+  - "\\b(?:the|a)\\s+(?:long\\s+)?road\\s+ahead\\b"
+  - "\\bbumps?\\s+in\\s+the\\s+road\\b"
+  - "\\bdown\\s+the\\s+road\\b"
+  - "\\bdown\\s+the\\s+line\\b"
 
   # --- The journey itself ("our journey began with one rule," "the
   # journey from prototype to production"). The adjacency gate keeps
   # the UX term of art "the user journey" quiet.
-  - "\\b(?:the|a|our|this|that|its) (?:own )?journey\\b"
-  - "\\bjourney (?:from|to|into|toward|towards)\\b"
+  - "\\b(?:the|a|our|this|that|its)\\s+(?:own\\s+)?journey\\b"
+  - "\\bjourney\\s+(?:from|to|into|toward|towards)\\b"

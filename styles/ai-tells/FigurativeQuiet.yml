@@ -19,25 +19,25 @@ tokens:
   # "Silent" and "mute" are the synonyms a writer reaches for once "quiet"
   # is flagged, so they share the tokens; the pair measures zero across
   # the Go and Python standard libraries.
-  - "\\b(?:stays?|staying|stayed|remains?|remaining|remained) (?:quiet|silent|mute)\\b"
-  - "\\b(?:goes?|going|went|gone) (?:quiet|silent|mute)\\b"
-  - "\\b(?:falls?|falling|fell|fallen) (?:quiet|silent)\\b"
-  - "\\bquiet(?:s|ing|ed)? down\\b"
-  - "\\bkeeps? quiet about\\b"
+  - "\\b(?:stays?|staying|stayed|remains?|remaining|remained)\\s+(?:quiet|silent|mute)\\b"
+  - "\\b(?:goes?|going|went|gone)\\s+(?:quiet|silent|mute)\\b"
+  - "\\b(?:falls?|falling|fell|fallen)\\s+(?:quiet|silent)\\b"
+  - "\\bquiet(?:s|ing|ed)?\\s+down\\b"
+  - "\\bkeeps?\\s+quiet\\s+about\\b"
 
   # --- Silence imposed: the artifact keeps another one from speaking
   # ("keeps the console quiet," "kept the log silent"). Measured at zero
   # across both standard libraries.
-  - "\\bke(?:eps?|eping|pt) (?:a|an|the|this|that|these|those|its|their|each|every|all|both) (?:[a-z'-]+ ){1,3}(?:quiet|silent)\\b"
+  - "\\bke(?:eps?|eping|pt)\\s+(?:a|an|the|this|that|these|those|its|their|each|every|all|both)\\s+(?:[a-z'-]+\\s+){1,3}(?:quiet|silent)\\b"
 
   # --- Understatement adverb: the artifact acts "quietly," the padding that
   # frames a change as modest ("quietly drops the error," "quietly ships,"
   # "quietly falls back," "quietly ignores the flag").
-  - "\\bquietly (?:drops?|ignores?|skips?|discards?|swallows?|handles?|fails?|retries|logs?|ships?|slips?|deprecates?|breaks?|does|absorbs?|masks?|hides?|suppresses?|omits?|sidesteps?|bypasses?|clobbers?|overrides?|adds?|removes?|rewrites?|mutates?|patches?)\\b"
-  - "\\bquietly (?:falls back|rolls? out|opts? out|goes? away|slips? in)\\b"
+  - "\\bquietly\\s+(?:drops?|ignores?|skips?|discards?|swallows?|handles?|fails?|retries|logs?|ships?|slips?|deprecates?|breaks?|does|absorbs?|masks?|hides?|suppresses?|omits?|sidesteps?|bypasses?|clobbers?|overrides?|adds?|removes?|rewrites?|mutates?|patches?)\\b"
+  - "\\bquietly\\s+(?:falls\\s+back|rolls?\\s+out|opts?\\s+out|goes?\\s+away|slips?\\s+in)\\b"
 
   # --- The unspoken-truth idiom ("says the quiet part out loud").
-  - "\\bthe quiet part out loud\\b"
+  - "\\bthe\\s+quiet\\s+part\\s+out\\s+loud\\b"
 
   # --- Silencing as a verb: a check muted rather than turned off ("the
   # flag silences the warning," "silenced every alert"). A
@@ -46,4 +46,4 @@ tokens:
   # Rust RFCs and the Python sources writing "silence the lint" and
   # "silence this exception," the bare infinitive being the form the
   # corpora use; each is the figure, flagged by design.
-  - "\\bsilenc(?:e|es|ed|ing) (?:the|a|an|its|their|this|that|it|them|every|each)\\b"
+  - "\\bsilenc(?:e|es|ed|ing)\\s+(?:the|a|an|its|their|this|that|it|them|every|each)\\b"

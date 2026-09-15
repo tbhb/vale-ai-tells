@@ -4,26 +4,26 @@ message: "AI evasion: '%s'. Take a clear position or remove the hedge."
 level: error
 ignorecase: true
 tokens:
-  - both sides of the argument
-  - both sides present valid points
-  - there are valid points on both sides
-  - each perspective has merit
-  - each side has merit
-  - it's important to consider all perspectives
-  - important to consider the perspectives
-  - consider all stakeholders
-  - perspectives of all stakeholders
-  - a balanced approach
-  - strike a balance
-  - find a balance
-  - nuanced understanding
-  - nuanced approach
-  - the answer is not straightforward
-  - not a simple answer
-  - there is no simple answer
-  - the issue is complex
-  - this is a complex issue
-  - depends on various factors
-  - depends on many factors
-  - varies depending on
-  - case-by-case basis
+  - both\s+sides\s+of\s+the\s+argument
+  - both\s+sides\s+present\s+valid\s+points
+  - there\s+are\s+valid\s+points\s+on\s+both\s+sides
+  - each\s+perspective\s+has\s+merit
+  - each\s+side\s+has\s+merit
+  - it's\s+important\s+to\s+consider\s+all\s+perspectives
+  - important\s+to\s+consider\s+the\s+perspectives
+  - consider\s+all\s+stakeholders
+  - perspectives\s+of\s+all\s+stakeholders
+  - a\s+balanced\s+approach
+  - strike\s+a\s+balance
+  - find\s+a\s+balance
+  - nuanced\s+understanding
+  - nuanced\s+approach
+  - the\s+answer\s+is\s+not\s+straightforward
+  - not\s+a\s+simple\s+answer
+  - there\s+is\s+no\s+simple\s+answer
+  - the\s+issue\s+is\s+complex
+  - this\s+is\s+a\s+complex\s+issue
+  - depends\s+on\s+various\s+factors
+  - depends\s+on\s+many\s+factors
+  - varies\s+depending\s+on
+  - case-by-case\s+basis

@@ -6,95 +6,95 @@ nonword: true
 scope: raw
 tokens:
   # "This [short noun] matters." - filler bridge sentences
-  - "\\bThis \\w+ matters\\."
-  - "\\bThis \\w+ \\w+ matters\\."
-  - "\\bThis \\w+ \\w+ \\w+ matters\\."
+  - "\\bThis\\s+\\w+\\s+matters\\."
+  - "\\bThis\\s+\\w+\\s+\\w+\\s+matters\\."
+  - "\\bThis\\s+\\w+\\s+\\w+\\s+\\w+\\s+matters\\."
 
   # "This matters because" variants
-  - "\\bThis matters because\\b"
-  - "\\bThis is important because\\b"
-  - "\\bThis distinction matters\\b"
-  - "\\bThis difference matters\\b"
-  - "\\bThis framing matters\\b"
-  - "\\bThis choice matters\\b"
-  - "\\bThis detail matters\\b"
-  - "\\bThis nuance matters\\b"
-  - "\\bThis subtlety matters\\b"
+  - "\\bThis\\s+matters\\s+because\\b"
+  - "\\bThis\\s+is\\s+important\\s+because\\b"
+  - "\\bThis\\s+distinction\\s+matters\\b"
+  - "\\bThis\\s+difference\\s+matters\\b"
+  - "\\bThis\\s+framing\\s+matters\\b"
+  - "\\bThis\\s+choice\\s+matters\\b"
+  - "\\bThis\\s+detail\\s+matters\\b"
+  - "\\bThis\\s+nuance\\s+matters\\b"
+  - "\\bThis\\s+subtlety\\s+matters\\b"
 
   # The "Let me explain / Let's explore" explainer-prompt family is owned by
   # UnpackExplore.
 
   # "The key here is" / "The point is" filler
-  - "\\bThe key here is\\b"
-  - "\\bThe point here is\\b"
-  - "\\bThe idea here is\\b"
-  - "\\bThe insight here is\\b"
+  - "\\bThe\\s+key\\s+here\\s+is\\b"
+  - "\\bThe\\s+point\\s+here\\s+is\\b"
+  - "\\bThe\\s+idea\\s+here\\s+is\\b"
+  - "\\bThe\\s+insight\\s+here\\s+is\\b"
   # "The takeaway ... here is" is owned by StructureAnnouncements.
-  - "\\bThe important thing here is\\b"
+  - "\\bThe\\s+important\\s+thing\\s+here\\s+is\\b"
 
   # The "It's worth [verb]ing" hedged-assertion family is owned by
   # FigurativeWorth.
 
   # Bold callout phrases (in markdown)
-  - "\\*\\*Key insight:?\\*\\*"
-  - "\\*\\*Key takeaway:?\\*\\*"
-  - "\\*\\*Key point:?\\*\\*"
+  - "\\*\\*Key\\s+insight:?\\*\\*"
+  - "\\*\\*Key\\s+takeaway:?\\*\\*"
+  - "\\*\\*Key\\s+point:?\\*\\*"
   - "\\*\\*Important:?\\*\\*"
   - "\\*\\*Note:?\\*\\*"
-  - "\\*\\*Bottom line:?\\*\\*"
-  - "\\*\\*The point:?\\*\\*"
+  - "\\*\\*Bottom\\s+line:?\\*\\*"
+  - "\\*\\*The\\s+point:?\\*\\*"
 
   # "This is the insight/key" framing. "This is the point" is PointVerdict's.
-  - "\\bThis is the insight\\b"
-  - "\\bThis is the key\\b"
-  - "\\bThis is the takeaway\\b"
-  - "\\bThis is the crucial\\b"
-  - "\\bThis is the critical\\b"
-  - "\\bThis is the important\\b"
+  - "\\bThis\\s+is\\s+the\\s+insight\\b"
+  - "\\bThis\\s+is\\s+the\\s+key\\b"
+  - "\\bThis\\s+is\\s+the\\s+takeaway\\b"
+  - "\\bThis\\s+is\\s+the\\s+crucial\\b"
+  - "\\bThis\\s+is\\s+the\\s+critical\\b"
+  - "\\bThis\\s+is\\s+the\\s+important\\b"
 
   # "This enables/ensures/allows" consequence statements
   # Includes "This [noun] enables" and "This [noun] [noun] enables" variants
-  - "\\bThis enables [^.]+\\."
-  - "\\bThis \\w+ enables [^.]+\\."
-  - "\\bThis \\w+ \\w+ enables [^.]+\\."
-  - "\\bThis ensures [^.]+\\."
-  - "\\bThis \\w+ ensures [^.]+\\."
-  - "\\bThis allows [^.]+\\."
-  - "\\bThis \\w+ allows [^.]+\\."
-  - "\\bThis provides [^.]+\\."
-  - "\\bThis \\w+ provides [^.]+\\."
-  - "\\bThis gives you [^.]+\\."
-  - "\\bThis \\w+ gives you [^.]+\\."
-  - "\\bThis means [^.]+\\."
-  - "\\bThis \\w+ means [^.]+\\."
+  - "\\bThis\\s+enables\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+enables\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+\\w+\\s+enables\\s+[^.]+\\."
+  - "\\bThis\\s+ensures\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+ensures\\s+[^.]+\\."
+  - "\\bThis\\s+allows\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+allows\\s+[^.]+\\."
+  - "\\bThis\\s+provides\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+provides\\s+[^.]+\\."
+  - "\\bThis\\s+gives\\s+you\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+gives\\s+you\\s+[^.]+\\."
+  - "\\bThis\\s+means\\s+[^.]+\\."
+  - "\\bThis\\s+\\w+\\s+means\\s+[^.]+\\."
 
   # "Understanding X enables/helps you" opener
-  - "\\bUnderstanding [^.]+enables you to [^.]+\\."
-  - "\\bUnderstanding [^.]+helps you [^.]+\\."
-  - "\\bUnderstanding [^.]+allows you to [^.]+\\."
+  - "\\bUnderstanding\\s+[^.]+enables\\s+you\\s+to\\s+[^.]+\\."
+  - "\\bUnderstanding\\s+[^.]+helps\\s+you\\s+[^.]+\\."
+  - "\\bUnderstanding\\s+[^.]+allows\\s+you\\s+to\\s+[^.]+\\."
 
   # "Real-world" filler
-  - "\\bReal-world [a-z]+"
-  - "\\bIn the real world\\b"
+  - "\\bReal-world\\s+[a-z]+"
+  - "\\bIn\\s+the\\s+real\\s+world\\b"
 
   # "At its core/heart" framing
-  - "\\bAt its core\\b"
-  - "\\bAt its heart\\b"
-  - "\\bAt its most basic\\b"
-  - "\\bAt its most basic level\\b"
-  - "\\bAt its most fundamental\\b"
-  - "\\bAt its most fundamental level\\b"
-  - "\\bAt its simplest\\b"
-  - "\\bAt their core\\b"
-  - "\\bAt their heart\\b"
+  - "\\bAt\\s+its\\s+core\\b"
+  - "\\bAt\\s+its\\s+heart\\b"
+  - "\\bAt\\s+its\\s+most\\s+basic\\b"
+  - "\\bAt\\s+its\\s+most\\s+basic\\s+level\\b"
+  - "\\bAt\\s+its\\s+most\\s+fundamental\\b"
+  - "\\bAt\\s+its\\s+most\\s+fundamental\\s+level\\b"
+  - "\\bAt\\s+its\\s+simplest\\b"
+  - "\\bAt\\s+their\\s+core\\b"
+  - "\\bAt\\s+their\\s+heart\\b"
 
   # "Think of X as" explanatory framing
-  - "\\bThink of it as\\b"
-  - "\\bThink of this as\\b"
-  - "\\bThink of [^.]+as [^.]+\\."
+  - "\\bThink\\s+of\\s+it\\s+as\\b"
+  - "\\bThink\\s+of\\s+this\\s+as\\b"
+  - "\\bThink\\s+of\\s+[^.]+as\\s+[^.]+\\."
 
   # "This is where" pivot phrases
-  - "\\bThis is where it gets interesting\\b"
-  - "\\bThis is where things get interesting\\b"
-  - "\\bThis is where [^.]+ comes in\\b"
-  - "\\bThat'?s where [^.]+ comes in\\b"
+  - "\\bThis\\s+is\\s+where\\s+it\\s+gets\\s+interesting\\b"
+  - "\\bThis\\s+is\\s+where\\s+things\\s+get\\s+interesting\\b"
+  - "\\bThis\\s+is\\s+where\\s+[^.]+\\s+comes\\s+in\\b"
+  - "\\bThat'?s\\s+where\\s+[^.]+\\s+comes\\s+in\\b"

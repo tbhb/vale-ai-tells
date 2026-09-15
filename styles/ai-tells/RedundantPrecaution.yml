@@ -4,7 +4,7 @@ message: "AI cliché: '%s'. State the specific safeguard or cut the phrase."
 level: error
 ignorecase: true
 tokens:
-  - belt and suspenders
+  - belt\s+and\s+suspenders
   - belt-and-suspenders
-  - belt and braces
+  - belt\s+and\s+braces
   - belt-and-braces

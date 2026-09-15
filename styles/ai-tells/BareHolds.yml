@@ -93,7 +93,7 @@ exceptions:
   - "(?i)bolts?"
   - "(?i)screws?"
   - "(?i)hinges?"
-  - "(?i)in place"
+  - "(?i)in\\s+place"
   - "(?i)liters?"
   - "(?i)litres?"
   - "(?i)gallons?"
@@ -103,20 +103,20 @@ tokens:
   # holds the serialized object," "each row held one value"), with an
   # optional modifier and an optional adverb inside the span. The
   # lookahead leaves FigurativeHolds its idiom complements.
-  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|two|any|some|most|whatever) (?:[a-z'-]+ )?[a-z]+ (?:already |still |also |only |then |now |never |always |currently )?(?:holds?|held) (?!(?:the same|an? (?:similar|identical|comparable|matching)|the key|the line|court|true|water|up|at scale|across|promise|potential|appeal|weight|sway|its own)\\b)(?:a|an|the|its|their|this|that|these|those|every|each|all|any|some|no|zero|one|two|three|several|many|both|identical|only|whatever|what|nothing|exactly|at least|at most|more|fewer|less|up to) (?:[a-z'-]+ )?[a-z]+\\b"
+  - "\\b(?:a|an|the|this|that|these|those|each|every|its|their|both|all|one|two|any|some|most|whatever)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\s+(?:already\\s+|still\\s+|also\\s+|only\\s+|then\\s+|now\\s+|never\\s+|always\\s+|currently\\s+)?(?:holds?|held)\\s+(?!(?:the\\s+same|an?\\s+(?:similar|identical|comparable|matching)|the\\s+key|the\\s+line|court|true|water|up|at\\s+scale|across|promise|potential|appeal|weight|sway|its\\s+own)\\b)(?:a|an|the|its|their|this|that|these|those|every|each|all|any|some|no|zero|one|two|three|several|many|both|identical|only|whatever|what|nothing|exactly|at\\s+least|at\\s+most|more|fewer|less|up\\s+to)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\b"
 
   # --- The quantified object with the subject left open ("two records
   # hold identical bytes," "holds every input the review needs," "a
   # directory holding one").
-  - "\\b(?:holds?|held|holding) (?:every|each|all|any|no|zero|identical|whatever|nothing|only|exactly|one|two|three|several|many|both|more|fewer|less|up to|at least|at most) (?:[a-z'-]+ )?[a-z]+\\b"
+  - "\\b(?:holds?|held|holding)\\s+(?:every|each|all|any|no|zero|identical|whatever|nothing|only|exactly|one|two|three|several|many|both|more|fewer|less|up\\s+to|at\\s+least|at\\s+most)\\s+(?:[a-z'-]+\\s+)?[a-z]+\\b"
 
   # --- The object fronted: a relative clause with the holder after its
   # contents ("the counts the aux tables already hold," "whatever the
   # store holds," "the value it holds"). The lookahead refuses a following
   # object, which the first token reads instead.
-  - "\\b(?:whatever|what|which|that) (?:the|a|an|its|their|this|that|each|every) (?:[a-z]+ ){0,2}(?:holds?|held)\\b(?! (?:a|an|the|its|their|this|that|no|one|two|three|several|many|some|all|every|each|zero|true|water|up|court|sway|promise|for|across|[a-z]+s)\\b)"
-  - "\\b(?:the|a|an|each|every|its|their|this|that|these|those) (?:[a-z]+ )?[a-z]+ (?:it|they|each [a-z]+|every [a-z]+|this [a-z]+|that [a-z]+|the [a-z]+|a [a-z]+|an [a-z]+|no [a-z]+|which|who) (?:[a-z]+ ){0,2}(?:holds?|held)\\b(?! (?:a|an|the|its|their|this|that|no|one|two|three|several|many|some|all|every|each|zero|true|water|up|court|sway|promise|for|across|[a-z]+s)\\b)"
+  - "\\b(?:whatever|what|which|that)\\s+(?:the|a|an|its|their|this|that|each|every)\\s+(?:[a-z]+\\s+){0,2}(?:holds?|held)\\b(?!\\s+(?:a|an|the|its|their|this|that|no|one|two|three|several|many|some|all|every|each|zero|true|water|up|court|sway|promise|for|across|[a-z]+s)\\b)"
+  - "\\b(?:the|a|an|each|every|its|their|this|that|these|those)\\s+(?:[a-z]+\\s+)?[a-z]+\\s+(?:it|they|each\\s+[a-z]+|every\\s+[a-z]+|this\\s+[a-z]+|that\\s+[a-z]+|the\\s+[a-z]+|a\\s+[a-z]+|an\\s+[a-z]+|no\\s+[a-z]+|which|who)\\s+(?:[a-z]+\\s+){0,2}(?:holds?|held)\\b(?!\\s+(?:a|an|the|its|their|this|that|no|one|two|three|several|many|some|all|every|each|zero|true|water|up|court|sway|promise|for|across|[a-z]+s)\\b)"
 
   # --- The participle of storage ("code held as a config value," "the
   # counts held within the manifest").
-  - "\\bheld (?:as|within|under) (?:a|an|the|its|their|this|that|one|each|every)\\b"
+  - "\\bheld\\s+(?:as|within|under)\\s+(?:a|an|the|its|their|this|that|one|each|every)\\b"

@@ -12,20 +12,20 @@ ignorecase: true
 tokens:
   # --- Aspersion: the finding dims confidence ("casts doubt on," "casts a
   # pall," "casts a shadow over," "casts a long shadow").
-  - "\\bcast(?:s|ing)? (?:serious |real |some |considerable )?doubt (?:on|over|upon)\\b"
-  - "\\bcast(?:s|ing)? a (?:long |dark |lingering )?shadow (?:on|over|across)?\\b"
-  - "\\bcast(?:s|ing)? a pall\\b"
-  - "\\bcast(?:s|ing)? aspersions\\b"
+  - "\\bcast(?:s|ing)?\\s+(?:serious\\s+|real\\s+|some\\s+|considerable\\s+)?doubt\\s+(?:on|over|upon)\\b"
+  - "\\bcast(?:s|ing)?\\s+a\\s+(?:long\\s+|dark\\s+|lingering\\s+)?shadow\\s+(?:on|over|across)?\\b"
+  - "\\bcast(?:s|ing)?\\s+a\\s+pall\\b"
+  - "\\bcast(?:s|ing)?\\s+aspersions\\b"
 
   # --- Illumination: the framing supposedly clarifies ("casts light on,"
   # "casts X in a new light," "casts X as").
-  - "\\bcast(?:s|ing)? (?:new )?light on\\b"
-  - "\\bcast(?:s|ing)? (?:it|this|that|them|the \\w+) in a (?:new|different|positive|negative|favorable|favourable) light\\b"
+  - "\\bcast(?:s|ing)?\\s+(?:new\\s+)?light\\s+on\\b"
+  - "\\bcast(?:s|ing)?\\s+(?:it|this|that|them|the\\s+\\w+)\\s+in\\s+a\\s+(?:new|different|positive|negative|favorable|favourable)\\s+light\\b"
 
   # --- Reach: the effort spreads out ("casts a wide net," "casts the net
   # wide").
-  - "\\bcast(?:s|ing)? a wide net\\b"
-  - "\\bcast(?:s|ing)? the net wide\\b"
+  - "\\bcast(?:s|ing)?\\s+a\\s+wide\\s+net\\b"
+  - "\\bcast(?:s|ing)?\\s+the\\s+net\\s+wide\\b"
 
   # --- Dismissal ("casts aside," "cast off").
-  - "\\bcast(?:s|ing)? aside\\b"
+  - "\\bcast(?:s|ing)?\\s+aside\\b"

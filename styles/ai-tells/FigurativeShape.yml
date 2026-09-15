@@ -46,17 +46,17 @@ tokens:
   # --- The determiner-gated noun, with an optional modifier ("the
   # shape," "the review shape," "its overall shape," "the same shape,"
   # "the wrong shape," "a shape that").
-  - "\\b(?:the|a|an|its|their|this|that|each|every|one|any|some|no|another|same|wrong|right|expected|correct|different|general|overall|basic|final|new|old|current|exact|whole|familiar|common|usual|typical|natural|particular|concrete|rough|full) (?!(?:gc|turtle|compound|polygon|polygonal|geometric|geometrical|physical|circular|square|round|oval|triangular|rectangular) )(?:[a-z-]+ )?shape\\b(?! (?:type|types|argument|arguments|instantiation|instantiations|parameter|parameters|stenciling|file|files|library|libraries|of (?:the|a|an|its) (?:curve|curves|distribution|distributions|graph|glyph|glyphs|font|character|characters|window|screen|region|rect|rectangle|cursor|icon|image|figure|earth|world|surface|object|body|polygon|path|outline|border|shadow|beam|pulse|waveform|signal|lens|cell|cells|nucleus|letter|letters|symbol|blob|bezier|arc|spline|mesh|solid|cube|sphere|circle|ellipse|box|array|arrays|tensor|tensors|matrix|matrices))\\b)"
+  - "\\b(?:the|a|an|its|their|this|that|each|every|one|any|some|no|another|same|wrong|right|expected|correct|different|general|overall|basic|final|new|old|current|exact|whole|familiar|common|usual|typical|natural|particular|concrete|rough|full)\\s+(?!(?:gc|turtle|compound|polygon|polygonal|geometric|geometrical|physical|circular|square|round|oval|triangular|rectangular)\\s+)(?:[a-z-]+\\s+)?shape\\b(?!\\s+(?:type|types|argument|arguments|instantiation|instantiations|parameter|parameters|stenciling|file|files|library|libraries|of\\s+(?:the|a|an|its)\\s+(?:curve|curves|distribution|distributions|graph|glyph|glyphs|font|character|characters|window|screen|region|rect|rectangle|cursor|icon|image|figure|earth|world|surface|object|body|polygon|path|outline|border|shadow|beam|pulse|waveform|signal|lens|cell|cells|nucleus|letter|letters|symbol|blob|bezier|arc|spline|mesh|solid|cube|sphere|circle|ellipse|box|array|arrays|tensor|tensors|matrix|matrices))\\b)"
 
   # --- The bare "shape of" with a determined complement ("concrete shape
   # of the API," "shape of the parse trees"), same geometric refusals.
-  - "\\bshape of (?:the|a|an|its|their|this|that|each|every) (?!(?:curve|curves|distribution|distributions|graph|glyph|glyphs|font|character|characters|window|screen|region|rect|rectangle|cursor|icon|image|figure|earth|world|surface|object|body|polygon|path|outline|border|shadow|beam|pulse|waveform|signal|lens|cell|cells|nucleus|letter|letters|symbol|blob|bezier|arc|spline|mesh|solid|cube|sphere|circle|ellipse|box|array|arrays|tensor|tensors|matrix|matrices)\\b)"
+  - "\\bshape\\s+of\\s+(?:the|a|an|its|their|this|that|each|every)\\s+(?!(?:curve|curves|distribution|distributions|graph|glyph|glyphs|font|character|characters|window|screen|region|rect|rectangle|cursor|icon|image|figure|earth|world|surface|object|body|polygon|path|outline|border|shadow|beam|pulse|waveform|signal|lens|cell|cells|nucleus|letter|letters|symbol|blob|bezier|arc|spline|mesh|solid|cube|sphere|circle|ellipse|box|array|arrays|tensor|tensors|matrix|matrices)\\b)"
 
   # --- The verb without a determined subject: the gerund and the
   # relative forms ("shaping the direction of the API," "what shapes
   # the output"). The sculptor with a determined subject ("the pass
   # shapes the output") stays with MotionMetaphors.
-  - "\\b(?:shaping|(?:what|which|whatever) shap(?:es|ed)) (?:the|a|an|its|their|this|that|each|every|how|our|your|my)\\b"
+  - "\\b(?:shaping|(?:what|which|whatever)\\s+shap(?:es|ed))\\s+(?:the|a|an|its|their|this|that|each|every|how|our|your|my)\\b"
 
   # --- The hyphenated compound ("code-shaped," "review-shaped,"
   # "identically-shaped"), past the geometry and body prefixes that name
@@ -65,4 +65,4 @@ tokens:
 
   # --- The gated plural ("the shapes agent prose builds," "both
   # shapes"), refusing the prepositions that follow a literal outline.
-  - "\\b(?:the|these|those|both|its|their|two|three|four|five|several|many|all|other|same|different|new|old|kept|remaining) (?:[a-z-]+ )?shapes\\b(?! (?:of|in|on|drawn|painted|cut|carved)\\b)"
+  - "\\b(?:the|these|those|both|its|their|two|three|four|five|several|many|all|other|same|different|new|old|kept|remaining)\\s+(?:[a-z-]+\\s+)?shapes\\b(?!\\s+(?:of|in|on|drawn|painted|cut|carved)\\b)"

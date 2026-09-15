@@ -6,4 +6,4 @@ level: error
 # raw commit body, not after markdown block parsing.
 scope: raw
 raw:
-  - '(?m)^#{2,4}\s+(?:Added|Changed|Fixed|Removed|Deprecated|Security|Breaking|Breaking Changes|Migration|New Features|Improvements|Bug Fixes)\s*$'
+  - '(?m)^#{2,4}\s+(?:Added|Changed|Fixed|Removed|Deprecated|Security|Breaking|Breaking\s+Changes|Migration|New\s+Features|Improvements|Bug\s+Fixes)\s*$'

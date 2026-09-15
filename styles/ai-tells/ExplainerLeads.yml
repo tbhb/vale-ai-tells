@@ -22,7 +22,7 @@ tokens:
   # of Go and Python stdlib prose: ten hits ("That's why the code is ...,"
   # "This is what the compiler does ..."), each one the construction itself
   # rather than a lookalike.
-  - "\\b(?:[Hh]ere's|[Hh]ere is|[Tt]his is|[Tt]hat's|[Tt]hat is) (?:exactly |precisely )?(?:what|why|how|when|where) (?:the|this|that|these|those|a|an|each|every|your|our|its) [-'\\w]+ [-'\\w]+"
+  - "\\b(?:[Hh]ere's|[Hh]ere\\s+is|[Tt]his\\s+is|[Tt]hat's|[Tt]hat\\s+is)\\s+(?:exactly\\s+|precisely\\s+)?(?:what|why|how|when|where)\\s+(?:the|this|that|these|those|a|an|each|every|your|our|its)\\s+[-'\\w]+\\s+[-'\\w]+"
 
   # --- Pattern B: the free relative as a label before a colon ("What the hook
   # does: it refuses the write."). The capitalized wh-word anchors the label
@@ -34,7 +34,7 @@ tokens:
   # between the clause and the colon ("**What the hook does**:"), and a
   # match that spans that boundary is not verbatim in the raw line, which
   # silently drops the alert.
-  - "\\b(?:What|Why|How) (?:the|this|that|these|those|a|an|each|every|your|our|its) [^.!?:\\n]{1,50}(?=:)"
+  - "\\b(?:What|Why|How)\\s+(?:the|this|that|these|those|a|an|each|every|your|our|its)\\s+[^.!?:\\n]{1,50}(?=:)"
 
   # --- Pattern C: the sentence-initial pseudo-cleft — the free relative as
   # subject, resolved by a copula ("What the hook does is refuse the write,"
@@ -43,4 +43,4 @@ tokens:
   # has neither. When/where stay out for the conditional-clause reason above.
   # Corpus cost on 1.3M lines of stdlib prose: four hits, one of them "What
   # this means is," which is the tell whoever wrote it.
-  - "\\b(?:What|Why|How) (?:the|this|that|these|those|a|an|each|every|your|our|its) (?:[-'\\w]+ ){1,3}(?:is|are|was|were)\\b"
+  - "\\b(?:What|Why|How)\\s+(?:the|this|that|these|those|a|an|each|every|your|our|its)\\s+(?:[-'\\w]+\\s+){1,3}(?:is|are|was|were)\\b"

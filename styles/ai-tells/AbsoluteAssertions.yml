@@ -4,18 +4,18 @@ message: "AI overreach: '%s'. Verify this claim or soften it."
 level: error
 ignorecase: true
 tokens:
-  - the only way to
-  - the only real solution
-  - the only way forward
-  - the single most important
-  - the most important thing is
-  - above all else
-  - above everything else
-  - more than anything else
-  - there is no better
-  - there is no other way
-  - there can be no doubt
-  - make no mistake
-  - make no mistake about it
-  - there's no denying
-  - there is no denying
+  - the\s+only\s+way\s+to
+  - the\s+only\s+real\s+solution
+  - the\s+only\s+way\s+forward
+  - the\s+single\s+most\s+important
+  - the\s+most\s+important\s+thing\s+is
+  - above\s+all\s+else
+  - above\s+everything\s+else
+  - more\s+than\s+anything\s+else
+  - there\s+is\s+no\s+better
+  - there\s+is\s+no\s+other\s+way
+  - there\s+can\s+be\s+no\s+doubt
+  - make\s+no\s+mistake
+  - make\s+no\s+mistake\s+about\s+it
+  - there's\s+no\s+denying
+  - there\s+is\s+no\s+denying

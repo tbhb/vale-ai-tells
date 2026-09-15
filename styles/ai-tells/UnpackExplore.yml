@@ -4,23 +4,23 @@ message: "AI explainer prompt: '%s'. Explain it directly instead of announcing i
 level: error
 ignorecase: true
 tokens:
-  - Let's unpack
-  - Let me unpack
-  - Let's break this down
-  - Let me break this down
-  - Let's take a closer look at
-  - Let me take a closer look at
-  - Let's dive into
-  - Let me dive into
-  - Let's walk through
-  - Let me walk through
-  - Let's dig into
-  - Let me dig into
-  - Let's examine
-  - Let me examine
-  - Let's explore
+  - Let's\s+unpack
+  - Let\s+me\s+unpack
+  - Let's\s+break\s+this\s+down
+  - Let\s+me\s+break\s+this\s+down
+  - Let's\s+take\s+a\s+closer\s+look\s+at
+  - Let\s+me\s+take\s+a\s+closer\s+look\s+at
+  - Let's\s+dive\s+into
+  - Let\s+me\s+dive\s+into
+  - Let's\s+walk\s+through
+  - Let\s+me\s+walk\s+through
+  - Let's\s+dig\s+into
+  - Let\s+me\s+dig\s+into
+  - Let's\s+examine
+  - Let\s+me\s+examine
+  - Let's\s+explore
   # Ported from Metacommentary so the explainer-prompt family has one owner.
-  - Let me explain
-  - Let's consider
-  - Let's look at
-  - Let's break down
+  - Let\s+me\s+explain
+  - Let's\s+consider
+  - Let's\s+look\s+at
+  - Let's\s+break\s+down

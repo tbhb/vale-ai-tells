@@ -31,4 +31,4 @@ ignorecase: true
 # palette listing ("Sky, Mint, Lime") still fires, and belongs in a
 # reader's own exceptions.
 tokens:
-  - "(?<!linux )mint(?:s|ed|ing)?\\b(?! (?:condition|green|tea|leaf|leaves|julep|sauce|chocolate|colou?r)\\b)"
+  - "(?<!linux\\s+)mint(?:s|ed|ing)?\\b(?!\\s+(?:condition|green|tea|leaf|leaves|julep|sauce|chocolate|colou?r)\\b)"

@@ -9,33 +9,33 @@ tokens:
   - Fourthly
   - Fifthly
   - Lastly
-  - The first takeaway
-  - The second takeaway
-  - The third takeaway
-  - The fourth takeaway
-  - The first lesson
-  - The second lesson
-  - The third lesson
-  - The first key
-  - The second key
-  - The third key
-  - The first thing to note
-  - The second thing to note
-  - The first point
-  - The second point
-  - The third point
-  - The first reason
-  - The second reason
-  - The third reason
-  - The first challenge
-  - The second challenge
-  - The third challenge
-  - The first step is
-  - The second step is
-  - The third step is
-  - The first benefit
-  - The second benefit
-  - The third benefit
-  - The first advantage
-  - The second advantage
-  - The third advantage
+  - The\s+first\s+takeaway
+  - The\s+second\s+takeaway
+  - The\s+third\s+takeaway
+  - The\s+fourth\s+takeaway
+  - The\s+first\s+lesson
+  - The\s+second\s+lesson
+  - The\s+third\s+lesson
+  - The\s+first\s+key
+  - The\s+second\s+key
+  - The\s+third\s+key
+  - The\s+first\s+thing\s+to\s+note
+  - The\s+second\s+thing\s+to\s+note
+  - The\s+first\s+point
+  - The\s+second\s+point
+  - The\s+third\s+point
+  - The\s+first\s+reason
+  - The\s+second\s+reason
+  - The\s+third\s+reason
+  - The\s+first\s+challenge
+  - The\s+second\s+challenge
+  - The\s+third\s+challenge
+  - The\s+first\s+step\s+is
+  - The\s+second\s+step\s+is
+  - The\s+third\s+step\s+is
+  - The\s+first\s+benefit
+  - The\s+second\s+benefit
+  - The\s+third\s+benefit
+  - The\s+first\s+advantage
+  - The\s+second\s+advantage
+  - The\s+third\s+advantage

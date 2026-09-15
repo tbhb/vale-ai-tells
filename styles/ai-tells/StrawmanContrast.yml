@@ -48,18 +48,18 @@ tokens:
   # --- The gerund tail, comma to sentence end ("rather than walking the
   # whole tree," "instead of re-reading every file," "instead of failing").
   # The lookahead refuses nouns that end in "ing."
-  - ", (?:rather than|instead of) (?:[a-z-]+ ){0,2}(?!(?:no|some|any|every)?things?\\b|strings?\\b|during\\b|bring\\b|rings?\\b|springs?\\b|siblings?\\b|ceiling\\b|evening\\b|morning\\b|kings?\\b|wings?\\b|swing\\b|sling\\b)[a-z]+(?:-[a-z]+)*ing\\b[^.!?;:,\\n]*[.!?]"
+  - ",\\s+(?:rather\\s+than|instead\\s+of)\\s+(?:[a-z-]+\\s+){0,2}(?!(?:no|some|any|every)?things?\\b|strings?\\b|during\\b|bring\\b|rings?\\b|springs?\\b|siblings?\\b|ceiling\\b|evening\\b|morning\\b|kings?\\b|wings?\\b|swing\\b|sling\\b)[a-z]+(?:-[a-z]+)*ing\\b[^.!?;:,\\n]*[.!?]"
 
   # --- The determiner tail, comma to sentence end ("rather than a scan,"
   # "instead of the first lookup," "rather than one per caller").
-  - ", (?:rather than|instead of) (?:a|an|the|one|every|each|its|their|this|that) [^.!?;:,\\n]*[.!?]"
+  - ",\\s+(?:rather\\s+than|instead\\s+of)\\s+(?:a|an|the|one|every|each|its|their|this|that)\\s+[^.!?;:,\\n]*[.!?]"
 
   # --- The reversal tail ("not the other way around," "not the reverse,"
   # "not vice versa").
-  - ", not (?:the other way(?: around| round)?|the reverse|the inverse|the opposite|vice versa)\\b"
+  - ",\\s+not\\s+(?:the\\s+other\\s+way(?:\\s+around|\\s+round)?|the\\s+reverse|the\\s+inverse|the\\s+opposite|vice\\s+versa)\\b"
 
   # --- The per-unit tail ("not one per caller," "not once per request").
-  - ", not (?:one|once) (?:per|for each|for every)\\b"
+  - ",\\s+not\\s+(?:one|once)\\s+(?:per|for\\s+each|for\\s+every)\\b"
 
   # --- The totality tail ("not the whole tree," "not the entire path").
-  - ", not the (?:whole|entire|full) [a-z-]+\\b"
+  - ",\\s+not\\s+the\\s+(?:whole|entire|full)\\s+[a-z-]+\\b"

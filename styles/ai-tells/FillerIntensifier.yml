@@ -13,26 +13,26 @@ tokens:
   # already means not one, so "no single component owns this" survives
   # as "no component owns this alone". Recasting those takes more than
   # deletion, and forcing that choice is the point of the alert.
-  - "(?:a|one|every|this|that|no|any) single(?!-)"
+  - "(?:a|one|every|this|that|no|any)\\s+single(?!-)"
 
   # "any one" is what "any single" turns into when a writer dodges the
   # token above, and it carries the same nothing: "any one of the
   # checks can veto" is "any of the checks can veto". "no one", "each
   # one", and "every one" stay out, since those head ordinary pronoun
   # phrases rather than intensified nouns.
-  - "any one(?!-)"
+  - "any\\s+one(?!-)"
 
   # "the single most important" belongs to AbsoluteAssertions, so it is
   # carved out here rather than double-flagged.
-  - "the single(?!-| most important)"
+  - "the\\s+single(?!-|\\s+most\\s+important)"
 
   # The synonyms take the same ride: "a lone exception", "its sole
   # purpose", "a mere formality", "one solitary warning". "sole" is
   # flagged even where legal boilerplate likes it ("the sole
   # discretion"), on the package's flag-hard stance.
-  - "(?:a|one|the|this|that|its|their|whose) (?:lone|sole|solitary|mere)(?!-)"
+  - "(?:a|one|the|this|that|its|their|whose)\\s+(?:lone|sole|solitary|mere)(?!-)"
 
   # "a singular focus" is the same intensifier, but "the singular" is
   # how grammar writing names the number ("the singular form"), so the
   # definite article stays out for this word alone.
-  - "(?:a|one|this|that|its|their|whose) singular(?!-)"
+  - "(?:a|one|this|that|its|their|whose)\\s+singular(?!-)"

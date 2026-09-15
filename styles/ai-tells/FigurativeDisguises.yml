@@ -46,29 +46,29 @@ tokens:
   # --- The costume verbs, each gated on the "as" that completes the frame.
   # Up to two optional words admit a direct object ("dressing inaction as,"
   # "disguising the lecture as," "parading the fix as").
-  - '\bdress(?:ed|es|ing) (?:\w+ ){0,2}(?:up )?as\b'
-  - '\bdisguis(?:ed|es|ing) (?:\w+ ){0,2}as\b'
-  - '\bmasquerad(?:e|es|ed|ing) (?:\w+ ){0,2}as\b'
-  - '\bparad(?:es|ed|ing) (?:\w+ ){0,2}as\b'
+  - '\bdress(?:ed|es|ing)\s+(?:\w+\s+){0,2}(?:up\s+)?as\b'
+  - '\bdisguis(?:ed|es|ing)\s+(?:\w+\s+){0,2}as\b'
+  - '\bmasquerad(?:e|es|ed|ing)\s+(?:\w+\s+){0,2}as\b'
+  - '\bparad(?:es|ed|ing)\s+(?:\w+\s+){0,2}as\b'
 
   # --- "Poses as," minus the comparison construction ("poses as much risk as,"
   # "poses as many questions as it answers"), which is ordinary prose. No
   # object slot here: "posing the question as" is the literal phrasing
   # sense, and the slot would sweep it in.
-  - '\bpos(?:es|ing) as(?! (?:much|many|few|little|great|well)\b)'
+  - '\bpos(?:es|ing)\s+as(?!\s+(?:much|many|few|little|great|well)\b)'
 
   # --- The impostor verbs without "as": a helper that "pretends to be"
   # the real client, "what passes for" documentation, a wrapper that
   # "passes itself off as" the original, a spreadsheet "cosplaying as" a
   # database.
-  - '\bpretend(?:s|ed|ing)? to be\b'
-  - '\b(?:what|which) passes for\b'
-  - '\bpass(?:es|ed|ing)? (?:itself|themselves|it|them) off as\b'
-  - '\bpassed off as\b'
-  - '\bcosplay(?:s|ed|ing)? as\b'
+  - '\bpretend(?:s|ed|ing)?\s+to\s+be\b'
+  - '\b(?:what|which)\s+passes\s+for\b'
+  - '\bpass(?:es|ed|ing)?\s+(?:itself|themselves|it|them)\s+off\s+as\b'
+  - '\bpassed\s+off\s+as\b'
+  - '\bcosplay(?:s|ed|ing)?\s+as\b'
 
   # --- The noun forms of the same frame.
-  - '\bin disguise\b'
-  - '\b(?:in|under) the guise of\b'
-  - '\bin sheep(?:''|’)?s clothing\b'
-  - '\bin a trench ?coat\b'
+  - '\bin\s+disguise\b'
+  - '\b(?:in|under)\s+the\s+guise\s+of\b'
+  - '\bin\s+sheep(?:''|’)?s\s+clothing\b'
+  - '\bin\s+a\s+trench\s*coat\b'

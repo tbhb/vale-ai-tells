@@ -40,10 +40,10 @@ exceptions:
 tokens:
   # "anchored in/to [abstraction]" — the core figurative token. Literal anchoring
   # objects (a wall, the seabed) land in the captured window and are exempted.
-  - "\\banchored (?:in|to)(?: \\w+){1,4}"
+  - "\\banchored\\s+(?:in|to)(?:\\s+\\w+){1,4}"
   # "anchor the [abstract object]"
-  - "\\banchor(?:s|ed|ing)? (?:the |a |an |our |your |their |this |its )?(?:\\w+ )?(?:strategy|strategies|visions?|arguments?|narratives?|approach(?:es)?|frameworks?|discussions?|thesis|theses|conversations?|decisions?|brands?|identity|identities|missions?|philosophy|philosophies|worldviews?|values?|principles?|messaging|stories|story|essays?|roadmaps?|plans?|goals?|initiatives?|efforts?|agendas?|priority|priorities)\\b"
+  - "\\banchor(?:s|ed|ing)?\\s+(?:the\\s+|a\\s+|an\\s+|our\\s+|your\\s+|their\\s+|this\\s+|its\\s+)?(?:\\w+\\s+)?(?:strategy|strategies|visions?|arguments?|narratives?|approach(?:es)?|frameworks?|discussions?|thesis|theses|conversations?|decisions?|brands?|identity|identities|missions?|philosophy|philosophies|worldviews?|values?|principles?|messaging|stories|story|essays?|roadmaps?|plans?|goals?|initiatives?|efforts?|agendas?|priority|priorities)\\b"
   # figurative noun anchor
-  - "\\b(?:emotional|narrative|thematic|conceptual|moral|cultural|psychological|spiritual|philosophical|guiding|steadying) anchor\\b"
+  - "\\b(?:emotional|narrative|thematic|conceptual|moral|cultural|psychological|spiritual|philosophical|guiding|steadying)\\s+anchor\\b"
   # "serves/acts as an anchor"
-  - "\\b(?:serves?|serving|served|acts?|acting|acted) as an anchor\\b"
+  - "\\b(?:serves?|serving|served|acts?|acting|acted)\\s+as\\s+an\\s+anchor\\b"

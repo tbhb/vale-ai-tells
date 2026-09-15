@@ -14,8 +14,8 @@ ignorecase: true
 # standard libraries.
 tokens:
   # --- Abstract offspring: a condition siring another condition.
-  - "\\bbreed(?:s|ing)? (?:confusion|complexity|distrust|mistrust|resentment|frustration|inconsistency|complacency|contempt|cynicism|doubt|errors|bugs|drift|dependence|silos)\\b"
+  - "\\bbreed(?:s|ing)?\\s+(?:confusion|complexity|distrust|mistrust|resentment|frustration|inconsistency|complacency|contempt|cynicism|doubt|errors|bugs|drift|dependence|silos)\\b"
 
   # --- The nursery: a place where the offspring hatch ("a breeding ground
   # for subtle bugs").
-  - "\\bbreeding ground for\\b"
+  - "\\bbreeding\\s+ground\\s+for\\b"

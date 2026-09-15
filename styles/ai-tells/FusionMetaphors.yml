@@ -25,17 +25,17 @@ ignorecase: true
 tokens:
   # --- Folding one thing into another ("folds the helper into the
   # caller," "fold it into the main loop").
-  - "\\bfold(?:s|ed|ing)? (?:the|a|an|its|their|that|this|it|them|those|these|each|every|both) (?:[a-z-]+ )?into\\b"
+  - "\\bfold(?:s|ed|ing)?\\s+(?:the|a|an|its|their|that|this|it|them|those|these|each|every|both)\\s+(?:[a-z-]+\\s+)?into\\b"
 
   # --- Collapsing a set to fewer ("the three rules collapse into one,"
   # "collapses to a single call").
-  - "\\bcollaps(?:e|es|ed|ing) (?:to|into|down to|down into) (?:a|an|the|one|two|three|its|their|this|that|[a-z]+)\\b"
+  - "\\bcollaps(?:e|es|ed|ing)\\s+(?:to|into|down\\s+to|down\\s+into)\\s+(?:a|an|the|one|two|three|its|their|this|that|[a-z]+)\\b"
 
   # --- Absorbing a sibling ("the new token absorbs the old one," "the
   # parent absorbs its children").
-  - "\\babsorb(?:s|ed|ing)? (?:the|a|an|its|their|this|that|each|every|it|them)\\b"
+  - "\\babsorb(?:s|ed|ing)?\\s+(?:the|a|an|its|their|this|that|each|every|it|them)\\b"
 
   # --- Fusing and coupling ("fuses the two passes," "couples the cache
   # to the writer").
-  - "\\bfus(?:e|es|ed|ing) (?:the|a|an|its|their|this|that|it|them|two|both)\\b"
-  - "\\bcoupl(?:es|ed|ing) (?:the|a|an|its|their|this|that|it|them) (?:[a-z]+ )?(?:to|with)\\b"
+  - "\\bfus(?:e|es|ed|ing)\\s+(?:the|a|an|its|their|this|that|it|them|two|both)\\b"
+  - "\\bcoupl(?:es|ed|ing)\\s+(?:the|a|an|its|their|this|that|it|them)\\s+(?:[a-z]+\\s+)?(?:to|with)\\b"

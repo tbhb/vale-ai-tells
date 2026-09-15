@@ -38,8 +38,8 @@ tokens:
   # --- The gavel: a fact or metric closes a dispute ("availability
   # settles the question," "the reconfirmation settles it," "a
   # classifier settles those").
-  - '\bsettl(?:es?|ed) the (?:question|debate|matter|argument|issue|dispute)\b'
-  - '\b(?:settles|settled) (?:it|that|this|which|what|whether|those|them)\b'
+  - '\bsettl(?:es?|ed)\s+the\s+(?:question|debate|matter|argument|issue|dispute)\b'
+  - '\b(?:settles|settled)\s+(?:it|that|this|which|what|whether|those|them)\b'
 
   # --- The dust: turbulence as a cloud that must come to rest before
   # anyone acts ("once the dust settles," "the dust settled after the
@@ -47,10 +47,10 @@ tokens:
   # dust that lands somewhere ("the dust settled on the windowsill")
   # out of the first token; the perfect tenses carry no lookahead, so
   # housekeeping prose about literal dust disables the rule.
-  - '\bthe dust settl(?:es|ed)\b(?!\s+(?:on|onto|over|in|into|across|out)\b)'
-  - '\bthe dust (?:has|had) (?:finally |never |already )?settled\b'
-  - '\bfor the dust to settle\b'
-  - '\blet(?:s|ting)? the dust settle\b'
+  - '\bthe\s+dust\s+settl(?:es|ed)\b(?!\s+(?:on|onto|over|in|into|across|out)\b)'
+  - '\bthe\s+dust\s+(?:has|had)\s+(?:finally\s+|never\s+|already\s+)?settled\b'
+  - '\bfor\s+the\s+dust\s+to\s+settle\b'
+  - '\blet(?:s|ting)?\s+the\s+dust\s+settle\b'
 
   # --- Settling into stability: a design or a process hardens into a
   # final configuration ("the API settled into its final form," "the
@@ -58,18 +58,18 @@ tokens:
   # The complement gate is what keeps the convergence register out; a
   # person settling into a routine fires too, so biography prose
   # disables the rule.
-  - '\bsettl(?:es?|ed|ing) into place\b'
-  - '\bsettl(?:es?|ed|ing) into (?:a|an|the|its|their) (?:[a-z]+ )?(?:rhythm|groove|pattern|routine|shape|form|normal)\b'
+  - '\bsettl(?:es?|ed|ing)\s+into\s+place\b'
+  - '\bsettl(?:es?|ed|ing)\s+into\s+(?:a|an|the|its|their)\s+(?:[a-z]+\s+)?(?:rhythm|groove|pattern|routine|shape|form|normal)\b'
 
   # --- The closed question: "settled" as an adjective declaring a
   # dispute beyond reopening ("the debate is settled," "consider it
   # settled," "settled law," "far from settled").
-  - '\b(?:question|debate|matter|issue|dispute) (?:is|was|remains|seems) (?:now |long |mostly |largely )?settled\b'
-  - '\bconsider(?:s|ed)? (?:it|that|this|the matter) settled\b'
-  - '\b(?:a|the) settled (?:question|matter|debate|issue)\b'
-  - '\bsettled (?:law|science)\b'
-  - '\bfar from settled\b'
+  - '\b(?:question|debate|matter|issue|dispute)\s+(?:is|was|remains|seems)\s+(?:now\s+|long\s+|mostly\s+|largely\s+)?settled\b'
+  - '\bconsider(?:s|ed)?\s+(?:it|that|this|the\s+matter)\s+settled\b'
+  - '\b(?:a|the)\s+settled\s+(?:question|matter|debate|issue)\b'
+  - '\bsettled\s+(?:law|science)\b'
+  - '\bfar\s+from\s+settled\b'
 
   # --- The score: retribution as bookkeeping ("settles an old score
   # with the flaky suite").
-  - '\bsettl(?:es?|ed|ing) (?:a|an|the|old) (?:old )?scores?\b'
+  - '\bsettl(?:es?|ed|ing)\s+(?:a|an|the|old)\s+(?:old\s+)?scores?\b'
