@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+<!-- vale off -->
+
+### Fixed
+
+- **ContentDuplication** (`ai-tells-experimental`): The script builds each paragraph's and each sentence's word set once rather than once per comparison, so a long document such as this README finishes inside the two seconds Vale 3.24 allows a script. Findings are unchanged.
+
+<!-- vale on -->
+
 ## [1.37.0] - 2026-09-14
 
 <!-- vale off -->
