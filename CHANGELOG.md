@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **ConclusionMarkers**, **FormalTransitions** (`ai-tells`): The sentence-initial tokens ("Ultimately," "Overall," "Specifically," "Significantly," "Essentially," "Fundamentally," "Of note") fire again on a sentence partway through a paragraph under Vale 3.24, where `^` matches only at the start of the paragraph. Vale 3.17 reported the same findings before and after the change.
+- **CommitTestEnumeration** (`ai-tells-commits`): The coverage tokens ("Coverage: 87%," "100% test coverage") fire again under Vale 3.24, which reads the `%%` escape in a pattern literally rather than as one percent sign.
 - **ContentDuplication** (`ai-tells-experimental`): The script builds each paragraph's and each sentence's word set once rather than once per comparison, so a long document such as this README finishes inside the two seconds Vale 3.24 allows a script. Findings are unchanged.
 
 <!-- vale on -->
