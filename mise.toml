@@ -260,12 +260,21 @@ run = "bash tools/lint-draft.sh $usage_file"
 # --- Test ---
 
 [tasks.test]
-description = "Run the fixture guard: tells fire, past-tense subjects smoke-test, no false positives"
+description = "Run the rule cases and the fixture guard: tells fire, past-tense subjects smoke-test, no false positives"
 run = [
+  "mise run test-rules",
   "mise run test-fires",
   "mise run test-commit-past-tense",
   "mise run test-clean",
 ]
+
+# Run the per-rule cases under tests/, one <Rule>.test.yml per rule, each
+# isolating its rule through a relative `rule:` path. They live outside
+# styles/ because vale before 3.24 loads any .yml there as a rule and
+# refuses a .test.yml, which would break `vale sync` for consumers.
+[tasks.test-rules]
+description = "Run the per-rule vale test cases under tests/"
+run = "vale test tests"
 
 # Assert the tell corpus fires a healthy volume of errors under the test gate.
 # .vale-test.ini binds ai-tells + ai-tells-experimental to test-document.md and

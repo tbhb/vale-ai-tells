@@ -15,6 +15,7 @@ vale-ai-tells/
 │   ├── ai-tells-commits/       # Commit-message rules (*.yml)
 │   ├── ai-tells-experimental/  # Opt-in structural and metric rules (*.yml)
 │   └── config/                 # Tengo scripts, the agent template, vocabularies
+├── tests/                      # Per-rule vale test cases (<style>/<Rule>.test.yml)
 ├── .github/workflows/          # CI, security, release, and Renovate automation
 ├── .config/mise/conf.d/        # Vendored repotools tool pins (vendir owns this)
 ├── .repotools/tasks/           # Vendored repotools shared tasks (vendir owns this)
@@ -48,8 +49,11 @@ A clone already contains the vendored payload, because it is committed. Delete i
 
 ```bash
 vale --config=.vale.ini test-document.md
-mise run test    # the fixture guard: tells fire, subjects smoke-test, no false positives
+mise run test-rules   # the per-rule cases under tests/
+mise run test         # the rule cases, then the fixture guard: tells fire, subjects smoke-test, no false positives
 ```
+
+Cases for a rule go in `tests/<style>/<Rule>.test.yml`, with `rule: ../../styles/<style>/<Rule>.yml` isolating it. Assert with `contains` (the check name and the quoted match) and `absent`. Keep them out of `styles/`: vale before 3.24 loads every `.yml` there as a rule, and a test file breaks `vale sync` for consumers.
 
 **Measuring a candidate token:**
 
