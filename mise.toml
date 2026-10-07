@@ -42,7 +42,7 @@ lockfile = true
 # baseline deliberately omits it: bootstrap syncs before it installs, and
 # a payload bump moves the very pins that sync writes. The pin lives
 # here, ahead of the payload.
-vendir = "0.46.1"
+vendir = "0.46.2"
 # Overrides the payload's vale pin, which trails 3.24.0, the release
 # that introduced `vale test`. Drop this once the vendored payload pins
 # 3.24.0 or later.
