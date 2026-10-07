@@ -1,0 +1,92 @@
+---
+- name: something shifted
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: Then something shifted in the build.
+  contains:
+    - ai-tells.NarrativePivots
+    - "'something shifted'"
+
+- name: something clicked
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: After the third rerun, something clicked.
+  contains: "'something clicked'"
+
+- name: everything changed
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: After the release, everything changed.
+  contains: "'everything changed'"
+
+- name: that changed everything
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The new cache landed, and that changed everything.
+  contains: "'that changed everything'"
+
+- name: it hit me
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The log scrolled by, and then it hit me.
+  contains: "'and then it hit me'"
+
+- name: made all the difference
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: A single index, and that made all the difference.
+  contains: "'and that made all the difference'"
+
+- name: but then I realized
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: I planned a rewrite, but then I realized the loop was fine.
+  contains: "'but then I realized'"
+
+- name: turning point
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The outage was brief, and it was a turning point.
+  contains: "'it was a turning point'"
+
+- name: light bulb
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: Reading the trace, a light bulb went off.
+  contains: "'a light bulb went off'"
+
+- name: penny dropped
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: Then the penny dropped.
+  contains: "'the penny dropped'"
+
+- name: all came together
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: By Friday, it all came together.
+  contains: "'it all came together'"
+
+- name: fell into place
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: Slowly, things fell into place.
+  contains: "'things fell into place'"
+
+- name: changed the game
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The new allocator changed the game for latency.
+  contains: "'changed the game'"
+
+- name: rewrote the rules
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The release rewrote the rules for plugins.
+  contains: "'rewrote the rules'"
+
+- name: flipped the script
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The patch flipped the script on retries.
+  contains: "'flipped the script'"
+
+- name: moved the goalposts
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The vendor moved the goalposts on support.
+  contains: "'moved the goalposts'"
+
+- name: shifted the paradigm
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The runtime shifted the paradigm for deploys.
+  contains: "'shifted the paradigm'"
+
+- name: concrete change
+  rule: ../../styles/ai-tells/NarrativePivots.yml
+  input: The patch changed the cache layout and the lock order.
+  absent: ai-tells.NarrativePivots

@@ -1,0 +1,73 @@
+---
+- name: small count with a body part
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The suite has a handful of slow tests.
+  contains:
+    - ai-tells.FigurativeQuantities
+    - "'a handful'"
+
+- name: small count with a kitchen measure
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The config needs a pinch of extra validation.
+  contains: "'a pinch of'"
+
+- name: large count with a crowd noun
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The tracker holds a slew of stale issues.
+  contains: "'a slew of'"
+
+- name: host of
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The release adds a whole host of options.
+  contains: "'a whole host of'"
+
+- name: container and vehicle scale
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The importer produced a boatload of warnings.
+  contains: "'a boatload of'"
+
+- name: landform scale
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The migration left a mountain of cleanup work.
+  contains: "'a mountain of'"
+
+- name: weather scale
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The rollout triggered a flood of alerts overnight.
+  contains: "'a flood of'"
+
+- name: fancy vague quantity
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The library offers a plethora of features.
+  contains: "'a plethora of'"
+
+- name: variety metaphor
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The docs describe a patchwork of conventions.
+  contains: "'a patchwork of'"
+
+- name: inflated array
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The tool supports a dizzying array of formats.
+  contains: "'a dizzying array of'"
+
+- name: distance standing in for a count
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The report shows how far one label reaches across the corpus.
+  contains: "'how far one label reaches'"
+
+- name: bare array stays literal
+  about: The adjective gates the array token; the bare noun is literal in technical prose.
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The function returns an array of integers.
+  absent: ai-tells.FigurativeQuantities
+
+- name: counted list
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The suite has seven slow tests and twelve flaky ones.
+  absent: ai-tells.FigurativeQuantities
+
+- name: how far with a literal distance
+  rule: ../../styles/ai-tells/FigurativeQuantities.yml
+  input: The log shows how far the build got before it stopped.
+  absent: ai-tells.FigurativeQuantities

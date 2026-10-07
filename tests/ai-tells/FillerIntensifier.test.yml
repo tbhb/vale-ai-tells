@@ -1,0 +1,93 @@
+---
+- name: a single
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: Run a single command to rebuild the index.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'a single'"
+
+- name: every single
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The job fails every single time on the old runner.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'every single'"
+
+- name: no single
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: No single component owns the retry policy.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'No single'"
+
+- name: any one
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: Any one of the checks can veto the merge.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'Any one'"
+
+- name: the single
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The tool reads the single file that holds the pins.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'the single'"
+
+- name: lone
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The suite has a lone exception in the retry test.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'a lone'"
+
+- name: sole
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The wrapper has its sole purpose in the build.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'its sole'"
+
+- name: mere
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The review was a mere formality.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'a mere'"
+
+- name: singular
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The team keeps a singular focus on latency.
+  contains:
+    - ai-tells.FillerIntensifier
+    - "'a singular'"
+
+- name: hyphenated compound
+  about: >-
+    The hyphen lookahead keeps compounds out, where the word does work.
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The tool ships a single-threaded server.
+  absent: ai-tells.FillerIntensifier
+
+- name: single most important stays with absolute assertions
+  about: >-
+    The comment carves "the single most important" out so it is not
+    double-flagged.
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: This is the single most important setting.
+  absent: ai-tells.FillerIntensifier
+
+- name: the singular form
+  about: >-
+    "The singular" names the grammatical number, so the definite article
+    stays out for this word alone.
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: The glossary lists the singular form of each term.
+  absent: ai-tells.FillerIntensifier
+
+- name: no one pronoun
+  about: >-
+    "no one" and "each one" head ordinary pronoun phrases.
+  rule: ../../styles/ai-tells/FillerIntensifier.yml
+  input: No one owns the retry policy, and each one reviews it.
+  absent: ai-tells.FillerIntensifier

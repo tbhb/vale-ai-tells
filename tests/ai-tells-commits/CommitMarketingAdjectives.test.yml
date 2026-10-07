@@ -1,0 +1,130 @@
+---
+- name: production-ready
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A production-ready cache for tokens.
+  contains:
+    - ai-tells-commits.CommitMarketingAdjectives
+    - "'production-ready'"
+
+- name: enterprise-grade
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    An enterprise-grade cache for tokens.
+  contains: "'enterprise-grade'"
+
+- name: mission-critical
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A mission-critical cache for tokens.
+  contains: "'mission-critical'"
+
+- name: unhyphenated world class
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A world class cache for tokens.
+  contains: "'world class'"
+
+- name: industry-standard
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    An industry-standard cache for tokens.
+  contains: "'industry-standard'"
+
+- name: battle-tested
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A battle-tested cache for tokens.
+  contains: "'battle-tested'"
+
+- name: bulletproof
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A bulletproof cache for tokens.
+  contains: "'bulletproof'"
+
+- name: top-tier
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A top-tier cache for tokens.
+  contains: "'top-tier'"
+
+- name: highly scalable
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A highly scalable cache for tokens.
+  contains: "'highly scalable'"
+
+- name: fault-tolerant
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A fault-tolerant cache for tokens.
+  contains: "'fault-tolerant'"
+
+- name: carefully crafted
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A carefully crafted cache for tokens.
+  contains: "'carefully crafted'"
+
+- name: elegantly designed
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    An elegantly designed cache for tokens.
+  contains: "'elegantly designed'"
+
+- name: first-class is standard terminology
+  about: First-class was left out of the token list on purpose.
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): accept callbacks
+
+    Functions are first-class values in the parser's scripting layer.
+  absent: ai-tells-commits.CommitMarketingAdjectives
+
+- name: hyphenated forms belong to the prose style
+  about: state-of-the-art and cutting-edge are covered by the ai-tells prose rules.
+  rule: ../../styles/ai-tells-commits/CommitMarketingAdjectives.yml
+  format: txt
+  input: |
+    feat(parser): add a cache
+
+    A state-of-the-art, cutting-edge cache for tokens.
+  absent: ai-tells-commits.CommitMarketingAdjectives

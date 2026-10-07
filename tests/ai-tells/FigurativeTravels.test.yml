@@ -1,0 +1,38 @@
+---
+- name: determiner-gated journey
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: The request travels through the stack.
+  contains:
+    - ai-tells.FigurativeTravels
+    - "'The request travels through'"
+
+- name: open subject with a destination
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: The precomputed digests travel into that bundle.
+  contains: "'The precomputed digests travel into'"
+
+- name: determiner-less data subject
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: State travels with the session.
+  contains: "'State travels'"
+
+- name: route complement
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: We travel through the stack to find the fault.
+  contains: "'travel through the'"
+
+- name: portability idiom
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: Good patterns travel well across codebases.
+  contains: "'travel well'"
+
+- name: travel by a vehicle
+  about: The preposition set leaves out "by train".
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: We travel by train to the conference.
+  absent: ai-tells.FigurativeTravels
+
+- name: transmission without the verb
+  rule: ../../styles/ai-tells/FigurativeTravels.yml
+  input: The router forwards each packet to the next hop.
+  absent: ai-tells.FigurativeTravels

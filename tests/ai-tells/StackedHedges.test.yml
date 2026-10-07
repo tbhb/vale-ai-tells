@@ -1,0 +1,42 @@
+---
+- name: could potentially
+  rule: ../../styles/ai-tells/StackedHedges.yml
+  input: The change could potentially break older callers.
+  contains:
+    - ai-tells.StackedHedges
+    - "'could potentially'"
+
+- name: may possibly
+  rule: ../../styles/ai-tells/StackedHedges.yml
+  input: The lock may possibly deadlock under load.
+  contains:
+    - ai-tells.StackedHedges
+    - "'may possibly'"
+
+- name: might conceivably
+  rule: ../../styles/ai-tells/StackedHedges.yml
+  input: The patch might conceivably break older callers.
+  contains:
+    - ai-tells.StackedHedges
+    - "'might conceivably'"
+
+- name: could perhaps
+  rule: ../../styles/ai-tells/StackedHedges.yml
+  input: The check could perhaps run earlier.
+  contains:
+    - ai-tells.StackedHedges
+    - "'could perhaps'"
+
+- name: reversed order is idiomatic
+  about: >-
+    The reversed "possibly could" is idiomatic and stays clean.
+  rule: ../../styles/ai-tells/StackedHedges.yml
+  input: She did all she possibly could to fix the build.
+  absent: ai-tells.StackedHedges
+
+- name: single hedge
+  about: >-
+    Single hedges belong to no rule; only the stack fires.
+  rule: ../../styles/ai-tells/StackedHedges.yml
+  input: The change could break older callers.
+  absent: ai-tells.StackedHedges

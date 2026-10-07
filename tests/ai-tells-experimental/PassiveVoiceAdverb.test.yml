@@ -1,0 +1,32 @@
+---
+- name: was never used
+  rule: ../../styles/ai-tells-experimental/PassiveVoiceAdverb.yml
+  input: The helper was never used in production.
+  contains:
+    - ai-tells-experimental.PassiveVoiceAdverb
+    - "'was never used'"
+
+- name: is automatically generated
+  rule: ../../styles/ai-tells-experimental/PassiveVoiceAdverb.yml
+  input: The index is automatically generated on every build.
+  contains: ai-tells-experimental.PassiveVoiceAdverb
+
+- name: was not merged
+  rule: ../../styles/ai-tells-experimental/PassiveVoiceAdverb.yml
+  input: The patch was not merged before the freeze.
+  contains: ai-tells-experimental.PassiveVoiceAdverb
+
+- name: get passive with an adverb
+  rule: ../../styles/ai-tells-experimental/PassiveVoiceAdverb.yml
+  input: The logs get quickly rotated by the daemon.
+  contains: ai-tells-experimental.PassiveVoiceAdverb
+
+- name: no gap stays with PassiveVoice
+  rule: ../../styles/ai-tells-experimental/PassiveVoiceAdverb.yml
+  input: The file was deleted by the cleanup job.
+  absent: ai-tells-experimental.PassiveVoiceAdverb
+
+- name: active voice with an adverb stays quiet
+  rule: ../../styles/ai-tells-experimental/PassiveVoiceAdverb.yml
+  input: The daemon quickly rotates the logs and never reads them.
+  absent: ai-tells-experimental.PassiveVoiceAdverb

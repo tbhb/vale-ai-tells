@@ -1,0 +1,92 @@
+---
+- name: capitalized count with framework noun
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Three pillars hold the design up.
+  contains:
+    - ai-tells.CataphoricForecasting
+    - "'Three pillars"
+
+- name: count with a forecasting verb
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Four user journeys define the experience.
+  contains: "'Four user journeys define'"
+
+- name: listicle pivot
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Here are the four options.
+  contains: "'Here are the four'"
+
+- name: the following count
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The following five items need review.
+  contains: "'The following five'"
+
+- name: existential announcement
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: There are three reasons to switch.
+  contains: "'There are three reasons'"
+
+- name: cardinal clause ending in a colon
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: "Three reasons stand out:"
+  contains: ai-tells.CataphoricForecasting
+
+- name: demonstrative count with framework noun
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The library keeps these three pillars intact.
+  contains: "'these three pillars'"
+
+- name: process decomposition
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The migration breaks down into three phases.
+  contains: "'breaks down into three phases'"
+
+- name: categorizing decomposition
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The failures fall into three categories.
+  contains: "'fall into three categories'"
+
+- name: sentence-initial the-count
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The three axes matter most.
+  contains: "'The three axes'"
+
+- name: bare cardinal subject
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Five people attended the review.
+  contains: "'Five people attended'"
+
+- name: folksy proportion
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Three of every four skills fail the first run.
+  contains: "'Three of every four'"
+
+- name: nine times out of ten
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Nine times out of ten the cache is warm.
+  contains: "'Nine times out of ten'"
+
+- name: mid-sentence count
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The commit changed all three files in the package.
+  absent: ai-tells.CataphoricForecasting
+
+- name: existential count of a plain noun
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: There are three files in the directory.
+  absent: ai-tells.CataphoricForecasting
+
+- name: temporal cardinal opener
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: Three years ago the parser was slower.
+  absent: ai-tells.CataphoricForecasting
+
+- name: temporal the-count
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The two weeks of onboarding went well.
+  absent: ai-tells.CataphoricForecasting
+
+- name: count-adjective compound
+  rule: ../../styles/ai-tells/CataphoricForecasting.yml
+  input: The service runs a three-tier architecture.
+  absent: ai-tells.CataphoricForecasting

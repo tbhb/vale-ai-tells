@@ -1,0 +1,48 @@
+---
+- name: two prepositional absences
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: It runs with no database and no network.
+  contains:
+    - ai-tells.NegatedPair
+    - "'with no database and no'"
+
+- name: determiner-gated without pair
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: It runs without a database or a round-trip.
+  contains: "'without a database or a round-trip'"
+
+- name: verb-gated neither
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: The tool needs neither the database nor a round-trip.
+  contains: "'needs neither'"
+
+- name: doubled negated verb
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: It doesn't need credentials and doesn't call the network.
+  contains: "'doesn't need credentials and doesn't'"
+
+- name: nor continuation
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: It doesn't need credentials, nor does it call the network.
+  contains: "', nor does it'"
+
+- name: sentence-initial neither nor
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: Neither the database nor the network is required.
+  contains: "'Neither the database nor the network is'"
+
+- name: bare without pair
+  about: Without the determiner it is ordinary docs English and stays out.
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: The call returns without arguments or results.
+  absent: ai-tells.NegatedPair
+
+- name: has neither stays with another rule
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: The record has neither an owner nor a group.
+  absent: ai-tells.NegatedPair
+
+- name: single negation
+  rule: ../../styles/ai-tells/NegatedPair.yml
+  input: It runs with no database.
+  absent: ai-tells.NegatedPair

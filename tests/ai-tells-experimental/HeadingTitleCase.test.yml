@@ -1,0 +1,31 @@
+---
+- name: title case heading
+  rule: ../../styles/ai-tells-experimental/HeadingTitleCase.yml
+  input: "# Getting Started With The Command Line"
+  contains: ai-tells-experimental.HeadingTitleCase
+
+- name: sentence case heading
+  rule: ../../styles/ai-tells-experimental/HeadingTitleCase.yml
+  input: "# Getting started with the command line"
+  absent: ai-tells-experimental.HeadingTitleCase
+
+- name: acronym exceptions stay quiet
+  rule: ../../styles/ai-tells-experimental/HeadingTitleCase.yml
+  input: "# Configuring the API and CLI for GitHub"
+  absent: ai-tells-experimental.HeadingTitleCase
+
+- name: title case body paragraph is not a heading
+  rule: ../../styles/ai-tells-experimental/HeadingTitleCase.yml
+  input: Getting Started With The Command Line Today.
+  absent: ai-tells-experimental.HeadingTitleCase
+
+- name: prefixed title case remainder still flags
+  about: A fully title-cased remainder after an ordinal prefix still flags.
+  rule: ../../styles/ai-tells-experimental/HeadingTitleCase.yml
+  input: "# Step 0: Open The Task List And Review Every Item"
+  contains: ai-tells-experimental.HeadingTitleCase
+
+- name: prefixed sentence case heading
+  rule: ../../styles/ai-tells-experimental/HeadingTitleCase.yml
+  input: "# Step 0: Open the task list"
+  absent: ai-tells-experimental.HeadingTitleCase

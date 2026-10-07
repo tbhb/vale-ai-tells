@@ -1,0 +1,86 @@
+---
+- name: third person series with a conjunction
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The tool parses input, validates schemas, and emits reports.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'parses input, validates schemas, and emits reports'"
+
+- name: gerund series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: She spent the week writing docs, fixing tests, and merging patches.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'writing docs, fixing tests, and merging patches'"
+
+- name: past tense series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The team drafted the plan, reviewed the schema, and shipped the tool.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'drafted the plan, reviewed the schema, and shipped the tool'"
+
+- name: modal series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The loader can read the file, build a tree, and emit tokens.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'can read the file, build a tree, and emit tokens'"
+
+- name: pronoun series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: We read the file, build a tree, and emit tokens.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'We read the file, build a tree, and emit tokens'"
+
+- name: infinitive series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The goal is to read the file, build a tree, and emit tokens.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'to read the file, build a tree, and emit tokens'"
+
+- name: colon series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: "The steps are simple: read the file, build a tree, and emit tokens."
+  contains:
+    - ai-tells.VerbTricolon
+    - "': read the file, build a tree, and emit tokens'"
+
+- name: asyndetic gerund series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The job is slow, parsing input, building trees, emitting tokens.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'parsing input, building trees, emitting tokens'"
+
+- name: subject-verb series
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The old parser reads text, the new lexer emits tokens, and the final checker flags errors.
+  contains:
+    - ai-tells.VerbTricolon
+    - "'The old parser reads text, the new lexer emits tokens, and the final checker flags errors'"
+
+- name: two items
+  about: >-
+    A pair is not a tricolon.
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The tool parses input and emits reports.
+  absent: ai-tells.VerbTricolon
+
+- name: three clauses from three sentences
+  about: >-
+    The gaps exclude terminal punctuation, so clauses from separate
+    sentences never read as a series.
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: The parser reads input. The lexer emits tokens. The logger writes errors.
+  absent: ai-tells.VerbTricolon
+
+- name: commit subject colon
+  about: >-
+    The lookbehind exempts a Conventional Commits subject, where the
+    colon introduces a description rather than a list.
+  rule: ../../styles/ai-tells/VerbTricolon.yml
+  input: "fix: tighten parser, loosen limits, and drop flags"
+  absent: ai-tells.VerbTricolon

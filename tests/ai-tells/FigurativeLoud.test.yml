@@ -1,0 +1,38 @@
+---
+- name: loudly before an action verb
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: The linter loudly warns about the deprecation.
+  contains:
+    - ai-tells.FigurativeLoud
+    - "'loudly warns'"
+
+- name: fails loudly
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: The check fails loudly when the lockfile drifts.
+  contains: "'fails loudly'"
+
+- name: loud signal idiom
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: The metric sends a loud signal about queue depth.
+  contains: "'sends a loud signal'"
+
+- name: loud warning about
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: The log carries a loud warning about scale.
+  contains: "'a loud warning about'"
+
+- name: loud and clear
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: The error comes through loud and clear.
+  contains: "'loud and clear'"
+
+- name: out loud
+  about: Reading or thinking out loud is a literal sense outside the rule.
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: She read the report out loud to the team.
+  absent: ai-tells.FigurativeLoud
+
+- name: literal loudness
+  rule: ../../styles/ai-tells/FigurativeLoud.yml
+  input: The speaker is loud in a small room.
+  absent: ai-tells.FigurativeLoud

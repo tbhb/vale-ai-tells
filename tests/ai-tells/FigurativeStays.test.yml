@@ -1,0 +1,67 @@
+---
+- name: curated state complement
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: Builds stay green.
+  contains:
+    - ai-tells.FigurativeStays
+    - "'stay green'"
+
+- name: curated state complement in the past
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: Indexes stayed small.
+  contains: "'stayed small'"
+
+- name: open complement after a subject
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The index stays tidy.
+  contains: "'The index stays tidy'"
+
+- name: open complement with an adverb
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: Each field always stays tidy across runs.
+  contains: "'Each field always stays tidy'"
+
+- name: stays out of the way
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The helper stays out of the way.
+  contains: "'stays out of the way'"
+
+- name: stays clear of
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: Loops stay clear of the hot path.
+  contains: "'stay clear of'"
+
+- name: stayed behind
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The test family stayed behind on an assumption.
+  contains: "'stayed behind'"
+
+- name: stays in the loop
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The owner stays in the loop on every change.
+  contains: "'stays in the loop'"
+
+- name: what stays in
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The doc decides what stays in and what goes.
+  contains: "'what stays in'"
+
+- name: guest at a hotel
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The guest stays at the hotel for a week.
+  absent: ai-tells.FigurativeStays
+
+- name: stays overnight
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The team stays overnight during the release.
+  absent: ai-tells.FigurativeStays
+
+- name: stays quiet belongs to another rule
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The test stays quiet.
+  absent: ai-tells.FigurativeStays
+
+- name: stays in sync
+  rule: ../../styles/ai-tells/FigurativeStays.yml
+  input: The replica stays in sync with the primary.
+  absent: ai-tells.FigurativeStays

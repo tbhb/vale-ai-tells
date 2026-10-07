@@ -1,0 +1,132 @@
+---
+- name: todays era opener
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: In today's rapidly evolving stack, config drifts.
+  contains:
+    - ai-tells.OpeningCliches
+    - "'In today's rapidly evolving'"
+
+- name: realm of
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: In the realm of build tools, speed wins.
+  contains: "'In the realm of'"
+
+- name: era where
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: In an era where builds are cached, cold starts hurt.
+  contains: "'In an era where'"
+
+- name: journey opener
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Embarking on a journey with Vale starts with a config file.
+  contains: "'Embarking on a journey'"
+
+- name: delve opener
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: As we delve into the parser, the lexer comes first.
+  contains: "'As we delve into'"
+
+- name: when it comes to
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: When it comes to caching, keys matter.
+  contains: "'When it comes to'"
+
+- name: picture this
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Picture this, a build that never finishes.
+  contains: "'Picture this'"
+
+- name: have you ever wondered
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Have you ever wondered why builds are slow?
+  contains: "'Have you ever wondered'"
+
+- name: dawn of
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Since the dawn of computing, caches have expired.
+  contains: "'Since the dawn of'"
+
+- name: before we dive in
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Before we dive in, install the tool.
+  contains: "'Before we dive in'"
+
+- name: by the end of this guide
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: By the end of this guide, you will have a working config.
+  contains: "'By the end of this guide'"
+
+- name: this guide will walk you through
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: This guide will walk you through the setup.
+  contains: "'This guide will walk you through'"
+
+- name: welcome to this guide
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Welcome to this guide on caching.
+  contains: "'Welcome to this guide'"
+
+- name: without further ado
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Without further ado, here is the config.
+  contains: "'Without further ado'"
+
+- name: gone are the days
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Gone are the days of manual deploys.
+  contains: "'Gone are the days'"
+
+- name: whether you are a
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Whether you're a novice or an expert, the setup is short.
+  contains: "'Whether you're a'"
+
+- name: you might be wondering
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: You might be wondering why the cache is cold.
+  contains: "'You might be wondering'"
+
+- name: chances are
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Chances are the cache is stale.
+  contains: "'Chances are'"
+
+- name: not alone
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: You're not alone if the build fails.
+  contains: "'You're not alone'"
+
+- name: right place
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: You've come to the right place for caching advice.
+  contains: "'You've come to the right place'"
+
+- name: ready to dive in
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: Ready to dive in? Run the installer.
+  contains: "'Ready to dive in'"
+
+- name: dynamic world
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: In the dynamic world of builds, speed wins.
+  contains: "'In the dynamic world of'"
+
+- name: as technology continues
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: As technology continues to evolve, caches grow.
+  contains: "'As technology continues to evolve'"
+
+- name: we live in
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: We live in a world of caches.
+  contains: "'We live in a world'"
+
+- name: whether as a conditional
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: The loader checks whether the cache is warm.
+  absent: ai-tells.OpeningCliches
+
+- name: plain opener
+  rule: ../../styles/ai-tells/OpeningCliches.yml
+  input: The loader reads the cache and returns the digest.
+  absent: ai-tells.OpeningCliches

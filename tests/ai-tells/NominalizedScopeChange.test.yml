@@ -1,0 +1,53 @@
+---
+- name: gerund then a predicate verb
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: The widening covers the inflections.
+  contains:
+    - ai-tells.NominalizedScopeChange
+    - "'The widening'"
+
+- name: gerund then a comma
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: After the narrowing, the alerts stay identical.
+  contains:
+    - ai-tells.NominalizedScopeChange
+    - "'the narrowing'"
+
+- name: gerund then a preposition
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: The tightening of the filter dropped two alerts.
+  contains:
+    - ai-tells.NominalizedScopeChange
+    - "'The tightening'"
+
+- name: gerund then a sentence end
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: The tests pass after this loosening.
+  contains:
+    - ai-tells.NominalizedScopeChange
+    - "'this loosening'"
+
+- name: broadening
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: A broadening in the token list catches more spellings.
+  contains:
+    - ai-tells.NominalizedScopeChange
+    - "'A broadening'"
+
+- name: adjectival widening
+  about: >-
+    The closed continuation list separates the adjectival reading
+    ("the widening gap") from the nominal one.
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: The widening gap between the two builds worries the team.
+  absent: ai-tells.NominalizedScopeChange
+
+- name: narrowing conversion
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: A narrowing conversion truncates the integer.
+  absent: ai-tells.NominalizedScopeChange
+
+- name: rule as subject
+  rule: ../../styles/ai-tells/NominalizedScopeChange.yml
+  input: The rule now catches the inflected spellings.
+  absent: ai-tells.NominalizedScopeChange

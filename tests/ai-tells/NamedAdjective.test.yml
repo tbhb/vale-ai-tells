@@ -1,0 +1,54 @@
+---
+- name: definite determiner with a noun
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The function opens the named file for reading.
+  contains:
+    - ai-tells.NamedAdjective
+    - "'the named file'"
+
+- name: each with a noun
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The runner checks each named rule in turn.
+  contains: "'each named rule'"
+
+- name: possessive with a noun
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The task builds its named target before the tests.
+  contains: "'its named target'"
+
+- name: stacked modifier
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The team funds the named operational support for the release.
+  contains: "'the named operational support'"
+
+- name: indefinite article
+  about: A named type means a type that has a name, so the indefinite article stays out.
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The compiler accepts a named type in this position.
+  absent: ai-tells.NamedAdjective
+
+- name: named pipe term of art
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The daemon listens on named pipes under the runtime directory.
+  absent: ai-tells.NamedAdjective
+
+- name: term of art behind a definite determiner
+  about: The lookahead keeps the compound terms of art out even under the.
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The checker resolves the named type before it expands the alias.
+  absent: ai-tells.NamedAdjective
+
+- name: participle with the name after it
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The loader reads the file named config.toml first.
+  absent: ai-tells.NamedAdjective
+
+- name: legal register
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The policy pays only the named party after the claim.
+  absent: ai-tells.NamedAdjective
+
+- name: meteorology register
+  rule: ../../styles/ai-tells/NamedAdjective.yml
+  input: The forecast tracks the named storm across the gulf.
+  absent: ai-tells.NamedAdjective

@@ -1,0 +1,37 @@
+---
+- name: only-way claim
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: This is the only way to avoid the race.
+  contains:
+    - ai-tells.AbsoluteAssertions
+    - "'the only way to'"
+
+- name: superlative importance claim
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: The single most important step is the backup.
+  contains: "'The single most important'"
+
+- name: priority claim
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: Above all else, keep the lockfile current.
+  contains: "'Above all else'"
+
+- name: no-better claim
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: There is no better option for a small cache.
+  contains: "'There is no better'"
+
+- name: warning opener
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: Make no mistake, the migration will fail without it.
+  contains: "'Make no mistake'"
+
+- name: denial opener
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: There's no denying that the build is slow.
+  contains: "'There's no denying'"
+
+- name: measured claim
+  rule: ../../styles/ai-tells/AbsoluteAssertions.yml
+  input: The cache cut the build from nine minutes to four.
+  absent: ai-tells.AbsoluteAssertions

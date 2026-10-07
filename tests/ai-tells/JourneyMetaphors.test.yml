@@ -1,0 +1,130 @@
+---
+- name: along the way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: We learned a lot along the way.
+  contains:
+    - ai-tells.JourneyMetaphors
+    - "'along the way'"
+
+- name: every step of the way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The docs supported us every step of the way.
+  contains: "'every step of the way'"
+
+- name: most of the way there
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: That gets us most of the way there.
+  contains: "'of the way there'"
+
+- name: halfway there
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The migration is halfway there.
+  contains: "'halfway there'"
+
+- name: on its way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: A fix is on its way.
+  contains: "'on its way'"
+
+- name: is on the way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The patch is on the way.
+  contains: "'is on the way'"
+
+- name: more on the way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The release adds two flags, with more on the way.
+  contains: "'more on the way'"
+
+- name: en route to
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The service is en route to general availability.
+  contains: "'en route to'"
+
+- name: finds its way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The bug found its way into production.
+  contains: "'found its way'"
+
+- name: paves the way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: This change paves the way for streaming.
+  contains: "'paves the way'"
+
+- name: makes it into
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The value makes it into the index.
+  contains: "'makes it into'"
+
+- name: walks the workflow
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The tool walks the workflow one stage at a time.
+  contains: "'walks the workflow'"
+
+- name: a long way
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: A typed config goes a long way toward clean diffs.
+  contains: "'a long way'"
+
+- name: path forward
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The review found a path forward for the cache.
+  contains: "'path forward'"
+
+- name: on a path to
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The service is on a path to stability.
+  contains: "'on a path to'"
+
+- name: on the road to
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The service is on the road to recovery.
+  contains: "'on the road to'"
+
+- name: bumps in the road
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: Expect a few bumps in the road.
+  contains: "'bumps in the road'"
+
+- name: down the road
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The shortcut bites us down the road.
+  contains: "'down the road'"
+
+- name: down the line
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The shortcut causes problems down the line.
+  contains: "'down the line'"
+
+- name: our journey
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: Our journey began with one rule.
+  contains: "'Our journey'"
+
+- name: journey from
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: Journey from prototype to production is the topic.
+  contains: "'Journey from'"
+
+- name: manner sense of way
+  about: Bare "on the way" is the manner sense in the corpora, so it stays out.
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The result depends on the way the cache is built.
+  absent: ai-tells.JourneyMetaphors
+
+- name: walks the tree
+  about: Walking a tree is the traversal term of art.
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The linter walks the tree once per file.
+  absent: ai-tells.JourneyMetaphors
+
+- name: a literal path
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: Set the value on the path to the config file.
+  absent: ai-tells.JourneyMetaphors
+
+- name: user journey
+  about: The adjacency gate keeps the UX term of art quiet.
+  rule: ../../styles/ai-tells/JourneyMetaphors.yml
+  input: The user journey map has six rows.
+  absent: ai-tells.JourneyMetaphors

@@ -1,0 +1,15 @@
+---
+- name: em-dash
+  rule: ../../styles/ai-tells/EmDashUsage.yml
+  input: The cache — held in memory — is fast.
+  contains: ai-tells.EmDashUsage
+
+- name: en-dash
+  rule: ../../styles/ai-tells/EmDashUsage.yml
+  input: The guide covers pages 3–5.
+  contains: ai-tells.EmDashUsage
+
+- name: hyphen
+  rule: ../../styles/ai-tells/EmDashUsage.yml
+  input: The cache is a read-through, in-memory store.
+  absent: ai-tells.EmDashUsage

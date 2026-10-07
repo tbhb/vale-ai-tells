@@ -1,0 +1,61 @@
+---
+- name: copula verdict
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: Speed is the point.
+  contains:
+    - ai-tells.PointVerdict
+    - "'is the point'"
+
+- name: contracted copula with an intensifier
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: That's the whole point.
+  contains: "'s the whole point'"
+
+- name: past copula
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: Determinism was the point.
+  contains: "'was the point'"
+
+- name: copula with an adverb
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: This is exactly the point.
+  contains: "'is exactly the point'"
+
+- name: intensified purpose statement
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: The whole point of the cache is to avoid the read.
+  contains: "'The whole point of'"
+
+- name: whole point is
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: The entire point is to keep the writer simple.
+  contains: "'The entire point is'"
+
+- name: question
+  about: The lookbehind on "what" keeps the question out.
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: So what is the point?
+  absent: ai-tells.PointVerdict
+
+- name: comma relative
+  about: SummativeAppositive owns the comma relative.
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: The cache avoids a second read, which is the whole point.
+  absent: ai-tells.PointVerdict
+
+- name: literal position
+  about: The lookahead keeps out the literal position.
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: The marker P is the point following the borrow.
+  absent: ai-tells.PointVerdict
+
+- name: locative continuation
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: The tick is the point at which the timer fires.
+  absent: ai-tells.PointVerdict
+
+- name: bare point of
+  about: The bare "the point of" is ordinary English.
+  rule: ../../styles/ai-tells/PointVerdict.yml
+  input: The point of the lockfile is stated in the README.
+  absent: ai-tells.PointVerdict

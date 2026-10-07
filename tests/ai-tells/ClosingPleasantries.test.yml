@@ -1,0 +1,92 @@
+---
+- name: i hope this helps
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: The flag is optional. I hope this helps.
+  contains:
+    - ai-tells.ClosingPleasantries
+    - "'I hope this helps'"
+
+- name: hopefully this helps
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Hopefully this helps with the build.
+  contains: "'Hopefully this helps'"
+
+- name: i hope you find this useful
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: I hope you find this useful.
+  contains: "'I hope you find this useful'"
+
+- name: feel free to ask
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: The config lives in the root. Feel free to ask about the rest.
+  contains: "'Feel free to ask'"
+
+- name: please feel free to reach out
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Please feel free to reach out to the maintainers.
+  contains: "'Please feel free to reach out'"
+
+- name: don't hesitate
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Don't hesitate to reach out if the build fails.
+  contains: "'Don't hesitate to reach out'"
+
+- name: please don't hesitate
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Please don't hesitate to contact the team.
+  contains: "'Please don't hesitate to contact'"
+
+- name: let me know if you have questions
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Let me know if you have any questions.
+  contains: "'Let me know if you have any questions'"
+
+- name: let me know if anything is unclear
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Let me know if anything is unclear.
+  contains: "'Let me know if anything is unclear'"
+
+- name: if you have any further questions
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: If you have any further questions, open an issue.
+  contains: "'If you have any further questions'"
+
+- name: if you'd like more details
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: If you'd like more details, see the spec.
+  contains: "'If you'd like more details'"
+
+- name: happy to help
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Happy to help with the migration.
+  contains: "'Happy to help'"
+
+- name: i'd be happy to walk you through
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: I'd be happy to walk you through the setup.
+  contains: "'I'd be happy to walk you through'"
+
+- name: i'm here to help
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: I'm here to help with the release.
+  contains: "'I'm here to help'"
+
+- name: we're always happy to help
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: We're always happy to help new contributors.
+  contains: "'We're always happy to help'"
+
+- name: best of luck
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Best of luck with the rewrite.
+  contains: "'Best of luck'"
+
+- name: happy coding
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Run the tests, then ship it. Happy coding.
+  contains: "'Happy coding'"
+
+- name: plain closing sentence
+  rule: ../../styles/ai-tells/ClosingPleasantries.yml
+  input: Open an issue with the failing input and the Vale version.
+  absent: ai-tells.ClosingPleasantries

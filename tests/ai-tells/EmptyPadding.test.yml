@@ -1,0 +1,38 @@
+---
+- name: various before a plural noun
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: Various factors affect the result.
+  contains:
+    - ai-tells.EmptyPadding
+    - "'Various factors'"
+
+- name: certain before a noun
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: The parser rejects certain inputs.
+  contains: "'certain inputs'"
+
+- name: respective before a plural noun
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: Each module keeps its respective settings.
+  contains: "'respective settings'"
+
+- name: particular before a noun
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: This particular cache never expires.
+  contains: "'particular cache'"
+
+- name: given as a modifier
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: The given value is copied into the buffer.
+  contains: "'given value'"
+
+- name: modifier before a verb
+  about: The pair needs a noun after the modifier; "certain to fail" has none.
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: The retry is certain to fail.
+  absent: ai-tells.EmptyPadding
+
+- name: concrete adjective
+  rule: ../../styles/ai-tells/EmptyPadding.yml
+  input: The parser rejects malformed inputs.
+  absent: ai-tells.EmptyPadding

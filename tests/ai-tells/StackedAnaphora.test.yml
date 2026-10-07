@@ -1,0 +1,230 @@
+---
+- name: three no sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: No flags. No config. No setup.
+  contains:
+    - ai-tells.StackedAnaphora
+    - "'No flags. No config. No setup'"
+
+- name: two no sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: No flags. No config.
+  contains: "'No flags. No config'"
+
+- name: three comma separated no clauses
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: No flags, no config, no setup.
+  contains: "'No flags, no config, no setup'"
+
+- name: three not sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Not a rewrite. Not a rename. Not a rollback.
+  contains: "'Not a rewrite. Not a rename. Not a rollback'"
+
+- name: two not sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Not a rewrite. Not a rename.
+  contains: "'Not a rewrite. Not a rename'"
+
+- name: three no more sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: No more flags. No more config. No more setup.
+  contains: "'No more flags. No more config. No more setup'"
+
+- name: three it's sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: It's fast. It's small. It's safe.
+  contains: "'It's fast. It's small. It's safe'"
+
+- name: three this is sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: This is fast. This is small. This is safe.
+  contains: "'This is fast. This is small. This is safe'"
+
+- name: three rhetorical questions
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: What breaks? Why does it break? How do we fix it?
+  contains: "'What breaks? Why does it break? How do we fix it?'"
+
+- name: three works because sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: The cache works because keys are stable. The queue works because writes are ordered. The lock works because owners are unique.
+  contains: "'The cache works because keys are stable. The queue works because writes are ordered. The lock works because owners are unique'"
+
+- name: three one sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: One parser. One config. One output.
+  contains: "'One parser. One config. One output'"
+
+- name: one comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: One input, one output.
+  contains: "'One input, one output'"
+
+- name: every sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Every rule has a test. Every test has a name. Every name is unique.
+  contains: "'Every rule has a test. Every test has a name. Every name is unique'"
+
+- name: every comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Every rule has a test, every test has a name.
+  contains: "'Every rule has a test, every test has a name'"
+
+- name: each sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Each rule has a test. Each test has a name. Each name is unique.
+  contains: "'Each rule has a test. Each test has a name. Each name is unique'"
+
+- name: each comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Each rule has a test, each test has a name.
+  contains: "'Each rule has a test, each test has a name'"
+
+- name: zero sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Zero flags. Zero config. Zero setup.
+  contains: "'Zero flags. Zero config. Zero setup'"
+
+- name: zero comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Zero flags, zero config.
+  contains: "'Zero flags, zero config'"
+
+- name: a single pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: A single binary. A single config file.
+  contains: "'A single binary. A single config file'"
+
+- name: a single comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: A single binary, a single config file.
+  contains: "'A single binary, a single config file'"
+
+- name: many pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Many rules fire. Many rules overlap.
+  contains: "'Many rules fire. Many rules overlap.'"
+
+- name: few pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Few rules fire. Few rules overlap.
+  contains: "'Few rules fire. Few rules overlap.'"
+
+- name: all sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: All rules have tests. All tests have names. All names are unique.
+  contains: "'All rules have tests. All tests have names. All names are unique'"
+
+- name: prepositional chain
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: We route it with a hook, through a queue, and for each tenant.
+  contains: "'with a hook, through a queue, and for each tenant'"
+
+- name: always pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Always run the tests. Always read the diff.
+  contains: "'Always run the tests. Always read the diff.'"
+
+- name: always comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Teams always run the tests, always read the diff.
+  contains: "'always run the tests, always read the diff'"
+
+- name: never pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Never edit the lock file. Never skip the hooks.
+  contains: "'Never edit the lock file. Never skip the hooks.'"
+
+- name: fully pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Fully typed. Fully tested.
+  contains: "'Fully typed. Fully tested.'"
+
+- name: completely comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: The design is completely typed, completely tested.
+  contains: "'completely typed, completely tested'"
+
+- name: entirely pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Entirely local. Entirely offline.
+  contains: "'Entirely local. Entirely offline.'"
+
+- name: truly pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Truly fast. Truly small.
+  contains: "'Truly fast. Truly small.'"
+
+- name: purely comma pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: The check is purely local, purely static.
+  contains: "'purely local, purely static'"
+
+- name: only pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Only one parser. Only one config.
+  contains: "'Only one parser. Only one config.'"
+
+- name: just pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Just a flag. Just a file.
+  contains: "'Just a flag. Just a file.'"
+
+- name: article exemplification triple
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: A hook wants to count failures. A subagent wants to record a result. A skill wants to stash a value.
+  contains: "'A hook wants to count failures. A subagent wants to record a result. A skill wants to stash a value'"
+
+- name: article mirror pair
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: An unset flag counts as false. A stale value belongs to the caller.
+  contains: "'An unset flag counts as false. A stale value belongs to the caller'"
+
+- name: definite noun list fragment
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: The parser, the cache, the writer.
+  contains: "'The parser, the cache, the writer.'"
+
+- name: whether or whether fragment
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Whether the build passes, or whether the tests hang.
+  contains: "'Whether the build passes, or whether the tests hang.'"
+
+- name: two whether sentences
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: Whether it parses. Whether it scales.
+  contains: "'Whether it parses. Whether it scales.'"
+
+- name: paired for scope openers
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: For search, that join reverses. For writes, the table takes one append.
+  contains: "'For search, that join reverses. For writes,'"
+
+- name: single for scope opener
+  about: A single fronted For is ordinary English; only the pair fires.
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: For search, the index reverses the join.
+  absent: ai-tells.StackedAnaphora
+
+- name: for discourse markers
+  about: The discourse markers are excluded at either position.
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: For example, the cache is cold. For now, ignore the warning.
+  absent: ai-tells.StackedAnaphora
+
+- name: two it's sentences
+  about: Only the three-sentence form is flagged for it's.
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: It's fast. It's small.
+  absent: ai-tells.StackedAnaphora
+
+- name: single no sentence
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: No flags are needed, and the parser reads the config once.
+  absent: ai-tells.StackedAnaphora
+
+- name: varied openings
+  rule: ../../styles/ai-tells/StackedAnaphora.yml
+  input: The parser reads the file. Then the cache is warmed. Finally the writer runs.
+  absent: ai-tells.StackedAnaphora

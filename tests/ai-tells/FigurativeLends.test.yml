@@ -1,0 +1,62 @@
+---
+- name: suitability lends itself to
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The format lends itself to batch processing.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lends itself to'"
+
+- name: suitability lends itself well to
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The interface lends itself well to testing.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lends itself well to'"
+
+- name: suitability lends themselves to
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: Small modules lend themselves to reuse.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lend themselves to'"
+
+- name: conferred quality
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The benchmark lends credence to the claim.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lends credence'"
+
+- name: conferred quality past tense
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The second run lent weight to the first.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lent weight'"
+
+- name: conferred air of
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The diagram lends an air of precision to the draft.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lends an air of'"
+
+- name: helping idiom
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The helper lends a hand with the setup.
+  contains:
+    - ai-tells.FigurativeLends
+    - "'lends a hand'"
+
+- name: literal money loan
+  about: >-
+    Literal lending stays quiet because the complement is the
+    discriminator.
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: The bank lends money to small firms.
+  absent: ai-tells.FigurativeLends
+
+- name: literal book loan
+  rule: ../../styles/ai-tells/FigurativeLends.yml
+  input: She lent me a book about compilers.
+  absent: ai-tells.FigurativeLends

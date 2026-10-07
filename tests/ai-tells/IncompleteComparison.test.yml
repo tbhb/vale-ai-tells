@@ -1,0 +1,47 @@
+---
+- name: significantly lower with no baseline
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The new loader shows significantly lower risk.
+  contains:
+    - ai-tells.IncompleteComparison
+    - "'significantly lower'"
+
+- name: substantially faster
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The rewrite is substantially faster.
+  contains: "'substantially faster'"
+
+- name: dramatically better
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The patch gives dramatically better results.
+  contains: "'dramatically better'"
+
+- name: considerably more
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The new loader uses considerably more memory.
+  contains: "'considerably more'"
+
+- name: notably fewer
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The second pass reports notably fewer errors.
+  contains: "'notably fewer'"
+
+- name: baseline after the comparative
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The rewrite is substantially faster than the old one.
+  absent: ai-tells.IncompleteComparison
+
+- name: baseline before the comparative
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: Compared with the old one, the rewrite is substantially faster.
+  absent: ai-tells.IncompleteComparison
+
+- name: versus baseline
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The loader is considerably smaller versus the old build.
+  absent: ai-tells.IncompleteComparison
+
+- name: intensifier without a comparative
+  rule: ../../styles/ai-tells/IncompleteComparison.yml
+  input: The loader changed significantly in this release.
+  absent: ai-tells.IncompleteComparison

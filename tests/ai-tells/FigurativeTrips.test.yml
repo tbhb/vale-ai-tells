@@ -1,0 +1,53 @@
+---
+- name: trips a rule
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: The commit message trips the rule.
+  contains:
+    - ai-tells.FigurativeTrips
+    - "'trips the rule'"
+
+- name: trips with a modifier before the noun
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: The subject line trips the commit gate.
+  contains: "'trips the commit gate'"
+
+- name: tripped a linter
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: That flag tripped a linter in review.
+  contains: "'tripped a linter'"
+
+- name: tripping a hook
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: Avoid tripping every hook on the first commit.
+  contains: "'tripping every hook'"
+
+- name: pronoun object
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: Writing about the rule still trips it.
+  contains: "'trips it'"
+
+- name: round-trip compound
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: The test will round-trip a string through the encoder.
+  absent: ai-tells.FigurativeTrips
+
+- name: round-trip with an article
+  about: The lookbehind keeps the article after round-trip out of the object slot.
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: Do not round-trip the check value through the encoder.
+  absent: ai-tells.FigurativeTrips
+
+- name: detector object outside the set
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: A write to freed memory will trip the detector.
+  absent: ai-tells.FigurativeTrips
+
+- name: literal tripping
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: The hiker tripped on a root near the trail.
+  absent: ai-tells.FigurativeTrips
+
+- name: circuit breaker
+  rule: ../../styles/ai-tells/FigurativeTrips.yml
+  input: A short will trip the breaker in the panel.
+  absent: ai-tells.FigurativeTrips

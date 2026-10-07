@@ -1,0 +1,57 @@
+---
+- name: determiner-gated artifact subject
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: The generated prose reaches for the same verb.
+  contains:
+    - ai-tells.FigurativeReaches
+    - "'The generated prose reaches for'"
+
+- name: curated bare subject
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: Agents reach for the passive voice.
+  contains: "'Agents reach for'"
+
+- name: writing-device complement
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: Writers reach for the same tired metaphor.
+  contains: "'reach for the same tired metaphor'"
+
+- name: imperative at a sentence start
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: Reach for a slice when the skip doesn't cover it.
+  contains: "'Reach for'"
+
+- name: second-person subject with a modal
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: You might reach for a git dependency here.
+  contains: "'You might reach for'"
+
+- name: generic human subject
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: Many users reach for the path form first.
+  contains: "'users reach for'"
+
+- name: hand reaching literally
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: The climber's hand reaches for the next hold.
+  absent: ai-tells.FigurativeReaches
+
+- name: child reaching literally
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: The child reaches for the shelf.
+  absent: ai-tells.FigurativeReaches
+
+- name: robot arm
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: The robot reaches for the part on the belt.
+  absent: ai-tells.FigurativeReaches
+
+- name: noun homograph
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: A reach for power ended the project.
+  absent: ai-tells.FigurativeReaches
+
+- name: out of reach stays with another rule
+  rule: ../../styles/ai-tells/FigurativeReaches.yml
+  input: The value is out of reach for the collector.
+  absent: ai-tells.FigurativeReaches

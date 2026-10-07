@@ -1,0 +1,38 @@
+---
+- name: virtue complement
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: The migration demands care around the lock order.
+  contains:
+    - ai-tells.FigurativeDemands
+    - "'demands care'"
+
+- name: virtue complement in the participle
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: The parser is demanding precision from every caller.
+  contains: "'demanding precision'"
+
+- name: virtue complement with an adjective
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: The edge case demands careful handling.
+  contains: "'demands careful'"
+
+- name: inspection complement
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: The failing test demands a closer look.
+  contains: "'demands a closer look'"
+
+- name: demand for an explanation
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: The reviewer demanded an explanation for the retry.
+  contains: "'demanded an explanation'"
+
+- name: person demanding a refund
+  about: The complement is the discriminator, so a literal demand stays quiet.
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: The customer demanded a refund after the outage.
+  absent: ai-tells.FigurativeDemands
+
+- name: economics noun
+  rule: ../../styles/ai-tells/FigurativeDemands.yml
+  input: Supply and demand set the price of compute.
+  absent: ai-tells.FigurativeDemands

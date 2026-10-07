@@ -1,0 +1,84 @@
+---
+- name: bare the tree
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(ci): clear the stale lock
+
+    The tree went red after the merge.
+  contains:
+    - ai-tells-commits.CommitGitJargon
+    - "'The tree'"
+
+- name: bare the index
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(hooks): read staged files
+
+    The hook read the index before the stage finished.
+  contains: "'the index'"
+
+- name: in-tree
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    chore(deps): drop the copy
+
+    The in-tree copy of the lexer is gone.
+  contains: "'in-tree'"
+
+- name: empty tree
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(hooks): handle a first commit
+
+    The diff ran against an empty tree.
+  contains: "'an empty tree'"
+
+- name: the tree of is not a git noun
+  about: The negative lookahead releases the tree of and the tree structure.
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(parser): walk the nodes
+
+    The parser walks the tree of nodes depth first.
+  absent: ai-tells-commits.CommitGitJargon
+
+- name: working tree
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(ci): clear the stale lock
+
+    The working tree went red after the merge.
+  absent: ai-tells-commits.CommitGitJargon
+
+- name: source tree
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    chore(deps): drop the copy
+
+    The source tree no longer holds a lexer copy.
+  absent: ai-tells-commits.CommitGitJargon
+
+- name: git index
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(hooks): read staged files
+
+    The hook read the git index before the stage finished.
+  absent: ai-tells-commits.CommitGitJargon
+
+- name: staging index
+  rule: ../../styles/ai-tells-commits/CommitGitJargon.yml
+  format: txt
+  input: |
+    fix(hooks): read staged files
+
+    The hook read the staging index before the stage finished.
+  absent: ai-tells-commits.CommitGitJargon

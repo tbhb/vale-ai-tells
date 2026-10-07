@@ -1,0 +1,59 @@
+---
+- name: label noun with a relative clause
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The index is rebuilt on every read, a cost that shows up in the benchmarks.
+  contains:
+    - ai-tells.SummativeAppositive
+    - "', a cost that'"
+
+- name: label noun with a contact clause
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The caller sees one row, a distinction the old path never made.
+  contains: "', a distinction the'"
+
+- name: label noun with worth
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The sweeper runs last, a detail worth noting.
+  contains: "', a detail worth'"
+
+- name: pronoun spelling
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: It drops the header, something no caller expects.
+  contains: "', something no'"
+
+- name: intensified which
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The sweeper runs last, which is exactly the point.
+  contains: "', which is exactly the'"
+
+- name: which is the whole point
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The cache is dropped on write, which is the whole point.
+  contains: "', which is the whole point'"
+
+- name: which is what without the intensifier
+  about: Measured out at thirteen corpus hits, so the bare spelling stays out.
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The loop retries three times, which is what we want.
+  absent: ai-tells.SummativeAppositive
+
+- name: which is why without the intensifier
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The lock is global, which is why we have to wait.
+  absent: ai-tells.SummativeAppositive
+
+- name: concrete appositive
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: Alice, a friend of mine, reviewed the patch.
+  absent: ai-tells.SummativeAppositive
+
+- name: regex pattern definition
+  about: Pattern is refused ahead of a matching verb.
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The rule uses a glob, a pattern that matches the filenames.
+  absent: ai-tells.SummativeAppositive
+
+- name: which is the point at which
+  rule: ../../styles/ai-tells/SummativeAppositive.yml
+  input: The loop exits, which is the point at which the lock is freed.
+  absent: ai-tells.SummativeAppositive

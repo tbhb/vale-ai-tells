@@ -1,0 +1,10 @@
+---
+- name: polysyllabic prose crosses 30 percent
+  rule: ../../styles/ai-tells-experimental/ComplexWordDensity.yml
+  input: Comprehensive documentation necessitates considerable organizational understanding, particularly regarding authentication, configuration, and deployment.
+  contains: ai-tells-experimental.ComplexWordDensity
+
+- name: plain short words stay under
+  rule: ../../styles/ai-tells-experimental/ComplexWordDensity.yml
+  input: The cat sat on the mat and ate the fish that we put in the red bowl by the door.
+  absent: ai-tells-experimental.ComplexWordDensity

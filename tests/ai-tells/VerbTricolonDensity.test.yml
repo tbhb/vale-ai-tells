@@ -1,0 +1,27 @@
+---
+- name: two verb tricolons in one paragraph
+  rule: ../../styles/ai-tells/VerbTricolonDensity.yml
+  input: The tool reads files, writes logs, and sends mail. It also parses input, builds trees, and emits code.
+  contains:
+    - ai-tells.VerbTricolonDensity
+    - "multiple verb tricolons"
+
+- name: one verb tricolon
+  about: The occurrence max is one, so a single tricolon stays under the threshold.
+  rule: ../../styles/ai-tells/VerbTricolonDensity.yml
+  input: The tool reads files, writes logs, and sends mail to the maintainers.
+  absent: ai-tells.VerbTricolonDensity
+
+- name: tricolons in separate paragraphs
+  about: The scope is the paragraph, so one tricolon in each of two paragraphs stays quiet.
+  rule: ../../styles/ai-tells/VerbTricolonDensity.yml
+  input: |
+    The tool reads files, writes logs, and sends mail to the maintainers.
+
+    The daemon parses input, builds trees, and emits code for the target.
+  absent: ai-tells.VerbTricolonDensity
+
+- name: two-item verb lists
+  rule: ../../styles/ai-tells/VerbTricolonDensity.yml
+  input: The tool reads files and writes logs. It also parses input and emits code.
+  absent: ai-tells.VerbTricolonDensity

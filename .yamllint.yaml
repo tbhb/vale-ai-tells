@@ -9,9 +9,12 @@ rules:
     # Rule files under styles/ carry single-line regex alternations and
     # long `message:` strings that cannot wrap without changing what Vale
     # matches, so the column cap covers everything else rather than being
-    # switched off tree-wide.
+    # switched off tree-wide. The cases under tests/ hold whole paragraphs
+    # as one line for the same reason: a line break inside an input is text
+    # the rule under test reads.
     ignore: |
       styles/
+      tests/
   comments:
     min-spaces-from-content: 1
   truthy:

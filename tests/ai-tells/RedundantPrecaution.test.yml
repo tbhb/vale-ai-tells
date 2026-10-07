@@ -1,0 +1,32 @@
+---
+- name: belt and suspenders
+  rule: ../../styles/ai-tells/RedundantPrecaution.yml
+  input: The second check is belt and suspenders.
+  contains:
+    - ai-tells.RedundantPrecaution
+    - "'belt and suspenders'"
+
+- name: hyphenated belt-and-suspenders
+  rule: ../../styles/ai-tells/RedundantPrecaution.yml
+  input: This is a belt-and-suspenders approach.
+  contains: "'belt-and-suspenders'"
+
+- name: belt and braces
+  rule: ../../styles/ai-tells/RedundantPrecaution.yml
+  input: The lock file is belt and braces.
+  contains: "'belt and braces'"
+
+- name: hyphenated belt-and-braces
+  rule: ../../styles/ai-tells/RedundantPrecaution.yml
+  input: It is a belt-and-braces setup.
+  contains: "'belt-and-braces'"
+
+- name: case insensitive
+  rule: ../../styles/ai-tells/RedundantPrecaution.yml
+  input: Belt and suspenders is the wrong figure here.
+  contains: "'Belt and suspenders'"
+
+- name: named safeguard
+  rule: ../../styles/ai-tells/RedundantPrecaution.yml
+  input: The second check repeats the first so a stale lock file fails twice.
+  absent: ai-tells.RedundantPrecaution

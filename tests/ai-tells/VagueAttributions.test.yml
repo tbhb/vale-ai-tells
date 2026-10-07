@@ -1,0 +1,97 @@
+---
+- name: experts argue
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Experts argue that the cache is unsafe.
+  contains:
+    - ai-tells.VagueAttributions
+    - "'Experts argue'"
+
+- name: experts have noted
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Experts have noted that retries help.
+  contains: "'Experts have noted'"
+
+- name: industry reports
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Industry reports suggest that builds are slowing.
+  contains: "'Industry reports suggest'"
+
+- name: industry experts
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Industry experts prefer the older format.
+  contains: "'Industry experts'"
+
+- name: observers have noted
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Observers have noted a rise in failures.
+  contains: "'Observers have noted'"
+
+- name: critics argue
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Critics argue that the design is too complex.
+  contains: "'Critics argue'"
+
+- name: some critics argue
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Some critics argue that the rule is noisy.
+  contains: "'Some critics argue'"
+
+- name: some researchers
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Some researchers prefer a smaller corpus.
+  contains: "'Some researchers'"
+
+- name: many analysts
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Many analysts expect a slowdown.
+  contains: "'Many analysts'"
+
+- name: studies show that
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Studies show that short functions are easier to test.
+  contains: "'Studies show that'"
+
+- name: studies have found that
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Studies have found that reviews catch defects.
+  contains: "'Studies have found that'"
+
+- name: research shows that
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Research shows that typed code has fewer bugs.
+  contains: "'Research shows that'"
+
+- name: research has found that
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Research has found that most defects sit in few files.
+  contains: "'Research has found that'"
+
+- name: several studies
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Several studies point to the same cause.
+  contains: "'Several studies'"
+
+- name: numerous experts
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: Numerous experts prefer small commits.
+  contains: "'Numerous experts'"
+
+- name: growing body of research
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: A growing body of research favors small commits.
+  contains: "'A growing body of research'"
+
+- name: the evidence suggests
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: The evidence suggests that the cache is stale.
+  contains: "'The evidence suggests'"
+
+- name: named source
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: The Go team argues for small interfaces in the 2015 proverbs talk.
+  absent: ai-tells.VagueAttributions
+
+- name: cited study
+  rule: ../../styles/ai-tells/VagueAttributions.yml
+  input: The 2019 Google study of 9 million reviews found that small changes land faster.
+  absent: ai-tells.VagueAttributions

@@ -1,0 +1,30 @@
+---
+- name: three negated noun phrases in one paragraph
+  rule: ../../styles/ai-tells-experimental/NegationDensity.yml
+  input: The build has no cache, the runner has no network, and the job has no retries configured.
+  contains: ai-tells-experimental.NegationDensity
+
+- name: two negated noun phrases are ordinary
+  about: The max is 2, so the rule fires only at three or more.
+  rule: ../../styles/ai-tells-experimental/NegationDensity.yml
+  input: The build has no cache, and the runner has no network access.
+  absent: ai-tells-experimental.NegationDensity
+
+- name: no longer, no one, and no matter are not counted
+  rule: ../../styles/ai-tells-experimental/NegationDensity.yml
+  input: The flag no longer works, and no one reads the old docs, so no matter what you set it does nothing, and no longer matters.
+  absent: ai-tells-experimental.NegationDensity
+
+- name: dotfile object counts toward the total
+  about: The optional leading dot keeps dotted-identifier objects countable.
+  rule: ../../styles/ai-tells-experimental/NegationDensity.yml
+  input: The repository has no .apm directory, no .github folder, and no .config file.
+  contains: ai-tells-experimental.NegationDensity
+
+- name: negations split across paragraphs are counted separately
+  rule: ../../styles/ai-tells-experimental/NegationDensity.yml
+  input: |
+    The build has no cache and the runner has no network.
+
+    The job has no retries and the step has no timeout.
+  absent: ai-tells-experimental.NegationDensity

@@ -1,0 +1,69 @@
+---
+- name: displacement with away
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The change sweeps away the old behavior.
+  contains:
+    - ai-tells.FigurativeSweeps
+    - "'sweeps away'"
+
+- name: removal object-gated on a record noun
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The job sweeps every stranded row from the table.
+  contains: "'sweeps every stranded row'"
+
+- name: engulfment
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The team got swept up in the migration for a month.
+  contains: "'swept up in'"
+
+- name: pervasion
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The rewrite swept through the codebase in a week.
+  contains: "'swept through'"
+
+- name: sweeping adjective with a revision noun
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The maintainer proposed sweeping changes to the layout.
+  contains: "'sweeping changes'"
+
+- name: sweepingly
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The document sweepingly dismisses the older design.
+  contains: "'sweepingly'"
+
+- name: concealment
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The team swept the problem under the rug.
+  contains: "'swept the problem under the rug'"
+
+- name: clean sweep
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The migration finished with a clean sweep of the old tables.
+  contains: "'clean sweep'"
+
+- name: one sweep
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The tool renames every symbol in one sweep.
+  contains: "'in one sweep'"
+
+- name: one fell swoop
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The patch replaces the whole module in one fell swoop.
+  contains: "'one fell swoop'"
+
+- name: audit-pass noun
+  about: A sweep as a scan pass is established programmer usage and stays uncovered.
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: Run a broad sweep over the docs before the release.
+  absent: ai-tells.FigurativeSweeps
+
+- name: collector sweep phase
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The collector finishes the sweep phase before the next mark.
+  absent: ai-tells.FigurativeSweeps
+
+- name: sweeping with a non-revision noun
+  about: The noun gate keeps the garbage-collector gerund and scenic vistas out.
+  rule: ../../styles/ai-tells/FigurativeSweeps.yml
+  input: The path follows a sweeping curve along the ridge.
+  absent: ai-tells.FigurativeSweeps

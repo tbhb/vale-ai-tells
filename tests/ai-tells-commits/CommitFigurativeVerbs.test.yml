@@ -1,0 +1,183 @@
+---
+- name: arrival with a noun after the determiner
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    The flag arrives with this release.
+  contains:
+    - ai-tells-commits.CommitFigurativeVerbs
+    - "'The flag arrives'"
+
+- name: arrived
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    The flag arrived in the last release.
+  contains: "'The flag arrived'"
+
+- name: enters the
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    The flag enters the public interface.
+  contains: "'The flag enters the'"
+
+- name: carries
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(config): read the timeout
+
+    The config carries a timeout the loader ignored.
+  contains: "'The config carries'"
+
+- name: carried
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(config): read the timeout
+
+    The config carried a timeout the loader ignored.
+  contains: "'The config carried'"
+
+- name: holds
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(release): store the draft
+
+    The script holds the draft in a temp file.
+  contains: "'The script holds the'"
+
+- name: survives
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(rebase): keep the lockfile
+
+    The lockfile survives a rebase now.
+  contains: "'The lockfile survives'"
+
+- name: loses with a determiner subject
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(format): keep the final newline
+
+    The formatter loses the final newline.
+  contains: "'The formatter loses the'"
+
+- name: loses with a bare proper noun subject
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(format): keep the final newline
+
+    Markdown loses one correction when two edits overlap.
+  contains: "'Markdown loses one'"
+
+- name: demands
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    ci: split the lint job
+
+    The gate demands a clean run before the merge.
+  contains: "'The gate demands'"
+
+- name: answers to
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    ci: split the lint job
+
+    The files answer to the sync task.
+  contains: "'The files answer to'"
+
+- name: asks for
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    ci: split the lint job
+
+    The gate asks for a clean run before the merge.
+  contains: "'The gate asks for'"
+
+- name: joins
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    ci: split the lint job
+
+    The check joins the lint task.
+  contains: "'The check joins'"
+
+- name: never sees
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(hooks): run on staged files
+
+    The hook never sees the staged changes.
+  contains: "'never sees'"
+
+- name: lives in
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    refactor(config): move the defaults
+
+    The timeout lives in the loader.
+  contains: "'The timeout lives in'"
+
+- name: names the
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    ci: split the lint job
+
+    The recipe names the gate it runs.
+  contains: "'The recipe names the'"
+
+- name: hand-edited
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(release): regenerate the lockfile
+
+    The lockfile was hand-edited and drifted.
+  contains: "'hand-edited'"
+
+- name: by hand
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(release): regenerate the lockfile
+
+    The version was bumped by hand.
+  contains: "'by hand'"
+
+- name: carry out is a phrasal verb
+  about: The conveyance token excludes carries out through a lookahead.
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    docs(release): describe the steps
+
+    The instruction the commit carries out is to tag the release.
+  absent: ai-tells-commits.CommitFigurativeVerbs
+
+- name: literal description
+  rule: ../../styles/ai-tells-commits/CommitFigurativeVerbs.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree, which the caller dereferenced.
+  absent: ai-tells-commits.CommitFigurativeVerbs

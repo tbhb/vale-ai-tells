@@ -1,0 +1,174 @@
+---
+- name: features emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    ✨ add a flag
+
+    Skips empty files.
+  contains:
+    - ai-tells-commits.CommitEmoji
+    - "'✨'"
+
+- name: bugs emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🐛 handle empty input
+
+    An empty file returned a nil tree.
+  contains: "'🐛'"
+
+- name: refactoring emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🎨 split the lexer
+
+    The lexer now lives in its own file.
+  contains: "'🎨'"
+
+- name: performance emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🚀 cache the token table
+
+    Cuts lexing time by 12 percent.
+  contains: "'🚀'"
+
+- name: documentation emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    📝 describe the flag
+
+    The README lacked the new flag.
+  contains: "'📝'"
+
+- name: tests emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    ✅ cover empty input
+
+    Adds a case for the empty file.
+  contains: "'✅'"
+
+- name: dependencies emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    📦 bump the lexer
+
+    Moves the lexer to 2.1.0.
+  contains: "'📦'"
+
+- name: configuration emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🔧 set the line length
+
+    The linter reads the new limit.
+  contains: "'🔧'"
+
+- name: security emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🔒 reject a bad token
+
+    The parser accepted an expired token.
+  contains: "'🔒'"
+
+- name: removal emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🔥 drop the legacy flag
+
+    Nothing reads the flag.
+  contains: "'🔥'"
+
+- name: version control emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🔀 merge the lexer branch
+
+    The branch carries the lexer split.
+  contains: "'🔀'"
+
+- name: logging emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🔊 log each rejected token
+
+    The parser logged nothing on a bad token.
+  contains: "'🔊'"
+
+- name: architecture emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🚚 move the lexer
+
+    The lexer now sits under internal.
+  contains: "'🚚'"
+
+- name: accessibility emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    ♿ label the form fields
+
+    Screen readers read the labels.
+  contains: "'♿'"
+
+- name: ui emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    📱 fit the layout to a phone
+
+    The table overflowed.
+  contains: "'📱'"
+
+- name: ci emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    👷 pin the runner image
+
+    The workflow floated on the latest image.
+  contains: "'👷'"
+
+- name: misc emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    🧹 tidy the lexer
+
+    Removes two unused helpers.
+  contains: "'🧹'"
+
+- name: emoji after the subject
+  about: nonword drops word boundaries, so the emoji matches anywhere in the buffer.
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree. 🐛
+  contains: "'🐛'"
+
+- name: words in place of emoji
+  rule: ../../styles/ai-tells-commits/CommitEmoji.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree, which the caller dereferenced.
+  absent: ai-tells-commits.CommitEmoji

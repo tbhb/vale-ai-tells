@@ -1,0 +1,62 @@
+---
+- name: nobody talks about
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: Nobody talks about the retry cost of this client.
+  contains:
+    - ai-tells.FalseExclusivity
+    - "'Nobody talks about'"
+
+- name: no one mentions
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: No one mentions the lock contention in the docs.
+  contains: "'No one mentions'"
+
+- name: the part nobody mentions
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: Here is the part nobody mentions about the cache.
+  contains: "'the part nobody mentions'"
+
+- name: what nobody tells you
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: This is what nobody tells you about merge queues.
+  contains: "'what nobody tells you'"
+
+- name: what most people miss
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: This is what most people miss about the scheduler.
+  contains: "'what most people miss'"
+
+- name: the dirty secret
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: The dirty secret of the build is its flaky test.
+  contains: "'The dirty secret'"
+
+- name: the uncomfortable truth
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: The uncomfortable truth is that the index is stale.
+  contains: "'The uncomfortable truth'"
+
+- name: the elephant in the room
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: The elephant in the room is the migration.
+  contains: "'The elephant in the room'"
+
+- name: the hidden cost
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: The hidden cost of this design is memory.
+  contains: "'The hidden cost'"
+
+- name: the silent killer
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: Timeouts are the silent killer of this service.
+  contains: "'the silent killer'"
+
+- name: here's what no one tells you
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: Here's what no one tells you about retries.
+  contains: "'Here's what no one tells you'"
+
+- name: plain statement
+  rule: ../../styles/ai-tells/FalseExclusivity.yml
+  input: The docs describe the retry cost and the lock contention.
+  absent: ai-tells.FalseExclusivity

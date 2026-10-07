@@ -1,0 +1,88 @@
+---
+- name: falls out naturally
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The cache invalidation falls out naturally from the design.
+  contains:
+    - ai-tells.OrganicConsequence
+    - "'falls out naturally'"
+
+- name: fell out naturally
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The retry logic fell out naturally from the queue.
+  contains: "'fell out naturally'"
+
+- name: falls straight out of
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The second rule falls straight out of the first.
+  contains: "'falls straight out of'"
+
+- name: drops cleanly out of
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The result drops cleanly out of the premise.
+  contains: "'drops cleanly out of'"
+
+- name: falls out without the adverb
+  about: A literal fall out of a pocket has no manner adverb, so it stays quiet.
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The pen fell out of my pocket.
+  absent: ai-tells.OrganicConsequence
+
+- name: emerges naturally
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The pattern emerges naturally from the data.
+  contains: "'emerges naturally'"
+
+- name: emerged organically
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The convention emerged organically over three releases.
+  contains: "'emerged organically'"
+
+- name: arises naturally
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The question arises naturally from the schema.
+  contains: "'arises naturally'"
+
+- name: arose naturally
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The conflict arose naturally from the merge.
+  contains: "'arose naturally'"
+
+- name: flows naturally
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The data flows naturally through the stages.
+  contains: "'flows naturally'"
+
+- name: a natural consequence
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The delay is a natural consequence of the lock.
+  contains: "'a natural consequence'"
+
+- name: the natural result
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: A stale index is the natural result.
+  contains: "'the natural result'"
+
+- name: naturally follows
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The second step naturally follows the first.
+  contains: "'naturally follows'"
+
+- name: naturally leads to
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: A shared cache naturally leads to contention.
+  contains: "'naturally leads to'"
+
+- name: follows naturally from
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The limit follows naturally from the format.
+  contains: "'follows naturally from'"
+
+- name: results naturally from
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The delay results naturally from the lock.
+  contains: "'results naturally from'"
+
+- name: stated cause
+  rule: ../../styles/ai-tells/OrganicConsequence.yml
+  input: The cache invalidation follows from the design choice to key on the digest.
+  absent: ai-tells.OrganicConsequence

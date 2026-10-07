@@ -1,0 +1,58 @@
+---
+- name: delve
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The report will delve into the logs.
+  contains:
+    - ai-tells.OverusedVocabulary
+    - "'delve'"
+
+- name: robust
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The parser is robust against bad input.
+  contains: "'robust'"
+
+- name: seamlessly
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The plugin integrates seamlessly with the editor.
+  contains: "'seamlessly'"
+
+- name: holistic
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The review takes a holistic view of the stack.
+  contains: "'holistic'"
+
+- name: myriad
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The tool has a myriad of options.
+  contains: "'myriad'"
+
+- name: palpable
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The relief was palpable after the release.
+  contains: "'palpable'"
+
+- name: hype verb
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The update will supercharge every build.
+  contains: "'supercharge'"
+
+- name: unleash
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The flag will unleash the full pipeline.
+  contains: "'unleash'"
+
+- name: genuinely
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The change is genuinely useful.
+  contains: "'genuinely'"
+
+- name: longer word containing a token
+  about: Word boundaries keep robustness from matching robust.
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The robustness test passes on every run.
+  absent: ai-tells.OverusedVocabulary
+
+- name: plain vocabulary
+  rule: ../../styles/ai-tells/OverusedVocabulary.yml
+  input: The parser reads each file and reports the line number.
+  absent: ai-tells.OverusedVocabulary

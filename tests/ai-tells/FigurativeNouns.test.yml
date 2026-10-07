@@ -1,0 +1,128 @@
+---
+- name: reach as a retrieval path
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Its primary reach is the whole-token index.
+  contains:
+    - ai-tells.FigurativeNouns
+    - "'Its primary reach'"
+
+- name: plural reaches
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The query picks between two reaches.
+  contains: "'two reaches'"
+
+- name: reach of a hand
+  about: The lookahead refuses the literal reach of a limb.
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The toddler extended the reach of the arm.
+  absent: ai-tells.FigurativeNouns
+
+- name: reach as a verb
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The count reaches 0 after the last drain.
+  absent: ai-tells.FigurativeNouns
+
+- name: wrinkle as a complication
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: One wrinkle is the second cache.
+  contains: "'One wrinkle'"
+
+- name: story as a design
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The migration story is simple.
+  contains: "'The migration story'"
+
+- name: story as fiction
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: She wrote a short story about a robot.
+  absent: ai-tells.FigurativeNouns
+
+- name: knob as an option
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The tool exposes a tuning knob for the cache.
+  contains: "'tuning knob'"
+
+- name: knob on a device
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Turn the volume knob to the left.
+  absent: ai-tells.FigurativeNouns
+
+- name: surface as what a reader sees
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The prose surface is large.
+  contains: "'The prose surface'"
+
+- name: surface compound without a determiner
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Documented surfaces change slowly.
+  contains: "'Documented surfaces'"
+
+- name: API surface
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The API surface is small.
+  absent: ai-tells.FigurativeNouns
+
+- name: attack surface
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The attack surface grows with each plugin.
+  absent: ai-tells.FigurativeNouns
+
+- name: surface area
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The fin has a large surface area.
+  absent: ai-tells.FigurativeNouns
+
+- name: grain as granularity
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Read the metrics at a coarser grain.
+  contains: "'coarser grain'"
+
+- name: grain of sand
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: A grain of sand jammed the latch.
+  absent: ai-tells.FigurativeNouns
+
+- name: lens as a point of view
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Read the diff through a security lens.
+  contains: "'through a security lens'"
+
+- name: lens cap
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Remove the lens cap before the shot.
+  absent: ai-tells.FigurativeNouns
+
+- name: headline number
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The post quotes a headline number for latency.
+  contains: "'headline number'"
+
+- name: the headline is
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The headline is a forty percent drop.
+  contains: "'The headline is'"
+
+- name: cascade of consequences
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: A cascade of retries follows the outage.
+  contains: "'A cascade of'"
+
+- name: dead end
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: That path is a dead end.
+  contains: "'a dead end'"
+
+- name: blind spot
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The audit has a blind spot.
+  contains: "'blind spot'"
+
+- name: seam between components
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: The injection seam is thin.
+  contains: "'The injection seam'"
+
+- name: seam allowance
+  rule: ../../styles/ai-tells/FigurativeNouns.yml
+  input: Check the seam allowance before cutting the cloth.
+  absent: ai-tells.FigurativeNouns

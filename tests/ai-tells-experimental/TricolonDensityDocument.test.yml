@@ -1,0 +1,114 @@
+---
+- name: four inline tricolons
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build is fast, cheap, and reliable. The docs are clear, short, and current. The tests are quick, small, and stable. The team is kind, calm, and curious. Users file bugs in the tracker.
+  contains: ai-tells-experimental.TricolonDensityDocument
+
+- name: four inline tricolons joined by or
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    Pick a build that is fast, cheap, or reliable. Pick docs that are clear, short, or current. Pick tests that are quick, small, or stable. Pick a team that is kind, calm, or curious. Users file bugs in the tracker.
+  contains: ai-tells-experimental.TricolonDensityDocument
+
+- name: four three-item bullet lists
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build has three goals.
+
+    - Speed
+    - Cost
+    - Safety
+
+    The docs have three goals.
+
+    - Clarity
+    - Brevity
+    - Currency
+
+    The tests have three goals.
+
+    - Quickness
+    - Size
+    - Stability
+
+    The team has three goals.
+
+    - Kindness
+    - Calm
+    - Curiosity
+  contains: ai-tells-experimental.TricolonDensityDocument
+
+- name: three tricolons are too few
+  about: The document needs at least four tricolons.
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build is fast, cheap, and reliable. The docs are clear, short, and current. The tests are quick, small, and stable. Users file bugs in the tracker.
+  absent: ai-tells-experimental.TricolonDensityDocument
+
+- name: tricolons mixed with many other list lengths
+  about: Tricolons must make up more than 60 percent of the lists.
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build is fast, cheap, and reliable. The docs are clear, short, and current. The tests are quick, small, and stable. The team is kind, calm, and curious.
+
+    - Speed
+    - Cost
+
+    - Clarity
+    - Brevity
+
+    - Quickness
+    - Size
+
+    - Kindness
+    - Calm
+  absent: ai-tells-experimental.TricolonDensityDocument
+
+- name: four-item lists are not tricolons
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build is fast, cheap, safe, and reliable. The docs are clear, short, plain, and current. The tests are quick, small, tidy, and stable. The team is kind, calm, wise, and curious. Users file bugs in the tracker.
+  absent: ai-tells-experimental.TricolonDensityDocument
+
+- name: tricolons diluted by prose
+  about: Tricolons must reach 20 percent of the sentences.
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build is fast, cheap, and reliable. The docs are clear, short, and current. The tests are quick, small, and stable. The team is kind, calm, and curious. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo. Engineers pick a task from the board. Operators restart the daemon after a crash. Tests run on every push to main. The server writes logs to disk. The cache holds recent results in memory. The parser reads one token at a time. The runner starts jobs in order. The queue keeps the oldest job first. Shells find the new binary on their path. The scheduler starts workers at midnight. The updater checks for new versions daily. The installer sets permissions on the file. The doctor command confirms the setup works. The proxy forwards each request to the origin. The agent reports its health every minute. The gate blocks a merge when checks fail. The bot labels each pull request by size. The hook rejects a commit with a bad subject. The tool prints a short summary at the end.
+  absent: ai-tells-experimental.TricolonDensityDocument
+
+- name: long items are not counted as a tricolon
+  about: Each item after the first must be three words or fewer.
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    The build runs on every push, the docs build on every merge, and the tests run on every branch. The server writes logs to disk, the cache holds results in memory, and the queue keeps jobs in order. The parser reads one token at a time, the lexer splits text on spaces, and the printer writes output to files. The team reviews each change twice, the lead signs off on releases, and the bot posts status to chat. Users file bugs in the tracker.
+  absent: ai-tells-experimental.TricolonDensityDocument
+
+- name: tricolons inside a code fence
+  rule: ../../styles/ai-tells-experimental/TricolonDensityDocument.yml
+  input: |
+    # Overview
+
+    ```text
+    The build is fast, cheap, and reliable. The docs are clear, short, and current. The tests are quick, small, and stable. The team is kind, calm, and curious.
+    ```
+
+    Users file bugs in the tracker.
+  absent: ai-tells-experimental.TricolonDensityDocument

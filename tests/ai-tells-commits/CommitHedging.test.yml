@@ -1,0 +1,111 @@
+---
+- name: this should fix
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This should fix the crash on an empty file.
+  contains:
+    - ai-tells-commits.CommitHedging
+    - "'This should fix'"
+
+- name: should resolve the
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The guard should resolve the crash on an empty file.
+  contains: "'should resolve the'"
+
+- name: should help with
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The guard should help with empty files.
+  contains: "'should help with'"
+
+- name: this may help
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This may help with the crash on an empty file.
+  contains: "'This may help'"
+
+- name: this might resolve
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This might resolve the crash on an empty file.
+  contains: "'This might resolve'"
+
+- name: this helps to
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This helps to avoid a crash on an empty file.
+  contains: "'This helps to'"
+
+- name: helps to ensure
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The guard helps to ensure the caller gets an error.
+  contains: "'helps to ensure'"
+
+- name: appears to fix
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The guard appears to fix the crash.
+  contains: "'appears to fix'"
+
+- name: seems to work
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The guard seems to work on an empty file.
+  contains: "'seems to work'"
+
+- name: seems to be resolved
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The crash seems to be resolved.
+  contains: "'seems to be resolved'"
+
+- name: diagnostic seems to be
+  about: Bare seems to be was dropped because it fires on diagnostic prose.
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The root cause seems to be a race in the lexer.
+  absent: ai-tells-commits.CommitHedging
+
+- name: states what was tested
+  rule: ../../styles/ai-tells-commits/CommitHedging.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Ran the parser against an empty file and saw the error return.
+  absent: ai-tells-commits.CommitHedging

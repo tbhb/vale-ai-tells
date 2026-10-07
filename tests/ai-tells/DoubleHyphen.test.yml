@@ -1,0 +1,18 @@
+---
+- name: ascii em dash stand-in
+  rule: ../../styles/ai-tells/DoubleHyphen.yml
+  input: The parser is fast -- but it skips comments.
+  contains:
+    - ai-tells.DoubleHyphen
+    - "'--'"
+
+- name: single hyphen compound
+  rule: ../../styles/ai-tells/DoubleHyphen.yml
+  input: The well-known parser skips comments.
+  absent: ai-tells.DoubleHyphen
+
+- name: cli flag in a code span
+  about: Vale masks the code span, so a backticked flag stays quiet.
+  rule: ../../styles/ai-tells/DoubleHyphen.yml
+  input: Pass `--verbose` to print every rule that ran.
+  absent: ai-tells.DoubleHyphen

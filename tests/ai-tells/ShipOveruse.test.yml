@@ -1,0 +1,47 @@
+---
+- name: ship it
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: Ship it before the freeze.
+  contains:
+    - ai-tells.ShipOveruse
+    - "'Ship'"
+
+- name: ship the feature
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: We ship the feature on Friday.
+  contains: "'ship'"
+
+- name: shipped
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: The fix shipped in the last release.
+  contains: "'shipped'"
+
+- name: shipping
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: Shipping fast is not the goal here.
+  contains: "'Shipping'"
+
+- name: maritime idiom
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: She runs a tight ship.
+  contains: "'ship'"
+
+- name: ship suffix
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: The relationship between the two modules is loose.
+  absent: ai-tells.ShipOveruse
+
+- name: leadership
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: Leadership approved the plan.
+  absent: ai-tells.ShipOveruse
+
+- name: compounds
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: The flagship product has a shipment tracker.
+  absent: ai-tells.ShipOveruse
+
+- name: spaceship
+  rule: ../../styles/ai-tells/ShipOveruse.yml
+  input: The spaceship docked at the station.
+  absent: ai-tells.ShipOveruse

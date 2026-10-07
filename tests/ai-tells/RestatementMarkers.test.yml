@@ -1,0 +1,110 @@
+---
+- name: formal opener
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file. In other words, the loader reads it once.
+  contains:
+    - ai-tells.RestatementMarkers
+    - "'In other words'"
+
+- name: simply put
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file. Simply put, the loader reads it once.
+  contains: "'Simply put'"
+
+- name: precision opener
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The loader reads the index. To be more precise, it reads the header.
+  contains: "'To be more precise'"
+
+- name: adverb opener
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The loader reads the index. More specifically, it reads the header.
+  contains: "'More specifically'"
+
+- name: plain terms opener
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The loader reads the index. In plain English, it reads one file.
+  contains: "'In plain English'"
+
+- name: what this means is
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file. What this means is that the loader reads it once.
+  contains: "'What this means is'"
+
+- name: gloss opener
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file. Put another way, the loader reads it once.
+  contains: "'Put another way'"
+
+- name: which is to say
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file, which is to say, one read.
+  contains: "'which is to say'"
+
+- name: parallel restatement
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: Reads take the lock. The same holds for writes.
+  contains: "'The same holds'"
+
+- name: parallel restatement with is true
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: Reads take the lock. The same is true of the index.
+  contains: "'The same is true'"
+
+- name: framing opener in practice
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file. In practice, the loader reads it once.
+  contains: "'In practice'"
+
+- name: framing opener in effect
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The join reverses. In effect, the roles swap.
+  contains: "'In effect'"
+
+- name: framing opener in the end
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The loader tries three paths. In the end, one read suffices.
+  contains: "'In the end'"
+
+- name: sentence-initial meaning with a comma
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The cache is empty. Meaning, the first read is slow.
+  contains: "'Meaning'"
+
+- name: sentence-initial meaning as a fragment
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The cache is empty. Meaning the first read is slow.
+  contains: "'Meaning the'"
+
+- name: mid-sentence in practice
+  about: The framing openers gate on the capital and the comma.
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The tool works in practice tests as well as in the lab.
+  absent: ai-tells.RestatementMarkers
+
+- name: mid-sentence in effect
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The new flag is in effect until the next release.
+  absent: ai-tells.RestatementMarkers
+
+- name: the same value
+  about: The verb is the gate, so the same plus a noun stays quiet.
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: Both calls return the same value for any input.
+  absent: ai-tells.RestatementMarkers
+
+- name: holds true stays with FigurativeHolds
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: Reads take the lock. The same holds true for writes.
+  absent: ai-tells.RestatementMarkers
+
+- name: meaning as a noun
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The meaning of the flag is documented in the manual.
+  absent: ai-tells.RestatementMarkers
+
+- name: that is gloss measures out
+  about: That is is the Go doc-comment house style for a gloss and stays out.
+  rule: ../../styles/ai-tells/RestatementMarkers.yml
+  input: The index is one file. That is, it reports whether the flag is set.
+  absent: ai-tells.RestatementMarkers

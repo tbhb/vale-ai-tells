@@ -1,0 +1,102 @@
+---
+- name: as part of this change
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    As part of this change the guard returns an error.
+  contains:
+    - ai-tells-commits.CommitOverexplanation
+    - "'As part of this change'"
+
+- name: as part of this pull request
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    As part of this pull request the guard returns an error.
+  contains: "'As part of this pull request'"
+
+- name: this is necessary because
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This is necessary because the caller dereferenced a nil tree.
+  contains: "'This is necessary because'"
+
+- name: this was needed to
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This was needed to stop the crash.
+  contains: "'This was needed to'"
+
+- name: along with padding
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Adds the flag along with corresponding docs.
+  contains: "'along with corresponding'"
+
+- name: diff narration
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    The following changes were made to the parser.
+  contains: "'The following changes were made'"
+
+- name: changes include
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Changes include a new flag and a new test.
+  contains: "'Changes include'"
+
+- name: summary of changes
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Summary of changes: a new flag and a new test.
+  contains: "'Summary of changes'"
+
+- name: scope framing
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    The purpose of this change is to skip empty files.
+  contains: "'The purpose of this change'"
+
+- name: the rationale behind this
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    The rationale behind this is to skip empty files.
+  contains: "'The rationale behind this'"
+
+- name: plain cause and effect
+  rule: ../../styles/ai-tells-commits/CommitOverexplanation.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree, which the caller dereferenced.
+    The parser now returns an error before building the tree.
+  absent: ai-tells-commits.CommitOverexplanation

@@ -1,0 +1,109 @@
+---
+- name: inanimate contest subject
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: A lower index wins.
+  contains:
+    - ai-tells.FigurativeWins
+    - "'A lower index wins'"
+
+- name: which source won
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The log records which source won.
+  contains: "'which source won'"
+
+- name: picks a winner
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The merge picks a winner for each key.
+  contains: "'picks a winner'"
+
+- name: losers
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The losers are dropped from the index.
+  contains: "'losers'"
+
+- name: outranks
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: An explicit flag outranks the config file.
+  contains: "'outranks'"
+
+- name: beats as precedence
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: An explicit flag beats the default.
+  contains: "'beats the'"
+
+- name: kicks off
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The scheduler kicks off the job at midnight.
+  contains: "'kicks off'"
+
+- name: wins the day
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: Simplicity wins the day.
+  contains: "'wins the day'"
+
+- name: wins out
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: We expect the simpler design to win out.
+  contains: "'win out'"
+
+- name: wins hands down
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: Linear scans win hands down on small inputs.
+  contains: "'win hands down'"
+
+- name: comes out on top
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The rewrite comes out on top in every benchmark.
+  contains: "'comes out on top'"
+
+- name: a quick win
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: That cleanup is a quick win.
+  contains: "'a quick win'"
+
+- name: easy wins
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The audit lists several easy wins.
+  contains: "'easy wins'"
+
+- name: chalks up a win
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: Each fix chalks up a win for the release.
+  contains: "'chalks up a win'"
+
+- name: for the win
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: Caching is the answer, so cache for the win.
+  contains: "'for the win'"
+
+- name: a winning formula
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: It is a winning formula for releases.
+  contains: "'a winning formula'"
+
+- name: the winning strategy
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: Batching is the winning strategy here.
+  contains: "'the winning strategy'"
+
+- name: win-win
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The trade is a win-win for both services.
+  contains: "'win-win'"
+
+- name: literal team win
+  about: The exceptions name the beings who literally win.
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The home team wins the cup.
+  absent: ai-tells.FigurativeWins
+
+- name: contraction
+  about: The trailing lookahead keeps won't out.
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: This approach won't work on a large input.
+  absent: ai-tells.FigurativeWins
+
+- name: literal player win
+  rule: ../../styles/ai-tells/FigurativeWins.yml
+  input: The first player wins the round.
+  absent: ai-tells.FigurativeWins

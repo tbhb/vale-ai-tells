@@ -1,0 +1,72 @@
+---
+- name: let's unpack
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's unpack the retry logic.
+  contains:
+    - ai-tells.UnpackExplore
+    - "'Let's unpack'"
+
+- name: let me unpack
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let me unpack the retry logic.
+  contains: "'Let me unpack'"
+
+- name: let's break this down
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's break this down step by step.
+  contains: "'Let's break this down'"
+
+- name: let's take a closer look at
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's take a closer look at the retry logic.
+  contains: "'Let's take a closer look at'"
+
+- name: let's dive into
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's dive into the retry logic.
+  contains: "'Let's dive into'"
+
+- name: let's walk through
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's walk through the retry logic.
+  contains: "'Let's walk through'"
+
+- name: let's dig into
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's dig into the retry logic.
+  contains: "'Let's dig into'"
+
+- name: let's examine
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's examine the retry logic.
+  contains: "'Let's examine'"
+
+- name: let's explore
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's explore the retry logic.
+  contains: "'Let's explore'"
+
+- name: let me explain
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let me explain the retry logic.
+  contains: "'Let me explain'"
+
+- name: let's consider
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's consider the retry logic.
+  contains: "'Let's consider'"
+
+- name: let's look at
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's look at the retry logic.
+  contains: "'Let's look at'"
+
+- name: let's break down
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: Let's break down the retry logic.
+  contains: "'Let's break down'"
+
+- name: direct explanation
+  rule: ../../styles/ai-tells/UnpackExplore.yml
+  input: The retry logic waits one second, then doubles the delay up to a limit.
+  absent: ai-tells.UnpackExplore

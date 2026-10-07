@@ -1,0 +1,69 @@
+---
+- name: slipping through
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The malformed form slipped through the validator.
+  contains:
+    - ai-tells.EvasionMetaphors
+    - "'slipped through'"
+
+- name: letting an object through
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The old pin still lets it through the gate.
+  contains: "'lets it through'"
+
+- name: letting a noun into a place
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The filter lets violations into production.
+  contains: "'lets violations into'"
+
+- name: letting a noun in at a clause end
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The linter lets errors in.
+  contains: "'lets errors in'"
+
+- name: let through without an object
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: What the previous pin let through was a stale lock.
+  contains: "'let through'"
+
+- name: routing around
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: It is a rule people route around.
+  contains: "'route around'"
+
+- name: going around a named guard
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: Cutting the release went around the review.
+  contains: "'went around the review'"
+
+- name: sneaking past
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: Nothing sneaks past the type checker.
+  contains: "'sneaks past'"
+
+- name: snuck past
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The bug snuck past the tests.
+  contains: "'snuck past'"
+
+- name: sidestepping
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The patch tries to sidestep this problem.
+  contains: "'sidestep'"
+
+- name: going unnoticed
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The gap went unnoticed for two releases.
+  contains: "'went unnoticed'"
+
+- name: bare in with a prepositional phrase
+  about: Bare in is admitted only at a clause end, so an object plus a phrase is not the fence.
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The handler lets errors in ParseForm fall through to the caller.
+  absent: ai-tells.EvasionMetaphors
+
+- name: going around a loop
+  about: The object set keeps the iteration idiom quiet.
+  rule: ../../styles/ai-tells/EvasionMetaphors.yml
+  input: The scanner will go around the loop until the buffer drains.
+  absent: ai-tells.EvasionMetaphors

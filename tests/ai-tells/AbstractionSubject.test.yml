@@ -1,0 +1,59 @@
+---
+- name: copula ahead of a verdict
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: That asymmetry is the point of the design.
+  contains:
+    - ai-tells.AbstractionSubject
+    - "'That asymmetry is'"
+
+- name: copula with a negated contraction
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: This coupling isn't free, and the writer pays for it.
+  contains: "'This coupling isn't'"
+
+- name: lowercase this after a conjunction
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: The cache is warm, and this indirection costs one read.
+  contains: "'this indirection costs'"
+
+- name: verb of comment
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: This inversion buys the reverse lookup.
+  contains: "'This inversion buys'"
+
+- name: verb of comment explains
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: That mismatch explains the retry.
+  contains: "'That mismatch explains'"
+
+- name: means behind a demonstrative Metacommentary skips
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: That asymmetry means one extra read.
+  contains: "'That asymmetry means'"
+
+- name: copula before a passive mechanism
+  about: The lookahead keeps out a participle that states how, not a verdict.
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: These constraints are checked by the database on every write.
+  absent: ai-tells.AbstractionSubject
+
+- name: copula before a measurement
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: That gap is 4 bytes wide.
+  absent: ai-tells.AbstractionSubject
+
+- name: lowercase that opening a clause
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: The index keeps order so that constraints are independent.
+  absent: ai-tells.AbstractionSubject
+
+- name: invariant holds is the literal sense
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: If that invariant holds, the loop terminates.
+  absent: ai-tells.AbstractionSubject
+
+- name: noun left off the list
+  about: Loop and pattern are code references and stay out of the noun list.
+  rule: ../../styles/ai-tells/AbstractionSubject.yml
+  input: This loop is faster than using copy.
+  absent: ai-tells.AbstractionSubject

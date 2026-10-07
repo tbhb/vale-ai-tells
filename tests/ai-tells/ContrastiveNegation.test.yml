@@ -1,0 +1,36 @@
+---
+- name: stacked anaphora
+  rule: ../../styles/ai-tells/ContrastiveNegation.yml
+  input: No setup, no config, no hassle.
+  contains:
+    - ai-tells.ContrastiveNegation
+    - "'No setup, no config, no hassle'"
+
+- name: no pain no gain idiom
+  rule: ../../styles/ai-tells/ContrastiveNegation.yml
+  input: The team follows a simple rule of no pain, no gain.
+  contains:
+    - ai-tells.ContrastiveNegation
+    - "'no pain, no gain'"
+
+- name: clause-final fragment
+  rule: ../../styles/ai-tells/ContrastiveNegation.yml
+  input: The index stores cleartext repo names, no k-anonymity gate.
+  contains:
+    - ai-tells.ContrastiveNegation
+    - "', no k-anonymity gate.'"
+
+- name: no longer is a temporal adverb
+  rule: ../../styles/ai-tells/ContrastiveNegation.yml
+  input: The parser no longer reads the file, and the cache no longer fills.
+  absent: ai-tells.ContrastiveNegation
+
+- name: no sooner is a temporal adverb
+  rule: ../../styles/ai-tells/ContrastiveNegation.yml
+  input: No sooner had the server started than the probe failed.
+  absent: ai-tells.ContrastiveNegation
+
+- name: single leading negation
+  rule: ../../styles/ai-tells/ContrastiveNegation.yml
+  input: There is no timeout on the socket.
+  absent: ai-tells.ContrastiveNegation

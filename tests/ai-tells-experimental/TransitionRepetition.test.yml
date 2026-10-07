@@ -1,0 +1,88 @@
+---
+- name: moreover three times
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The cache is fast. Moreover, it is small. Moreover, it is safe to clear. Moreover, it needs no setup.
+  contains: ai-tells-experimental.TransitionRepetition
+
+- name: adverb transition three times
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The cache is fast. Additionally, it is small. Additionally, it is safe to clear. Additionally, it needs no setup.
+  contains: ai-tells-experimental.TransitionRepetition
+
+- name: multi-word transition three times
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    Use a flag for each mode. For example, pass the first flag. For example, pass the second flag. For example, pass the third flag.
+  contains: ai-tells-experimental.TransitionRepetition
+
+- name: short conjunctive transition three times
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The lock is held, thus the job waits. The queue is full, thus the job waits. The disk is slow, thus the job waits.
+  contains: ai-tells-experimental.TransitionRepetition
+
+- name: the match is case-insensitive
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The cache is fast. Furthermore, it is small. FURTHERMORE, it is safe to clear. furthermore, it needs no setup.
+  contains: ai-tells-experimental.TransitionRepetition
+
+- name: two uses stay under the limit
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The cache is fast. Moreover, it is small. Moreover, it is safe to clear. It needs no setup.
+  absent: ai-tells-experimental.TransitionRepetition
+
+- name: a connector outside the list
+  about: Only the listed transitions count, so "however" repeated three times stays quiet.
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The cache is fast. However, it is small. However, it is hard to clear. However, it needs setup.
+  absent: ai-tells-experimental.TransitionRepetition
+
+- name: hence inside henceforth
+  about: The pattern is word-bounded, so "henceforth" does not count as "hence".
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    The cache is fast. Henceforth, it is small. Henceforth, it is safe to clear. Henceforth, it needs no setup.
+  absent: ai-tells-experimental.TransitionRepetition
+
+- name: repeats split across two sections
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Install
+
+    The cache is fast. Moreover, it is small. Moreover, it is safe to clear.
+
+    # Operate
+
+    The queue is slow. Moreover, it is large. Moreover, it needs setup.
+  absent: ai-tells-experimental.TransitionRepetition
+
+- name: repeats inside a code fence
+  rule: ../../styles/ai-tells-experimental/TransitionRepetition.yml
+  input: |
+    # Setup
+
+    ```text
+    The cache is fast. Moreover, it is small. Moreover, it is safe to clear. Moreover, it needs no setup.
+    ```
+  absent: ai-tells-experimental.TransitionRepetition

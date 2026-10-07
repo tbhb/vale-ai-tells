@@ -1,0 +1,67 @@
+---
+- name: ultimate guide heading
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    # The Ultimate Guide to Vale Rules
+
+    Rules live in a style directory.
+  contains:
+    - ai-tells.MarketingHeadings
+    - "'The Ultimate Guide'"
+
+- name: everything you need to know
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    # Everything You Need to Know About Tokens
+
+    Tokens are matched case-insensitively.
+  contains: "'Everything You Need to Know'"
+
+- name: mastering heading
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    ## Mastering Regular Expressions
+
+    Start with anchors.
+  contains: "'Mastering'"
+
+- name: the power of heading
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    ## The Power of Anchors
+
+    An anchor checks without consuming.
+  contains: "'The Power of'"
+
+- name: the future of heading
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    ## The Future of Linting
+
+    Linters keep getting faster.
+  contains: "'The Future of'"
+
+- name: game-changer heading
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    ## A Game-Changer for Reviewers
+
+    The report groups findings by file.
+  contains: "'A Game-Changer'"
+
+- name: puffery in body text
+  about: The rule is heading-scoped, so the same words in a paragraph stay quiet.
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    # Writing rules
+
+    This section is the ultimate guide to writing rules, and it covers everything you need to know.
+  absent: ai-tells.MarketingHeadings
+
+- name: plain heading
+  rule: ../../styles/ai-tells/MarketingHeadings.yml
+  input: |
+    # Writing rules
+
+    Rules live in a style directory.
+  absent: ai-tells.MarketingHeadings

@@ -1,0 +1,43 @@
+---
+- name: hurdle over a checking noun
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The draft clears the gate on the first run.
+  contains:
+    - ai-tells.FigurativeClears
+    - "'clears the gate'"
+
+- name: hurdle with a modifier word
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The patch cleared every mechanical validator without edits.
+  contains: "'cleared every mechanical validator'"
+
+- name: bound noun standing in for a hurdle
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The fix clears the target for this release.
+  contains: "'clears the target'"
+
+- name: proper-noun hurdle
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The branch clears CI after the rebase.
+  contains: "'clears CI'"
+
+- name: intransitive hurdle
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The alert cleared on the next run without a fix.
+  contains: "'cleared on the next run'"
+
+- name: clearing a cache
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The script clears the cache before the build starts.
+  absent: ai-tells.FigurativeClears
+
+- name: clearing a screen
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: The command clears the screen and redraws the prompt.
+  absent: ai-tells.FigurativeClears
+
+- name: pronoun object stays out
+  about: Clear it and clear them are the deletion sense, with no complement to tell the hurdle apart.
+  rule: ../../styles/ai-tells/FigurativeClears.yml
+  input: Press the reset key to clear it before the next run.
+  absent: ai-tells.FigurativeClears

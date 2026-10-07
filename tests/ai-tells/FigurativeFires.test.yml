@@ -1,0 +1,48 @@
+---
+- name: checking noun as subject
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The rule fires on every heading in the file.
+  contains:
+    - ai-tells.FigurativeFires
+    - "'rule fires'"
+
+- name: checking noun with an adverb
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The hook never fired during the rebase.
+  contains: "'hook never fired'"
+
+- name: per-occasion complement with the subject left open
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: Formatters fire on every commit in the repository.
+  contains: "'fire on every commit'"
+
+- name: pronoun subject
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The checks run in order, and they fire nothing on a clean file.
+  contains: "'they fire'"
+
+- name: fires nothing
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The formatter fires nothing on a clean file.
+  contains: "'fires nothing'"
+
+- name: misfire
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The rule misfired on the heading.
+  contains: "'misfired'"
+
+- name: timer subject
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The timer fired after the deadline passed.
+  absent: ai-tells.FigurativeFires
+
+- name: event subject
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The event fires once for each window resize.
+  absent: ai-tells.FigurativeFires
+
+- name: pronoun with a literal object
+  about: The trailing lookahead keeps the gun and employee senses out.
+  rule: ../../styles/ai-tells/FigurativeFires.yml
+  input: The company said it fired the contractors last week.
+  absent: ai-tells.FigurativeFires

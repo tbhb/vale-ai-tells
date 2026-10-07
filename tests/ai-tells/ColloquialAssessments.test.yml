@@ -1,0 +1,126 @@
+---
+- name: curated noun lands
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The joke really lands in the release notes.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'The joke really lands'"
+
+- name: curated noun landed with adverb
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The analogy actually landed with the reviewers.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'The analogy actually landed'"
+
+- name: adverb alone lands
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: It really lands when the diff is small.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'really lands'"
+
+- name: lands flat
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The pitch landed flat with the team.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'landed flat'"
+
+- name: where it lands
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: This is where it finally lands for most readers.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'where it finally lands'"
+
+- name: is the move
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: Caching the lookup is the move.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'is the move'"
+
+- name: the right move
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: Splitting the module was the right move.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'the right move'"
+
+- name: the play here
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The play here is a read-through cache.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'The play here'"
+
+- name: what really matters
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: What really matters is the tail latency.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'What really matters'"
+
+- name: what matters most
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: Tail latency is what matters most.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'what matters most'"
+
+- name: all that matters
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: All that really matters is the tail latency.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'All that really matters'"
+
+- name: the only thing that matters
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The only thing that matters is the tail latency.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'The only thing that matters'"
+
+- name: handy for
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: Handy for auditing which items never made it through.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'Handy for'"
+
+- name: comes in handy
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The flag comes in handy during a bisect.
+  contains:
+    - ai-tells.ColloquialAssessments
+    - "'comes in handy'"
+
+- name: literal landing
+  about: >-
+    The arrival-verb sense belongs to FigurativeLands and literal
+    landings are not the assessment.
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The probe lands on the surface at noon.
+  absent: ai-tells.ColloquialAssessments
+
+- name: bare the move
+  about: >-
+    A bare "the move" is too broad (chess, real estate), so only the
+    verdict construction fires.
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The engine evaluates the move before the opponent replies.
+  absent: ai-tells.ColloquialAssessments
+
+- name: ordinary matters
+  about: >-
+    Bare "matters" is ordinary English; only the rhetorical wind-up fires.
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: Ordering matters when two writers share a lock.
+  absent: ai-tells.ColloquialAssessments
+
+- name: handy as an attributive adjective
+  rule: ../../styles/ai-tells/ColloquialAssessments.yml
+  input: The script is a handy tool.
+  absent: ai-tells.ColloquialAssessments

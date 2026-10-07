@@ -1,0 +1,59 @@
+---
+- name: coverage claim
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The wrapper handles all edge cases in the input.
+  contains:
+    - ai-tells.UniversalObject
+    - "'handles all edge'"
+
+- name: coverage claim with every
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The new check covers every scenario in the plan.
+  contains: "'covers every scenario'"
+
+- name: elimination claim
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The rewrite eliminates all ambiguity from the spec.
+  contains: "'eliminates all ambiguity'"
+
+- name: bar cleared
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The build passes all checks on the main branch.
+  contains: "'passes all checks'"
+
+- name: resolution and assurance
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The fix resolves every conflict in the lockfile.
+  contains: "'resolves every conflict'"
+
+- name: plural present subject
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The wrappers handle all edge cases in the input.
+  contains: "'The wrappers handle all edge'"
+
+- name: operations verb stays out
+  about: The operations family measured as ordinary spec language and is not in the verb list.
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The function returns all matches in the file.
+  absent: ai-tells.UniversalObject
+
+- name: modal aspiration
+  about: Modals and infinitives take the bare verb, which the grammar excludes.
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The wrapper should handle all edge cases in the input.
+  absent: ai-tells.UniversalObject
+
+- name: infinitive aspiration
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The goal is to cover every scenario in the plan.
+  absent: ai-tells.UniversalObject
+
+- name: all but exception idiom
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The pass eliminates all but the top level of nesting.
+  absent: ai-tells.UniversalObject
+
+- name: every other alternation
+  rule: ../../styles/ai-tells/UniversalObject.yml
+  input: The loop handles every other row in the batch.
+  absent: ai-tells.UniversalObject

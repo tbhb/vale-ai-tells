@@ -1,0 +1,85 @@
+---
+- name: determiner-gated designation
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: The manifest names the tag to install.
+  contains:
+    - ai-tells.BareNames
+    - "'The manifest names the'"
+
+- name: participle with an adverb
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: The rejections also named the figurative verbs.
+  contains: "'The rejections also named the'"
+
+- name: gerund after a determiner
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Pass a string naming a character set.
+  contains: "'a string naming a'"
+
+- name: pronoun subject
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: It names a kind of file.
+  contains: "'It names a'"
+
+- name: relative subject
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Pass the flag, which names the target.
+  contains: "'which names the'"
+
+- name: bare plural subject
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Recipes name the gate they run.
+  contains: "'Recipes name the'"
+
+- name: modal verb
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Each entry must name a file.
+  contains: "'must name a'"
+
+- name: file as the subject
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: vendir.yml names the tag.
+  contains: "'vendir.yml names the'"
+
+- name: imperative at the sentence start
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Name the version in the changelog.
+  contains: "'Name the'"
+
+- name: imperative after a comma
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Open the file, then name the tag you chose.
+  contains: "'name the'"
+
+- name: relative that after the plural noun
+  about: The object lookahead refuses "that" after the plural noun.
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: The type names that appear in the report are sorted.
+  absent: ai-tells.BareNames
+
+- name: variable named the same
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: A variable named the same as its type shadows it.
+  absent: ai-tells.BareNames
+
+- name: team naming a release
+  about: The human act of giving a name sits in the exceptions.
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: The team names a release every quarter.
+  absent: ai-tells.BareNames
+
+- name: complaint naming a defendant
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: The complaint names the defendant in the first paragraph.
+  absent: ai-tells.BareNames
+
+- name: imperative before a code span
+  about: The literal act of naming a file keeps the code span out of the imperative token.
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Name the new file `pep-9999.rst` and commit it.
+  absent: ai-tells.BareNames
+
+- name: imperative before after
+  rule: ../../styles/ai-tells/BareNames.yml
+  input: Name the logger after the package.
+  absent: ai-tells.BareNames

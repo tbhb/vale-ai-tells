@@ -1,0 +1,62 @@
+---
+- name: usage witness
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: The library sees heavy use in production.
+  contains:
+    - ai-tells.FigurativeSees
+    - "'sees heavy use'"
+
+- name: metric witness
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: The service saw a spike in errors after the deploy.
+  contains:
+    - ai-tells.FigurativeSees
+    - "'saw a spike in'"
+
+- name: historical witness introduction
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: That change saw the introduction of a new parser.
+  contains:
+    - ai-tells.FigurativeSees
+    - "'saw the introduction of'"
+
+- name: historical witness year
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: 2024 saw a shift toward typed configuration.
+  contains:
+    - ai-tells.FigurativeSees
+    - "'2024 saw'"
+
+- name: historical witness period noun
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: The quarter saw record growth in downloads.
+  contains:
+    - ai-tells.FigurativeSees
+    - "'quarter saw'"
+
+- name: weathered veteran
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: The build script has seen better days.
+  contains:
+    - ai-tells.FigurativeSees
+    - "'has seen better days'"
+
+- name: literal seeing by a person
+  about: >-
+    The complement is the discriminator, so literal seeing stays quiet.
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: She sees the screen flicker when the cable moves.
+  absent: ai-tells.FigurativeSees
+
+- name: component receiving input
+  about: >-
+    "Never sees" stays in the commit style because pre-LLM prose uses it
+    literally for a component that receives no input.
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: The handler never sees the raw bytes.
+  absent: ai-tells.FigurativeSees
+
+- name: compiler reading input
+  rule: ../../styles/ai-tells/FigurativeSees.yml
+  input: The compiler sees the file twice, once per pass.
+  absent: ai-tells.FigurativeSees

@@ -1,0 +1,115 @@
+---
+- name: runs deep
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The problem runs deep in the scheduler.
+  contains:
+    - ai-tells.FigurativeRuns
+    - "'runs deep'"
+
+- name: runs counter to
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: This choice runs counter to the design.
+  contains: "'runs counter to'"
+
+- name: runs afoul of
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The hack runs afoul of the linter.
+  contains: "'runs afoul of'"
+
+- name: runs roughshod over
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The patch runs roughshod over the old API.
+  contains: "'runs roughshod over'"
+
+- name: runs the gamut
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: Reported failures run the gamut from typos to crashes.
+  contains: "'run the gamut'"
+
+- name: runs the full spectrum
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The tests run the full spectrum of inputs.
+  contains: "'run the full spectrum'"
+
+- name: runs the show
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The config file runs the show here.
+  contains: "'runs the show'"
+
+- name: runs the risk of
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: A long cache lifetime runs the risk of stale reads.
+  contains: "'runs the risk of'"
+
+- name: runs interference
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The wrapper runs interference for the old caller.
+  contains: "'runs interference'"
+
+- name: runs circles around
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The new parser runs circles around the old one.
+  contains: "'runs circles around'"
+
+- name: running on fumes
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The team is running on fumes after the release.
+  contains: "'running on fumes'"
+
+- name: ran dry
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The budget ran dry before the audit finished.
+  contains: "'ran dry'"
+
+- name: ran its course
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The experiment ran its course in March.
+  contains: "'ran its course'"
+
+- name: running out of runway
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The project is running out of runway.
+  contains: "'running out of runway'"
+
+- name: runs under the whole table
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: One limit runs under the whole table.
+  contains: "'runs under the whole table'"
+
+- name: tension runs beneath
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: A tension runs beneath the two proposals.
+  contains: "'tension runs beneath'"
+
+- name: runs beneath the surface
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: A second schema runs beneath the surface.
+  contains: "'runs beneath the surface'"
+
+- name: hit the ground running
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: New hires hit the ground running.
+  contains: "'hit the ground running'"
+
+- name: off and running
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: With the lock file in place, the build is off and running.
+  contains: "'off and running'"
+
+- name: test suite running
+  about: Literal execution stays quiet.
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The server runs on port 8080, and the tests run in CI.
+  absent: ai-tells.FigurativeRuns
+
+- name: cron running across regions
+  about: A cron that runs across every region is a literal execution.
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The job runs across every region and runs through every fixture.
+  absent: ai-tells.FigurativeRuns
+
+- name: run a tight ship
+  about: Stays in ShipOveruse, so this rule leaves it.
+  rule: ../../styles/ai-tells/FigurativeRuns.yml
+  input: The maintainers run a tight ship.
+  absent: ai-tells.FigurativeRuns

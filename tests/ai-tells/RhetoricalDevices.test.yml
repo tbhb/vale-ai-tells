@@ -1,0 +1,62 @@
+---
+- name: when doing x ask
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "When reviewing a change, ask: does it touch the lock order?"
+  contains:
+    - ai-tells.RhetoricalDevices
+    - "'When reviewing a change, ask:'"
+
+- name: when you do x ask
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "When you merge a branch, ask: is the changelog updated?"
+  contains: "'When you merge a branch, ask:'"
+
+- name: before doing x ask
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "Before shipping a rule, ask: does it fire on prose?"
+  contains: "'Before shipping a rule, ask:'"
+
+- name: the test colon
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "The test: does the build pass without the cache?"
+  contains: "'The test:'"
+
+- name: the litmus test
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "The litmus test: can a stranger run it?"
+  contains: "'The litmus test:'"
+
+- name: heres the test
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "Here's the test: does the build pass?"
+  contains: "'Here's the test:'"
+
+- name: concrete test
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: This gives you a concrete test for the cache.
+  contains: "'This gives you a concrete test'"
+
+- name: ask yourself colon
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "Ask yourself: does the cache expire?"
+  contains: "'Ask yourself:'"
+
+- name: ask yourself whether
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: Ask yourself whether the cache expires.
+  contains: "'Ask yourself whether'"
+
+- name: question to ask
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: "The question to ask is: does the cache expire?"
+  contains: "'The question to ask is:'"
+
+- name: ask without a colon
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: When reviewing a change, ask a maintainer about the lock order.
+  absent: ai-tells.RhetoricalDevices
+
+- name: test as a noun
+  rule: ../../styles/ai-tells/RhetoricalDevices.yml
+  input: Run the test suite before you push.
+  absent: ai-tells.RhetoricalDevices

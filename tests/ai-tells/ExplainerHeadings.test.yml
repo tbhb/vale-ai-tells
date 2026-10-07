@@ -1,0 +1,88 @@
+---
+- name: free-relative heading
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# Why the Pin Exists"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'Why the Pin Exists'"
+
+- name: free-relative heading with how
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# How the Cache Works"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'How the Cache Works'"
+
+- name: deep dive
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# Deep Dive into the Scheduler"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'Deep Dive'"
+
+- name: under the hood
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# Under the Hood"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'Under the Hood'"
+
+- name: demystifying
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# Demystifying the Scheduler"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'Demystifying'"
+
+- name: why it matters
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# Why It Matters"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'Why It Matters'"
+
+- name: what it solves
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# What It Solves"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'What It Solves'"
+
+- name: a closer look
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# A Closer Look"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'A Closer Look'"
+
+- name: the inner workings
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# The Inner Workings"
+  contains:
+    - ai-tells.ExplainerHeadings
+    - "'The Inner Workings'"
+
+- name: conventional how-to heading
+  about: >-
+    The determiner gate keeps "How to Configure X" out.
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# How to Configure the Cache"
+  absent: ai-tells.ExplainerHeadings
+
+- name: whats new heading
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# What's New"
+  absent: ai-tells.ExplainerHeadings
+
+- name: topic heading
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: "# Cache invalidation"
+  absent: ai-tells.ExplainerHeadings
+
+- name: body text is out of scope
+  about: >-
+    The rule is scoped to headings, so the same phrase in a paragraph
+    stays quiet.
+  rule: ../../styles/ai-tells/ExplainerHeadings.yml
+  input: This section covers why the pin exists and how the cache works.
+  absent: ai-tells.ExplainerHeadings

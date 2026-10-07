@@ -1,0 +1,78 @@
+---
+- name: leaving tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The sweeper drops the row, leaving the cache cold.
+  contains:
+    - ai-tells.ConsequenceParticiple
+    - "', leaving the'"
+
+- name: giving tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The join reverses, giving the caller one row per blob.
+  contains: "', giving the'"
+
+- name: costing tail with one
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The lookup retries, costing one extra read.
+  contains: "', costing one'"
+
+- name: thereby before the participle
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The lock is held longer, thereby keeping the queue short.
+  contains: "', thereby keeping the'"
+
+- name: making tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The index is rebuilt on every write, making every read a miss.
+  contains: "', making every'"
+
+- name: meaning tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The write lands after the read, meaning the index is stale.
+  contains: "', meaning the'"
+
+- name: meaning that tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The write lands after the read, meaning that each report can be a match.
+  contains: "', meaning that each'"
+
+- name: resulting in tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The scan runs twice, resulting in a second pass.
+  contains: "', resulting in a'"
+
+- name: leading to tail
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The key is reused, leading to a full scan.
+  contains: "', leading to a'"
+
+- name: leaving without a determiner
+  about: The gate is the determiner or pronoun after the participle.
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The worker exits, leaving early.
+  absent: ai-tells.ConsequenceParticiple
+
+- name: making it possible
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The flag is set, making it possible to retry.
+  absent: ai-tells.ConsequenceParticiple
+
+- name: making a best effort
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The tool tries again, making a best effort to finish.
+  absent: ai-tells.ConsequenceParticiple
+
+- name: allowing is measured out
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The hook runs first, allowing the caller to patch it.
+  absent: ai-tells.ConsequenceParticiple
+
+- name: causing is measured out
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The task holds both locks, causing a deadlock.
+  absent: ai-tells.ConsequenceParticiple
+
+- name: no comma before the participle
+  rule: ../../styles/ai-tells/ConsequenceParticiple.yml
+  input: The sweeper drops the row leaving the cache cold.
+  absent: ai-tells.ConsequenceParticiple

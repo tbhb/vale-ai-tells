@@ -1,0 +1,176 @@
+---
+- name: not just then it's
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "It's not just a linter; it's a safety net for prose."
+  contains:
+    - ai-tells.ContrastiveFormulas
+    - "'It's not just a linter; it's a safety net for prose'"
+
+- name: not merely with a comma
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "It's not merely a cache, it's the whole read path."
+  contains: "'It's not merely a cache, it's the whole read path'"
+
+- name: not about then about
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "It's not about speed; it's about trust in the output."
+  contains: "'It's not about speed; it's about trust in the output'"
+
+- name: not about across two sentences
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: It's not about speed. It's about trust in the output.
+  contains: "'It's not about speed. It's about trust in the output'"
+
+- name: this isn't just
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "This isn't just a rename; it's a new contract for callers."
+  contains: "'This isn't just a rename; it's a new contract for callers'"
+
+- name: this is not only
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "This is not only a fix; it's a redesign of the retry path."
+  contains: "'This is not only a fix; it's a redesign of the retry path'"
+
+- name: this isn't about across two sentences
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: This isn't about style. It's about correctness under load.
+  contains: "'This isn't about style. It's about correctness under load'"
+
+- name: it's more than
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "It's more than a parser; it's the front door to the toolchain."
+  contains: "'It's more than a parser; it's the front door to the toolchain'"
+
+- name: this is more than just
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "This is more than just a patch; it's a policy change."
+  contains: "'This is more than just a patch; it's a policy change'"
+
+- name: less about and more about
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: It's less about the tool and more about the habit it builds.
+  contains: "'It's less about the tool and more about the habit it builds'"
+
+- name: this is less about
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: This is less about the code and more about the review loop.
+  contains: "'This is less about the code and more about the review loop'"
+
+- name: isn't the point
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "Speed isn't the point; correctness is the goal here."
+  contains: "'Speed isn't the point; correctness is'"
+
+- name: the real isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "The real cost isn't the compute; it's the review time."
+  contains: "'The real cost isn't the compute; it's the review time'"
+
+- name: what matters isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "What matters isn't the score; it's the trend over a quarter."
+  contains: "'What matters isn't the score; it's the trend over a quarter'"
+
+- name: the question isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "The question isn't whether it works; it's whether it scales."
+  contains: "'The question isn't whether it works; it's whether it scales'"
+
+- name: the problem isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "The problem isn't the parser; it's the input it receives."
+  contains: "'The problem isn't the parser; it's the input it receives'"
+
+- name: yes but the real
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: Yes, the tests are green, but the real risk is the config.
+  contains: "'Yes, the tests are green, but the real risk is the config'"
+
+- name: not whether but how
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "It's not whether the cache hits; it's how often it hits."
+  contains: "'It's not whether the cache hits; it's how often it hits'"
+
+- name: noun isn't then it's
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: Caching isn't a trick. It's a contract about freshness.
+  contains: "'Caching isn't a trick. It's a contract about freshness'"
+
+- name: bare appositive a not a
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: The new rule is a refinement, not a rivalry with the old one.
+  contains: "'a refinement, not a rivalry with the old one'"
+
+- name: bare appositive in a heading
+  about: The verbless appositive also fires where the clause-level tokens never match.
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: |
+    # A refinement, not a rewrite
+
+    Body text.
+  contains: "'A refinement, not a rewrite'"
+
+- name: not only but also
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: The tool not only parses the file but also rewrites it.
+  contains: "'not only parses the file but also rewrites it'"
+
+- name: not because but because
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: We kept it not because it was fast but because it was simple.
+  contains: "'not because it was fast but because it was simple'"
+
+- name: plural these aren't they're
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: These aren't bugs. They're features of the old design.
+  contains: "'These aren't bugs. They're features of the old design'"
+
+- name: plural with a semicolon
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: "These aren't flags; they're switches for the whole run."
+  contains: "'These aren't flags; they're switches for the whole run'"
+
+- name: plural noun aren't they're
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: Defaults aren't neutral. They're a decision made for you.
+  contains: "'Defaults aren't neutral. They're a decision made for you'"
+
+- name: doesn't mean it means
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: This doesn't mean the cache is wrong. It means the key is stale.
+  contains: "'This doesn't mean the cache is wrong. It means the key is stale'"
+
+- name: noun doesn't mean it means
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: Silence doesn't mean consent. It means nobody replied yet.
+  contains: "'Silence doesn't mean consent. It means nobody replied yet'"
+
+- name: multi-word subject isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: The colophon isn't a disclaimer. It's a feature of the page.
+  contains: "'The colophon isn't a disclaimer. It's a feature of the page'"
+
+- name: an noun isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: A cache isn't a database. It's a copy that may go stale.
+  contains: "'A cache isn't a database. It's a copy that may go stale'"
+
+- name: possessive noun isn't
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: Our parser isn't a toy. It's the core of the product.
+  contains: "'Our parser isn't a toy. It's the core of the product'"
+
+- name: multi-word subject without a determiner
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: Static analysis in CI isn't a gate. It's a signal about the design.
+  contains: "'Static analysis in CI isn't a gate. It's a signal about the design'"
+
+- name: plain negation without a correction
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: The parser isn't thread-safe, so guard it with a mutex.
+  absent: ai-tells.ContrastiveFormulas
+
+- name: plain positive claim
+  rule: ../../styles/ai-tells/ContrastiveFormulas.yml
+  input: The cache cuts read latency, and the key includes the schema version.
+  absent: ai-tells.ContrastiveFormulas

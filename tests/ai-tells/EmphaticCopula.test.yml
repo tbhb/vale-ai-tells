@@ -1,0 +1,64 @@
+---
+- name: italicized copula with asterisks
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The parser *is* the bottleneck in every build.
+  contains:
+    - ai-tells.EmphaticCopula
+    - "'*is*'"
+
+- name: italicized copula with underscores
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The parser _was_ the bottleneck in every build.
+  contains: "' _was_'"
+
+- name: italicized plural copula
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The tests *are* the contract for this module.
+  contains: "'*are*'"
+
+- name: italicized article
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: This is *the* answer to the cache question.
+  contains: "'*the*'"
+
+- name: italicized conjunction
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The flag takes a path *or* a URL.
+  contains: "'*or*'"
+
+- name: italicized negation
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The loader does _not_ read the manifest twice.
+  contains: "' _not_'"
+
+- name: italicized intensifier
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The patch *actually* removes the retry loop.
+  contains: "'*actually*'"
+
+- name: italicized absolute
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The hook _always_ runs before the commit.
+  contains: "' _always_'"
+
+- name: bold copula
+  about: The single-asterisk guard keeps bold out.
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The parser **is** the bottleneck in every build.
+  absent: ai-tells.EmphaticCopula
+
+- name: bold and italic together
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The parser ***is*** the bottleneck in every build.
+  absent: ai-tells.EmphaticCopula
+
+- name: dunder method name
+  about: The underscore tokens require a leading space, so a dunder name stays quiet.
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: Define __is__ as a property on the base class.
+  absent: ai-tells.EmphaticCopula
+
+- name: italics on an ordinary word
+  rule: ../../styles/ai-tells/EmphaticCopula.yml
+  input: The parser reads the *manifest* before it reads the lockfile.
+  absent: ai-tells.EmphaticCopula

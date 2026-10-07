@@ -1,0 +1,166 @@
+---
+- name: determiner-gated payoff
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The upfront work pays off.
+  contains:
+    - ai-tells.FigurativePays
+    - "'The upfront work pays off'"
+
+- name: unnamed price
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: Skip the check and you pay the price later.
+  contains:
+    - ai-tells.FigurativePays
+    - "'pay the price'"
+
+- name: unnamed steep price
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The team paid a steep price for the shortcut.
+  contains:
+    - ai-tells.FigurativePays
+    - "'paid a steep price'"
+
+- name: cost spelling of the invoice
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The fast path never pays that cost.
+  contains:
+    - ai-tells.FigurativePays
+    - "'pays that cost'"
+
+- name: free lunch
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The flag is available at no cost.
+  contains:
+    - ai-tells.FigurativePays
+    - "'at no cost'"
+
+- name: count as an invoice
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The token costs thirteen corpus hits.
+  contains:
+    - ai-tells.FigurativePays
+    - "'costs thirteen corpus hits'"
+
+- name: cost is a number of hits
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The cost is five hits across the corpora.
+  contains:
+    - ai-tells.FigurativePays
+    - "'The cost is five'"
+
+- name: at a count of corpus hits
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The phrase sits at zero corpus hits in the standard library.
+  contains:
+    - ai-tells.FigurativePays
+    - "'at zero corpus hits'"
+
+- name: would pay to
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: A reader would pay to compare the two outputs.
+  contains:
+    - ai-tells.FigurativePays
+    - "'would pay to'"
+
+- name: spends effort
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The tool spends effort on files it already checked.
+  contains:
+    - ai-tells.FigurativePays
+    - "'spends effort'"
+
+- name: purchase buys us
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The cache buys us very little.
+  contains:
+    - ai-tells.FigurativePays
+    - "'buys us'"
+
+- name: purchase buys an abstract good
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The shim bought breathing room for the migration.
+  contains:
+    - ai-tells.FigurativePays
+    - "'bought breathing room'"
+
+- name: fixed idiom price of admission
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The slow startup is the price of admission.
+  contains:
+    - ai-tells.FigurativePays
+    - "'price of admission'"
+
+- name: fixed idiom foots the bill
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The extra pass foots the bill for the new check.
+  contains:
+    - ai-tells.FigurativePays
+    - "'foots the bill'"
+
+- name: fixed idiom premium
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The design puts a premium on readable diffs.
+  contains:
+    - ai-tells.FigurativePays
+    - "'puts a premium on'"
+
+- name: settled invoice
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The corpus run settled the cost of each token.
+  contains:
+    - ai-tells.FigurativePays
+    - "'settled the cost'"
+
+- name: settles up
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The final step settles up the remaining entries.
+  contains:
+    - ai-tells.FigurativePays
+    - "'settles up'"
+
+- name: squares the ledger
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The audit squares the ledger.
+  contains:
+    - ai-tells.FigurativePays
+    - "'squares the ledger'"
+
+- name: balances the books
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The nightly job balances the books.
+  contains:
+    - ai-tells.FigurativePays
+    - "'balances the books'"
+
+- name: named tradeoff with of
+  about: >-
+    Pre-LLM prose names the goods with an "of" complement, so the
+    lookahead leaves the tradeoff alone.
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: We pay the price of building the map on every call.
+  absent: ai-tells.FigurativePays
+
+- name: at the cost of
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The cache speeds up reads at the cost of memory.
+  absent: ai-tells.FigurativePays
+
+- name: cost in a unit
+  about: >-
+    A cost stated in seconds is a measurement, so the unit lookahead
+    leaves it alone.
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The cost is 5 seconds per request.
+  absent: ai-tells.FigurativePays
+
+- name: settled on a price
+  about: >-
+    The negotiation sense takes "on" and stays clear.
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The two vendors settled on a price after a week.
+  absent: ai-tells.FigurativePays
+
+- name: plain prose with no transaction
+  rule: ../../styles/ai-tells/FigurativePays.yml
+  input: The migration finished before the deadline.
+  absent: ai-tells.FigurativePays

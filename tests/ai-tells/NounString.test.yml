@@ -1,0 +1,24 @@
+---
+- name: four common nouns in a row
+  rule: ../../styles/ai-tells/NounString.yml
+  input: We reviewed the customer feedback analysis pipeline today.
+  contains:
+    - ai-tells.NounString
+    - "'customer feedback analysis pipeline'"
+
+- name: three-noun compound
+  about: Three-noun compounds saturate technical prose, so the line sits at four.
+  rule: ../../styles/ai-tells/NounString.yml
+  input: We reviewed the config file path today.
+  absent: ai-tells.NounString
+
+- name: proper nouns in the stack
+  about: The anchored tag keeps proper nouns out.
+  rule: ../../styles/ai-tells/NounString.yml
+  input: We reviewed the Google Cloud Storage Console today.
+  absent: ai-tells.NounString
+
+- name: nouns separated by a verb
+  rule: ../../styles/ai-tells/NounString.yml
+  input: The team reviews feedback, and the pipeline stalls.
+  absent: ai-tells.NounString

@@ -1,0 +1,42 @@
+---
+- name: despite its challenges
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Despite its challenges, the parser handles every case.
+  contains:
+    - ai-tells.DespiteChallenges
+    - "'Despite its challenges'"
+
+- name: despite these limitations
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Despite these limitations, the tool ships on time.
+  contains: "'Despite these limitations'"
+
+- name: despite its drawbacks
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Despite its drawbacks, the format caught on.
+  contains: "'Despite its drawbacks'"
+
+- name: despite these hurdles
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Despite these hurdles, the release went out.
+  contains: "'Despite these hurdles'"
+
+- name: despite facing significant
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Despite facing significant delays, the team finished.
+  contains: "'Despite facing significant'"
+
+- name: while challenges remain
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: While challenges remain, the outlook is good.
+  contains: "'While challenges remain'"
+
+- name: challenges notwithstanding
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Limitations notwithstanding, the library works.
+  contains: "'Limitations notwithstanding'"
+
+- name: despite a literal obstacle
+  rule: ../../styles/ai-tells/DespiteChallenges.yml
+  input: Despite the rain, the build ran on schedule.
+  absent: ai-tells.DespiteChallenges

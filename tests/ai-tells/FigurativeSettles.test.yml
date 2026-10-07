@@ -1,0 +1,78 @@
+---
+- name: gavel with a dispute noun
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The latency number settles the question for this release.
+  contains:
+    - ai-tells.FigurativeSettles
+    - "'settles the question'"
+
+- name: gavel with a pronoun
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: A single failing test settled it.
+  contains: "'settled it'"
+
+- name: the dust settles
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: We will revisit the layout once the dust settles after the reorg.
+  contains: "'the dust settles'"
+
+- name: dust that has settled
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The team waited until the dust had settled before merging.
+  contains: "'the dust had settled'"
+
+- name: wait for the dust to settle
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: Wait for the dust to settle before you rebase.
+  contains: "'for the dust to settle'"
+
+- name: settling into place
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The pieces settled into place after the third rewrite.
+  contains: "'settled into place'"
+
+- name: settling into a form
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The API settled into its final form last spring.
+  contains: "'settled into its final form'"
+
+- name: closed question as an adjective
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The debate is settled, so the naming stays as it is.
+  contains: "'debate is settled'"
+
+- name: consider it settled
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: You can consider it settled after the vote.
+  contains: "'consider it settled'"
+
+- name: settled law
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The convention is treated as settled law in this team.
+  contains: "'settled law'"
+
+- name: settling a score
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The patch settles an old score with the flaky suite.
+  contains: "'settles an old score'"
+
+- name: settling on a choice
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The team settled on a heuristic for ranking.
+  absent: ai-tells.FigurativeSettles
+
+- name: settling for a simpler form
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: We can settle for the simpler form of the check.
+  absent: ai-tells.FigurativeSettles
+
+- name: dust landing on a surface
+  about: The locative lookahead keeps literal dust out of the first dust token.
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The dust settled on the windowsill overnight.
+  absent: ai-tells.FigurativeSettles
+
+- name: control-loop convergence
+  rule: ../../styles/ai-tells/FigurativeSettles.yml
+  input: The pacer settles into a non-degenerate state after a few ticks.
+  absent: ai-tells.FigurativeSettles

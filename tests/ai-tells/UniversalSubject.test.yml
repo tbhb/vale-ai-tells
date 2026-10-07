@@ -1,0 +1,76 @@
+---
+- name: copula with a participle
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All edge cases are handled.
+  contains:
+    - ai-tells.UniversalSubject
+    - "'All edge cases are handled'"
+
+- name: singular copula with has been
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: Every concern has been addressed.
+  contains: "'Every concern has been addressed'"
+
+- name: copula with an adverb
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All inputs are properly validated.
+  contains: "'All inputs are properly validated'"
+
+- name: progressive status report
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All concerns are being addressed.
+  contains: "'All concerns are being addressed'"
+
+- name: irregular participle
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: Every request is sent over TLS.
+  contains: "'Every request is sent'"
+
+- name: scoreboard pass
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All tests pass.
+  contains: "'All tests pass'"
+
+- name: scoreboard green
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: Every check is green.
+  contains: "'Every check is green'"
+
+- name: active form with every
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: Every predicate reads a live root.
+  contains: "'Every predicate reads a'"
+
+- name: active form with all
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All rows carry a timestamp.
+  contains: "'All rows carry a'"
+
+- name: lowercase subordinate clause
+  about: The sentence-initial capital is the declarative gate.
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: The loop exits when all bytes are consumed.
+  absent: ai-tells.UniversalSubject
+
+- name: adjective predicate
+  about: The participle slot refuses adjective predicates.
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All three parts are optional.
+  absent: ai-tells.UniversalSubject
+
+- name: future promise
+  about: The modal keeps the plan out of the copula alternation.
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All feedback will be addressed.
+  absent: ai-tells.UniversalSubject
+
+- name: quantifier float
+  about: The float resumes a list the subject already named.
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: The temps, the locals, and the globals are all copied.
+  absent: ai-tells.UniversalSubject
+
+- name: modal in the subject slot
+  rule: ../../styles/ai-tells/UniversalSubject.yml
+  input: All arguments must have a default value.
+  absent: ai-tells.UniversalSubject

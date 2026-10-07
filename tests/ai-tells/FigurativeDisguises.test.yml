@@ -1,0 +1,105 @@
+---
+- name: disguised as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The comment is an opinion disguised as a question.
+  contains:
+    - ai-tells.FigurativeDisguises
+    - "'disguised as'"
+
+- name: dressed up as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The patch is a rewrite dressed up as a refactor.
+  contains: "'dressed up as'"
+
+- name: masquerading as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The wrapper adds complexity masquerading as rigor.
+  contains: "'masquerading as'"
+
+- name: masquerade as in the base form
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: A stale cache can masquerade as a network fault.
+  contains: "'masquerade as'"
+
+- name: parading as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The team is parading the fix as a feature.
+  contains: "'parading the fix as'"
+
+- name: poses as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The helper poses as the real client in tests.
+  contains: "'poses as'"
+
+- name: pretends to be
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The wrapper pretends to be the original.
+  contains: "'pretends to be'"
+
+- name: what passes for
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: This is what passes for documentation here.
+  contains: "'what passes for'"
+
+- name: passes itself off as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The shim passes itself off as the original package.
+  contains: "'passes itself off as'"
+
+- name: passed off as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The summary was passed off as a review.
+  contains: "'passed off as'"
+
+- name: cosplaying as
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The spreadsheet is cosplaying as a database.
+  contains: "'cosplaying as'"
+
+- name: in disguise
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The memo is a lecture in disguise.
+  contains: "'in disguise'"
+
+- name: under the guise of
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The padding arrives under the guise of thoroughness.
+  contains: "'under the guise of'"
+
+- name: in sheep's clothing
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The shortcut is a hazard in sheep's clothing.
+  contains: "'in sheep's clothing'"
+
+- name: in a trench coat
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The adapter is three services in a trench coat.
+  contains: "'in a trench coat'"
+
+- name: poses as much risk comparison
+  about: The comparison construction is ordinary prose, so the lookahead leaves it alone.
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The new flag poses as much risk as the old one.
+  absent: ai-tells.FigurativeDisguises
+
+- name: noun homograph
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The parade route avoids the main road.
+  absent: ai-tells.FigurativeDisguises
+
+- name: passes for the wrong reason
+  about: A test literally passes for a wrong reason, so the free relative is the gate.
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The test passes for the wrong reason.
+  absent: ai-tells.FigurativeDisguises
+
+- name: scheduled cleanup pass
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The cleanup pass kicked off as scheduled.
+  absent: ai-tells.FigurativeDisguises
+
+- name: posed as an optimization
+  about: Mathematical prose says a problem is posed as an optimization, so the past participle stays uncovered.
+  rule: ../../styles/ai-tells/FigurativeDisguises.yml
+  input: The problem is posed as an optimization over the weights.
+  absent: ai-tells.FigurativeDisguises

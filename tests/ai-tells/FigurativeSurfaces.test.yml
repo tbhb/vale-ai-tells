@@ -1,0 +1,90 @@
+---
+- name: transitive emergence
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The audit surfaced three findings in the parser.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'surfaced three'"
+
+- name: bare-noun object
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The command surfaces skills whose definition matches the query.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'surfaces skills'"
+
+- name: subject-gated emergence
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The failure surfaced in CI on Tuesday.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'failure surfaced'"
+
+- name: negative report
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: Nothing surfaced this earlier in the review.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'Nothing surfaced'"
+
+- name: bare verb behind an infinitive marker
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: We added tooling to surface changes between releases.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'to surface changes'"
+
+- name: bare verb behind a modal
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The linter can surface bugs before the merge.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'can surface bugs'"
+
+- name: bare verb behind a negation
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The log doesn't surface the failure.
+  contains:
+    - ai-tells.FigurativeSurfaces
+    - "'doesn't surface the'"
+
+- name: singular noun
+  about: >-
+    The singular noun ("the API surface") never matches.
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The API surface is small and documented.
+  absent: ai-tells.FigurativeSurfaces
+
+- name: surface of a sphere
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The surface of the sphere is smooth.
+  absent: ai-tells.FigurativeSurfaces
+
+- name: plural noun with a copula
+  about: >-
+    The open object refuses copulas, so the plural noun stays quiet.
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The API surfaces are listed in the reference.
+  absent: ai-tells.FigurativeSurfaces
+
+- name: physical compound
+  about: >-
+    The open object refuses the physical compounds.
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The coating raises surface tension in the lab.
+  absent: ai-tells.FigurativeSurfaces
+
+- name: submarine surfacing
+  about: >-
+    A submarine surfacing takes a preposition, so it stays quiet.
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The submarine surfaced at dawn.
+  absent: ai-tells.FigurativeSurfaces
+
+- name: bare verb before a compound
+  about: >-
+    After "to" the lookahead refuses only the compounds, here "surface
+    area."
+  rule: ../../styles/ai-tells/FigurativeSurfaces.yml
+  input: The coating is meant to surface area evenly.
+  absent: ai-tells.FigurativeSurfaces

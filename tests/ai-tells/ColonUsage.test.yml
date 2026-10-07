@@ -1,0 +1,30 @@
+---
+- name: capitalized word after a colon
+  rule: ../../styles/ai-tells/ColonUsage.yml
+  input: "The rule has one job: Flag the tell before it reaches the reader."
+  contains:
+    - ai-tells.ColonUsage
+    - "': Flag'"
+
+- name: lowercase word after a colon
+  rule: ../../styles/ai-tells/ColonUsage.yml
+  input: "The rule has one job: flag the tell before it reaches the reader."
+  absent: ai-tells.ColonUsage
+
+- name: pronoun I after a colon
+  rule: ../../styles/ai-tells/ColonUsage.yml
+  input: "The reviewer left a note: I checked every case by hand."
+  absent: ai-tells.ColonUsage
+
+- name: colon-joined run such as a clock time
+  rule: ../../styles/ai-tells/ColonUsage.yml
+  input: "The standup moved to 10:30: Meeting rooms are booked."
+  absent: ai-tells.ColonUsage
+
+- name: heading with a capitalized title half
+  rule: ../../styles/ai-tells/ColonUsage.yml
+  input: |
+    # Appendix A: Glossary
+
+    The terms below are used throughout.
+  absent: ai-tells.ColonUsage

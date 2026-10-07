@@ -1,0 +1,215 @@
+---
+- name: and that's the beauty of it
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The cache invalidates itself. And that's the beauty of it.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'And that's the beauty of it'"
+
+- name: and that's what makes it
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The cache invalidates itself. And that's what makes it fast.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'And that's what makes it fast'"
+
+- name: and that's exactly why
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The cache invalidates itself. And that's exactly why it stays small.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'And that's exactly why it stays small'"
+
+- name: that's the key insight
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The parser never backtracks. That's the key insight.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'That's the key insight'"
+
+- name: that's the power of
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The parser never backtracks. That's the power of a single pass.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'That's the power of a single pass'"
+
+- name: that's the real question
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The parser never backtracks. That's the real question.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'That's the real question'"
+
+- name: this is what x looks like
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: This is what good error handling looks like.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'This is what good error handling looks like'"
+
+- name: this is what it means to
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: This is what it means to own the build.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'This is what it means to own the build'"
+
+- name: here's the thing
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Here's the thing about the retry loop.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Here's the thing'"
+
+- name: here's the catch
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The retry loop works. Here's the catch.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Here's the catch'"
+
+- name: here's why this matters
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Here's why this matters for the retry loop.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Here's why this matters'"
+
+- name: the key insight is
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The key insight is that the queue never blocks.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'The key insight is'"
+
+- name: plural revelation
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Three core principles are at work in the queue.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'core principles are'"
+
+- name: the lesson here is
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The lesson here is to measure first.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'The lesson here is to measure first'"
+
+- name: and this is exactly what
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The queue never blocks, and this is exactly what the design needs.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'and this is exactly what the design needs'"
+
+- name: let that sink in
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The build takes forty minutes. Let that sink in.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Let that sink in'"
+
+- name: think about it for a moment
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Think about it for a moment before merging.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Think about it for a moment'"
+
+- name: comma and that's rare
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The tool ships with tests, and that's rare for a plugin.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "', and that's rare'"
+
+- name: the real secret is
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The real secret is a short feedback loop.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'The real secret is a short feedback loop'"
+
+- name: the real problem isn't
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The real problem isn't the parser but the config.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'The real problem isn't the parser but the config'"
+
+- name: what this really means
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: What this really means is that the cache is stale.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'What this really means is that the cache is stale'"
+
+- name: and here's why
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The cache is stale. And here's why.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'And here's why'"
+
+- name: let me be clear
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Let me be clear about the retry policy.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Let me be clear'"
+
+- name: rest assured
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Rest assured, the migration is idempotent.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Rest assured'"
+
+- name: the truth is
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The truth is the migration was never tested.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'The truth is'"
+
+- name: the hard truth is
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The hard truth is the migration was never tested.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'The hard truth is'"
+
+- name: spoiler alert
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Spoiler alert, the migration failed.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Spoiler alert'"
+
+- name: pro tip
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: Pro tip, run the migration twice.
+  contains:
+    - ai-tells.AffirmativeFormulas
+    - "'Pro tip'"
+
+- name: takeaway stays with structure announcements
+  about: >-
+    The rule comment hands "the takeaway is" to StructureAnnouncements.
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The takeaway is that the queue never blocks.
+  absent: ai-tells.AffirmativeFormulas
+
+- name: bottom line stays with conclusion markers
+  about: >-
+    The rule comment hands "the bottom line is" to ConclusionMarkers.
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The bottom line is that the queue never blocks.
+  absent: ai-tells.AffirmativeFormulas
+
+- name: plain statement of fact
+  rule: ../../styles/ai-tells/AffirmativeFormulas.yml
+  input: The queue never blocks because every producer has its own buffer.
+  absent: ai-tells.AffirmativeFormulas

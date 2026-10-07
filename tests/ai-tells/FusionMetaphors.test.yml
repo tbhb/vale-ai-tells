@@ -1,0 +1,52 @@
+---
+- name: folds into
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The change folds the helper into the caller.
+  contains:
+    - ai-tells.FusionMetaphors
+    - "'folds the helper into'"
+
+- name: collapses into
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The three rules collapse into one.
+  contains: "'collapse into one'"
+
+- name: collapses to
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The pipeline collapses to a single call.
+  contains: "'collapses to a'"
+
+- name: absorbs
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The new token absorbs the old one.
+  contains: "'absorbs the'"
+
+- name: fuses
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The fix fuses the two passes.
+  contains: "'fuses the'"
+
+- name: couples
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The flag couples the cache to the writer.
+  contains: "'couples the cache to'"
+
+- name: literal fold
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: Fold the paper in half.
+  absent: ai-tells.FusionMetaphors
+
+- name: literal collapse
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: The old bridge will collapse in the next flood.
+  absent: ai-tells.FusionMetaphors
+
+- name: absorbs without a determiner
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: A sponge absorbs water.
+  absent: ai-tells.FusionMetaphors
+
+- name: coupling noun
+  rule: ../../styles/ai-tells/FusionMetaphors.yml
+  input: Tight coupling hurts the test suite.
+  absent: ai-tells.FusionMetaphors

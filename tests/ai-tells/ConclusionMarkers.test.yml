@@ -23,3 +23,60 @@
   rule: ../../styles/ai-tells/ConclusionMarkers.yml
   input: The owner is ultimately responsible, and the overall design holds.
   absent: ai-tells.ConclusionMarkers
+
+- name: summarize family
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: To sum up, the parser handles every case.
+  contains:
+    - ai-tells.ConclusionMarkers
+    - "'To sum up'"
+
+- name: closing family
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: In closing, the parser handles every case.
+  contains: "'In closing'"
+
+- name: all in all
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: All in all, the parser handles every case.
+  contains: "'All in all'"
+
+- name: end of the day idiom
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: At the end of the day, the parser handles every case.
+  contains: "'At the end of the day'"
+
+- name: said and done idiom
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: When all is said and done, the parser handles every case.
+  contains: "'When all is said and done'"
+
+- name: bottom line verdict
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: The bottom line is that the parser handles every case.
+  contains: "'The bottom line is'"
+
+- name: final analysis
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: In the final analysis, the parser handles every case.
+  contains: "'In the final analysis'"
+
+- name: taking everything into account
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: Taking everything into account, the parser handles every case.
+  contains: "'Taking everything into account'"
+
+- name: taking all of this into account
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: Taking all of this into account, the parser handles every case.
+  contains: "'Taking all of this into account'"
+
+- name: on the whole
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: On the whole, the parser handles every case.
+  contains: "'On the whole'"
+
+- name: by way of conclusion
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: By way of conclusion, the parser handles every case.
+  contains: "'By way of conclusion'"

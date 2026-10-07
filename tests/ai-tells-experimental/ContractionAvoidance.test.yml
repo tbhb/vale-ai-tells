@@ -1,0 +1,289 @@
+---
+- name: conversational document that avoids contractions
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+  contains: ai-tells-experimental.ContractionAvoidance
+
+- name: conversational document that uses contractions
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It's easy to miss a setting, and you don't want a failed release. The team doesn't run the job twice, so the first run must pass.
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: typographic apostrophes count as contractions
+  about: A typographer writes every contraction with U+2019; the script normalizes it before counting.
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It’s easy to miss a setting, and you don’t want a failed release. The team doesn’t run the job twice, so the first run must pass.
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: formal document with no informal markers
+  about: Specs and legal text legitimately avoid contractions, so a document needs two informal markers to be gated in.
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: document under 500 words
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+
+    You should check your configuration before the deploy. It is easy to miss a setting, and you do not want a failed release. The team does not run the job twice, so the first run must pass.
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: informal markers only inside a code fence
+  about: Code fences are stripped before the gate check, so the pronouns inside one do not count.
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    ```text
+    you your we our you
+    ```
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: informal markers only inside HTML tags and comments
+  about: MDX and HTML markup is stripped before the gate check.
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. The team does not run the job twice, so the first run must pass.
+
+    <!-- you and your team -->
+
+    <Callout title="you your" />
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: one informal marker is not enough
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass.
+  absent: ai-tells-experimental.ContractionAvoidance
+
+- name: two markers from a question and a pronoun
+  about: A question in prose counts as an informal marker alongside a pronoun.
+  rule: ../../styles/ai-tells-experimental/ContractionAvoidance.yml
+  input: |
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+
+    The configuration must be checked before the deploy. It is easy to miss a setting, and the release does not recover from one. Your team does not run the job twice, so the first run must pass. Is that clear? Yes.
+  contains: ai-tells-experimental.ContractionAvoidance

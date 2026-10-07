@@ -1,0 +1,64 @@
+---
+- name: serves as
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The file serves as a lockfile.
+  contains:
+    - ai-tells.ServesAsDodge
+    - "'serves as a'"
+
+- name: served as in the past
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The branch served as the staging area.
+  contains: "'served as the'"
+
+- name: serving as
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The daemon runs on port 80, serving as an entry point.
+  contains: "'serving as an'"
+
+- name: stands as
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The test stands as a guard for the parser.
+  contains: "'stands as a'"
+
+- name: marks a pivotal
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The release marks a pivotal change for plugins.
+  contains: "'marks a pivotal'"
+
+- name: represents a significant
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The patch represents a significant rewrite of the parser.
+  contains: "'represents a significant'"
+
+- name: boasts a vibrant
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The project boasts a vibrant plugin list.
+  contains: "'boasts a vibrant'"
+
+- name: features a wide
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The CLI features a wide range of flags.
+  contains: "'features a wide'"
+
+- name: offers a unique
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The tool offers a unique view of the diff.
+  contains: "'offers a unique'"
+
+- name: colon cheat
+  about: A long definite subject, a colon, an indefinite article, and a long descriptive tail.
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: "The candidate hook mechanism: a hook on Bash that blocks the write."
+  contains: "'The candidate hook mechanism: a hook on Bash that blocks the write'"
+
+- name: short pedagogical colon
+  about: A short subject and a short tail are an answer, not the cheat.
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: "The answer: a hook."
+  absent: ai-tells.ServesAsDodge
+
+- name: literal serve
+  rule: ../../styles/ai-tells/ServesAsDodge.yml
+  input: The server serves static assets to every client.
+  absent: ai-tells.ServesAsDodge

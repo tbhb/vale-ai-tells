@@ -1,0 +1,79 @@
+---
+- name: the problem is that
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The problem is that the index goes stale.
+  contains:
+    - ai-tells.ShellNounCopula
+    - "'The problem is that'"
+
+- name: the difference is that
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The difference is that the second build read the cache.
+  contains: "'The difference is that'"
+
+- name: the question is whether
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The question is whether the cache survives a restart.
+  contains: "'The question is whether'"
+
+- name: one catch is that
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: One catch is that the daemon keeps the lock.
+  contains: "'One catch is that'"
+
+- name: adjective before the noun
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The only downside is that the build is slower.
+  contains: "'The only downside is that'"
+
+- name: copula was with just
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The reason was just that the cache expired.
+  contains: "'The reason was just that'"
+
+- name: possessive determiner
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: Its downside is that the lock is global.
+  contains: "'Its downside is that'"
+
+- name: the problem here is that
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The problem here is that the index goes stale.
+  contains: "'The problem here is that'"
+
+- name: the issue here was that
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The issue here was that the lock was global.
+  contains: "'The issue here was that'"
+
+- name: the key here stays with metacommentary
+  about: The nouns Metacommentary takes with "here" are left out of the here token.
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The point here is that the lock is global.
+  absent: ai-tells.ShellNounCopula
+
+- name: the rule is that
+  about: Nouns that name a kind of statement carry the definition, so they stay out of the list.
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The rule is that every import sorts alphabetically.
+  absent: ai-tells.ShellNounCopula
+
+- name: the invariant is that
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The invariant is that the queue never holds duplicates.
+  absent: ai-tells.ShellNounCopula
+
+- name: ordinal enumeration
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The first is that the cache is stale.
+  absent: ai-tells.ShellNounCopula
+
+- name: noun without a that-clause
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The problem is a stale index after a rename.
+  absent: ai-tells.ShellNounCopula
+
+- name: claim without a shell
+  rule: ../../styles/ai-tells/ShellNounCopula.yml
+  input: The index goes stale after a rename.
+  absent: ai-tells.ShellNounCopula

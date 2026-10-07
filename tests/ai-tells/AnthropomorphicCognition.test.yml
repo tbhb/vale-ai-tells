@@ -1,0 +1,188 @@
+---
+- name: volition in an artifact
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The spec wants a retry after each failure.
+  contains:
+    - ai-tells.AnthropomorphicCognition
+    - "'The spec wants'"
+
+- name: volition with an adverb
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The linter really wants a trailing newline.
+  contains: "'The linter really wants'"
+
+- name: ditransitive teaching
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: A stale codebook would teach a reviewer the wrong contract.
+  contains: "'teach'"
+
+- name: teaching a tool
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: Teach Renovate to read the new markers.
+  contains: "'Teach Renovate'"
+
+- name: can be taught
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The validator can be taught new formats.
+  contains: "'can be taught'"
+
+- name: learning tool
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The spell checker learns the new word after one run.
+  contains: "'learns the'"
+
+- name: knowing nothing
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The manager knows nothing about that format.
+  contains: "'knows nothing about'"
+
+- name: having no idea
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The hook has no idea the file moved.
+  contains: "'has no idea'"
+
+- name: asks whether
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The detector asks whether any package holds the file.
+  contains: "'The detector asks whether'"
+
+- name: trusts the
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The reviewer trusts the inlined material.
+  contains: "'trusts the'"
+
+- name: decides which
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The record's bytes decide which extractor runs.
+  contains: "'The record's bytes decide which'"
+
+- name: answers questions
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The prose answers questions an exact match cannot.
+  contains: "'The prose answers questions'"
+
+- name: answers to a rule
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The squash message answers to the same styles as a commit.
+  contains: "'The squash message answers to'"
+
+- name: forbids
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: Determinism forbids a model on the decision path.
+  contains: "'Determinism forbids'"
+
+- name: arbitrates
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The ensemble arbitrates the band between the two scores.
+  contains: "'arbitrates'"
+
+- name: cedes
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: A weak signal cedes recall to the stronger one.
+  contains: "'cedes'"
+
+- name: adopts
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The create path adopts an open issue.
+  contains: "'The create path adopts an'"
+
+- name: tells you to
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: Every failure tells you to refresh the cache.
+  contains: "'tells'"
+
+- name: could mistake
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: A file the loader could mistake for a capture breaks the run.
+  contains: "'the loader could mistake for'"
+
+- name: cannot prove
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: One scan can't prove a record left for good.
+  contains: "'One scan can't prove'"
+
+- name: guesses
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The parser guesses the encoding from the first bytes.
+  contains: "'The parser guesses'"
+
+- name: pretending
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The sync reports an error rather than pretending the item never existed.
+  contains: "'rather than pretending'"
+
+- name: pretends
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The sweep reports a clean tree because it pretends the row is gone.
+  contains: "'it pretends'"
+
+- name: hunts
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The secret scanner hunts keys in every commit.
+  contains: "'hunts'"
+
+- name: gets confused
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The parser gets confused by a trailing comma.
+  contains: "'gets confused'"
+
+- name: confuses the
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: A stray quote would confuse the trace parser.
+  contains: "'confuse the trace parser'"
+
+- name: misbehaves
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: Roll back if the release misbehaves.
+  contains: "'misbehaves'"
+
+- name: telling the truth
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The refusal text was telling the truth about the task.
+  contains: "'telling the truth'"
+
+- name: person wanting
+  about: The exceptions name people who legitimately want.
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The user wants a faster build.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: pronoun wanting
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: We want the build to fail fast.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: relative clause with it
+  about: A relative clause with it for a subject puts the wanter outside the span.
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The surface it wants is the narrow one.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: taught in schools
+  about: The lookahead keeps the human idiom out of the span.
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: Latin was taught in schools for centuries.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: answer to a question
+  about: The noun sense of answer to stays out.
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The answers to these two questions are in the FAQ.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: pretends otherwise
+  about: Pretends otherwise stays with AnthropomorphicJustification.
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The doc is stale but it pretends otherwise.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: we learned
+  about: The past tense carries a human subject and stays out.
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: We learned the hard way that the cache expires.
+  absent: ai-tells.AnthropomorphicCognition
+
+- name: plain checking tool
+  rule: ../../styles/ai-tells/AnthropomorphicCognition.yml
+  input: The linter reports each unused import and exits with status 1.
+  absent: ai-tells.AnthropomorphicCognition

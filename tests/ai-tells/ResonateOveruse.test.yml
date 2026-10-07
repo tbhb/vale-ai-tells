@@ -1,0 +1,33 @@
+---
+- name: resonates
+  rule: ../../styles/ai-tells/ResonateOveruse.yml
+  input: The message resonates with the audience.
+  contains:
+    - ai-tells.ResonateOveruse
+    - "'resonates'"
+
+- name: resonated
+  rule: ../../styles/ai-tells/ResonateOveruse.yml
+  input: The proposal resonated with the maintainers.
+  contains:
+    - ai-tells.ResonateOveruse
+    - "'resonated'"
+
+- name: resonating
+  rule: ../../styles/ai-tells/ResonateOveruse.yml
+  input: The framing is resonating with new users.
+  contains:
+    - ai-tells.ResonateOveruse
+    - "'resonating'"
+
+- name: noun form resonance
+  about: >-
+    The noun forms are a different word and stay clean.
+  rule: ../../styles/ai-tells/ResonateOveruse.yml
+  input: The circuit shows a sharp resonance near 440 Hz.
+  absent: ai-tells.ResonateOveruse
+
+- name: adjective form resonant
+  rule: ../../styles/ai-tells/ResonateOveruse.yml
+  input: The resonant frequency of the cavity is fixed.
+  absent: ai-tells.ResonateOveruse

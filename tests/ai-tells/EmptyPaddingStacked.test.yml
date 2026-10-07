@@ -1,0 +1,32 @@
+---
+- name: various adjective noun
+  rule: ../../styles/ai-tells/EmptyPaddingStacked.yml
+  input: The parser handles various common errors.
+  contains:
+    - ai-tells.EmptyPaddingStacked
+    - "'various common errors'"
+
+- name: certain adjective noun
+  rule: ../../styles/ai-tells/EmptyPaddingStacked.yml
+  input: The rule flags certain obvious patterns.
+  contains: "'certain obvious patterns'"
+
+- name: respective adjective noun
+  rule: ../../styles/ai-tells/EmptyPaddingStacked.yml
+  input: Each module keeps its respective local state.
+  contains: "'respective local state'"
+
+- name: particular adjective noun
+  rule: ../../styles/ai-tells/EmptyPaddingStacked.yml
+  input: The linter reports a particular narrow case.
+  contains: "'particular narrow case'"
+
+- name: modifier directly before the noun
+  rule: ../../styles/ai-tells/EmptyPaddingStacked.yml
+  input: The parser handles various errors.
+  absent: ai-tells.EmptyPaddingStacked
+
+- name: adjective without the modifier
+  rule: ../../styles/ai-tells/EmptyPaddingStacked.yml
+  input: The parser handles common errors.
+  absent: ai-tells.EmptyPaddingStacked
