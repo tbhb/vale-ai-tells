@@ -1,0 +1,46 @@
+---
+- name: cleft lead-in with here's
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: Here's what the change does to the parser.
+  contains:
+    - ai-tells.ExplainerLeads
+    - "'Here's what the change does'"
+
+- name: cleft lead-in with this is why
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: This is why the pin matters for every consumer.
+  contains: "'This is why the pin matters'"
+
+- name: cleft lead-in with that's how
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: That's how the pieces fit together at build time.
+  contains: "'That's how the pieces fit'"
+
+- name: free relative as a label before a colon
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: "What the hook does: it refuses the write."
+  contains: "'What the hook does'"
+
+- name: pseudo-cleft with a copula
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: What the hook does is refuse the write.
+  contains: "'What the hook does is'"
+
+- name: embedded clause mid-sentence
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: The result depends on how the shell resolves the path.
+  absent: ai-tells.ExplainerLeads
+
+- name: capitalized when clause stays a conditional
+  about: Only what, why, and how anchor the label; a capitalized When opens a conditional.
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: "When the input is 6: the parser skips the header."
+  absent: ai-tells.ExplainerLeads
+
+- name: heading form
+  rule: ../../styles/ai-tells/ExplainerLeads.yml
+  input: |
+    # What the hook does is refuse the write
+
+    The hook runs before every commit.
+  absent: ai-tells.ExplainerLeads

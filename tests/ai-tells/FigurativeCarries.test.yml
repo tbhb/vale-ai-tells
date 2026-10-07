@@ -1,0 +1,153 @@
+---
+- name: freighted significance
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying baggage.
+  contains:
+    - ai-tells.FigurativeCarries
+    - "'carrying baggage'"
+
+- name: freighted weight with a modifier
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying significant risk.
+  contains: "'carrying significant risk'"
+
+- name: same weight
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying the same weight twice.
+  contains: "'carrying the same weight'"
+
+- name: attached caveat
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying a caveat.
+  contains: "'carrying a caveat'"
+
+- name: heroics
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying the team.
+  contains: "'carrying the team'"
+
+- name: content possession
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying no pipeline logic.
+  contains: "'carrying no pipeline logic'"
+
+- name: content possession with data
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying the payload.
+  contains: "'carrying the payload'"
+
+- name: rule possession
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying the exemption.
+  contains: "'carrying the exemption'"
+
+- name: typographic cargo
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying a prefix.
+  contains: "'carrying a prefix'"
+
+- name: negated cargo with an open noun
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying no counts.
+  contains: "'carrying no counts'"
+
+- name: negated cargo with a code span
+  about: Markdown masks a backticked object to an asterisk run, which the alternation matches.
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying no `counts`.
+  contains: "'carrying no ******'"
+
+- name: mirrored possession
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Avoid carrying the same caveat.
+  contains: "'carrying the same'"
+
+- name: open subject conveyance
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The manifest carries the pin for each package.
+  contains: "'The manifest carries'"
+
+- name: open subject with a possessive
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Each zip carries its own README.
+  contains: "'Each zip carries'"
+
+- name: open subject with an adverb
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: An inline suppression always carries a reason.
+  contains: "'An inline suppression always carries'"
+
+- name: pronoun subject
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: This carries more risk than the old path.
+  contains: "'This carries'"
+
+- name: code span subject
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: "`Icon` carries its own box."
+  contains: "'carries'"
+
+- name: auxiliary before the bare verb
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Badges can carry a leading icon.
+  contains: "'Badges can carry'"
+
+- name: infinitive marker
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Files have to carry the scope.
+  contains: "'Files have to carry'"
+
+- name: bare carry after a plural subject
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The machine formats carry the score columns.
+  contains: "'The machine formats carry'"
+
+- name: bare carry after a relative pronoun
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: These are the blobs that carry no state rows.
+  contains: "'that carry'"
+
+- name: bare plural with no determiner
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Python scripts carry inline metadata.
+  contains: "'scripts carry'"
+
+- name: truck carries freight
+  about: The listed literal carriers stay quiet.
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The truck carries freight to the depot every night.
+  absent: ai-tells.FigurativeCarries
+
+- name: mosquito carries a virus
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The mosquito carries the virus between hosts.
+  absent: ai-tells.FigurativeCarries
+
+- name: context carries values
+  about: Go's own Context API documentation uses the verb literally.
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: A context carries deadlines and values across API boundaries.
+  absent: ai-tells.FigurativeCarries
+
+- name: carries out
+  about: The phrasal "carries out" means execute.
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The runner carries out the policy for each job.
+  absent: ai-tells.FigurativeCarries
+
+- name: carried over
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The importer carried over settings from the previous release.
+  absent: ai-tells.FigurativeCarries
+
+- name: arithmetic carry
+  about: The arithmetic noun stays quiet.
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: The adder returns the carry and the sum.
+  absent: ai-tells.FigurativeCarries
+
+- name: carries its weight
+  about: Stays in AnthropomorphicJustification.
+  rule: ../../styles/ai-tells/FigurativeCarries.yml
+  input: Each helper must carry its weight in review.
+  absent: ai-tells.FigurativeCarries

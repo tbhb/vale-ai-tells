@@ -1,0 +1,82 @@
+---
+- name: five sentences of near-equal length
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user right now. The updater downloads the archive into the cache directory of the project each night. The linter reads the config from the root folder of the repository on every run. The scheduler starts the worker at the top of the hour and records the status. The reviewer opens the pull request and checks the diff for each changed file today.
+  contains: ai-tells-experimental.SentenceLengthVariance
+
+- name: sentences of varied length
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    It works. The installer copies the binary into the local bin directory of the user, sets the permissions on the file so that the shell can run it, and then prints a short note about the result. Run it. The updater downloads the archive into the cache directory of the project each night. Done now.
+  absent: ai-tells-experimental.SentenceLengthVariance
+
+- name: four sentences are too few
+  about: The script needs at least five sentences of three words or more.
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user right now. The updater downloads the archive into the cache directory of the project each night. The linter reads the config from the root folder of the repository on every run. The scheduler starts the worker at the top of the hour and records the status.
+  absent: ai-tells-experimental.SentenceLengthVariance
+
+- name: uniform short sentences stay under the mean floor
+  about: A mean under 12 words is exempt, since short uniform sentences read as staccato style rather than a tell.
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    The cat sat down here. The dog ran off then. The bird flew up high. The fish swam past us. The fox hid in grass.
+  absent: ai-tells-experimental.SentenceLengthVariance
+
+- name: uniform sentences split across two sections
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Install
+
+    The installer copies the binary into the local bin directory of the user right now. The updater downloads the archive into the cache directory of the project each night.
+
+    # Operate
+
+    The linter reads the config from the root folder of the repository on every run. The scheduler starts the worker at the top of the hour and records the status. The reviewer opens the pull request and checks the diff for each changed file today.
+  absent: ai-tells-experimental.SentenceLengthVariance
+
+- name: uniform sentences as list items
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    - The installer copies the binary into the local bin directory of the user right now.
+    - The updater downloads the archive into the cache directory of the project each night.
+    - The linter reads the config from the root folder of the repository on every run.
+    - The scheduler starts the worker at the top of the hour and records the status.
+    - The reviewer opens the pull request and checks the diff for each changed file today.
+  absent: ai-tells-experimental.SentenceLengthVariance
+
+- name: uniform sentences as table rows
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    | Step | Detail |
+    | --- | --- |
+    | One | The installer copies the binary into the local bin directory of the user right now. |
+    | Two | The updater downloads the archive into the cache directory of the project each night. |
+    | Three | The linter reads the config from the root folder of the repository on every run. |
+    | Four | The scheduler starts the worker at the top of the hour and records the status. |
+    | Five | The reviewer opens the pull request and checks the diff for each changed file today. |
+  absent: ai-tells-experimental.SentenceLengthVariance
+
+- name: uniform sentences inside a code fence
+  rule: ../../styles/ai-tells-experimental/SentenceLengthVariance.yml
+  input: |
+    # Setup
+
+    ```text
+    The installer copies the binary into the local bin directory of the user right now. The updater downloads the archive into the cache directory of the project each night. The linter reads the config from the root folder of the repository on every run. The scheduler starts the worker at the top of the hour and records the status. The reviewer opens the pull request and checks the diff for each changed file today.
+    ```
+  absent: ai-tells-experimental.SentenceLengthVariance

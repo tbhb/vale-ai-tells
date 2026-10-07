@@ -1,0 +1,79 @@
+---
+- name: tool name as the jurisdiction
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under cog the same text is configurable twice.
+  contains:
+    - ai-tells.UnderRegime
+    - "'Under cog the'"
+
+- name: letter and digit label
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under D15 the endpoint stays on the loopback interface.
+  contains:
+    - ai-tells.UnderRegime
+    - "'Under D15 the'"
+
+- name: opener after a sentence
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: The tests pass. Under mise the mechanism is chosen by the file.
+  contains:
+    - ai-tells.UnderRegime
+    - "'Under mise the'"
+
+- name: name in a code span
+  about: >-
+    Markdown masks the span to asterisks, and the second token keeps the
+    alert on the opener.
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under `cog` the same text is configurable twice.
+  contains:
+    - ai-tells.UnderRegime
+    - "'Under'"
+
+- name: list item opener
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: |
+    - Under mise the mechanism is chosen by the file.
+    - The other entry stays quiet.
+  contains:
+    - ai-tells.UnderRegime
+    - "'Under mise the'"
+
+- name: determiner after under
+  about: >-
+    A determiner after "Under" never fires.
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under this proposal the cache shrinks.
+  absent: ai-tells.UnderRegime
+
+- name: under the hood
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under the hood, the parser reads one token at a time.
+  absent: ai-tells.UnderRegime
+
+- name: adjective-led condition
+  about: >-
+    The word after the adjective is a noun, not a determiner.
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under normal circumstances the parser retries twice.
+  absent: ai-tells.UnderRegime
+
+- name: bare condition idiom
+  about: >-
+    The exceptions hold "under load" and the other bare condition
+    idioms.
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under load the parser retries twice.
+  absent: ai-tells.UnderRegime
+
+- name: capitalized platform conditional
+  about: >-
+    A capitalized proper noun is the corpora's own platform conditional.
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: Under Windows, the DEFAULT parameter can be used.
+  absent: ai-tells.UnderRegime
+
+- name: under mid-sentence
+  rule: ../../styles/ai-tells/UnderRegime.yml
+  input: The file sits under cog and the loader reads it twice.
+  absent: ai-tells.UnderRegime

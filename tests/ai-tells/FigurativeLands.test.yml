@@ -1,0 +1,113 @@
+---
+- name: lands in with a destination
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The fix lands in main on Friday.
+  contains:
+    - ai-tells.FigurativeLands
+    - "'fix lands in'"
+
+- name: lands on a node
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The request lands on the second node.
+  contains: "'request lands on'"
+
+- name: lands upstream
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The change lands upstream next week.
+  contains: "'change lands upstream'"
+
+- name: lands as a separate commit
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The fix lands as a separate commit.
+  contains: "'fix lands as'"
+
+- name: once the feature lands
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: We drop the shim once the feature lands.
+  contains: "'once the feature lands'"
+
+- name: when the pr lands
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Rebase again when the PR lands.
+  contains: "'when the PR lands'"
+
+- name: perfect arrival
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The fix has landed in the release branch.
+  contains: "'fix has landed'"
+
+- name: adverbial arrival
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Support finally landed for the new format.
+  contains: "'Support finally landed'"
+
+- name: bare arrival at a clause boundary
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The rewrite landed, and everything broke.
+  contains: "'rewrite landed'"
+
+- name: transitive landing
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Landing the rule before the freeze is the goal.
+  contains: "'Landing the rule before'"
+
+- name: transitive landed
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: She landed a fix for the race.
+  contains: "'landed a fix for'"
+
+- name: transitive pronoun object
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Landing it means rewording this package first.
+  contains: "'Landing it'"
+
+- name: plane lands on a runway
+  about: The shared exceptions keep a literal lander quiet.
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The plane lands on the runway at noon.
+  absent: ai-tells.FigurativeLands
+
+- name: when the plane lands
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Call me when the plane lands.
+  absent: ai-tells.FigurativeLands
+
+- name: bird lands
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The bird landed on the sill.
+  absent: ai-tells.FigurativeLands
+
+- name: snow lands
+  about: A sentence-initial capital subject still reaches the (?i) exception.
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Snow lands on the sill overnight.
+  absent: ai-tells.FigurativeLands
+
+- name: public lands
+  about: Lands as a territory noun, not the verb.
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: Grazing on public lands in the west is regulated.
+  absent: ai-tells.FigurativeLands
+
+- name: the joke lands
+  about: Assessment subjects belong to ColloquialAssessments.
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The joke lands in the second act.
+  absent: ai-tells.FigurativeLands
+
+- name: landed a new job
+  about: The human-achievement idiom is a different figure.
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: She landed a new job at the lab.
+  absent: ai-tells.FigurativeLands
+
+- name: landed the plane
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The pilot landed the plane in a crosswind.
+  absent: ai-tells.FigurativeLands
+
+- name: lands the jump
+  about: Athletic execution is the same different figure.
+  rule: ../../styles/ai-tells/FigurativeLands.yml
+  input: The skater lands the jump on the first try.
+  absent: ai-tells.FigurativeLands

@@ -1,0 +1,154 @@
+---
+- name: short noun matters
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This detail matters.
+  contains:
+    - ai-tells.Metacommentary
+    - "'This detail matters.'"
+
+- name: matters because
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This matters because the cache is cold.
+  contains: "'This matters because'"
+
+- name: important because
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This is important because the cache is cold.
+  contains: "'This is important because'"
+
+- name: distinction matters
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This distinction matters when you merge two branches.
+  contains: "'This distinction matters'"
+
+- name: key here is
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: The key here is the lock order.
+  contains: "'The key here is'"
+
+- name: idea here is
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: The idea here is to batch the writes.
+  contains: "'The idea here is'"
+
+- name: important thing here is
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: The important thing here is the lock order.
+  contains: "'The important thing here is'"
+
+- name: bold key insight callout
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: "**Key insight:** the cache is cold."
+  contains: "'**Key insight:**'"
+
+- name: bold note callout
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: "**Note:** the cache is cold."
+  contains: "'**Note:**'"
+
+- name: this is the key framing
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This is the key to the design.
+  contains: "'This is the key'"
+
+- name: this is the crucial framing
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This is the crucial step in the rollout.
+  contains: "'This is the crucial'"
+
+- name: this enables
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This enables faster reads.
+  contains: "'This enables faster reads.'"
+
+- name: this noun ensures
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This lock ensures the writer never races the reader.
+  contains: "'This lock ensures the writer never races the reader.'"
+
+- name: this allows
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This allows the worker to resume.
+  contains: "'This allows the worker to resume.'"
+
+- name: this provides
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This provides a stable cursor.
+  contains: "'This provides a stable cursor.'"
+
+- name: this gives you
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This gives you a stable cursor.
+  contains: "'This gives you a stable cursor.'"
+
+- name: this means
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This means the cache is cold.
+  contains: "'This means the cache is cold.'"
+
+- name: understanding opener
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: Understanding the lock order enables you to debug hangs.
+  contains: "'Understanding the lock order enables you to debug hangs.'"
+
+- name: real-world filler
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: Real-world data is messy.
+  contains: "'Real-world data'"
+
+- name: in the real world
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: In the real world, disks fail.
+  contains: "'In the real world'"
+
+- name: at its core
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: At its core, the tool is a parser.
+  contains: "'At its core'"
+
+- name: at its most basic level
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: At its most basic level, the tool is a parser.
+  contains: "'At its most basic'"
+
+- name: at their heart
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: At their heart, the rules are regular expressions.
+  contains: "'At their heart'"
+
+- name: think of it as
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: Think of it as a queue with a lid.
+  contains: "'Think of it as'"
+
+- name: think of x as y
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: Think of the cache as a map from paths to digests.
+  contains: "'Think of the cache as a map from paths to digests.'"
+
+- name: where it gets interesting
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This is where it gets interesting.
+  contains: "'This is where it gets interesting'"
+
+- name: where x comes in
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: That's where the scheduler comes in.
+  contains: "'That's where the scheduler comes in'"
+
+- name: lowercase real-world
+  about: The rule is case-sensitive, so mid-sentence "real-world" stays quiet.
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: The suite runs against real-world data.
+  absent: ai-tells.Metacommentary
+
+- name: this is the point
+  about: '"This is the point" belongs to PointVerdict.'
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: This is the point.
+  absent: ai-tells.Metacommentary
+
+- name: concrete this sentence
+  rule: ../../styles/ai-tells/Metacommentary.yml
+  input: The parser reads this file once.
+  absent: ai-tells.Metacommentary

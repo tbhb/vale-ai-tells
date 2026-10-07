@@ -1,0 +1,104 @@
+---
+- name: tapestry cliche
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The config format is a rich tapestry of legacy options.
+  contains:
+    - ai-tells.AICompoundPhrases
+    - "'rich tapestry'"
+
+- name: multifaceted pair
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The scheduler is complex and multifaceted.
+  contains: "'complex and multifaceted'"
+
+- name: interplay and balance
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The cache and the queue keep a delicate balance.
+  contains: "'delicate balance'"
+
+- name: crucial role
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The index plays a crucial role in lookups.
+  contains: "'plays a crucial role'"
+
+- name: cutting edge and game changer
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The new allocator is a game-changer for latency.
+  contains: "'game-changer'"
+
+- name: stock idiom
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: Caching every response is a slippery slope.
+  contains: "'slippery slope'"
+
+- name: groundwork idiom
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The refactor laid the groundwork for the new parser.
+  contains: "'laid the groundwork'"
+
+- name: testament idiom
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The test suite is a testament to the maintainers.
+  contains: "'a testament to'"
+
+- name: open question idiom
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: Whether the fix lands upstream, only time will tell.
+  contains: "'only time will tell'"
+
+- name: center stage
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: Then the retry policy takes center stage.
+  contains: "'takes center stage'"
+
+- name: cornerstone
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The lockfile is a cornerstone of the build.
+  contains: "'a cornerstone of'"
+
+- name: needle idiom
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The patch moved the needle on startup time.
+  contains: "'moved the needle'"
+
+- name: unlock idiom
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The new API unlocks the potential of the cache.
+  contains: "'unlocks the potential'"
+
+- name: real as intensifier
+  about: The enumerated nouns fire; bare "real" does not.
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The migration offers real flexibility to operators.
+  contains: "'real flexibility'"
+
+- name: real with an article
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The old config format posed a real risk to upgrades.
+  contains: "'a real risk'"
+
+- name: thread to pull
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The logs leave several threads to pull on.
+  contains: "'threads to pull on'"
+
+- name: hardens metaphor
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: Settle the names before the API hardens.
+  contains: "'before the API hardens'"
+
+- name: ossifies metaphor
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: Change the wire format after the protocol ossifies.
+  contains: "'after the protocol ossifies'"
+
+- name: bare real stays quiet
+  about: Bare "real" is too broad (real-time, real estate), so only enumerated nouns fire.
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The real-time clock reads the real file.
+  absent: ai-tells.AICompoundPhrases
+
+- name: hardens without the gate
+  rule: ../../styles/ai-tells/AICompoundPhrases.yml
+  input: The glue hardens overnight, so clamp the joint.
+  absent: ai-tells.AICompoundPhrases

@@ -1,0 +1,67 @@
+---
+- name: both sides
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: There are valid points on both sides of the licensing debate.
+  contains:
+    - ai-tells.FalseBalance
+    - "'There are valid points on both sides'"
+
+- name: each side has merit
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: Each side has merit when choosing a storage engine.
+  contains: "'Each side has merit'"
+
+- name: consider all perspectives
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: It's important to consider all perspectives before merging.
+  contains: "'It's important to consider all perspectives'"
+
+- name: balanced approach
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The team took a balanced approach to the migration.
+  contains: "'a balanced approach'"
+
+- name: strike a balance
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The cache tries to strike a balance between speed and memory.
+  contains: "'strike a balance'"
+
+- name: nuanced understanding
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: Reviewing the diff takes a nuanced understanding of the lock order.
+  contains: "'nuanced understanding'"
+
+- name: not straightforward
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The answer is not straightforward for large repositories.
+  contains: "'The answer is not straightforward'"
+
+- name: complex issue
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: This is a complex issue for the scheduler.
+  contains: "'This is a complex issue'"
+
+- name: depends on factors
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The latency depends on various factors.
+  contains: "'depends on various factors'"
+
+- name: varies depending
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The timeout varies depending on the region.
+  contains: "'varies depending on'"
+
+- name: case by case
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The team reviews each exception on a case-by-case basis.
+  contains: "'case-by-case basis'"
+
+- name: concrete dependency
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The timeout depends on the region setting in the config file.
+  absent: ai-tells.FalseBalance
+
+- name: balanced tree
+  rule: ../../styles/ai-tells/FalseBalance.yml
+  input: The index is a balanced binary tree with a fixed depth.
+  absent: ai-tells.FalseBalance

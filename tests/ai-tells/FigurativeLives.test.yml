@@ -1,0 +1,64 @@
+---
+- name: determiner-gated residence
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The vendored payload lives in two directories.
+  contains:
+    - ai-tells.FigurativeLives
+    - "'The vendored payload lives in'"
+
+- name: determiner-gated residence with an as complement
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The split lives as reviewed data in the repository.
+  contains: "'The split lives as'"
+
+- name: subject with no determiner
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: Config lives in mise.toml for this repository.
+  contains: "'Config lives in'"
+
+- name: bare plural with the base verb
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: Operator mechanics live elsewhere in the codebase.
+  contains: "'mechanics live elsewhere'"
+
+- name: address question
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The page explains where the config lives for each tool.
+  contains: "'where the config lives'"
+
+- name: mortality idiom
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The pattern lives and dies with the cache.
+  contains: "'lives and dies'"
+
+- name: lives on
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The old naming convention lives on in the tests.
+  contains: "'convention lives on'"
+
+- name: family residence
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The family lives in a small town near the coast.
+  absent: ai-tells.FigurativeLives
+
+- name: animal residence
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: The bird lives in the old oak at the edge of the park.
+  absent: ai-tells.FigurativeLives
+
+- name: demonstrative subject
+  about: A bare "this lives in" is the Go standard library's layout idiom and stays out.
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: This lives in a separate file for now.
+  absent: ai-tells.FigurativeLives
+
+- name: first person
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: I live in a flat near the office.
+  absent: ai-tells.FigurativeLives
+
+- name: liveness vocabulary with in
+  about: Compiler liveness prose keeps in and at out of the bare plural token.
+  rule: ../../styles/ai-tells/FigurativeLives.yml
+  input: Variables live at block entry and die at the last use.
+  absent: ai-tells.FigurativeLives

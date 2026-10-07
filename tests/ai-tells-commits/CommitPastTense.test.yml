@@ -1,0 +1,114 @@
+---
+- name: plain past tense subject
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    Added rate limiting middleware
+
+    The server accepted unlimited requests.
+  contains:
+    - ai-tells-commits.CommitPastTense
+    - "'Added'"
+
+- name: past tense fixed
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    Fixed off-by-one in iterator
+
+    The iterator skipped the last element.
+  contains: "'Fixed'"
+
+- name: past tense after a type prefix
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    feat: Added rate limiting
+
+    The server accepted unlimited requests.
+  contains: "'feat: Added'"
+
+- name: past tense after a type and scope
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    fix(auth): Fixed session expiry
+
+    Sessions never expired.
+  contains: "'fix(auth): Fixed'"
+
+- name: gerund subject
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    Refactoring the parser
+
+    The lexer now lives in its own file.
+  contains: "'Refactoring'"
+
+- name: breaking-change marker before the colon
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    feat(api)!: Removed the legacy endpoint
+
+    Clients must move to the v2 endpoint.
+  contains: "'feat(api)!: Removed'"
+
+- name: irregular past tense
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    Wrote the session store
+
+    Sessions persisted only in memory.
+  contains: "'Wrote'"
+
+- name: imperative subject
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    Add rate limiting middleware
+
+    The server accepted unlimited requests.
+  absent: ai-tells-commits.CommitPastTense
+
+- name: imperative after a type prefix
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    fix: Resolve race condition in scheduler
+
+    Two workers claimed the same job.
+  absent: ai-tells-commits.CommitPastTense
+
+- name: imperative after a type and scope
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    feat(auth): Drop legacy session check
+
+    Nothing calls the check.
+  absent: ai-tells-commits.CommitPastTense
+
+- name: body paragraph starting with a past-tense verb
+  about: The \A anchor ties the match to line 1, so a body paragraph never fires.
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Fixed in the lexer by returning an error before the tree is built.
+
+    Added a guard in the caller as well.
+  absent: ai-tells-commits.CommitPastTense
+
+- name: past tense verb later in the subject
+  about: Only a verb in the leading position fires.
+  rule: ../../styles/ai-tells-commits/CommitPastTense.yml
+  format: txt
+  input: |
+    fix(parser): Handle input that Added a nil tree
+
+    An empty file returned a nil tree.
+  absent: ai-tells-commits.CommitPastTense

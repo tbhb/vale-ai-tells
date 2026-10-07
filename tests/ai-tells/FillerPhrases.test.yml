@@ -1,0 +1,68 @@
+---
+- name: vague range phrase
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The library supports a wide range of formats.
+  contains:
+    - ai-tells.FillerPhrases
+    - "'a wide range of'"
+
+- name: vague count word
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The tracker lists numerous open issues.
+  contains: "'numerous'"
+
+- name: wordy purpose phrase
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The script runs twice in order to confirm the result.
+  contains: "'in order to'"
+
+- name: weak verb phrase
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The wrapper tends to retry after a timeout.
+  contains: "'tends to'"
+
+- name: capability phrase
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The parser is capable of reading nested tables.
+  contains: "'is capable of'"
+
+- name: fact that phrase
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The build failed due to the fact that the pin moved.
+  contains: "'due to the fact that'"
+
+- name: it is clear that
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: It is clear that the cache is stale.
+  contains: "'It is clear that'"
+
+- name: performative sincerity with a comma
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: Honestly, the old layout was easier to read.
+  contains: "'Honestly'"
+
+- name: performative sincerity as a phrase
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: To be honest, the old layout was easier to read.
+  contains: "'To be honest'"
+
+- name: quite frankly
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The old layout was quite frankly easier to read.
+  contains: "'quite frankly'"
+
+- name: the honest take
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: My honest opinion is that the old layout was easier to read.
+  contains: "'My honest opinion'"
+
+- name: plain statement
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The library supports three formats, and the parser reads each one.
+  absent: ai-tells.FillerPhrases
+
+- name: migrated quantity phrase stays with FigurativeQuantities
+  about: A myriad of, a plethora of, and a wealth of moved out of this rule.
+  rule: ../../styles/ai-tells/FillerPhrases.yml
+  input: The library offers a plethora of features.
+  absent: ai-tells.FillerPhrases

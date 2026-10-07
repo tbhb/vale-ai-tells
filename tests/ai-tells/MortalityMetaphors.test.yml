@@ -1,0 +1,76 @@
+---
+- name: a run that dies
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: A run that dies part way through leaves no manifest.
+  contains:
+    - ai-tells.MortalityMetaphors
+    - "'A run that dies'"
+
+- name: subject dies
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The fetch dies during the third stage.
+  contains: "'The fetch dies'"
+
+- name: modal die
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The worker process can die mid-write.
+  contains: "'The worker process can die'"
+
+- name: pronoun dies
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The job restarts when it dies during a deploy.
+  contains: "'it dies'"
+
+- name: row survives
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: Every row survives unchanged after the migration.
+  contains: "'Every row survives'"
+
+- name: survives the rebase untouched
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: Tags survive the rebase untouched.
+  contains: "'survive the'"
+
+- name: outlives
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The cache entry outlives the request.
+  contains: "'outlives'"
+
+- name: whole life
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The handle is kept for its whole life.
+  contains: "'for its whole life'"
+
+- name: dies down idiom
+  about: The fade idioms stay out of the death token.
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The noise from the build farm dies down after midnight.
+  absent: ai-tells.MortalityMetaphors
+
+- name: a person dying
+  about: The exceptions name people, who literally die.
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The patient died of a stroke in 1998.
+  absent: ai-tells.MortalityMetaphors
+
+- name: battery dying
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The battery dies after six hours on the road.
+  absent: ai-tells.MortalityMetaphors
+
+- name: survives all restarts
+  about: The totality construction is UniversalObject's, so the object lookahead leaves it.
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The queue survives all restarts of the daemon.
+  absent: ai-tells.MortalityMetaphors
+
+- name: dead code adjective
+  about: The dead adjectives stay out.
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The linter removes dead code from the build.
+  absent: ai-tells.MortalityMetaphors
+
+- name: plain exit
+  rule: ../../styles/ai-tells/MortalityMetaphors.yml
+  input: The process exits with status 1 and the manifest is not written.
+  absent: ai-tells.MortalityMetaphors

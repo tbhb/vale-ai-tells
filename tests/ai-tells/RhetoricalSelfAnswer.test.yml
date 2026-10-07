@@ -1,0 +1,74 @@
+---
+- name: the result question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The result? The build is faster.
+  contains:
+    - ai-tells.RhetoricalSelfAnswer
+    - "'The result? T'"
+
+- name: the catch question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The catch? The daemon keeps the lock.
+  contains: "'The catch? T'"
+
+- name: the problem question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The problem? The index goes stale.
+  contains: "'The problem? T'"
+
+- name: the answer question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The answer? It depends on the cache.
+  contains: "'The answer? I'"
+
+- name: the worst part question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The worst part? Nobody noticed.
+  contains: "'The worst part? N'"
+
+- name: the trade-off question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The trade-off? Memory goes up.
+  contains: "'The trade-off? M'"
+
+- name: the scary part question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The scary part? The cache never expires.
+  contains: "'The scary part? T'"
+
+- name: the bottom line question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The bottom line? Ship the fix.
+  contains: "'The bottom line? S'"
+
+- name: the short answer question
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The short answer? Yes.
+  contains: "'The short answer? Y'"
+
+- name: rule matches inside a code fence
+  about: Raw scope reads the text of a fence too, so the match fires there.
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: |
+    Example:
+
+    ```text
+    The result? The build is faster.
+    ```
+  contains: ai-tells.RhetoricalSelfAnswer
+
+- name: real question with a lowercase reply
+  about: The capital letter after the question mark is the gate.
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: Is the result? maybe the build is faster.
+  absent: ai-tells.RhetoricalSelfAnswer
+
+- name: question inside a longer sentence
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: What is the result of the build? The build is faster.
+  absent: ai-tells.RhetoricalSelfAnswer
+
+- name: statement
+  rule: ../../styles/ai-tells/RhetoricalSelfAnswer.yml
+  input: The result is a faster build.
+  absent: ai-tells.RhetoricalSelfAnswer

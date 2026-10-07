@@ -1,0 +1,72 @@
+---
+- name: highlighting family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The patch adds a retry, highlighting its importance for flaky networks.
+  contains:
+    - ai-tells.ParticipialPadding
+    - "'highlighting its importance'"
+
+- name: underscoring family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The team froze the schema, underscoring the need for a migration plan.
+  contains: "'underscoring the need'"
+
+- name: emphasizing family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The guide covers pinning, emphasizing the importance of tags.
+  contains: "'emphasizing the importance'"
+
+- name: reflecting family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The release drops the old flag, reflecting broader trends in the ecosystem.
+  contains: "'reflecting broader trends'"
+
+- name: contributing family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The cache shortens builds, contributing to the overall speed of the pipeline.
+  contains: "'contributing to the overall'"
+
+- name: showcasing family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The demo runs the full suite, showcasing its range.
+  contains: "'showcasing its'"
+
+- name: reinforcing family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The vendor tags every release, reinforcing its position as the reference.
+  contains: "'reinforcing its position'"
+
+- name: solidifying family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The project ships a stable API, solidifying its place among the tools.
+  contains: "'solidifying its place'"
+
+- name: ensuring family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The installer checks the lockfile, ensuring a smooth upgrade.
+  contains: "'ensuring a smooth'"
+
+- name: fostering family
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The maintainers hold office hours, fostering a sense of belonging.
+  contains: "'fostering a sense of'"
+
+- name: shaping the future
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The RFC lands this quarter, shaping the future of the toolchain.
+  contains: "'shaping the future'"
+
+- name: paving the way
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The refactor merged last week, paving the way for a faster loader.
+  contains: "'paving the way for a'"
+
+- name: marking a milestone
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The tag v2.0.0 went out today, marking a significant milestone.
+  contains: "'marking a significant'"
+
+- name: participle with a concrete object
+  rule: ../../styles/ai-tells/ParticipialPadding.yml
+  input: The patch adds a retry, reducing timeouts on slow networks.
+  absent: ai-tells.ParticipialPadding

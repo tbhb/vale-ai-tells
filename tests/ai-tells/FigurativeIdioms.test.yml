@@ -1,0 +1,376 @@
+---
+- name: costs little
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The extra check costs little in practice.
+  contains:
+    - ai-tells.FigurativeIdioms
+    - "'costs little'"
+
+- name: fares no better
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The second parser fares no better on this input.
+  contains: "'fares no better'"
+
+- name: comes at a cost
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: This comes at a steep price for readers.
+  contains: "'comes at a steep price'"
+
+- name: came at a cost
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The speedup came at a cost.
+  contains: "'came at a cost'"
+
+- name: cost with an of complement
+  about: The named tradeoff after "of" is what pre-LLM prose writes.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: That will come at a cost of extra complexity.
+  absent: ai-tells.FigurativeIdioms
+
+- name: measured cost
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The measured cost is one comment.
+  contains: "'measured cost'"
+
+- name: what remains of
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: This is what remains of the old loader.
+  contains: "'what remains of'"
+
+- name: accepts the cost
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The present form accepts the cost already.
+  contains: "'accepts the cost'"
+
+- name: cost the rule accepts
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: This is the same cost the rule accepts today.
+  contains: "'cost the rule accepts'"
+
+- name: tolerated cost
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The extra pass is a tolerated cost here.
+  contains: "'tolerated cost'"
+
+- name: accepts a cost function
+  about: The noun-compound sense is literal, so the lookahead excludes the compound head.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The optimizer accepts a cost function as its argument.
+  absent: ai-tells.FigurativeIdioms
+
+- name: out of reach
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The fix puts the bug out of reach.
+  contains: "'out of reach'"
+
+- name: gives something up in exchange
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The design gives something up in exchange for speed.
+  contains: "'gives something up in exchange'"
+
+- name: for want of
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The build failed for want of a pinned version.
+  contains: "'for want of'"
+
+- name: empty slate
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The merge starts from an empty slate.
+  contains: "'empty slate'"
+
+- name: clean slate
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The reset gives each test a clean slate.
+  contains: "'clean slate'"
+
+- name: dodges the rule
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The change dodges the rule that should have caught it.
+  contains: "'dodges the'"
+
+- name: put something in front of
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The patch put guards in front of the parser.
+  contains: "'put guards in front of'"
+
+- name: where it bites
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: This is where it bites on large repositories.
+  contains: "'where it bites'"
+
+- name: bites hardest
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The limit bites hardest on the largest inputs.
+  contains: "'bites hardest'"
+
+- name: sails through
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: A short document sails through the gate.
+  contains: "'sails through'"
+
+- name: sailed through
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The draft sailed through review.
+  contains: "'sailed through'"
+
+- name: moved the goalposts
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The new rule moved the goalposts for contributors.
+  contains: "'moved the goalposts'"
+
+- name: blast radius
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The change has a small blast radius.
+  contains: "'blast radius'"
+
+- name: comes down to
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: It comes down to trust between the services.
+  contains: "'comes down to'"
+
+- name: came down to a reduction complement
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The failure came down to whether the lock was held.
+  contains: "'came down to whether'"
+
+- name: came down to literally
+  about: The past tense is gated on a reduction complement, so the descent sense stays quiet.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The guests came down to breakfast at eight.
+  absent: ai-tells.FigurativeIdioms
+
+- name: boils down to
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: This boils down to a race on the counter.
+  contains: "'boils down to'"
+
+- name: stands in for
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The fixture stands in for real traffic.
+  contains: "'stands in for'"
+
+- name: stood in for
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: A stub stood in for the network during the test.
+  contains: "'stood in for'"
+
+- name: stand-in noun
+  about: The noun is the ordinary word for a placeholder and stays uncovered.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The test uses a stand-in for the network.
+  absent: ai-tells.FigurativeIdioms
+
+- name: closes the gap
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The new check closes the gap in coverage.
+  contains: "'closes the gap'"
+
+- name: in lockstep
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The two counters move in lockstep.
+  contains: "'in lockstep'"
+
+- name: in step with
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The docs stay in step with the code.
+  contains: "'in step with'"
+
+- name: point of no return
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The commit marks the point of no return.
+  contains: "'point of no return'"
+
+- name: under its own power
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The service restarts under its own power.
+  contains: "'under its own power'"
+
+- name: covers more ground
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The second suite covers more ground than the first.
+  contains: "'covers more ground'"
+
+- name: brings into line with
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The patch brings the config into line with the schema.
+  contains: "'brings the config into line with'"
+
+- name: walks it back
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: No later step walks it back once the flag is set.
+  contains: "'walks it back'"
+
+- name: walk back a claim
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The release notes walk back the earlier claim.
+  contains: "'walk back the'"
+
+- name: cannot walk back
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: A reviewer cannot walk that back later.
+  contains: "'cannot walk that back'"
+
+- name: walk back to a destination
+  about: A stroll back to a place is literal, so the modal token excludes a destination.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: A reviewer can walk back to the hotel after the talk.
+  absent: ai-tells.FigurativeIdioms
+
+- name: moved under it
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The base had moved under it before the push.
+  contains: "'moved under it'"
+
+- name: file moves under a directory
+  about: A file literally moves under a directory, so a pronoun object is the gate.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The script moves the file under the docs directory.
+  absent: ai-tells.FigurativeIdioms
+
+- name: eats its own cooking
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The package eats its own cooking in CI.
+  contains: "'eats its own cooking'"
+
+- name: self-consumption verb
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The team dogfoods the linter on this repository.
+  contains: "'dogfoods'"
+
+- name: eats its own dog food
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The tool eats its own dog food on every commit.
+  contains: "'eats its own dog food'"
+
+- name: drinks its own champagne
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The project drinks its own champagne during releases.
+  contains: "'drinks its own champagne'"
+
+- name: sleeping dogs
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: There is no reason to wake sleeping dogs here.
+  contains: "'sleeping dogs'"
+
+- name: fans out
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The query fans out to every shard.
+  contains: "'fans out'"
+
+- name: fan-out noun
+  about: The compound noun is legitimate concurrency vocabulary.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The fan-out factor is eight.
+  absent: ai-tells.FigurativeIdioms
+
+- name: lines up with
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The count lines up with reality.
+  contains: "'lines up with'"
+
+- name: doubles as
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The header doubles as a version marker.
+  contains: "'doubles as'"
+
+- name: double duty
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The flag does double duty in the parser.
+  contains: "'double duty'"
+
+- name: the whole trick
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: Pinning the digest is the whole trick.
+  contains: "'the whole trick'"
+
+- name: a step further
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The second pass goes a step further.
+  contains: "'a step further'"
+
+- name: meets the bar
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The patch meets the quality bar for release.
+  contains: "'meets the quality bar'"
+
+- name: on hand
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: Keep the migration notes on hand during the migration.
+  contains: "'on hand'"
+
+- name: went missing
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The checksum went missing after the rebase.
+  contains: "'went missing'"
+
+- name: went away
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The error went away after the upgrade.
+  contains: "'went away'"
+
+- name: for good
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The old loader is removed for good.
+  contains: "'for good'"
+
+- name: for good measure
+  about: The lookahead refuses the for-good phrases that are ordinary English.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The script reruns the formatter for good measure.
+  absent: ai-tells.FigurativeIdioms
+
+- name: made that call
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The maintainer made that call in the last release.
+  contains: "'made that call'"
+
+- name: made the call
+  about: Both corpora use "made the call" for a function call, so only the demonstrative form is covered.
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The handler made the call to the backend.
+  absent: ai-tells.FigurativeIdioms
+
+- name: judgment call
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: Naming the helper is a judgment call.
+  contains: "'judgment call'"
+
+- name: takes a while
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The index build takes a while on cold caches.
+  contains: "'takes a while'"
+
+- name: gets it backwards
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The old doc gets it backwards.
+  contains: "'gets it backwards'"
+
+- name: picks up on
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The watcher picks up on every edit.
+  contains: "'picks up on'"
+
+- name: from two angles
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The report approaches the bug from two angles.
+  contains: "'from two angles'"
+
+- name: stands up a service
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The script stands up a service for each test.
+  contains: "'stands up a'"
+
+- name: stood up a service
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The job stood up a mirror before the run.
+  contains: "'stood up a'"
+
+- name: buried in
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The setting is buried in the config.
+  contains: "'buried in'"
+
+- name: buries the error
+  rule: ../../styles/ai-tells/FigurativeIdioms.yml
+  input: The wrapper buries the error in the log.
+  contains: "'buries the'"

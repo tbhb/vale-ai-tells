@@ -1,0 +1,87 @@
+---
+- name: more of pattern
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: This is more of a convention than a rule, but the linter enforces it.
+  contains:
+    - ai-tells.DefensiveHedges
+    - "'This is more of a convention than a rule, but the linter enforces it'"
+
+- name: not the most pattern
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: It's not the most elegant design, but it ships on time.
+  contains: "'It's not the most elegant design, but it ships on time'"
+
+- name: may seem pattern
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: This may seem like overkill, but the retries matter.
+  contains: "'This may seem like overkill, but the retries matter'"
+
+- name: might sound pattern
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: That might sound strange, but the cache is write-through.
+  contains: "'That might sound strange, but the cache is write-through'"
+
+- name: admittedly opener
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: Admittedly, the parser is slow, but it never drops a token.
+  contains: "'Admittedly, the parser is slow, but it never drops a token'"
+
+- name: granted opener
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: Granted, the API is young, but the schema is stable.
+  contains: "'Granted, the API is young, but the schema is stable'"
+
+- name: to be fair opener
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: To be fair, the tool is new, but it covers the basics.
+  contains: "'To be fair, the tool is new, but it covers the basics'"
+
+- name: while this might appear
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: While this might appear redundant, the second check guards the cache.
+  contains: "'While this might appear redundant, the second check guards the cache'"
+
+- name: not meant to be
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: This isn't meant to be exhaustive, but it covers the common cases.
+  contains: "'This isn't meant to be exhaustive, but it covers the common cases'"
+
+- name: on the surface
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: On the surface, the change is trivial, but it touches the lock order.
+  contains: "'On the surface, the change is trivial, but it touches the lock order'"
+
+- name: at first glance
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: At first glance, the loop looks wrong, but the index is reset.
+  contains: "'At first glance, the loop looks wrong, but the index is reset'"
+
+- name: i know this seems
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: I know this seems odd, but the test needs the delay.
+  contains: "'I know this seems odd, but the test needs the delay'"
+
+- name: while x is
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: While the cache is fast, the cold path still reads the disk.
+  contains: "'While the cache is fast, the cold path still reads the disk'"
+
+- name: while x can
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: While the queue can grow, the worker drains it on exit.
+  contains: "'While the queue can grow, the worker drains it on exit'"
+
+- name: although opener
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: Although the build is green, the release waits for review.
+  contains: "'Although the build is green, the release waits for review'"
+
+- name: plain statement with a conjunction
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: The build is green, but the release waits for review.
+  absent: ai-tells.DefensiveHedges
+
+- name: while as a loop keyword
+  rule: ../../styles/ai-tells/DefensiveHedges.yml
+  input: The worker loops while the queue holds items.
+  absent: ai-tells.DefensiveHedges

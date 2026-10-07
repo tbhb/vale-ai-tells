@@ -1,0 +1,207 @@
+---
+- name: handing a result across a counter
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The guard hands the merge a clean start.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'The guard hands the'"
+
+- name: paying family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The extra index pays for itself within a week.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'pays for itself'"
+
+- name: paying its rent
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: Every dependency pays its rent in this package.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'pays its rent'"
+
+- name: weight family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: Each helper pulls its weight in the build.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'pulls its weight'"
+
+- name: lifting family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The scheduler does the heavy lifting here.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'does the heavy lifting'"
+
+- name: load-bearing family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The second assertion is load-bearing.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'load-bearing'"
+
+- name: doing the work family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The index is doing the real work in this query.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'doing the real work'"
+
+- name: standing family on its own
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The deprecation message should stand on its own.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'stand on its own'"
+
+- name: standing family alone
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The final section stands alone with all the required detail.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'stands alone'"
+
+- name: holds its own
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The old parser still holds its own against the rewrite.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'holds its own'"
+
+- name: speaks for itself
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The benchmark speaks for itself.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'speaks for itself'"
+
+- name: justifies its existence
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The wrapper justifies its existence by hiding the retry loop.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'justifies its existence'"
+
+- name: deserving family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The lock ordering deserves noting before the refactor.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'deserves noting'"
+
+- name: crowning family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The final patch crowns the release.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'crowns the'"
+
+- name: claiming family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The new build claims the top spot in the benchmark.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'claims the top spot'"
+
+- name: agency family behaves itself
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The linter behaves itself on large files.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'behaves itself'"
+
+- name: reflexive agency
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The query narrows itself as filters arrive.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'narrows itself'"
+
+- name: self-report
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The credential path proves itself on the first request.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'proves itself'"
+
+- name: voice
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The check only speaks up after the push.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'speaks up'"
+
+- name: deliberation
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The reviewer forms an opinion before the second round.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'forms an opinion'"
+
+- name: delivers on its promise
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The README delivers on its promise.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'delivers on its promise'"
+
+- name: hinges on one assumption
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The design hinges on a single assumption.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'hinges on a single'"
+
+- name: adjudication family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The benchmark decides the debate.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'decides the debate'"
+
+- name: harm family
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The extra check passes without doing harm.
+  contains:
+    - ai-tells.AnthropomorphicJustification
+    - "'without doing harm'"
+
+- name: stand alone adjective stays quiet
+  about: >-
+    The lookbehind on the bare-verb token excludes the adjective use,
+    "a stand alone top-level window."
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The script opens a stand alone window.
+  absent: ai-tells.AnthropomorphicJustification
+
+- name: person with a job
+  about: >-
+    The comment declines a bare "for a living" token because a person
+    writing for a living is ordinary English.
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: She writes for a living and maintains the style guide.
+  absent: ai-tells.AnthropomorphicJustification
+
+- name: names stays with its own rule
+  about: >-
+    The comment rejects the "names" verb here; BareNames owns it.
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: IsDir reports whether the path names a directory.
+  absent: ai-tells.AnthropomorphicJustification
+
+- name: wants stays uncovered
+  about: >-
+    The comment leaves "wants" with an inanimate subject uncovered
+    because the standard libraries use it freely.
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The scheduler wants to preempt the goroutine.
+  absent: ai-tells.AnthropomorphicJustification
+
+- name: literal paper claim
+  about: >-
+    The claiming family is gated on the trophy object, so a paper that
+    claims a result stays clean.
+  rule: ../../styles/ai-tells/AnthropomorphicJustification.yml
+  input: The paper claims a result that the data does not support.
+  absent: ai-tells.AnthropomorphicJustification

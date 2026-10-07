@@ -1,0 +1,73 @@
+---
+- name: pronoun subject
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: What you get is one row per blob.
+  contains:
+    - ai-tells.PseudoCleft
+    - "'What you get is one'"
+
+- name: bare verb
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: What changed is the direction.
+  contains: "'What changed is the'"
+
+- name: bare verb with a phrase
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: What makes this work is the hash.
+  contains: "'What makes this work is the'"
+
+- name: all frame
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: All you need is the offset.
+  contains: "'All you need is the'"
+
+- name: all it does is
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: All it does is call the hook.
+  contains: "'All it does is call'"
+
+- name: mid-sentence all frame
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: If all you want is a unique ID, use a counter.
+  contains: "'all you want is a'"
+
+- name: the only frame
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: The only thing that changes is the direction.
+  contains: "'The only thing that changes is the'"
+
+- name: where with a verb of payoff
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: Where this pays off is the read path.
+  contains: "'Where this pays off is the'"
+
+- name: predicate adjective
+  about: The word after the copula has to be a determiner or similar, so an adjective stays out.
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: What remains is unclear.
+  absent: ai-tells.PseudoCleft
+
+- name: question form
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: What value is the default?
+  absent: ai-tells.PseudoCleft
+
+- name: conditional where
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: Where the input is a list, the parser stops early.
+  absent: ai-tells.PseudoCleft
+
+- name: really matters belongs to another rule
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: What really matters is the offset.
+  absent: ai-tells.PseudoCleft
+
+- name: all that matters belongs to another rule
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: All that matters is the offset.
+  absent: ai-tells.PseudoCleft
+
+- name: plain sentence
+  rule: ../../styles/ai-tells/PseudoCleft.yml
+  input: The direction changes after the first pass.
+  absent: ai-tells.PseudoCleft

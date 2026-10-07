@@ -1,0 +1,170 @@
+---
+- name: shortcoming falls short
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The first attempt falls short of the target.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls short'"
+
+- name: shortcoming fell flat
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The rollout fell flat on the first day.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell flat'"
+
+- name: shortcoming falls apart
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The design falls apart under review.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls apart'"
+
+- name: shortcoming had fallen behind
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The mirror had fallen behind the upstream release.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fallen behind'"
+
+- name: shortcoming falls through
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The migration plan fell through.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell through'"
+
+- name: membership falls under a category
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The case falls under the category of legacy behavior.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls under the category'"
+
+- name: membership falls within scope
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The request fell within scope for the audit.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell within scope'"
+
+- name: membership falls outside the remit
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The change falls outside the remit of this package.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls outside the remit'"
+
+- name: membership falls into place
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: Once the lock is released, the rest falls into place.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls into place'"
+
+- name: membership falls into the trap of
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The draft falls into the trap of restating the diff.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls into the trap of'"
+
+- name: membership falls into one of
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: Each alert falls into one of two dispositions.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls into one of'"
+
+- name: membership falls within the range
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The latency falls within the range we measured.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls within the range'"
+
+- name: membership numeric floor
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: Coverage fell below the threshold on Monday.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell below the threshold'"
+
+- name: duty assignment
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The responsibility falls to the release manager.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'responsibility falls to'"
+
+- name: neglect by the wayside
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The cleanup task fell by the wayside.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell by the wayside'"
+
+- name: neglect through the cracks
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The bug fell through the cracks during triage.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell through'"
+
+- name: neglect out of favor
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The old flag fell out of favor after the rewrite.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell out of favor'"
+
+- name: neglect into disrepair
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The test suite fell into disrepair.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'fell into disrepair'"
+
+- name: prey
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The parser falls victim to a malformed header.
+  contains:
+    - ai-tells.FigurativeFalls
+    - "'falls victim to'"
+
+- name: literal night
+  about: >-
+    Literal falling stays quiet because each token curates a figurative
+    complement.
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: Night falls early in December.
+  absent: ai-tells.FigurativeFalls
+
+- name: literal price
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The price fell sharply after the announcement.
+  absent: ai-tells.FigurativeFalls
+
+- name: literal ball
+  about: >-
+    The duty-assignment token gates on an abstract subject, so a ball
+    falling to the floor stays quiet.
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The ball falls to the floor.
+  absent: ai-tells.FigurativeFalls
+
+- name: falls back to is documentation English
+  about: >-
+    The comment measured "falls back to" at 219 corpus hits and left it
+    out.
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The loader falls back to the default config.
+  absent: ai-tells.FigurativeFalls
+
+- name: counted sort stays with cataphoric forecasting
+  about: >-
+    The comment leaves "falls into three categories" to
+    CataphoricForecasting.
+  rule: ../../styles/ai-tells/FigurativeFalls.yml
+  input: The cases fall into three categories.
+  absent: ai-tells.FigurativeFalls

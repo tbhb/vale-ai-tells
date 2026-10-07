@@ -1,0 +1,58 @@
+---
+- name: determiner-gated possession
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The table holds every stage's tables for the build.
+  contains:
+    - ai-tells.BareHolds
+    - "'The table holds every stage'"
+
+- name: determiner-gated possession with an adverb
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: Each column still holds the serialized object after the write.
+  contains: "'Each column still holds the serialized object'"
+
+- name: quantified object with the subject left open
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: Two records hold identical bytes after the copy.
+  contains: "'Two records hold identical bytes after'"
+
+- name: gerund with a counted object
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The script reads a directory holding one file per run.
+  contains: "'holding one file per'"
+
+- name: object fronted in a relative clause
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The cache returns whatever the store holds at that moment.
+  contains: "'whatever the store holds'"
+
+- name: participle of storage
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The settings are code held as a config value in the manifest.
+  contains: "'held as a'"
+
+- name: lock holder stays literal
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The goroutine holds the lock until the write finishes.
+  absent: ai-tells.BareHolds
+
+- name: caller holding a reference
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: A caller holds a reference to the buffer until it returns.
+  absent: ai-tells.BareHolds
+
+- name: physical clamp
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The clamp holds every plank in place while the glue dries.
+  absent: ai-tells.BareHolds
+
+- name: gerund with a determiner object
+  about: The counted gerund fires, but the lock-and-buffer gerund stays out.
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The worker finishes the copy while holding the lock.
+  absent: ai-tells.BareHolds
+
+- name: idiom complement stays with FigurativeHolds
+  rule: ../../styles/ai-tells/BareHolds.yml
+  input: The invariant holds true after every commit.
+  absent: ai-tells.BareHolds

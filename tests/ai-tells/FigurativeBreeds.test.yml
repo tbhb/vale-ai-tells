@@ -1,0 +1,22 @@
+---
+- name: abstract offspring
+  rule: ../../styles/ai-tells/FigurativeBreeds.yml
+  input: Complexity breeds confusion in every large codebase.
+  contains:
+    - ai-tells.FigurativeBreeds
+    - "'breeds confusion'"
+
+- name: proverb
+  rule: ../../styles/ai-tells/FigurativeBreeds.yml
+  input: Familiarity breeds contempt, and the logs show it.
+  contains: "'breeds contempt'"
+
+- name: breeding ground
+  rule: ../../styles/ai-tells/FigurativeBreeds.yml
+  input: A loose process is a breeding ground for subtle bugs.
+  contains: "'breeding ground for'"
+
+- name: literal breeding
+  rule: ../../styles/ai-tells/FigurativeBreeds.yml
+  input: The farm breeds dogs and sells the puppies.
+  absent: ai-tells.FigurativeBreeds

@@ -1,0 +1,125 @@
+---
+- name: regular participles in half the sentences
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The old logs were deleted by the cleanup job. The index is generated on every build. The report was mailed to the team. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice.
+  contains: ai-tells-experimental.PassiveDensity
+
+- name: irregular participles
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The parser was written in Go. The reports were sent to the team. The bug is known to the authors. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice.
+  contains: ai-tells-experimental.PassiveDensity
+
+- name: adverb between the auxiliary and the participle
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The helper was never used in production. The index is automatically generated on every build. The patch was not merged before the freeze. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice.
+  contains: ai-tells-experimental.PassiveDensity
+
+- name: get passive
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The old records get deleted every night. The temp files got removed after the build. The cache gets cleared on each deploy. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice.
+  contains: ai-tells-experimental.PassiveDensity
+
+- name: active prose
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The cleanup job deletes the old logs. The build generates the index. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: fewer than three passives
+  about: The section needs at least three passive sentences, however high the share.
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The old logs were deleted by the cleanup job. The index is generated on every build. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: three passives under thirty-five percent
+  about: The share must exceed 35 percent, so three of ten stays quiet.
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The old logs were deleted by the cleanup job. The index is generated on every build. The report was mailed to the team. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo. Engineers pick a task from the board. Operators restart the daemon after a crash. Tests run on every push to main.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: fewer than six sentences
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The old logs were deleted by the cleanup job. The index is generated on every build. The report was mailed to the team. The team ships a release every Friday. Users file bugs in the tracker.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: indeed is not a participle
+  about: The script rejects "indeed", which matches the participle shape.
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    The cache is indeed small. The queue is indeed fast. The parser is indeed strict. The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: passives split across two sections
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Install
+
+    The old logs were deleted by the cleanup job. The index is generated on every build. The team ships a release every Friday. Users file bugs in the tracker.
+
+    # Operate
+
+    The report was mailed to the team. Reviewers read each change twice. The linter checks every file in the repo. Engineers pick a task from the board.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: passives in list items
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    - The old logs were deleted by the cleanup job.
+    - The index is generated on every build.
+    - The report was mailed to the team.
+
+    The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo. Engineers pick a task from the board.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: passives in table rows
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    | Step | Detail |
+    | --- | --- |
+    | One | The old logs were deleted by the cleanup job. |
+    | Two | The index is generated on every build. |
+    | Three | The report was mailed to the team. |
+
+    The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo. Engineers pick a task from the board.
+  absent: ai-tells-experimental.PassiveDensity
+
+- name: passives in a code fence
+  rule: ../../styles/ai-tells-experimental/PassiveDensity.yml
+  input: |
+    # Setup
+
+    ```text
+    The old logs were deleted by the cleanup job. The index is generated on every build. The report was mailed to the team.
+    ```
+
+    The team ships a release every Friday. Users file bugs in the tracker. Reviewers read each change twice. The linter checks every file in the repo. Engineers pick a task from the board.
+  absent: ai-tells-experimental.PassiveDensity

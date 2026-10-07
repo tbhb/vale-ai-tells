@@ -1,0 +1,77 @@
+---
+- name: as mentioned above
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: As mentioned above, the parser skips comments.
+  contains:
+    - ai-tells.SelfReference
+    - "'As mentioned above'"
+
+- name: as noted earlier
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The cache, as noted earlier, expires after an hour.
+  contains: "'as noted earlier'"
+
+- name: as discussed before
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: As discussed before, the lock file is generated.
+  contains: "'As discussed before'"
+
+- name: as stated above
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The limit is 10 MB, as stated above.
+  contains: "'as stated above'"
+
+- name: as outlined above
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: Follow the steps as outlined above.
+  contains: "'as outlined above'"
+
+- name: as we saw
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: As we saw, the retry path never runs.
+  contains: "'As we saw'"
+
+- name: as we'll see
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The cache is shared, as we'll see in the next section.
+  contains: "'as we'll see'"
+
+- name: as shown earlier
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The table, as shown earlier, lists every flag.
+  contains: "'as shown earlier'"
+
+- name: as explained above
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The hook runs before commit, as explained above.
+  contains: "'as explained above'"
+
+- name: recall that
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: Recall that the parser skips comments.
+  contains: "'Recall that'"
+
+- name: remember that
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: Remember that the flag is optional.
+  contains: "'Remember that'"
+
+- name: as previously mentioned
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The build, as previously mentioned, is slow.
+  contains: "'as previously mentioned'"
+
+- name: as i mentioned
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: As I mentioned, the config lives in the root.
+  contains: "'As I mentioned'"
+
+- name: as i explained
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The cache is stale, as I explained.
+  contains: "'as I explained'"
+
+- name: plain pointer to a section
+  rule: ../../styles/ai-tells/SelfReference.yml
+  input: The cache expires after an hour; the limits table lists every flag.
+  absent: ai-tells.SelfReference

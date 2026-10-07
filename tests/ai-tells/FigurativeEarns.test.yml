@@ -1,0 +1,44 @@
+---
+- name: earns its keep
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: Each rule earns its keep in review.
+  contains:
+    - ai-tells.FigurativeEarns
+    - "'earns'"
+
+- name: earned passive
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: Trust is earned one release at a time.
+  contains: "'earned'"
+
+- name: earning gerund
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: The helper is earning a caveat in the docs.
+  contains: "'earning'"
+
+- name: bare infinitive
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: A shell has to earn full branch coverage.
+  contains: "'earn'"
+
+- name: literal person subject still fires
+  about: The maintainer's call banned every form, the literal person-subject uses included.
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: She earned a degree in physics.
+  contains: "'earned'"
+
+- name: earnings noun
+  about: The word boundary leaves the nominal vocabulary alone.
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: The quarterly earnings report is due on Friday.
+  absent: ai-tells.FigurativeEarns
+
+- name: earner noun
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: The top earner on the team wrote the parser.
+  absent: ai-tells.FigurativeEarns
+
+- name: earnest adjective
+  rule: ../../styles/ai-tells/FigurativeEarns.yml
+  input: The maintainer made an earnest attempt to fix the bug.
+  absent: ai-tells.FigurativeEarns

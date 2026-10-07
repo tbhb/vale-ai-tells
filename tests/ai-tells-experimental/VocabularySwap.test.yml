@@ -1,0 +1,130 @@
+---
+- name: delve family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The guide will delve into the cache layer.
+  contains:
+    - ai-tells-experimental.VocabularySwap
+    - "'delve'"
+
+- name: utilize family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The tool utilizes a local cache.
+  contains:
+    - ai-tells-experimental.VocabularySwap
+    - "'utilizes'"
+
+- name: facilitate family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The hook facilitates review.
+  contains: "'facilitates'"
+
+- name: commence family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The job will commence at midnight.
+  contains: "'commence'"
+
+- name: terminate family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The daemon will terminate when the socket closes.
+  contains: "'terminate'"
+
+- name: ascertain
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: We must ascertain the cause of the failure.
+  contains: "'ascertain'"
+
+- name: endeavor family with British spelling
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The team endeavours to ship weekly.
+  contains: "'endeavours'"
+
+- name: leverage family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The parser leverages the existing index.
+  contains: "'leverages'"
+
+- name: streamline base form
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: We plan to streamline the release flow.
+  contains: "'streamline'"
+
+- name: bolster family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The new check will bolster the gate.
+  contains: "'bolster'"
+
+- name: elucidate family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The appendix elucidates the format.
+  contains: "'elucidates'"
+
+- name: elevate base form
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The script will elevate the build to root.
+  contains: "'elevate'"
+
+- name: reimagine family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The team will reimagine the onboarding flow.
+  contains: "'reimagine'"
+
+- name: encompass family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The suite encompasses every parser.
+  contains: "'encompasses'"
+
+- name: abstract noun and adjective swaps
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: A comprehensive methodology gives an actionable paradigm.
+  contains:
+    - "'comprehensive'"
+    - "'methodology'"
+    - "'actionable'"
+    - "'paradigm'"
+
+- name: impactful and proactive
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: This impactful change lets us act proactively.
+  contains:
+    - "'impactful'"
+    - "'proactively'"
+
+- name: synergy and holistic
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The holistic view shows the synergy between teams.
+  contains:
+    - "'holistic'"
+    - "'synergy'"
+
+- name: genuine family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: We genuinely want the genuine report.
+  contains:
+    - "'genuinely'"
+    - "'genuine'"
+
+- name: unlock family
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The key unlocks the vault.
+  contains: "'unlocks'"
+
+- name: ignorecase catches a capitalized form
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: Utilize the local cache.
+  contains: ai-tells-experimental.VocabularySwap
+
+- name: streamlined adjective is omitted on purpose
+  about: A streamlined pipeline is a settled technical adjective, so the -ed key is left out.
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The streamlined pipeline runs in two minutes.
+  absent: ai-tells-experimental.VocabularySwap
+
+- name: elevated privileges is omitted on purpose
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The installer needs elevated privileges to write there.
+  absent: ai-tells-experimental.VocabularySwap
+
+- name: plain verbs stay quiet
+  rule: ../../styles/ai-tells-experimental/VocabularySwap.yml
+  input: The tool uses a local cache and helps with review.
+  absent: ai-tells-experimental.VocabularySwap

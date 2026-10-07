@@ -1,0 +1,63 @@
+---
+- name: utilize
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The tool utilizes a cache.
+  contains:
+    - ai-tells.FormalRegister
+    - "'utilizes'"
+
+- name: facilitate
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The hook will facilitate the upgrade.
+  contains: "'facilitate'"
+
+- name: implementation
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The implementation lives in the parser module.
+  contains: "'implementation'"
+
+- name: commence
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The job will commence at midnight.
+  contains: "'commence'"
+
+- name: terminate
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The supervisor will terminate the worker.
+  contains: "'terminate'"
+
+- name: ascertain
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The script tries to ascertain the version.
+  contains: "'ascertain'"
+
+- name: conceptualize
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: It helps to conceptualize the cache as a map.
+  contains: "'conceptualize'"
+
+- name: prioritize
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The queue will prioritize urgent jobs.
+  contains: "'prioritize'"
+
+- name: optimize
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The compiler tries to optimize the loop.
+  contains: "'optimize'"
+
+- name: minimizing
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The patch focuses on minimizing allocations.
+  contains: "'minimizing'"
+
+- name: longer word sharing a stem
+  about: Word boundaries keep inflections outside the token list quiet.
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The exterminator implemented nothing.
+  absent: ai-tells.FormalRegister
+
+- name: plain verbs
+  rule: ../../styles/ai-tells/FormalRegister.yml
+  input: The tool uses a cache and starts at midnight.
+  absent: ai-tells.FormalRegister

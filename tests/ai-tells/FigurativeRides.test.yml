@@ -1,0 +1,107 @@
+---
+- name: everything rides on
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: Everything rides on this migration.
+  contains:
+    - ai-tells.FigurativeRides
+    - "'Everything rides on'"
+
+- name: rides on whether
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The plan rides on whether CI stays green.
+  contains: "'rides on whether'"
+
+- name: rides along
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The fix rides along with the release.
+  contains: "'rides along'"
+
+- name: rides alongside
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The flag rides alongside the config.
+  contains: "'rides alongside'"
+
+- name: rides through
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The change rides through the next release.
+  contains: "'rides through'"
+
+- name: rides shotgun
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The linter rides shotgun on every commit.
+  contains: "'rides shotgun'"
+
+- name: hitches a ride
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The patch hitches a ride on the security release.
+  contains: "'hitches a ride'"
+
+- name: along for the ride
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The docs change came along for the ride.
+  contains: "'along for the ride'"
+
+- name: free ride
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The helper gets a free ride on the main path.
+  contains: "'free ride'"
+
+- name: rides on top of
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The cache rides on top of Redis.
+  contains: "'rides on top of'"
+
+- name: riding the wave
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The launch is riding the wave of adoption.
+  contains: "'riding the wave'"
+
+- name: riding the coattails
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The tool is riding the coattails of the rewrite.
+  contains: "'riding the coattails'"
+
+- name: riding the momentum
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The team is riding the momentum of the release.
+  contains: "'riding the momentum'"
+
+- name: riding high
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The project is riding high after the launch.
+  contains: "'riding high'"
+
+- name: rides the infrastructure
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The query rides the index.
+  contains: "'rides the index'"
+
+- name: rides the hot path
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: The scan rides the hot path.
+  contains: "'rides the hot path'"
+
+- name: riding herd on
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: She spends the week riding herd on the linters.
+  contains: "'riding herd on'"
+
+- name: let it ride
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: We can let it ride until the next release.
+  contains: "'let it ride'"
+
+- name: rides the bus
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: She rides the bus to work.
+  absent: ai-tells.FigurativeRides
+
+- name: rides a horse
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: He rides a horse around the paddock.
+  absent: ai-tells.FigurativeRides
+
+- name: rides on a literal vehicle
+  rule: ../../styles/ai-tells/FigurativeRides.yml
+  input: She rides on the bus every morning.
+  absent: ai-tells.FigurativeRides

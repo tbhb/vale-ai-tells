@@ -1,0 +1,48 @@
+---
+- name: state kept
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The cache keeps a re-run cheap.
+  contains:
+    - ai-tells.FigurativeKeeps
+    - "'keeps a re-run cheap'"
+
+- name: state kept past tense
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The formatter kept the output legible.
+  contains: "'kept the output legible'"
+
+- name: distance kept
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The sweep keeps an orphan away from every extractor.
+  contains: "'keeps an orphan away from'"
+
+- name: keeps clear of
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The guard keeps the rest clear of it.
+  contains: "'keeps the rest clear of'"
+
+- name: reader kept from a thought
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The label keeps a reader from mistaking one for the other.
+  contains: "'keeps a reader from mistaking'"
+
+- name: causative keeps from being
+  about: The causative stays out, since both standard libraries say prevents this way.
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The flag keeps the garbage collector from being invoked.
+  absent: ai-tells.FigurativeKeeps
+
+- name: keeps a file out of history
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: A gitignore entry keeps a file out of history.
+  absent: ai-tells.FigurativeKeeps
+
+- name: adjective outside the list
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The pool keeps the connection open between calls.
+  absent: ai-tells.FigurativeKeeps
+
+- name: keeps honest belongs to another rule
+  rule: ../../styles/ai-tells/FigurativeKeeps.yml
+  input: The test keeps the benchmark honest.
+  absent: ai-tells.FigurativeKeeps

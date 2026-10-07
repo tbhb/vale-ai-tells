@@ -1,0 +1,153 @@
+---
+- name: comprehensive combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    test(parser): cover empty input
+
+    Adds comprehensive tests for the empty-file path.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'comprehensive tests'"
+
+- name: robust combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Adds robust error handling for the empty-file path.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'robust error handling'"
+
+- name: more robust
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The empty-file path is now more robust.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'more robust'"
+
+- name: proper combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Adds proper validation for the empty-file path.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'proper validation'"
+
+- name: properly verb combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The caller can now properly handle an empty file.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'properly handle'"
+
+- name: relevant combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    docs(parser): describe empty input
+
+    Updates the relevant documentation.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'relevant documentation'"
+
+- name: appropriate combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Returns appropriate error messages for an empty file.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'appropriate error messages'"
+
+- name: necessary combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Makes the necessary changes to the empty-file path.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'necessary changes'"
+
+- name: various combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Includes various improvements to the empty-file path.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'various improvements'"
+
+- name: overall combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    Raises the overall code quality of the lexer.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'overall code quality'"
+
+- name: corresponding combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Adds the flag and the corresponding tests.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'corresponding tests'"
+
+- name: and related combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Adds the flag and related changes.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'and related changes'"
+
+- name: and associated combo
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Adds the flag and associated tests.
+  contains:
+    - ai-tells-commits.CommitBuzzwords
+    - "'and associated tests'"
+
+- name: specific description of the change
+  rule: ../../styles/ai-tells-commits/CommitBuzzwords.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree, which the caller dereferenced.
+    The parser now returns an error before building the tree.
+  absent: ai-tells-commits.CommitBuzzwords

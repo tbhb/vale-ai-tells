@@ -1,0 +1,54 @@
+---
+- name: bare noun verb pair
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: Shippers scan. Practitioners read.
+  contains:
+    - ai-tells.ParallelStaccato
+    - "'Shippers scan. Practitioners read.'"
+
+- name: the noun verb pair
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: The parser reads. The lexer writes.
+  contains:
+    - ai-tells.ParallelStaccato
+    - "'The parser reads. The lexer writes.'"
+
+- name: positive then negated pair
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: Content carries the personality. Chrome doesn't.
+  contains:
+    - ai-tells.ParallelStaccato
+    - "'Content carries the personality. Chrome doesn't.'"
+
+- name: multi-word subject pair
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: Concurrent readers don't block each other. One writer at a time doesn't block readers.
+  contains:
+    - ai-tells.ParallelStaccato
+    - "'Concurrent readers don't block each other. One writer at a time doesn't block readers.'"
+
+- name: solo enumerated verb
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: Latency drops.
+  contains:
+    - ai-tells.ParallelStaccato
+    - "'Latency drops.'"
+
+- name: solo verb outside the list
+  about: >-
+    Only the enumerated verbs read as the dramatic one-liner.
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: Latency improves.
+  absent: ai-tells.ParallelStaccato
+
+- name: pronoun one-liner stays with mic drop
+  about: >-
+    The comment hands "It works." and "That scales." to MicDrop.
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: It works.
+  absent: ai-tells.ParallelStaccato
+
+- name: varied sentence shapes
+  rule: ../../styles/ai-tells/ParallelStaccato.yml
+  input: The parser reads the input and builds a tree. It then hands the tree to the checker.
+  absent: ai-tells.ParallelStaccato

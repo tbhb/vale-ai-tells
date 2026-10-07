@@ -1,0 +1,52 @@
+---
+- name: mints an identifier
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The step mints an identifier for each run.
+  contains:
+    - ai-tells.FigurativeMints
+    - "'mints'"
+
+- name: minting gerund
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The workflow is minting a short-lived token.
+  contains: "'minting'"
+
+- name: passive participle
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: A token minted from the app expires in an hour.
+  contains: "'minted'"
+
+- name: attributive participle
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The minted installation token expires in an hour.
+  contains: "'minted'"
+
+- name: gerund noun
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: Token minting happens once per job.
+  contains: "'minting'"
+
+- name: newly minted
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The newly minted release carries a new tag.
+  contains: "'minted'"
+
+- name: linux mint platform name
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The suite was tested on Linux Mint 18.3.
+  absent: ai-tells.FigurativeMints
+
+- name: mint condition
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The fixture ships in mint condition.
+  absent: ai-tells.FigurativeMints
+
+- name: mint green color
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The badge uses mint green on a dark background.
+  absent: ai-tells.FigurativeMints
+
+- name: mint tea
+  rule: ../../styles/ai-tells/FigurativeMints.yml
+  input: The kitchen stocks mint tea for the team.
+  absent: ai-tells.FigurativeMints

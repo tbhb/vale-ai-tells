@@ -1,0 +1,72 @@
+---
+- name: draws on a source
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The design draws on prior work from the Go team.
+  contains:
+    - ai-tells.FigurativeDraws
+    - "'draws on prior'"
+
+- name: drew heavily on
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The author drew heavily on the Python docs.
+  contains: "'drew heavily on'"
+
+- name: draws inspiration from
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The format draws inspiration from INI files.
+  contains: "'draws inspiration from'"
+
+- name: drew inspiration from
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The tool drew inspiration from make.
+  contains: "'drew inspiration from'"
+
+- name: draws a distinction
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The section draws a distinction between reads and writes.
+  contains: "'draws a distinction'"
+
+- name: drew a parallel
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The RFC drew a parallel with the earlier proposal.
+  contains: "'drew a parallel'"
+
+- name: draws comparisons
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The post draws comparisons with older tools.
+  contains: "'draws comparisons'"
+
+- name: draws attention to
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The warning draws attention to the unsafe flag.
+  contains: "'draws attention to'"
+
+- name: drew scrutiny
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The change drew scrutiny from the maintainers.
+  contains: "'drew scrutiny'"
+
+- name: draws to a close
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The release cycle draws to a close this week.
+  contains: "'draws to a close'"
+
+- name: drew to a close
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The migration drew to a close by Friday.
+  contains: "'drew to a close'"
+
+- name: drawing a card
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The player draws a card from the deck.
+  absent: ai-tells.FigurativeDraws
+
+- name: drawing water
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The pump draws water from the well.
+  absent: ai-tells.FigurativeDraws
+
+- name: drawing a shape
+  rule: ../../styles/ai-tells/FigurativeDraws.yml
+  input: The function draws a rectangle on the canvas.
+  absent: ai-tells.FigurativeDraws

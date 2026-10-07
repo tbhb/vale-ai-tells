@@ -1,0 +1,66 @@
+---
+- name: determiner-gated arrival
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The catalog reached the store before the index was built.
+  contains:
+    - ai-tells.BareReaches
+    - "'The catalog reached the'"
+
+- name: determiner-gated arrival with a modifier
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: An orphan never reaches an extractor in this pipeline.
+  contains:
+    - ai-tells.BareReaches
+
+- name: bare plural subject
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: Only referenced records reach the store.
+  contains:
+    - ai-tells.BareReaches
+
+- name: perfect tense with the subject out of view
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The batch has already reached the store.
+  contains:
+    - ai-tells.BareReaches
+
+- name: object fronted in a relative clause
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: These are the items a query reaches.
+  contains:
+    - ai-tells.BareReaches
+
+- name: reaching for stays with another rule
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The generated prose reaches for the same verb.
+  absent: ai-tells.BareReaches
+
+- name: numeric terminal sense
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The counter reaches zero and the loop exits.
+  absent: ai-tells.BareReaches
+
+- name: end of input sense
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The scanner reaches EOF and stops.
+  absent: ai-tells.BareReaches
+
+- name: threshold sense
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The queue reaches a threshold of ten items.
+  absent: ai-tells.BareReaches
+
+- name: passive measurement
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The timeout is reached after thirty seconds.
+  absent: ai-tells.BareReaches
+
+- name: literal arm reaching
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The climber reached the ledge with one hand.
+  absent: ai-tells.BareReaches
+
+- name: physics subject
+  rule: ../../styles/ai-tells/BareReaches.yml
+  input: The light reaches the sensor after a short delay.
+  absent: ai-tells.BareReaches

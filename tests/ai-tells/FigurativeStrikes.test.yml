@@ -1,0 +1,68 @@
+---
+- name: strikes a chord
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The argument strikes a chord with maintainers.
+  contains:
+    - ai-tells.FigurativeStrikes
+    - "'strikes a chord'"
+
+- name: struck a nerve
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The critique struck a nerve in the thread.
+  contains: "'struck a nerve'"
+
+- name: strikes the right note
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The phrase strikes the right note for a release.
+  contains: "'strikes the right note'"
+
+- name: struck the right tone
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The message struck the right tone.
+  contains: "'struck the right tone'"
+
+- name: strikes at the core of
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: This critique strikes at the core of the design.
+  contains: "'strikes at the core of'"
+
+- name: struck at the root of
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The patch struck at the root of the flakiness.
+  contains: "'struck at the root of'"
+
+- name: strikes close to home
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The postmortem strikes close to home.
+  contains: "'strikes close to home'"
+
+- name: struck gold
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The profiler struck gold in the allocator.
+  contains: "'struck gold'"
+
+- name: strike while the iron is hot
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: Merge now and strike while the iron is hot.
+  contains: "'strike while the iron is hot'"
+
+- name: strike a balance
+  about: Stays in FalseBalance, so the tokens here avoid that object.
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The design must strike a balance between speed and safety.
+  absent: ai-tells.FigurativeStrikes
+
+- name: striking a match
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: Strike the match and light the burner.
+  absent: ai-tells.FigurativeStrikes
+
+- name: workers strike
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: The dock workers voted to strike on Monday.
+  absent: ai-tells.FigurativeStrikes
+
+- name: lightning
+  rule: ../../styles/ai-tells/FigurativeStrikes.yml
+  input: Lightning struck the antenna twice.
+  absent: ai-tells.FigurativeStrikes

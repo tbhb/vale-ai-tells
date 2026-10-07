@@ -1,0 +1,63 @@
+---
+- name: fronted side label
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: On the read side, the lookup is one hop.
+  contains:
+    - ai-tells.ScopePartition
+    - "'On the read side,'"
+
+- name: side label after a coordinator
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: The reader parses the key, and on the write side, every blob is hashed.
+  contains: "'and on the write side,'"
+
+- name: hyphenated side label
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: Server-side, the token is checked on every request.
+  contains: "'Server-side,'"
+
+- name: hyphenated label after a coordinator
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: The client signs the request, and server-side, the token is checked.
+  contains: "'and server-side,'"
+
+- name: fronted time label
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: At index time, the tokenizer runs once.
+  contains: "'At index time,'"
+
+- name: time label after a coordinator
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: The linker resolves names, and at run time, the loader checks them.
+  contains: "'and at run time,'"
+
+- name: plus side idiom
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: On the plus side, the build is fast.
+  absent: ai-tells.ScopePartition
+
+- name: geometric side
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: On the right-hand side of the page sits the logo.
+  absent: ai-tells.ScopePartition
+
+- name: mid-sentence lowercase predicate
+  about: The coordinator gate keeps the lowercase predicate out.
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: The proxy filters them on the client side, so nothing leaks.
+  absent: ai-tells.ScopePartition
+
+- name: time idiom with a demonstrative
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: At this time, the build runs on one node.
+  absent: ai-tells.ScopePartition
+
+- name: time phrase without the comma
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: The check runs at compile time on every build.
+  absent: ai-tells.ScopePartition
+
+- name: left-hand hyphenated side
+  rule: ../../styles/ai-tells/ScopePartition.yml
+  input: Left-side, the margin is wider.
+  absent: ai-tells.ScopePartition

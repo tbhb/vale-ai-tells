@@ -1,0 +1,124 @@
+---
+- name: four paragraphs of near-equal length
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release.
+
+    The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+
+    The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+  contains: ai-tells-experimental.ParagraphLengthVariance
+
+- name: paragraphs of varied length
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release. The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install. The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release. The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change. The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+
+    The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+  absent: ai-tells-experimental.ParagraphLengthVariance
+
+- name: three uniform paragraphs are too few
+  about: The script needs four prose paragraphs in one section.
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release.
+
+    The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+  absent: ai-tells-experimental.ParagraphLengthVariance
+
+- name: short paragraphs are not counted
+  about: Only paragraphs of 30 words or more count toward the section.
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user.
+
+    The updater downloads the archive into the cache directory of the project.
+
+    The linter reads the config from the root folder of the repository now.
+
+    The scheduler starts the worker at the top of the hour each day.
+  absent: ai-tells-experimental.ParagraphLengthVariance
+
+- name: uniform paragraphs split across two sections
+  about: Variance is measured within each section independently.
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Install
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release.
+
+    # Operate
+
+    The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+
+    The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+  absent: ai-tells-experimental.ParagraphLengthVariance
+
+- name: a code fence is not a paragraph
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release.
+
+    The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+
+    ```text
+    The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+    ```
+  absent: ai-tells-experimental.ParagraphLengthVariance
+
+- name: a list item is not a paragraph
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release.
+
+    The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+
+    - The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+  absent: ai-tells-experimental.ParagraphLengthVariance
+
+- name: uniform paragraphs inside MDX components still count
+  about: JSX tags and import lines are stripped, so they neither add paragraphs nor hide them.
+  rule: ../../styles/ai-tells-experimental/ParagraphLengthVariance.yml
+  input: |
+    # Setup
+
+    import Callout from '../components/Callout.astro'
+
+    <Callout type="note">
+
+    The installer copies the binary into the local bin directory of the user and sets the permissions on the file so that the shell can run it without any extra steps from the person doing the install.
+
+    The updater downloads the archive into the cache directory of the project and checks the signature on the bundle so that the pipeline can trust it without any manual steps from the person doing the release.
+
+    The linter reads the config from the root folder of the repository and reports the findings on each line so that the reviewer can fix them without any extra tools from the person who wrote the change.
+
+    The scheduler starts the worker at the top of the hour and records the exit status in the log so that the operator can inspect it without any special access from the person running the cluster.
+
+    </Callout>
+  contains: ai-tells-experimental.ParagraphLengthVariance

@@ -1,0 +1,65 @@
+---
+- name: worth knowing about
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: Naming is worth knowing about before you ship.
+  contains:
+    - ai-tells.FigurativeWorth
+    - "'worth knowing about'"
+
+- name: worth the effort
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The migration is worth the effort.
+  contains: "'worth the effort'"
+
+- name: worth it
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: Is the complexity worth it?
+  contains: "'worth it'"
+
+- name: worth noting
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: Here is one project worth noting.
+  contains: "'worth noting'"
+
+- name: worth pointing out
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: There is one detail worth pointing out here.
+  contains: "'worth pointing out'"
+
+- name: worth a closer look
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The retry path is worth a closer look.
+  contains: "'worth a closer'"
+
+- name: worth your time
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The talk is worth your time.
+  contains: "'worth your time'"
+
+- name: worth making gerund
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: Whether a fix is worth making depends on the cost.
+  contains: "'worth making depends'"
+
+- name: worth of quantity idiom
+  about: The quantity idiom, a count plus worth of, stays out.
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The buffer holds two days' worth of logs.
+  absent: ai-tells.FigurativeWorth
+
+- name: net worth
+  about: Net worth belongs to finance prose, which the lookbehind spares.
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The report lists the net worth of each fund.
+  absent: ai-tells.FigurativeWorth
+
+- name: self-worth
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The study measured self-worth in teenagers.
+  absent: ai-tells.FigurativeWorth
+
+- name: worthwhile separate word
+  about: Worthwhile is a separate word the word boundary never reaches.
+  rule: ../../styles/ai-tells/FigurativeWorth.yml
+  input: The migration was a worthwhile change.
+  absent: ai-tells.FigurativeWorth

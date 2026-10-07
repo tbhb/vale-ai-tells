@@ -1,0 +1,83 @@
+---
+- name: final thoughts heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    # Final Thoughts
+
+    The parser handles every case.
+  contains:
+    - ai-tells.WrapUpHeadings
+    - "'Final Thoughts'"
+
+- name: closing thoughts heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Closing Thoughts
+
+    The parser handles every case.
+  contains: "'Closing Thoughts'"
+
+- name: wrapping up heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Wrapping Up
+
+    The parser handles every case.
+  contains: "'Wrapping Up'"
+
+- name: wrap-up hyphenated heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Wrap-Up
+
+    The parser handles every case.
+  contains: "'Wrap-Up'"
+
+- name: putting it all together heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Putting It All Together
+
+    The parser handles every case.
+  contains: "'Putting It All Together'"
+
+- name: the big picture heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## The Big Picture
+
+    The parser handles every case.
+  contains: "'The Big Picture'"
+
+- name: the takeaway heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## The Takeaway
+
+    The parser handles every case.
+  contains: "'The Takeaway'"
+
+- name: final take heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Final Take
+
+    The parser handles every case.
+  contains: "'Final Take'"
+
+- name: topic heading
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Parser Design
+
+    The parser handles every case.
+  absent: ai-tells.WrapUpHeadings
+
+- name: phrase in body prose
+  about: The rule scopes to headings, so the same words in a paragraph stay quiet.
+  rule: ../../styles/ai-tells/WrapUpHeadings.yml
+  input: |
+    ## Parser Design
+
+    My final thoughts are in the changelog.
+  absent: ai-tells.WrapUpHeadings

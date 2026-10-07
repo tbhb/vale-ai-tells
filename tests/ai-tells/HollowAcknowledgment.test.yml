@@ -1,0 +1,39 @@
+---
+- name: notice verb then without a gerund
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The review names the gap without ever filling it.
+  contains:
+    - ai-tells.HollowAcknowledgment
+    - "'names the gap without ever filling it'"
+
+- name: identifies with a short noun phrase
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The report identifies the main risk without actually solving it.
+  contains: "'identifies the main risk without actually solving it'"
+
+- name: all diagnosis and no treatment
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The memo is all diagnosis and no treatment.
+  contains: "'all diagnosis and no treatment'"
+
+- name: all analysis with a comma
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The memo is all analysis, no action.
+  contains: "'all analysis, no action'"
+
+- name: without a back-reference
+  about: The pronoun tail is the gate, so an ordinary without-gerund clause stays quiet.
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The maintainer left the call without saying goodbye.
+  absent: ai-tells.HollowAcknowledgment
+
+- name: notice verb followed by an action
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The review names the gap and then fills it.
+  absent: ai-tells.HollowAcknowledgment
+
+- name: all and no pair outside the list
+  about: Curated pairs keep the general all-X-no-Y shape from flooding.
+  rule: ../../styles/ai-tells/HollowAcknowledgment.yml
+  input: The shop sells all hammers and no nails.
+  absent: ai-tells.HollowAcknowledgment

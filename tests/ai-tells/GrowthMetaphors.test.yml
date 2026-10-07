@@ -1,0 +1,74 @@
+---
+- name: incubate
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The team will incubate the parser before release.
+  contains:
+    - ai-tells.GrowthMetaphors
+    - "'incubate'"
+
+- name: gestation
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The design spent a long gestation in review.
+  contains: "'gestation'"
+
+- name: nascent
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The nascent ecosystem has few plugins.
+  contains: "'nascent'"
+
+- name: fledgling
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The fledgling project needs maintainers.
+  contains: "'fledgling'"
+
+- name: embryonic
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The embryonic API changes every week.
+  contains: "'embryonic'"
+
+- name: cultivate
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: We cultivate contributors through mentoring.
+  contains: "'cultivate'"
+
+- name: nurture
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: Maintainers nurture new ideas in the tracker.
+  contains: "'nurture'"
+
+- name: infancy phrase
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The tooling is still in its infancy.
+  contains: "'in its infancy'"
+
+- name: minimum viable
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: Ship a minimum viable parser first.
+  contains: "'minimum viable'"
+
+- name: seed funding
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The company raised seed funding last spring.
+  contains: "'seed funding'"
+
+- name: organic growth
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: Adoption came from organic growth.
+  contains: "'organic growth'"
+
+- name: random seed
+  about: Seed is scoped to the startup phrases, so the random seed stays clean.
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: Set the random seed before each test run.
+  absent: ai-tells.GrowthMetaphors
+
+- name: viable option
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: A viable option is to cache the result.
+  absent: ai-tells.GrowthMetaphors
+
+- name: literal infancy
+  about: Infancy is scoped to the metaphor phrase so literal babyhood does not fire.
+  rule: ../../styles/ai-tells/GrowthMetaphors.yml
+  input: The study followed children from infancy to age five.
+  absent: ai-tells.GrowthMetaphors

@@ -1,0 +1,62 @@
+---
+- name: anchored in an abstraction
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The design is anchored in our shared values.
+  contains:
+    - ai-tells-experimental.FigurativeAnchor
+    - "'anchored in our shared values'"
+
+- name: anchored to an abstraction
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The roadmap is anchored to customer needs.
+  contains: ai-tells-experimental.FigurativeAnchor
+
+- name: anchor the strategy
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: A clear mission will anchor the strategy for the year.
+  contains: ai-tells-experimental.FigurativeAnchor
+
+- name: anchoring a narrative
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: Three case studies anchor our narrative.
+  contains: ai-tells-experimental.FigurativeAnchor
+
+- name: emotional anchor noun
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The old photograph gave her an emotional anchor.
+  contains:
+    - ai-tells-experimental.FigurativeAnchor
+    - "'emotional anchor'"
+
+- name: guiding anchor noun
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The charter is a guiding anchor for every team.
+  contains: ai-tells-experimental.FigurativeAnchor
+
+- name: serves as an anchor
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The glossary serves as an anchor for the whole project.
+  contains:
+    - ai-tells-experimental.FigurativeAnchor
+    - "'serves as an anchor'"
+
+- name: anchored to a wall is literal
+  about: The exceptions cover the physical objects something literally anchors to.
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The shelf is anchored to the wall with two bolts.
+  absent: ai-tells-experimental.FigurativeAnchor
+
+- name: anchored in concrete is literal
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The posts are anchored in concrete below the frost line.
+  absent: ai-tells-experimental.FigurativeAnchor
+
+- name: ship anchor is literal
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: The crew dropped the anchor in the bay and waited for the tide.
+  absent: ai-tells-experimental.FigurativeAnchor
+
+- name: html anchor tag is literal
+  rule: ../../styles/ai-tells-experimental/FigurativeAnchor.yml
+  input: Add an anchor tag with an href attribute to link to the section.
+  absent: ai-tells-experimental.FigurativeAnchor

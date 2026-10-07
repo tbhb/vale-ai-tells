@@ -260,80 +260,21 @@ run = "bash tools/lint-draft.sh $usage_file"
 # --- Test ---
 
 [tasks.test]
-description = "Run the rule cases and the fixture guard: tells fire, past-tense subjects smoke-test, no false positives"
-run = [
-  "mise run test-rules",
-  "mise run test-fires",
-  "mise run test-commit-past-tense",
-  "mise run test-clean",
-]
+description = "Run the per-rule cases, then check the false-positive fixtures stay clean"
+run = ["mise run test-rules", "mise run test-clean"]
 
 # Run the per-rule cases under tests/, one <Rule>.test.yml per rule, each
 # isolating its rule through a relative `rule:` path. They live outside
 # styles/ because vale before 3.24 loads any .yml there as a rule and
 # refuses a .test.yml, which would break `vale sync` for consumers.
+# --coverage fails the run when any rule draws no alert in a passing case,
+# so a new rule cannot land without cases of its own. It only counts the
+# rules under the paths it is given, and tests/ holds none, so the three
+# style directories are named too. Naming styles/ whole would also count
+# the Google, proselint, and write-good packages `vale sync` puts there.
 [tasks.test-rules]
-description = "Run the per-rule vale test cases under tests/"
-run = "vale test tests"
-
-# Assert the tell corpus fires a healthy volume of errors under the test gate.
-# .vale-test.ini binds ai-tells + ai-tells-experimental to test-document.md and
-# ai-tells-commits to test-commit-messages.md at MinAlertLevel=error. The
-# experimental rules ship at warning level, so only the error-level styles
-# contribute here (ai-tells on the doc, ai-tells-commits on the commit corpus);
-# the density metrics are validated separately. The floors catch a whole style
-# silently ceasing to fire without pinning an exact count.
-[tasks.test-fires]
-description = "Assert the tell corpus fires a healthy volume of errors"
-run = '''
-#!/usr/bin/env bash
-# Deliberately not -e: both counts are collected before either is judged.
-set -uo pipefail
-doc=$(vale --config=.vale-test.ini --output=JSON test-document.md | grep -c '"Severity": "error"' || true)
-commit=$(vale --config=.vale-test.ini --output=JSON test-commit-messages.md | grep -c '"Severity": "error"' || true)
-echo "test-document.md: $doc errors (ai-tells)"
-echo "test-commit-messages.md: $commit errors (ai-tells-commits)"
-fail=0
-if [[ "$doc" -lt 400 ]]; then echo "FAIL: test-document.md fired $doc errors, expected at least 400"; fail=1; fi
-if [[ "$commit" -lt 40 ]]; then echo "FAIL: test-commit-messages.md fired $commit errors, expected at least 40"; fail=1; fi
-[[ "$fail" -eq 0 ]] && echo "Tell corpus fires as expected."
-exit "$fail"
-'''
-
-# Smoke-test CommitPastTense on single-subject inputs. The rule's \A raw anchor
-# only sees line 1, so the corpus fixture cannot exercise it. This feeds each
-# documented subject through Vale on its own and checks the rule fires on
-# past-tense or participle subjects and stays quiet on imperative ones.
-[tasks.test-commit-past-tense]
-description = "Smoke-test CommitPastTense on single-subject inputs"
-run = '''
-#!/usr/bin/env bash
-# Deliberately not -e: every subject is checked before the result is judged.
-set -uo pipefail
-dir=$(mktemp -d)
-cfg="$dir/smoke.ini"
-subj="$dir/subject.md"
-printf 'StylesPath = %s/styles\nMinAlertLevel = error\n[*]\nBasedOnStyles = ai-tells-commits\n' "$(pwd)" > "$cfg"
-fail=0
-check() {
-  printf '%s\n' "$2" > "$subj"
-  hits=$(vale --config="$cfg" --output=JSON "$subj" | grep -c 'CommitPastTense' || true)
-  if [[ "$1" == fire && "$hits" -eq 0 ]]; then echo "FAIL (expected fire): $2"; fail=1
-  elif [[ "$1" == clean && "$hits" -ne 0 ]]; then echo "FAIL (expected clean): $2"; fail=1
-  else echo "ok ($1): $2"; fi
-}
-check fire 'Added rate limiting middleware'
-check fire 'Fixed off-by-one in iterator'
-check fire 'feat: Added rate limiting'
-check fire 'fix(auth): Fixed session expiry'
-check fire 'Refactoring the parser'
-check clean 'Add rate limiting middleware'
-check clean 'fix: Resolve race condition in scheduler'
-check clean 'feat(auth): Drop legacy session check'
-rm -rf "$dir"
-[[ "$fail" -eq 0 ]] && echo "CommitPastTense smoke test passed."
-exit "$fail"
-'''
+description = "Run the per-rule vale test cases under tests/, requiring every rule to be covered"
+run = "vale test --coverage styles/ai-tells styles/ai-tells-commits styles/ai-tells-experimental tests"
 
 # The MDX fixture takes its own config. .vale-test-mdx.ini raises the
 # raw-scope density rules to error, and vale applies a rule-level override

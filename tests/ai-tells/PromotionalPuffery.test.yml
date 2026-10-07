@@ -1,0 +1,157 @@
+---
+- name: nestled
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The module is nestled in the core package.
+  contains:
+    - ai-tells.PromotionalPuffery
+    - "'nestled in the'"
+
+- name: nestled between
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The shim is nestled between two layers.
+  contains: "'nestled between'"
+
+- name: heart of
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The scheduler sits at the heart of the system.
+  contains: "'at the heart of'"
+
+- name: in the heart of
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The office is in the heart of the city.
+  contains: "'in the heart of'"
+
+- name: rich heritage
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The project has a rich cultural heritage.
+  contains: "'rich cultural heritage'"
+
+- name: rich and vibrant
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The ecosystem is rich and vibrant.
+  contains: "'rich and vibrant'"
+
+- name: vibrant community
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The library has a vibrant community.
+  contains: "'vibrant community'"
+
+- name: vibrant ecosystem
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The language has a vibrant ecosystem of tools.
+  contains: "'vibrant ecosystem'"
+
+- name: natural beauty
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The valley is known for its natural beauty.
+  contains: "'natural beauty'"
+
+- name: a hub for
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The repository is a hub for plugin authors.
+  contains: "'a hub for'"
+
+- name: a thriving hub
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The forum became a thriving hub of activity.
+  contains: "'a thriving hub'"
+
+- name: a beacon of
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The guide is a beacon of clarity.
+  contains: "'a beacon of'"
+
+- name: a treasure trove of
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The archive is a treasure trove of old patches.
+  contains: "'a treasure trove of'"
+
+- name: a shining example
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The test suite is a shining example of coverage.
+  contains: "'a shining example'"
+
+- name: a prime example
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The loader is a prime example of the pattern.
+  contains: "'a prime example'"
+
+- name: a masterclass in
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The design is a masterclass in restraint.
+  contains: "'a masterclass in'"
+
+- name: a testament to
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The speed is a testament to the new cache.
+  contains: "'a testament to the'"
+
+- name: renowned for
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The tool is renowned for its speed.
+  contains: "'renowned for its'"
+
+- name: widely regarded as
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The format is widely regarded as stable.
+  contains: "'widely regarded as'"
+
+- name: is home to
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The repository is home to three packages.
+  contains: "'is home to'"
+
+- name: has emerged as
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The tool has emerged as a standard.
+  contains: "'has emerged as a'"
+
+- name: has established itself as
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The format has established itself as the default.
+  contains: "'has established itself as'"
+
+- name: continues to evolve
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The project continues to evolve each quarter.
+  contains: "'continues to evolve'"
+
+- name: continues to thrive
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The community continues to thrive.
+  contains: "'continues to thrive'"
+
+- name: left an indelible mark
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The release left an indelible mark on the ecosystem.
+  contains: "'left an indelible mark'"
+
+- name: leaving a lasting impact
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The rewrite shipped, leaving a lasting impact on the team.
+  contains: "'leaving a lasting impact'"
+
+- name: left a lasting impression
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The talk left a lasting impression on the room.
+  contains: "'left a lasting impression'"
+
+- name: a lasting legacy
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The tool has a lasting legacy in the field.
+  contains: "'a lasting legacy'"
+
+- name: enduring legacy
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The format has an enduring legacy.
+  contains: "'enduring legacy'"
+
+- name: enduring impact
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The decision had an enduring impact on the design.
+  contains: "'enduring impact'"
+
+- name: neutral statement
+  rule: ../../styles/ai-tells/PromotionalPuffery.yml
+  input: The repository contains three packages and a shared test suite.
+  absent: ai-tells.PromotionalPuffery

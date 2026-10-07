@@ -1,0 +1,52 @@
+---
+- name: key takeaway
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: The key takeaway is that the cache is stale.
+  contains:
+    - ai-tells.StructureAnnouncements
+    - "'key takeaway'"
+
+- name: main takeaways
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: The main takeaways are listed below.
+  contains: "'main takeaways'"
+
+- name: the takeaway is
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: The takeaway is that the cache is stale.
+  contains: "'The takeaway is'"
+
+- name: quick recap
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: Here is a quick recap of the changes.
+  contains: "'a quick recap'"
+
+- name: to recap
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: To recap, the loader reads the lockfile.
+  contains: "'To recap'"
+
+- name: quick summary
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: Here is a quick summary of the changes.
+  contains: "'a quick summary'"
+
+- name: quick overview
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: This section gives a quick overview of the loader.
+  contains: "'a quick overview'"
+
+- name: to put it plainly
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: To put it plainly, the cache is stale.
+  contains: "'To put it plainly'"
+
+- name: to put this in perspective
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: To put this in perspective, the cache holds ten entries.
+  contains: "'To put this in perspective'"
+
+- name: plain content
+  rule: ../../styles/ai-tells/StructureAnnouncements.yml
+  input: The loader reads the lockfile and the cache holds ten entries.
+  absent: ai-tells.StructureAnnouncements

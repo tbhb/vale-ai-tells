@@ -1,0 +1,177 @@
+---
+- name: interface grant verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The linter allows no inline suppression.
+  contains:
+    - ai-tells.NegatedObject
+    - "'allows no inline'"
+
+- name: requires zero spelling
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The tool requires zero configuration.
+  contains: "'requires zero configuration'"
+
+- name: offers no guarantee
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The cache offers no guarantee of order.
+  contains: "'offers no guarantee'"
+
+- name: reporting verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The scan reported no failures.
+  contains: "'reported no failures'"
+
+- name: intensifier before no
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The tool requires absolutely no configuration.
+  contains: "'requires absolutely no configuration'"
+
+- name: make no
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The loader makes no clock calls.
+  contains: "'makes no clock'"
+
+- name: make no mistake stays with another rule
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: Make no mistake about the deadline.
+  absent: ai-tells.NegatedObject
+
+- name: do no harm stays with another rule
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The wrapper does no harm to the original.
+  absent: ai-tells.NegatedObject
+
+- name: operations verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The tool performs no validation on the input.
+  contains: "'performs no validation'"
+
+- name: operations verb touches
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The command touches no files outside the cache.
+  contains: "'touches no files'"
+
+- name: possession verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The reader keeps no state between calls.
+  contains: "'keeps no state'"
+
+- name: possession idiom
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The rewrite leaves no trace in the history.
+  contains: "'leaves no trace'"
+
+- name: intensified absence with no verb gate
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: Absolutely no data is stored about retries.
+  contains: "'Absolutely no data'"
+
+- name: literal zero dependencies
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The package is literally zero dependencies.
+  contains: ai-tells.NegatedObject
+
+- name: prepositional spelling behind a ship verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The binary ships with no dependencies.
+  contains: "'ships with no dependencies'"
+
+- name: prepositional spelling with a reassurance noun
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The tool is small, with zero setup.
+  contains: "'with zero setup'"
+
+- name: without any behind a run verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The tool runs without any setup.
+  contains: "'runs without any setup'"
+
+- name: nothing spelling
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The command deletes nothing.
+  contains: "'deletes nothing'"
+
+- name: nothing with possession verb
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The index holds nothing.
+  contains: "'holds nothing'"
+
+- name: nothing but idiom
+  about: The lookahead drops the degree and idiom phrases that only share the surface.
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The file holds nothing but derived data.
+  absent: ai-tells.NegatedObject
+
+- name: does nothing no-op
+  about: Both standard libraries document a no-op this way, so the spelling stays out.
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: This method does nothing when the cache is empty.
+  absent: ai-tells.NegatedObject
+
+- name: finds no
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The scan finds no match in the tree.
+  contains: "'finds no m'"
+
+- name: sees no
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The reader sees no difference between the runs.
+  contains: "'sees no d'"
+
+- name: found no doubt idiom
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The reviewer found no doubt in the result.
+  absent: ai-tells.NegatedObject
+
+- name: quoted object
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The list names no 'every' keyword.
+  contains: ai-tells.NegatedObject
+
+- name: comparative after no
+  about: A comparative negates a degree rather than an object.
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The second parser fares no better than the first.
+  absent: ai-tells.NegatedObject
+
+- name: no one pronoun
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The issues no one filed stay open.
+  absent: ai-tells.NegatedObject
+
+- name: no more than quantifier
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The cache holds no more than ten entries.
+  absent: ai-tells.NegatedObject
+
+- name: zero or more count
+  about: The zero lookahead excludes the literal count.
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The pattern accepts zero or more spaces.
+  absent: ai-tells.NegatedObject
+
+- name: zero value
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The loader returns the zero value on error.
+  absent: ai-tells.NegatedObject
+
+- name: verb negated with doesn't
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The linter doesn't allow inline suppression.
+  absent: ai-tells.NegatedObject
+
+- name: clausal complement verb
+  about: Verbs with a clausal complement negate the elided clause, so they stay out of the list.
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: A green check means no run failed.
+  absent: ai-tells.NegatedObject
+
+- name: ensure no
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The test must ensure no goroutines leak.
+  absent: ai-tells.NegatedObject
+
+- name: has no
+  rule: ../../styles/ai-tells/NegatedObject.yml
+  input: The struct has no exported fields.
+  absent: ai-tells.NegatedObject

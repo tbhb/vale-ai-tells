@@ -1,0 +1,138 @@
+---
+- name: important to note
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It's important to note that the cache expires nightly.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'It's important to note that'"
+
+- name: important to understand
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It is important to understand the retry policy first.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'It is important to understand'"
+
+- name: essential to note
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It is essential to note the lock ordering.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'It is essential to note'"
+
+- name: crucial to recognize
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It is crucial to recognize the failure modes.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'It is crucial to recognize'"
+
+- name: should be noted
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It should be noted that the cache expires nightly.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'It should be noted that'"
+
+- name: goes without saying
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It goes without saying that the tests must pass.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'It goes without saying'"
+
+- name: needless to say
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: Needless to say, the tests must pass.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'Needless to say'"
+
+- name: generally speaking
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: Generally speaking, the cache expires nightly.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'Generally speaking'"
+
+- name: that being said
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: That being said, the cache expires nightly.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'That being said'"
+
+- name: on the other hand
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: On the other hand, the cache expires nightly.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'On the other hand'"
+
+- name: to be sure
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: To be sure, the cache expires nightly.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'To be sure'"
+
+- name: in a sense
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The cache is, in a sense, a second database.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'in a sense'"
+
+- name: one thing is clear
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: One thing is clear about the cache.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'One thing is clear'"
+
+- name: raises important questions
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The design raises important questions about expiry.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'raises important questions'"
+
+- name: begs the question
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The cache begs the question of who owns expiry.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'begs the question'"
+
+- name: invites us to consider
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The design invites us to consider the failure modes.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'invites us to consider'"
+
+- name: reminds us that
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The outage reminds us that caches expire.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'reminds us that'"
+
+- name: as you might expect
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The cache expires nightly, as you might expect.
+  contains:
+    - ai-tells.HedgingPhrases
+    - "'as you might expect'"
+
+- name: worth family stays with figurative worth
+  about: >-
+    The "It's worth <verb>ing" family lives in FigurativeWorth.
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: It's worth noting that the cache expires nightly.
+  absent: ai-tells.HedgingPhrases
+
+- name: plain statement
+  rule: ../../styles/ai-tells/HedgingPhrases.yml
+  input: The cache expires nightly, and the next read refills it.
+  absent: ai-tells.HedgingPhrases

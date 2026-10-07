@@ -1,0 +1,80 @@
+---
+- name: nearly every sentence opens with the same word
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. The linter checks every file in the repo. The team ships a release every Friday. The docs explain each flag with an example. The cache holds recent results in memory. The parser reads one token at a time. The runner starts jobs in order. The queue keeps the oldest job first. Run the doctor command after you install.
+  contains: ai-tells-experimental.SentenceStartEntropy
+
+- name: varied sentence openers
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. Linters check every file in the repo. Our team ships a release every Friday. Docs explain each flag with an example. Caches hold recent results in memory. Parsers read one token at a time. Runners start jobs in order. Queues keep the oldest job first. Run the doctor command after you install.
+  absent: ai-tells-experimental.SentenceStartEntropy
+
+- name: fewer than eight sentences
+  about: The script needs eight countable sentence openers in a section.
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. The linter checks every file in the repo. The team ships a release every Friday. The docs explain each flag with an example. The cache holds recent results in memory. The parser reads one token at a time. Run the doctor command after you install.
+  absent: ai-tells-experimental.SentenceStartEntropy
+
+- name: one opener repeated is skipped
+  about: With a single unique opener the normalized entropy is undefined, so the script skips the section.
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. The linter checks every file in the repo. The team ships a release every Friday. The docs explain each flag with an example. The cache holds recent results in memory. The parser reads one token at a time. The runner starts jobs in order. The queue keeps the oldest job first. The shell finds the new binary on its path.
+  absent: ai-tells-experimental.SentenceStartEntropy
+
+- name: single-letter openers are ignored
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    A cache holds recent results in memory. A parser reads one token at a time. A runner starts jobs in order. A queue keeps the oldest job first. A server writes logs to disk. A linter checks every file in the repo. A team ships a release every Friday. A doc explains each flag with an example. The shell finds the new binary on its path.
+  absent: ai-tells-experimental.SentenceStartEntropy
+
+- name: repetition split across two sections
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Install
+
+    The server writes logs to disk. The linter checks every file in the repo. The team ships a release every Friday. The docs explain each flag with an example.
+
+    # Operate
+
+    The cache holds recent results in memory. The parser reads one token at a time. The runner starts jobs in order. The queue keeps the oldest job first. Run the doctor command after you install.
+  absent: ai-tells-experimental.SentenceStartEntropy
+
+- name: repetition inside list items
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    - The server writes logs to disk.
+    - The linter checks every file in the repo.
+    - The team ships a release every Friday.
+    - The docs explain each flag with an example.
+    - The cache holds recent results in memory.
+    - The parser reads one token at a time.
+    - The runner starts jobs in order.
+    - The queue keeps the oldest job first.
+    - Run the doctor command after you install.
+  absent: ai-tells-experimental.SentenceStartEntropy
+
+- name: repetition inside a code fence
+  rule: ../../styles/ai-tells-experimental/SentenceStartEntropy.yml
+  input: |
+    # Setup
+
+    ```text
+    The server writes logs to disk. The linter checks every file in the repo. The team ships a release every Friday. The docs explain each flag with an example. The cache holds recent results in memory. The parser reads one token at a time. The runner starts jobs in order. The queue keeps the oldest job first. Run the doctor command after you install.
+    ```
+  absent: ai-tells-experimental.SentenceStartEntropy

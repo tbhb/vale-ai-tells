@@ -1,0 +1,64 @@
+---
+- name: possession with a determiner
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: Vendir owns that directory.
+  contains:
+    - ai-tells.FigurativeOwns
+    - "'owns that directory'"
+
+- name: possession with a modifier word
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: One rule owns the whole phrase.
+  contains: "'owns the whole phrase'"
+
+- name: object fronted by a relative clause
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The pass writes the table it owns.
+  contains: "'The pass writes the table it owns'"
+
+- name: counted object
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The writer owns three tables in the schema.
+  contains: "'The writer owns three'"
+
+- name: bare plural object
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: It owns tables that no other stage touches.
+  contains: "'It owns tables'"
+
+- name: bare own after a relative pronoun
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: These are the docs that own the decision cut.
+  contains: "'that own the'"
+
+- name: owning rule title
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The owning rule reports each finding.
+  contains: "'The owning rule'"
+
+- name: keeps its own
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The consumer keeps its own config file.
+  contains: "'keeps its own config file'"
+
+- name: goroutine owns a lock
+  about: Concurrency and memory objects are exceptions.
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The goroutine owns the lock until it returns.
+  absent: ai-tells.FigurativeOwns
+
+- name: caller owns the buffer
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The caller owns the buffer after the call returns.
+  absent: ai-tells.FigurativeOwns
+
+- name: legal ownership
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: The foundation owns the trademark for the project name.
+  absent: ai-tells.FigurativeOwns
+
+- name: each thread keeps its own stack
+  about: The stack lands in the exceptions.
+  rule: ../../styles/ai-tells/FigurativeOwns.yml
+  input: Each thread keeps its own stack.
+  absent: ai-tells.FigurativeOwns

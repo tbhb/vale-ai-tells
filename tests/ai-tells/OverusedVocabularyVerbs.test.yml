@@ -1,0 +1,38 @@
+---
+- name: leverage as a verb
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: We leverage the cache to speed up lookups.
+  contains:
+    - ai-tells.OverusedVocabularyVerbs
+    - "'leverage'"
+
+- name: navigating as a verb
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: She is navigating the config files.
+  contains: "'navigating'"
+
+- name: harnesses as a verb
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: The tool harnesses every core on the machine.
+  contains: "'harnesses'"
+
+- name: foster as a verb
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: We foster shared ownership of the code.
+  contains: "'foster'"
+
+- name: spearheading as a verb
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: She is spearheading the migration this year.
+  contains: "'spearheading'"
+
+- name: noun sense of leverage
+  about: The sequence rule tags the part of speech, so the noun stays quiet.
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: The lever gives a mechanical advantage, and the leverage is high.
+  absent: ai-tells.OverusedVocabularyVerbs
+
+- name: noun sense of harness
+  rule: ../../styles/ai-tells/OverusedVocabularyVerbs.yml
+  input: The test harness is in the tools directory.
+  absent: ai-tells.OverusedVocabularyVerbs

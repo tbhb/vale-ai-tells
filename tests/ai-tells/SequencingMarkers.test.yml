@@ -1,0 +1,57 @@
+---
+- name: adverb ordinal
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: Firstly, the loader reads the manifest.
+  contains:
+    - ai-tells.SequencingMarkers
+    - "'Firstly'"
+
+- name: lastly
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: Lastly, the loader writes the lockfile.
+  contains: "'Lastly'"
+
+- name: numbered takeaway
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The first takeaway is that pins need tags.
+  contains: "'The first takeaway'"
+
+- name: numbered lesson
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The second lesson is that hooks need tests.
+  contains: "'The second lesson'"
+
+- name: numbered point
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The third point concerns the lockfile.
+  contains: "'The third point'"
+
+- name: numbered reason
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The first reason is speed.
+  contains: "'The first reason'"
+
+- name: numbered step
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The second step is to run the linter.
+  contains: "'The second step is'"
+
+- name: numbered benefit
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The first benefit is a smaller diff.
+  contains: "'The first benefit'"
+
+- name: numbered advantage
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The third advantage is a shorter build.
+  contains: "'The third advantage'"
+
+- name: plain ordinal in a sentence
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: The first run failed, and the second run passed.
+  absent: ai-tells.SequencingMarkers
+
+- name: first as an adverb
+  rule: ../../styles/ai-tells/SequencingMarkers.yml
+  input: First, the loader reads the manifest.
+  absent: ai-tells.SequencingMarkers

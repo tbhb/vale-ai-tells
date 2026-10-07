@@ -1,0 +1,159 @@
+---
+- name: feeding a stage
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The pipeline feeds the stage that builds the index.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'The pipeline feeds the'"
+
+- name: feeding into
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: Each row feeds directly into the ranker.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'feeds directly into the'"
+
+- name: stranding
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: A failed join strands the row without a parent.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'strands'"
+
+- name: swamping
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The extra rows swamp the index.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'swamp'"
+
+- name: dwarfing
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The big table dwarfs the rest of the schema.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'dwarfs'"
+
+- name: crowding out
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The new stage crowds out the older passes.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'crowds out'"
+
+- name: leaning on
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The planner leans on the index for every lookup.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'leans on the'"
+
+- name: baked in
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The default is baked in at build time.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'baked in'"
+
+- name: baking a path into an image
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The build bakes the path into the image.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'bakes the path into'"
+
+- name: driving the build
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The config drives the build for every target.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'The config drives the'"
+
+- name: shaping the output
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The pass shapes the output of the compiler.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'The pass shapes the'"
+
+- name: cracking open
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The stage cracks open the record to read the header.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'cracks open'"
+
+- name: shedding columns
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The pass sheds the derived columns before writing.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'sheds the'"
+
+- name: shedding light
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The trace sheds light on the slow path.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'sheds light'"
+
+- name: seating a record
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The loader seats the record in the cache.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'seats the'"
+
+- name: trailing a release
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The mirror trails the newest release by a day.
+  contains:
+    - ai-tells.MotionMetaphors
+    - "'trails the newest release'"
+
+- name: strand of fiber
+  about: >-
+    The strand token refuses "of" so a literal strand stays quiet.
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: Three strands of fiber run through the cable.
+  absent: ai-tells.MotionMetaphors
+
+- name: swamp land
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The swamp land floods every spring.
+  absent: ai-tells.MotionMetaphors
+
+- name: leaning on a wall
+  about: >-
+    The lookahead refuses the physical objects a person leans on.
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: She leans on the wall while the build finishes.
+  absent: ai-tells.MotionMetaphors
+
+- name: baking in an oven
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: Bake in the oven for ten minutes.
+  absent: ai-tells.MotionMetaphors
+
+- name: person driving a car
+  about: >-
+    Both sides of the driver token are determiner-gated, so a person
+    driving a car stays quiet.
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: She drives the car to work each day.
+  absent: ai-tells.MotionMetaphors
+
+- name: beings that literally feed
+  about: >-
+    The exceptions list covers beings that literally feed.
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The parents feed the child before school.
+  absent: ai-tells.MotionMetaphors
+
+- name: measured-out verb flows
+  about: >-
+    The comment measured "flows" and "routes" out as ordinary English
+    for the operation.
+  rule: ../../styles/ai-tells/MotionMetaphors.yml
+  input: The traffic flows to the primary and the proxy routes the rest.
+  absent: ai-tells.MotionMetaphors

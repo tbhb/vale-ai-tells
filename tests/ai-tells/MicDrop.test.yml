@@ -1,0 +1,263 @@
+---
+- name: pronoun and intransitive verb
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: It matters.
+  contains:
+    - ai-tells.MicDrop
+    - "'It matters.'"
+
+- name: pronoun with pays off
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: This pays off.
+  contains: "'This pays off.'"
+
+- name: pronoun with scales
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: That scales.
+  contains: "'That scales.'"
+
+- name: noun-phrase subject
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The unset-versus-bogus distinction matters.
+  contains: "'The unset-versus-bogus distinction matters.'"
+
+- name: plural noun-phrase subject
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: These details matter.
+  contains: "'These details matter.'"
+
+- name: copula and emphatic adjective
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: This is key.
+  contains: "'This is key.'"
+
+- name: contracted copula and adjective
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: That's intentional.
+  contains: "'That's intentional.'"
+
+- name: copula and by design
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: It is by design.
+  contains: "'It is by design.'"
+
+- name: plural pronoun copula and adjective
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: These are thin.
+  contains: "'These are thin.'"
+
+- name: the noun is adjective
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The result is clean.
+  contains: "'The result is clean.'"
+
+- name: the two-word noun is adjective
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The error path is clean.
+  contains: "'The error path is clean.'"
+
+- name: all quantifier verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: All four are thin.
+  contains: "'All four are thin.'"
+
+- name: both verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Both are thin.
+  contains: "'Both are thin.'"
+
+- name: both noun verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Both layers are thin.
+  contains: "'Both layers are thin.'"
+
+- name: each noun verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Every choice is deliberate.
+  contains: "'Every choice is deliberate.'"
+
+- name: each standalone verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Each is independent.
+  contains: "'Each is independent.'"
+
+- name: everything verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Everything is intentional.
+  contains: "'Everything is intentional.'"
+
+- name: nothing verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Nothing is accidental.
+  contains: "'Nothing is accidental.'"
+
+- name: none verdict
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: None are optional.
+  contains: "'None are optional.'"
+
+- name: change then stay antithesis
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The adapter changes, the service call stays the same.
+  contains: "'changes, the service call stays the same.'"
+
+- name: stay then change antithesis
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The core remains, the plugins change.
+  contains: ai-tells.MicDrop
+
+- name: period-separated antithesis
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Tools change. Principles don't change.
+  contains: ai-tells.MicDrop
+
+- name: adjective list fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Simple, predictable, testable.
+  contains: "'Simple, predictable, testable.'"
+
+- name: parallel noun-phrase fragment pair
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Clean separation, clear ownership.
+  contains: "'Clean separation, clear ownership.'"
+
+- name: comparative balanced fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Faster delivery, fewer surprises.
+  contains: "'Faster delivery, fewer surprises.'"
+
+- name: just noun fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Pure orchestration.
+  contains: "'Pure orchestration.'"
+
+- name: just data nothing more
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Just data, nothing more.
+  contains: "'Just data, nothing more.'"
+
+- name: fragment spliced with and
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Pure orchestration, and the one package that imports from all layers.
+  contains: "'Pure orchestration, and the one package that imports from all layers.'"
+
+- name: terse prepositional callback
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: With PostgreSQL, one.
+  contains: "'With PostgreSQL, one.'"
+
+- name: and it shows
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: And it shows.
+  contains: "'And it shows.'"
+
+- name: and that's okay
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: And that's okay.
+  contains: "'And that's okay.'"
+
+- name: and that's it
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: And that's it.
+  contains: "'And that's it.'"
+
+- name: full stop
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The loader is done. Full stop.
+  contains: "'Full stop.'"
+
+- name: period as emphasis
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The loader reads one file. Period.
+  contains: "'. Period.'"
+
+- name: contrastive fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Dense, not cramped.
+  contains: "'Dense, not cramped.'"
+
+- name: contrastive fragment with never
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Strict, never rigid.
+  contains: "'Strict, never rigid.'"
+
+- name: bare negation fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: No singleton.
+  contains: "'No singleton.'"
+
+- name: verb-led contrastive with a linking verb
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Isolation here stays logical, not physical.
+  contains: "'Isolation here stays logical, not physical.'"
+
+- name: verb-led contrastive with never
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Isolation here stays logical, never physical.
+  contains: "'Isolation here stays logical, never physical.'"
+
+- name: verb-led contrastive with a noun object
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: They share a contract, not code.
+  contains: "'They share a contract, not code.'"
+
+- name: preference fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Clarity over cleverness.
+  contains: "'Clarity over cleverness.'"
+
+- name: comparative aphorism
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Disk costs less than lost context.
+  contains: "'Disk costs less than lost context.'"
+
+- name: extended contrastive
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Speed, not polish, not scope.
+  contains: ai-tells.MicDrop
+
+- name: sequencing fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Scannable, then readable.
+  contains: "'Scannable, then readable.'"
+
+- name: priority fragment
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Correctness first, speed second.
+  contains: "'Correctness first, speed second.'"
+
+- name: imperative mic-drop
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Trust the process.
+  contains: "'Trust the process.'"
+
+- name: categorical declaration
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: Density is a feature.
+  contains: "'Density is a feature.'"
+
+- name: tagline gloss after a colon
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: "Implicit positioning: the reference shelf, not the opinion column."
+  contains: "': the reference shelf, not the opinion column'"
+
+- name: billing period noun
+  about: The bare Period token is anchored to a sentence boundary, so the noun stays clean.
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The invoice covers the billing period.
+  absent: ai-tells.MicDrop
+
+- name: grace period noun
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The lock has a short grace period.
+  absent: ai-tells.MicDrop
+
+- name: ordinary full sentence with a verb
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: The parser handles every case in the suite, and the cache stays warm between runs.
+  absent: ai-tells.MicDrop
+
+- name: it matters inside a sentence
+  rule: ../../styles/ai-tells/MicDrop.yml
+  input: It matters when the cache is cold.
+  absent: ai-tells.MicDrop

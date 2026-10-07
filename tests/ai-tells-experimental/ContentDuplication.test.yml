@@ -31,3 +31,65 @@
 
     The installer copies the binary into the user's local bin directory and sets its permissions.
   absent: ai-tells-experimental.ContentDuplication
+
+- name: sentence repeated inside one paragraph
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory. Afterwards the shell reloads its path. The installer copies the binary into the local bin directory now.
+  contains: ai-tells-experimental.ContentDuplication
+
+- name: distinct sentences inside one paragraph
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory. Afterwards the shell reloads its path. Run the doctor command to confirm the new binary resolves.
+  absent: ai-tells-experimental.ContentDuplication
+
+- name: loosely overlapping paragraphs
+  about: Paragraphs must share more than 60 percent of their words, so a shared opening is not enough.
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the local bin directory and sets its permissions.
+
+    The installer also writes a default config file, registers a systemd unit, and starts the daemon at boot.
+  absent: ai-tells-experimental.ContentDuplication
+
+- name: repeated short lines
+  about: Paragraphs under eight words are skipped.
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    Run the doctor command again.
+
+    Run the doctor command again.
+  absent: ai-tells-experimental.ContentDuplication
+
+- name: repeated list items
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    - The installer copies the binary into the user's local bin directory and sets its permissions.
+
+    - The installer copies the binary into the user's local bin directory and sets its permissions.
+  absent: ai-tells-experimental.ContentDuplication
+
+- name: repeated code fence
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    ```text
+    The installer copies the binary into the user's local bin directory and sets its permissions.
+    ```
+
+    ```text
+    The installer copies the binary into the user's local bin directory and sets its permissions.
+    ```
+  absent: ai-tells-experimental.ContentDuplication

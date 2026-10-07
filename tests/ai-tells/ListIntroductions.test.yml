@@ -1,0 +1,73 @@
+---
+- name: below you'll find
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Below you'll find the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Below you'll find'"
+
+- name: below you will find
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Below you will find the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Below you will find'"
+
+- name: here's a breakdown of
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Here's a breakdown of the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Here's a breakdown of'"
+
+- name: here is an overview of
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Here is an overview of the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Here is an overview of'"
+
+- name: here's a summary of
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Here's a summary of the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Here's a summary of'"
+
+- name: here's everything you need to know
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Here's everything you need to know about the options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Here's everything you need to know'"
+
+- name: here's what you need to know about
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Here's what you need to know about the options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'Here's what you need to know about'"
+
+- name: the following sections will
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: The following sections will cover the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'The following sections will'"
+
+- name: the following guide will
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: The following guide will cover the supported options.
+  contains:
+    - ai-tells.ListIntroductions
+    - "'The following guide will'"
+
+- name: plain list lead-in
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: The supported options are listed in the table.
+  absent: ai-tells.ListIntroductions
+
+- name: here is the file
+  rule: ../../styles/ai-tells/ListIntroductions.yml
+  input: Here is the config file that the loader reads.
+  absent: ai-tells.ListIntroductions

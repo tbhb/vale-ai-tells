@@ -1,0 +1,43 @@
+---
+- name: reversal verb then a universal
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: For search, the join reverses, and a chunk that ranks well maps back to every blob.
+  contains:
+    - ai-tells.CoordinatedReveal
+    - "'reverses, and a chunk that ranks well maps back to every'"
+
+- name: coordinated absolute after the and
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The table is append-only, and a blob's bytes never change once captured.
+  contains: "', and a blob's bytes never change'"
+
+- name: coordinated absolute with a copula
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The index is small, and the source symbol is always the table entry.
+  contains: "', and the source symbol is always the'"
+
+- name: coordinated restriction
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The pass is called by the sweeper, and only the sweeper may reset it.
+  contains: "', and only the'"
+
+- name: coordinated nothing else
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The handle belongs to the loader, and nothing else has it.
+  contains: "', and nothing else'"
+
+- name: universal with an anaphoric relative
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The map points back to every blob that contains it.
+  contains: "'every blob that contains it'"
+
+- name: plain coordination without a totality word
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The table is append-only, and the loader reads it twice.
+  absent: ai-tells.CoordinatedReveal
+
+- name: at all after a reversal verb
+  about: The lookbehind keeps "at all" from counting as a universal.
+  rule: ../../styles/ai-tells/CoordinatedReveal.yml
+  input: The join reverses, and the parser stops at all.
+  absent: ai-tells.CoordinatedReveal

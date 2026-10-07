@@ -1,0 +1,48 @@
+---
+- name: x not y heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Policy, not process"
+  contains:
+    - ai-tells.MicDropHeadings
+    - "'Policy, not process'"
+
+- name: x never y heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Safety, never speed"
+  contains: "'Safety, never speed'"
+
+- name: x then y heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Measure, then cut"
+  contains: "'Measure, then cut'"
+
+- name: x over y heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Speed over safety"
+  contains: "'Speed over safety'"
+
+- name: x first y second heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Tests first, code second"
+  contains: "'Tests first, code second'"
+
+- name: x first y never heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Tests first, code never"
+  contains: "'Tests first, code never'"
+
+- name: mic drop in a subheading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "## Policy, not process"
+  contains: ai-tells.MicDropHeadings
+
+- name: descriptive heading
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: "# Choosing a cache size"
+  absent: ai-tells.MicDropHeadings
+
+- name: mic drop in body prose
+  about: The rule is scoped to headings, so the same words in a paragraph stay quiet.
+  rule: ../../styles/ai-tells/MicDropHeadings.yml
+  input: Speed over safety is the usual tradeoff.
+  absent: ai-tells.MicDropHeadings

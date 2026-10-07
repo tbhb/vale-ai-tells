@@ -1,0 +1,72 @@
+---
+- name: cannot be overstated
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The importance of tests cannot be overstated.
+  contains:
+    - ai-tells.UrgencyInflation
+    - "'cannot be overstated'"
+
+- name: cannot be emphasized enough
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The value of a backup can't be emphasized enough.
+  contains: "'can't be emphasized enough'"
+
+- name: more important than ever
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: Logging is more important than ever.
+  contains: "'more important than ever'"
+
+- name: more vital than ever
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: Review is more vital than ever.
+  contains: "'more vital than ever'"
+
+- name: has never been more
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: Code review has never been more critical.
+  contains: "'has never been more critical'"
+
+- name: have never been more
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: Backups have never been more urgent.
+  contains: "'have never been more urgent'"
+
+- name: stakes have never been higher
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The stakes have never been higher for the release.
+  contains: "'The stakes have never been higher'"
+
+- name: stakes are higher than ever
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The stakes are higher than ever this quarter.
+  contains: "'The stakes are higher than ever'"
+
+- name: at a crossroads
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The project is at a crossroads.
+  contains: "'at a crossroads'"
+
+- name: at an inflection point
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The ecosystem is at an inflection point.
+  contains: "'at an inflection point'"
+
+- name: increasingly complex world
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: In an increasingly complex world, logs matter.
+  contains: "'In an increasingly complex world'"
+
+- name: ever more connected world
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: In an ever more connected world, retries matter.
+  contains: "'In an ever more connected world'"
+
+- name: ordinary comparison
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The new parser is more important to the build than the old one.
+  absent: ai-tells.UrgencyInflation
+
+- name: literal junction
+  rule: ../../styles/ai-tells/UrgencyInflation.yml
+  input: The bus stops at a junction near the depot.
+  absent: ai-tells.UrgencyInflation

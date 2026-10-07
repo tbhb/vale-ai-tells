@@ -1,0 +1,54 @@
+---
+- name: attributive graded default
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The loader falls back to a benign default.
+  contains:
+    - ai-tells.AnthropomorphicAdjectives
+    - "'a benign default'"
+
+- name: attributive with a modifier
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: Every refactor breaks the brittle integration test.
+  contains: "'the brittle integration'"
+
+- name: attributive generous timeout
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The client sets a generous timeout.
+  contains: "'a generous timeout'"
+
+- name: predicative adjective
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The parser is brittle.
+  contains: "'is brittle'"
+
+- name: predicative with an adverb
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The heap target was mostly noisy.
+  contains: "'was mostly noisy'"
+
+- name: predicative honest
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: That claim is honest about its limits.
+  contains: "'is honest'"
+
+- name: predicative stays healthy
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The cache stays healthy under load.
+  contains: "'stays healthy'"
+
+- name: benign tumor is literal
+  about: The attributive token refuses the heads that take the adjective literally.
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The biopsy showed a benign tumor.
+  absent: ai-tells.AnthropomorphicAdjectives
+
+- name: healthy patient is literal
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: The trial enrolled a healthy patient.
+  absent: ai-tells.AnthropomorphicAdjectives
+
+- name: to be honest
+  about: The infinitive is left out of the predicative token.
+  rule: ../../styles/ai-tells/AnthropomorphicAdjectives.yml
+  input: To be honest, the output is hard to read.
+  absent: ai-tells.AnthropomorphicAdjectives

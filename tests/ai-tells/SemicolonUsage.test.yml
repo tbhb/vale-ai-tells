@@ -1,0 +1,43 @@
+---
+- name: comma-free clause-final continuation
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The cache is warm; the queue is empty.
+  contains:
+    - ai-tells.SemicolonUsage
+    - "'; the queue is empty.'"
+
+- name: semicolon before however
+  about: >-
+    The conjunctive adverbs join clauses without a comma and are
+    exempt.
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The cache is warm; however the queue is empty.
+  absent: ai-tells.SemicolonUsage
+
+- name: semicolon before therefore
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The cache is warm; therefore the queue is empty.
+  absent: ai-tells.SemicolonUsage
+
+- name: semicolon before instead
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The cache is warm; instead the queue is empty.
+  absent: ai-tells.SemicolonUsage
+
+- name: continuation carrying a comma
+  about: >-
+    The legitimate uses nearly always carry a comma, so the token needs
+    a comma-free continuation.
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The cache is warm; the queue is empty, and the workers are idle.
+  absent: ai-tells.SemicolonUsage
+
+- name: series with internal commas
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The sites are Austin, Texas; Dublin, Ireland; and Osaka, Japan.
+  absent: ai-tells.SemicolonUsage
+
+- name: no semicolon
+  rule: ../../styles/ai-tells/SemicolonUsage.yml
+  input: The cache is warm. The queue is empty.
+  absent: ai-tells.SemicolonUsage

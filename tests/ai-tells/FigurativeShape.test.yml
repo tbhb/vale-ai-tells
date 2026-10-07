@@ -1,0 +1,65 @@
+---
+- name: determiner-gated noun
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: Those two numbers pick the review shape.
+  contains:
+    - ai-tells.FigurativeShape
+    - "'the review shape'"
+
+- name: modifier in the determiner slot
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The loader rejects the wrong shape of input.
+  contains: "'the wrong shape'"
+
+- name: shape of with a determined complement
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: Document shape of the parse trees before coding.
+  contains: "'shape of the '"
+
+- name: gerund verb
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The council is shaping the direction of the API.
+  contains: "'shaping the'"
+
+- name: relative verb
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: Check what shapes the output of the formatter.
+  contains: "'what shapes the'"
+
+- name: hyphenated compound
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The linter flags code-shaped prose in comments.
+  contains: "'code-shaped'"
+
+- name: gated plural
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: Compare the shapes agent prose builds.
+  contains: "'the shapes'"
+
+- name: compiler term of art
+  about: The modifier refuses the Go compiler's "GC shape".
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The compiler stencils one function per GC shape.
+  absent: ai-tells.FigurativeShape
+
+- name: generics vocabulary
+  about: The trailing check refuses the generics vocabulary.
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: A shape type is passed as a dictionary argument.
+  absent: ai-tells.FigurativeShape
+
+- name: geometric head
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The renderer reads the shape of the curve from the font.
+  absent: ai-tells.FigurativeShape
+
+- name: literal outline prefix
+  about: The hyphenated compound refuses geometry prefixes.
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The bracket is an L-shaped piece of steel.
+  absent: ai-tells.FigurativeShape
+
+- name: literal plural
+  rule: ../../styles/ai-tells/FigurativeShape.yml
+  input: The plotter draws the shapes of the glyphs in black.
+  absent: ai-tells.FigurativeShape

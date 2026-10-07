@@ -1,0 +1,184 @@
+---
+- name: moreover
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Moreover, the parser handles every case.
+  contains:
+    - ai-tells.FormalTransitions
+    - "'Moreover'"
+
+- name: furthermore
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Furthermore, the cache stays warm.
+  contains: "'Furthermore'"
+
+- name: therefore
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The index is stale. Therefore, the build reruns.
+  contains: "'Therefore'"
+
+- name: nevertheless
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Nevertheless, the test passes.
+  contains: "'Nevertheless'"
+
+- name: thus
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Thus, the cache is rebuilt.
+  contains: "'Thus'"
+
+- name: in addition
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: In addition, the loader reads the lockfile.
+  contains: "'In addition'"
+
+- name: on the contrary
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: On the contrary, the cache is cold.
+  contains: "'On the contrary'"
+
+- name: as a result
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: As a result, the build fails.
+  contains: "'As a result'"
+
+- name: for example
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: For example, the loader reads the lockfile.
+  contains: "'For example'"
+
+- name: sentence-initial specifically with a comma
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Specifically, the loader reads the lockfile.
+  contains: "'Specifically'"
+
+- name: sentence-initial significantly after a period
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The tests pass. Significantly, the loader reads the lockfile.
+  contains: "'Significantly'"
+
+- name: mid-sentence specifically
+  about: The manner adverb flags only as a sentence-initial transition with a trailing comma.
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The loader is specifically designed for lockfiles.
+  absent: ai-tells.FormalTransitions
+
+- name: mid-sentence significantly
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The loader runs significantly faster than before.
+  absent: ai-tells.FormalTransitions
+
+- name: sentence-initial essentially with a comma
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Essentially, the loader reads the lockfile.
+  contains: "'Essentially'"
+
+- name: sentence-initial fundamentally with a comma
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Fundamentally, the loader reads the lockfile.
+  contains: "'Fundamentally'"
+
+- name: notably
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Notably, the loader reads the lockfile.
+  contains: "'Notably'"
+
+- name: with that in mind
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: With that in mind, the loader reads the lockfile.
+  contains: "'With that in mind'"
+
+- name: to that end
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: To that end, the loader reads the lockfile.
+  contains: "'To that end'"
+
+- name: building on this
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Building on this, the loader reads the lockfile.
+  contains: "'Building on this'"
+
+- name: that's why
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: That's why the loader reads the lockfile.
+  contains: "'That's why'"
+
+- name: this is because
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: This is because the loader reads the lockfile.
+  contains: "'This is because'"
+
+- name: what's more
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: What's more, the loader reads the lockfile.
+  contains: "'What's more'"
+
+- name: not to mention
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The loader is fast, not to mention small.
+  contains: "'not to mention'"
+
+- name: on that note
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: On that note, the loader reads the lockfile.
+  contains: "'On that note'"
+
+- name: case in point
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Case in point, the loader reads the lockfile.
+  contains: "'Case in point'"
+
+- name: sentence-initial of note
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Of note, the loader reads the lockfile.
+  contains: "'Of note'"
+
+- name: mid-sentence point of note
+  about: The bare opener is the tell, but mid-sentence "a point of note" is not.
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The lockfile format is a point of note for maintainers.
+  absent: ai-tells.FormalTransitions
+
+- name: in the same vein
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: In the same vein, the loader reads the lockfile.
+  contains: "'In the same vein'"
+
+- name: by extension
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: By extension, the loader reads the lockfile.
+  contains: "'By extension'"
+
+- name: that's not all
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: That's not all the loader does.
+  contains: "'That's not all'"
+
+- name: better yet
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Better yet, the loader reads the lockfile.
+  contains: "'Better yet'"
+
+- name: equally important
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Equally important, the loader reads the lockfile.
+  contains: "'Equally important'"
+
+- name: that is to say
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: That is to say, the loader reads the lockfile.
+  contains: "'That is to say'"
+
+- name: in light of this
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: In light of this, the loader reads the lockfile.
+  contains: "'In light of this'"
+
+- name: given that
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: Given that, the loader reads the lockfile.
+  contains: "'Given that'"
+
+- name: plain connector
+  rule: ../../styles/ai-tells/FormalTransitions.yml
+  input: The index is stale, so the build reruns.
+  absent: ai-tells.FormalTransitions

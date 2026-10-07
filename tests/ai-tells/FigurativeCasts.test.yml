@@ -1,0 +1,78 @@
+---
+- name: aspersion casts doubt
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The finding casts doubt on the benchmark.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts doubt on'"
+
+- name: aspersion long shadow
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The decision casts a long shadow over the release.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts a long shadow over'"
+
+- name: aspersion pall
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The outage casts a pall on the launch.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts a pall'"
+
+- name: aspersion aspersions
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The review casts aspersions on the old design.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts aspersions'"
+
+- name: illumination light on
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The trace casts light on the slow path.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts light on'"
+
+- name: illumination in a new light
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The framing casts it in a new light.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts it in a new light'"
+
+- name: reach wide net
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The search casts a wide net across the repositories.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts a wide net'"
+
+- name: dismissal
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The rewrite casts aside the old interface.
+  contains:
+    - ai-tells.FigurativeCasts
+    - "'casts aside'"
+
+- name: fishing line
+  about: >-
+    Literal casting stays quiet; the complement is the discriminator.
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: She cast the line into the river at dawn.
+  absent: ai-tells.FigurativeCasts
+
+- name: metalwork
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The foundry cast the housing in bronze.
+  absent: ai-tells.FigurativeCasts
+
+- name: ballot
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: Each member cast a ballot before the meeting closed.
+  absent: ai-tells.FigurativeCasts
+
+- name: theater cast
+  rule: ../../styles/ai-tells/FigurativeCasts.yml
+  input: The cast of the play rehearses on Tuesday.
+  absent: ai-tells.FigurativeCasts

@@ -1,0 +1,95 @@
+---
+- name: three plain bullets
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    - src/lexer.go
+    - src/token.go
+    - src/parser.go
+  contains: ai-tells-commits.CommitFileListing
+
+- name: backticked paths
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    - `src/lexer.go`
+    - `src/token.go`
+    - `src/parser.go`
+  contains: ai-tells-commits.CommitFileListing
+
+- name: bold paths
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    - **src/lexer.go**
+    - **src/token.go**
+    - **src/parser.go**
+  contains: ai-tells-commits.CommitFileListing
+
+- name: paths with a trailing annotation
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    - src/lexer.go: add the scanner
+    - src/token.go - define the kinds
+    - src/parser.go — consume the kinds
+  contains: ai-tells-commits.CommitFileListing
+
+- name: asterisk and plus markers
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    * src/lexer.go
+    + src/token.go
+    - docs/lexer.md
+  contains: ai-tells-commits.CommitFileListing
+
+- name: list ends the buffer
+  about: Vale hands a raw block over without a trailing newline.
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: "refactor(parser): split the lexer\n\n- a.py\n- b.py\n- c.py"
+  contains: ai-tells-commits.CommitFileListing
+
+- name: two bullets
+  about: The rule needs three or more consecutive file bullets.
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    - src/lexer.go
+    - src/token.go
+  absent: ai-tells-commits.CommitFileListing
+
+- name: bullets that describe the change
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    - The scanner reads one rune at a time.
+    - Token kinds move into their own type.
+    - The parser consumes the kinds directly.
+  absent: ai-tells-commits.CommitFileListing
+
+- name: extension outside the list
+  rule: ../../styles/ai-tells-commits/CommitFileListing.yml
+  format: txt
+  input: |
+    chore(assets): add the logo
+
+    - assets/logo.png
+    - assets/banner.png
+    - assets/icon.png
+  absent: ai-tells-commits.CommitFileListing

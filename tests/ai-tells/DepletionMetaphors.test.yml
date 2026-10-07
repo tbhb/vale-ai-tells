@@ -1,0 +1,43 @@
+---
+- name: exhausting a budget
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: The loop exhausts its retry budget on every call.
+  contains:
+    - ai-tells.DepletionMetaphors
+    - "'exhausts its retry budget'"
+
+- name: starving a thing of a resource
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: A long retry starves the writer of slots.
+  contains:
+    - ai-tells.DepletionMetaphors
+    - "'starves the writer of'"
+
+- name: stalling on an obstacle
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: The job stalls on the lock until the holder exits.
+  contains:
+    - ai-tells.DepletionMetaphors
+    - "'stalls on'"
+
+- name: degrading on an obstacle
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: The query degrades on large inputs.
+  contains:
+    - ai-tells.DepletionMetaphors
+    - "'degrades on'"
+
+- name: exhaust without a budget object
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: The loop exhausts the iterator and returns.
+  absent: ai-tells.DepletionMetaphors
+
+- name: starvation noun
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: Starvation is possible when readers hold the lock.
+  absent: ai-tells.DepletionMetaphors
+
+- name: scheduler stall noun
+  rule: ../../styles/ai-tells/DepletionMetaphors.yml
+  input: A stall in the scheduler delays the next tick.
+  absent: ai-tells.DepletionMetaphors

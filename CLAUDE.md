@@ -50,7 +50,7 @@ A clone already contains the vendored payload, because it is committed. Delete i
 ```bash
 vale --config=.vale.ini test-document.md
 mise run test-rules   # the per-rule cases under tests/
-mise run test         # the rule cases, then the fixture guard: tells fire, subjects smoke-test, no false positives
+mise run test         # the rule cases, then the false-positive fixtures stay clean
 ```
 
 Cases for a rule go in `tests/<style>/<Rule>.test.yml`, with `rule: ../../styles/<style>/<Rule>.yml` isolating it. Assert with `contains` (the check name and the quoted match) and `absent`. Keep them out of `styles/`: vale before 3.24 loads every `.yml` there as a rule, and a test file breaks `vale sync` for consumers.
@@ -118,6 +118,6 @@ Appreciate the irony: an AI working on a tool that detects AI writing. Lean into
 
 Before committing changes:
 
-1. Test against `test-document.md`
+1. Add or update the rule's cases in `tests/<style>/<Rule>.test.yml`, one per token family and one per guard, and run `mise run test`
 2. Ensure rules don't have excessive false positives
 3. Update README.md if adding/removing rules

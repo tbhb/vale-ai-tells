@@ -35,3 +35,66 @@
 
     An empty file returned a nil tree, which the caller dereferenced.
   absent: ai-tells-commits.CommitTestEnumeration
+
+- name: tests passing with a count
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    12 tests passing after the change.
+  contains: "'12 tests passing'"
+
+- name: tests failing
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    3 tests failed before the change.
+  contains: "'3 tests failed'"
+
+- name: passed and failed counts
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Result: 40 passed, 2 failed.
+  contains: "'40 passed, 2 failed'"
+
+- name: all tests green
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    All tests green.
+  contains: "'All tests green'"
+
+- name: check emoji before all tests
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    ✅ all tests
+  contains: "'✅ all tests'"
+
+- name: coverage percent before the noun
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Raises line coverage to 91.5% line coverage.
+  contains: "'91.5% line coverage'"
+
+- name: describes a new test case
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  format: txt
+  input: |
+    test(parser): cover empty input
+
+    Adds a case that feeds an empty file to the parser.
+  absent: ai-tells-commits.CommitTestEnumeration

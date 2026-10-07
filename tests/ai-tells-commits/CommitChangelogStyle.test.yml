@@ -1,0 +1,78 @@
+---
+- name: level two added heading
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    ## Added
+
+    A flag that skips empty files.
+  contains:
+    - ai-tells-commits.CommitChangelogStyle
+    - "heading '## Added"
+
+- name: level three fixed heading
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    ### Fixed
+
+    An empty file no longer returns a nil tree.
+  contains: "heading '### Fixed"
+
+- name: level four breaking changes heading
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    feat(parser)!: drop the legacy flag
+
+    #### Breaking Changes
+
+    The legacy flag is gone.
+  contains: "heading '#### Breaking Changes"
+
+- name: bug fixes heading
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    ## Bug Fixes
+
+    An empty file no longer returns a nil tree.
+  contains: "heading '## Bug Fixes"
+
+- name: heading outside the keyword list
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    ## Background
+
+    An empty file returned a nil tree.
+  absent: ai-tells-commits.CommitChangelogStyle
+
+- name: keyword inside a sentence
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    The first heading is Added in the changelog, and the parser is fixed.
+  absent: ai-tells-commits.CommitChangelogStyle
+
+- name: level one heading
+  about: The rule matches two to four hashes only.
+  rule: ../../styles/ai-tells-commits/CommitChangelogStyle.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    # Fixed
+
+    An empty file no longer returns a nil tree.
+  absent: ai-tells-commits.CommitChangelogStyle

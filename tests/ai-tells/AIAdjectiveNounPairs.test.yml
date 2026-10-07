@@ -1,0 +1,23 @@
+---
+- name: adjective before a noun
+  rule: ../../styles/ai-tells/AIAdjectiveNounPairs.yml
+  input: The team shipped a seamless integration with the billing service.
+  contains:
+    - ai-tells.AIAdjectiveNounPairs
+    - "'seamless integration'"
+
+- name: another listed adjective before a plural noun
+  rule: ../../styles/ai-tells/AIAdjectiveNounPairs.yml
+  input: The release brought comprehensive changes to the parser.
+  contains: "'comprehensive changes'"
+
+- name: adjective with no noun after it
+  about: The second token needs a noun tag, so a predicate adjective stays quiet.
+  rule: ../../styles/ai-tells/AIAdjectiveNounPairs.yml
+  input: The new design is comprehensive.
+  absent: ai-tells.AIAdjectiveNounPairs
+
+- name: adjective outside the list
+  rule: ../../styles/ai-tells/AIAdjectiveNounPairs.yml
+  input: The team shipped a fast integration with the billing service.
+  absent: ai-tells.AIAdjectiveNounPairs

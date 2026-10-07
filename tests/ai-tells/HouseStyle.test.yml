@@ -1,0 +1,53 @@
+---
+- name: house style
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: The linter enforces the house style.
+  contains:
+    - ai-tells.HouseStyle
+    - "'house style'"
+
+- name: house styles plural
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: Both teams keep their own house styles.
+  contains: "'house styles'"
+
+- name: house tic
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: That phrase is a house tic.
+  contains: "'house tic'"
+
+- name: house formula
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: The commit body repeats a house formula.
+  contains: "'house formula'"
+
+- name: house voice
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: The docs drift away from the house voice.
+  contains: "'house voice'"
+
+- name: house idiom
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: The README leans on a house idiom.
+  contains: "'house idiom'"
+
+- name: house idioms plural
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: The changelog uses two house idioms.
+  contains: "'house idioms'"
+
+- name: in-house compound
+  about: The lookbehind keeps "in-house style" quiet, since it is in-house plus style.
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: Our in-house style guide covers headings.
+  absent: ai-tells.HouseStyle
+
+- name: in-house plural compound
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: Both in-house styles cover headings.
+  absent: ai-tells.HouseStyle
+
+- name: house as a building
+  rule: ../../styles/ai-tells/HouseStyle.yml
+  input: The old house has a style of its own.
+  absent: ai-tells.HouseStyle

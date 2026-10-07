@@ -1,0 +1,54 @@
+---
+- name: was plus participle
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The file was deleted by the cleanup job.
+  contains:
+    - ai-tells-experimental.PassiveVoice
+    - "'was deleted'"
+
+- name: is plus participle
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The cache is called before every build.
+  contains: ai-tells-experimental.PassiveVoice
+
+- name: has been plus participle
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The patch has been made available to every tester.
+  contains: ai-tells-experimental.PassiveVoice
+
+- name: will be plus participle
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The request will be rejected by the server.
+  contains: ai-tells-experimental.PassiveVoice
+
+- name: get passive
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The old records get deleted every night.
+  contains: ai-tells-experimental.PassiveVoice
+
+- name: got passive
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The branch got deleted after the merge.
+  contains: ai-tells-experimental.PassiveVoice
+
+- name: conventional passive is still flagged
+  about: The rule has no exceptions, so established passives such as "is deprecated" fire too.
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: This flag is deprecated and will be removed.
+  contains: ai-tells-experimental.PassiveVoice
+
+- name: predicate adjective stays quiet
+  about: Predicate adjectives tag as JJ, unlike the regex passive rules.
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The results were mixed and the color is red.
+  absent: ai-tells-experimental.PassiveVoice
+
+- name: active voice stays quiet
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The cleanup job deleted the file and the server rejected the request.
+  absent: ai-tells-experimental.PassiveVoice
+
+- name: adverb gap stays with PassiveVoiceAdverb
+  rule: ../../styles/ai-tells-experimental/PassiveVoice.yml
+  input: The helper was never used in production.
+  absent: ai-tells-experimental.PassiveVoice

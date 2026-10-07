@@ -1,0 +1,77 @@
+---
+- name: flywheel effect
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The plugin ecosystem has a flywheel effect on adoption.
+  contains:
+    - ai-tells.StrategyBuzzwords
+    - "'flywheel effect'"
+
+- name: qualified flywheel
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The team describes a growth flywheel around the rule catalog.
+  contains: "'growth flywheel'"
+
+- name: building a flywheel
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The roadmap aims at building a flywheel from user rules.
+  contains: "'building a flywheel'"
+
+- name: qualified moat
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The vendor claims a defensible moat in the lint market.
+  contains: "'defensible moat'"
+
+- name: building a moat
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The company is widening the moat with every release.
+  contains: "'widening the moat'"
+
+- name: moat around the business
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The pitch deck promises a moat around the business.
+  contains: "'moat around the business'"
+
+- name: north star metric
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The dashboard tracks the north star metric for rule adoption.
+  contains: "'north star metric'"
+
+- name: our north star
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: Accuracy is our north star for this project.
+  contains: "'our north star'"
+
+- name: network effects
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The marketplace benefits from network effects as more authors join.
+  contains: "'network effects'"
+
+- name: first-mover advantage
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The vendor enjoys a first-mover advantage in this niche.
+  contains: "'first-mover advantage'"
+
+- name: land grab
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The announcement set off a market land grab among vendors.
+  contains: "'market land grab'"
+
+- name: mechanical flywheel
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The engine bolts a heavy flywheel to the crankshaft.
+  absent: ai-tells.StrategyBuzzwords
+
+- name: castle moat
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: The castle had a moat around the outer wall.
+  absent: ai-tells.StrategyBuzzwords
+
+- name: the actual north star
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: Sailors once used the north star to find their heading.
+  absent: ai-tells.StrategyBuzzwords
+
+- name: bare first mover
+  rule: ../../styles/ai-tells/StrategyBuzzwords.yml
+  input: In the chess opening, the first mover picks the pace.
+  absent: ai-tells.StrategyBuzzwords

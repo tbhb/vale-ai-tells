@@ -1,0 +1,70 @@
+---
+- name: structural label with a long lowercase clause
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The dominant attendee report: developers build from scratch because the tools disagree."
+  contains:
+    - ai-tells.LabelAndExplain
+    - "'The dominant attendee report:'"
+
+- name: curated label with a capitalized continuation
+  about: The curated labels fire whatever follows the colon.
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The takeaway: Always test the parser."
+  contains: "'The takeaway:'"
+
+- name: curated label with a short continuation
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The catch: it is slow."
+  contains: "'The catch:'"
+
+- name: curated label the price
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The price: one extra read per lookup."
+  contains: "'The price:'"
+
+- name: curated label trade-off
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The trade-off: memory for speed."
+  contains: "'The trade-off:'"
+
+- name: curated label the fix
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The fix: pin the version."
+  contains: "'The fix:'"
+
+- name: curated label the payoff
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The payoff: faster builds."
+  contains: "'The payoff:'"
+
+- name: short value after a plain label
+  about: The clause must run 20 characters, so a short value stays quiet.
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The output: green."
+  absent: ai-tells.LabelAndExplain
+
+- name: dotted file list
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The three files: a.go, b.go, and c.go."
+  absent: ai-tells.LabelAndExplain
+
+- name: clause label with a copula
+  about: The copula lookbehind skips a label that is really a clause.
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The following options are available: the parser accepts a path and a flag."
+  absent: ai-tells.LabelAndExplain
+
+- name: capitalized value after a plain label
+  about: Label with a capital continuation belongs to ColonUsage, not this rule.
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: "The config file: Some long capitalized explanation follows here."
+  absent: ai-tells.LabelAndExplain
+
+- name: curated label in a heading
+  about: The negated heading scope keeps a heading quiet.
+  rule: ../../styles/ai-tells/LabelAndExplain.yml
+  input: |
+    # The catch: read this first
+
+    Body text.
+  absent: ai-tells.LabelAndExplain

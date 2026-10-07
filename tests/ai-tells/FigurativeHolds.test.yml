@@ -1,0 +1,105 @@
+---
+- name: mirrored possession
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The second chart holds the same spread as the first.
+  contains:
+    - ai-tells.FigurativeHolds
+    - "'holds the same spread'"
+
+- name: mirrored possession with an adjective
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The new page holds a similar layout to the old one.
+  contains: "'holds a similar layout'"
+
+- name: mirrored possession in the past
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The old page held an identical header.
+  contains: "'held an identical header'"
+
+- name: holds true
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The bound holds true for every input.
+  contains: "'holds true'"
+
+- name: holds up under scrutiny
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The design holds up under scrutiny.
+  contains: "'holds up under'"
+
+- name: holds water
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The analogy does not hold water.
+  contains: "'hold water'"
+
+- name: holds at scale
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The approach holds at scale.
+  contains: "'holds at scale'"
+
+- name: holds across datasets
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The speedup holds across datasets.
+  contains: "'holds across'"
+
+- name: subject-gated survival
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The correlation still holds after the rerun.
+  contains: "'correlation still holds'"
+
+- name: subject-gated progressive
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The invariant is still holding at the end of the loop.
+  contains: "'invariant is still holding'"
+
+- name: holds promise
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The approach holds great promise for the build.
+  contains: "'holds great promise'"
+
+- name: holds weight
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The benchmark holds little weight with reviewers.
+  contains: "'holds little weight'"
+
+- name: holds the key to
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The index holds the key to the speedup.
+  contains: "'holds the key to'"
+
+- name: holds the line
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The linter holds the line on style.
+  contains: "'holds the line'"
+
+- name: constraint enforcement with a bound noun
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The sandbox holds network access to an approved-domain allowlist.
+  contains: "'holds network access to an approved-domain allowlist'"
+
+- name: constraint enforcement with a numeric bound
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The limiter holds request rates to under 100 per second.
+  contains: "'holds request rates to under'"
+
+- name: literal container
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The bucket holds three files.
+  absent: ai-tells.FigurativeHolds
+
+- name: reference to
+  about: The constraint token needs a bound noun after "to", so "holds a reference to" stays quiet.
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The struct holds a reference to the parent node.
+  absent: ai-tells.FigurativeHolds
+
+- name: passive belief
+  about: The copula pairs only with "holding", so passive belief stays out.
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The assumption is widely held among maintainers.
+  absent: ai-tells.FigurativeHolds
+
+- name: holds its own
+  about: '"Holds its own" belongs to AnthropomorphicJustification.'
+  rule: ../../styles/ai-tells/FigurativeHolds.yml
+  input: The new cache holds its own against the old one.
+  absent: ai-tells.FigurativeHolds

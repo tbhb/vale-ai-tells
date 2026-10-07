@@ -1,0 +1,77 @@
+---
+- name: three of six sentences open with one word
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. Linters check every file in the repo. The team ships a release every Friday. Docs explain each flag with an example. The cache holds recent results in memory. Parsers read one token at a time.
+  contains: ai-tells-experimental.SentenceStartRepetition
+
+- name: openers match regardless of case
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. Linters check every file in the repo. the team ships a release every Friday. Docs explain each flag with an example. THE cache holds recent results in memory. Parsers read one token at a time.
+  contains: ai-tells-experimental.SentenceStartRepetition
+
+- name: only two repeats
+  about: A word must open at least three sentences.
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. Linters check every file in the repo. The team ships a release every Friday. Docs explain each flag with an example. Caches hold recent results in memory. Parsers read one token at a time.
+  absent: ai-tells-experimental.SentenceStartRepetition
+
+- name: three repeats at exactly thirty percent
+  about: The share must exceed 30 percent, so three of ten stays quiet.
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. Linters check every file in the repo. The team ships a release every Friday. Docs explain each flag with an example. Caches hold recent results in memory. Parsers read one token at a time. Runners start jobs in order. The queue keeps the oldest job first. Shells find the new binary on their path. Tests run on every push to main.
+  absent: ai-tells-experimental.SentenceStartRepetition
+
+- name: fewer than six sentences
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    The server writes logs to disk. The linter checks every file in the repo. The team ships a release every Friday. Docs explain each flag with an example. Caches hold recent results in memory.
+  absent: ai-tells-experimental.SentenceStartRepetition
+
+- name: repetition split across two sections
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Install
+
+    The server writes logs to disk. Linters check every file in the repo. The team ships a release every Friday.
+
+    # Operate
+
+    Docs explain each flag with an example. The cache holds recent results in memory. Parsers read one token at a time.
+  absent: ai-tells-experimental.SentenceStartRepetition
+
+- name: repetition inside list items
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    - The server writes logs to disk.
+    - Linters check every file in the repo.
+    - The team ships a release every Friday.
+    - Docs explain each flag with an example.
+    - The cache holds recent results in memory.
+    - Parsers read one token at a time.
+  absent: ai-tells-experimental.SentenceStartRepetition
+
+- name: repetition inside a code fence
+  rule: ../../styles/ai-tells-experimental/SentenceStartRepetition.yml
+  input: |
+    # Setup
+
+    ```text
+    The server writes logs to disk. Linters check every file in the repo. The team ships a release every Friday. Docs explain each flag with an example. The cache holds recent results in memory. Parsers read one token at a time.
+    ```
+  absent: ai-tells-experimental.SentenceStartRepetition

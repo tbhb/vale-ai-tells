@@ -1,0 +1,38 @@
+---
+- name: what you'll learn heading
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: "# What You'll Learn"
+  contains:
+    - ai-tells.AnnouncementHeadings
+    - "'What You'll Learn'"
+
+- name: what we will cover heading
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: "# What We Will Cover"
+  contains: "'What We Will Cover'"
+
+- name: what to expect heading
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: "## What to Expect"
+  contains: "'What to Expect'"
+
+- name: what we're building heading
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: "## What We're Building"
+  contains: "'What We're Building'"
+
+- name: here's what you'll get heading
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: "## Here's What You'll Get"
+  contains: "'Here's What You'll Get'"
+
+- name: topic heading
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: "# Installing the parser"
+  absent: ai-tells.AnnouncementHeadings
+
+- name: announcement phrase in body text
+  about: The rule is scoped to headings, so the same words in a paragraph stay quiet.
+  rule: ../../styles/ai-tells/AnnouncementHeadings.yml
+  input: This page shows what to expect from the parser and what you will learn.
+  absent: ai-tells.AnnouncementHeadings

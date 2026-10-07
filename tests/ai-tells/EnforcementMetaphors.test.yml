@@ -1,0 +1,124 @@
+---
+- name: stands down
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The guard stands down after the first run.
+  contains:
+    - ai-tells.EnforcementMetaphors
+    - "'stands down'"
+
+- name: stand an object down
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: We stand the commit guard down on release branches.
+  contains: "'stand the commit guard down'"
+
+- name: gate stays armed
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The gate stays armed for every write.
+  contains: "'gate stays armed'"
+
+- name: arming a gate
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The workflow arms a gate over every write.
+  contains: "'arms a gate'"
+
+- name: keeps its teeth
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The check keeps its teeth on the main branch.
+  contains: "'keeps its teeth'"
+
+- name: toothless
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: A toothless check never fails the build.
+  contains: "'toothless'"
+
+- name: polices
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: One workflow polices the arrangement of the files.
+  contains: "'polices the'"
+
+- name: fights for
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: A formatter would fight the installer for it.
+  contains: "'fight the installer for'"
+
+- name: keeps them honest
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: These are the gates that keep them honest.
+  contains: "'keep them honest'"
+
+- name: keeps a compound object honest
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The test keeps the benchmark numbers honest.
+  contains: "'keeps the benchmark numbers honest'"
+
+- name: honest count
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The report gives an honest count of the failures.
+  contains: "'an honest count'"
+
+- name: gates it
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The root that gates it is checked first.
+  contains: "'gates it'"
+
+- name: subject gate the object
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The live roots gate every swept table.
+  contains: "'roots gate every'"
+
+- name: to gate
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: We use a flag to gate the rollout.
+  contains: "'to gate'"
+
+- name: stands behind
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: This is a draft no pull request stands behind.
+  contains: "'stands behind'"
+
+- name: stood in the way
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: One skill stood in the way of the merge.
+  contains: "'stood in the way'"
+
+- name: left standing
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: No consumer was left standing after the removal.
+  contains: "'left standing'"
+
+- name: rule would flood
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: A bare verb rule would flood the report.
+  contains: "'rule would flood'"
+
+- name: governs how
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The flag governs whether the cache writes.
+  contains: "'governs whether'"
+
+- name: escalates to
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: A warning escalates to an error after three runs.
+  contains: "'escalates to'"
+
+- name: arming a timer
+  about: The arming token gates on enforcement nouns, so timers stay quiet.
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The server is arming the ping timer after the handshake.
+  absent: ai-tells.EnforcementMetaphors
+
+- name: honest person
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: She is an honest person and a careful reviewer.
+  absent: ai-tells.EnforcementMetaphors
+
+- name: river flood
+  about: The checking-noun subject is the gate, so a river stays quiet.
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The river will flood the valley in spring.
+  absent: ai-tells.EnforcementMetaphors
+
+- name: plain keeps
+  rule: ../../styles/ai-tells/EnforcementMetaphors.yml
+  input: The cache keeps the last ten entries in memory.
+  absent: ai-tells.EnforcementMetaphors

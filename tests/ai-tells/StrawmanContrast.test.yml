@@ -1,0 +1,65 @@
+---
+- name: gerund tail
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The reader walks the index, rather than walking the whole tree.
+  contains:
+    - ai-tells.StrawmanContrast
+    - "', rather than walking the whole tree.'"
+
+- name: instead of gerund
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: It reads the offsets directly, instead of re-reading every file.
+  contains: "', instead of re-reading every file.'"
+
+- name: determiner tail
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The lookup is one read, rather than a scan.
+  contains: "', rather than a scan.'"
+
+- name: instead of determiner
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The loader checks the first entry, instead of the whole list.
+  contains: "', instead of the whole list.'"
+
+- name: reversal tail
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The join goes from chunk to blob, not the other way around.
+  contains: "', not the other way around'"
+
+- name: reverse tail
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The parent owns the child, not the reverse.
+  contains: "', not the reverse'"
+
+- name: per-unit tail
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: It keeps one copy, not one per caller.
+  contains: "', not one per'"
+
+- name: totality tail
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The pass rewrites the header, not the whole file.
+  contains: "', not the whole file'"
+
+- name: rather than without a comma
+  about: The comma is part of the gate; the bare phrase is ordinary English.
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The tool prefers a flag rather than walking the whole tree.
+  absent: ai-tells.StrawmanContrast
+
+- name: instead of at the sentence start
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: Instead of reading the file, the loader streams it.
+  absent: ai-tells.StrawmanContrast
+
+- name: noun ending in ing
+  about: The gerund gate refuses nouns that end in "ing".
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: The loader returns early, instead of nothing.
+  absent: ai-tells.StrawmanContrast
+
+- name: but not the reverse
+  about: The human spelling "but not the reverse" has no comma before "not".
+  rule: ../../styles/ai-tells/StrawmanContrast.yml
+  input: Every parent owns a child but not the reverse.
+  absent: ai-tells.StrawmanContrast

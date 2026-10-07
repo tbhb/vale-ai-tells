@@ -1,0 +1,83 @@
+---
+- name: significantly faster
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    The lexer is significantly faster on large files.
+  contains:
+    - ai-tells-commits.CommitUnquantifiedClaims
+    - "'significantly faster'"
+
+- name: dramatically reduced
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    Allocations are dramatically reduced.
+  contains: "'dramatically reduced'"
+
+- name: much faster
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    The lexer is much faster on large files.
+  contains: "'much faster'"
+
+- name: huge performance improvement
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    This is a huge performance improvement for large files.
+  contains: "'huge performance improvement'"
+
+- name: blazing fast
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    The lexer is blazing fast on large files.
+  contains: "'blazing fast'"
+
+- name: blazingly fast
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    The lexer is blazingly fast on large files.
+  contains: "'blazingly fast'"
+
+- name: noticeably faster
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    The lexer is noticeably faster on large files.
+  contains: "'noticeably faster'"
+
+- name: claim backed by a measurement
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    Lexing a 10 MB file drops from 480 ms to 310 ms.
+  absent: ai-tells-commits.CommitUnquantifiedClaims
+
+- name: modifier without a comparative
+  rule: ../../styles/ai-tells-commits/CommitUnquantifiedClaims.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    The cache is significantly documented in the README.
+  absent: ai-tells-commits.CommitUnquantifiedClaims

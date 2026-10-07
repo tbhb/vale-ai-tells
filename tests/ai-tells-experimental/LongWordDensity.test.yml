@@ -1,0 +1,10 @@
+---
+- name: long words cross 40 percent
+  rule: ../../styles/ai-tells-experimental/LongWordDensity.yml
+  input: Understanding fundamental architecture requires considerable experience, especially regarding distributed infrastructure.
+  contains: ai-tells-experimental.LongWordDensity
+
+- name: short words stay under
+  rule: ../../styles/ai-tells-experimental/LongWordDensity.yml
+  input: The cat sat on the mat and ate the fish that we put in the red bowl by the door.
+  absent: ai-tells-experimental.LongWordDensity

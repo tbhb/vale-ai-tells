@@ -1,0 +1,129 @@
+---
+- name: ensuring consistency
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    refactor(parser): rename the token type
+
+    Renames Tok to Token, ensuring consistency across the package.
+  contains:
+    - ai-tells-commits.CommitTrailingJustification
+    - "'ensuring consistency'"
+
+- name: ensuring that the
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Returns an error, ensuring that the caller never sees nil.
+  contains: "'ensuring that the'"
+
+- name: improving performance
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    Caches each token, improving performance on large files.
+  contains: "'improving performance'"
+
+- name: improving the overall
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    perf(parser): cache tokens
+
+    Caches each token, improving the overall lexing time.
+  contains: "'improving the overall'"
+
+- name: enhancing readability
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    Splits the lexer, enhancing readability.
+  contains: "'enhancing readability'"
+
+- name: maintaining backwards compatibility
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    Adds the flag, maintaining backwards compatibility with old configs.
+  contains: "'maintaining backwards compatibility'"
+
+- name: providing a better
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Returns an error, providing a better message for an empty file.
+  contains: "'providing a better'"
+
+- name: for improved
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    Splits the lexer for improved clarity.
+  contains: "'for improved clarity'"
+
+- name: for better
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    Splits the lexer for better maintainability.
+  contains: "'for better maintainability'"
+
+- name: for greater clarity
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    Splits the lexer for greater clarity.
+  contains: "'for greater clarity'"
+
+- name: which ensures that
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Returns an error, which ensures that the caller never sees nil.
+  contains: "'which ensures that'"
+
+- name: which makes it easier
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    refactor(parser): split the lexer
+
+    Splits the lexer, which makes it easier to test.
+  contains: "'which makes it easier'"
+
+- name: which results in
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Returns an error, which results in a clear message.
+  contains: "'which results in'"
+
+- name: cause and effect stated plainly
+  rule: ../../styles/ai-tells-commits/CommitTrailingJustification.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree, which the caller dereferenced.
+    The parser now returns an error before building the tree.
+  absent: ai-tells-commits.CommitTrailingJustification

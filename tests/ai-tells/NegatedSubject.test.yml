@@ -1,0 +1,136 @@
+---
+- name: copula with a participle
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No configuration is required for the parser.
+  contains:
+    - ai-tells.NegatedSubject
+    - "'No configuration is required'"
+
+- name: copula with a plural subject
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No breaking changes are introduced by the patch.
+  contains: "'No breaking changes are introduced'"
+
+- name: copula with a modal auxiliary
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No data will be collected during the run.
+  contains: "'No data will be collected'"
+
+- name: copula with a perfect auxiliary
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No changes have been made to the schema.
+  contains: "'No changes have been made'"
+
+- name: copula with an adverb
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No data is ever collected by the tool.
+  contains: "'No data is ever collected'"
+
+- name: gets auxiliary
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No row ever gets deleted here.
+  contains: "'No row ever gets deleted'"
+
+- name: coordinated subject
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No schema migration or manual backfill is needed.
+  contains: "'No schema migration or manual backfill is needed'"
+
+- name: zero spelling
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Zero configuration is required for the parser.
+  contains: "'Zero configuration is required'"
+
+- name: not a single spelling
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Not a single line is wasted in the rewrite.
+  contains: "'Not a single line is wasted'"
+
+- name: mid-sentence after and
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: The sync is safe, and no data is lost on failure.
+  contains: "'and no data is lost'"
+
+- name: adjective predicate
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No field is optional in the new schema.
+  contains: "'No field is optional'"
+
+- name: intransitive verb
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No operational driver appears in the code.
+  contains: "'No operational driver appears'"
+
+- name: intransitive verb with a modal
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No writer should block the reader.
+  contains: "'No writer should block'"
+
+- name: elliptical form
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No signup required.
+  contains: "'No signup required'"
+
+- name: nothing with a verb
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Nothing upstream feeds the stage.
+  contains: "'Nothing upstream feeds'"
+
+- name: nothing with the copula
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Nothing else is required to run the build.
+  contains: "'Nothing else is required'"
+
+- name: none of
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: None of these writes a table.
+  contains: "'None of these writes'"
+
+- name: neither
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Neither subcommand writes back to the file.
+  contains: "'Neither subcommand writes'"
+
+- name: relative clause negated subject
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: The sweep removes every derived row no live record references.
+  contains: "'every derived row no live record references'"
+
+- name: docs conditional in lowercase
+  about: Lowercase "no" after "if" is the docs conditional, so the capital gate keeps it quiet.
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: If no timeout is specified, the default applies.
+  absent: ai-tells.NegatedSubject
+
+- name: degree phrase
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No longer needed after the migration, the flag was removed.
+  absent: ai-tells.NegatedSubject
+
+- name: no one pronoun
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No one was harmed in the incident.
+  absent: ai-tells.NegatedSubject
+
+- name: exception contract
+  about: Returned predicates anchor standard docs formulas and stay out.
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: No error is returned when the file is missing.
+  absent: ai-tells.NegatedSubject
+
+- name: zero padding
+  about: The Zero spelling takes the curated predicates only, so the digit stays quiet.
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Zero padding is allowed in the version field.
+  absent: ai-tells.NegatedSubject
+
+- name: so no adjustment is needed
+  about: With "so" the construction is the consequence idiom, which stays out.
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: The values already match, so no adjustment is needed.
+  absent: ai-tells.NegatedSubject
+
+- name: nothing more than
+  rule: ../../styles/ai-tells/NegatedSubject.yml
+  input: Nothing more than a flag is needed.
+  absent: ai-tells.NegatedSubject

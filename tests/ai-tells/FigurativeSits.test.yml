@@ -1,0 +1,132 @@
+---
+- name: conceptual-location placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Pricing sits at the intersection of two fields.
+  contains:
+    - ai-tells.FigurativeSits
+    - "'sits at the intersection of'"
+
+- name: range placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The answer sits somewhere between the two options.
+  contains: "'sits somewhere between'"
+
+- name: adverb and relational preposition
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The feature sits squarely within scope.
+  contains: "'sits squarely within'"
+
+- name: companion placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Pricing sits alongside the incumbent.
+  contains: "'sits alongside'"
+
+- name: rests-with placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Ownership sits with the board.
+  contains: "'sits with'"
+
+- name: within scope
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: This sits within our remit.
+  contains: "'sits within'"
+
+- name: dormancy just sits there
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The draft just sits there for weeks.
+  contains: "'just sits there'"
+
+- name: dormancy in isolation
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Pricing sits in isolation from the rest.
+  contains: "'sits in isolation'"
+
+- name: dormancy idle
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The ticket sits idle until Monday.
+  contains: "'sits idle'"
+
+- name: acceptance idiom
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The plan sits well with the team.
+  contains: "'sits well'"
+
+- name: emotional weight
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The verdict sits heavy on the maintainers.
+  contains: "'sits heavy'"
+
+- name: opposition placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Pricing sits at odds with the older guide.
+  contains: "'sits at odds with'"
+
+- name: limbo placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Pricing sits in limbo after review.
+  contains: "'sits in limbo'"
+
+- name: front and center
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The warning sits front and center on the page.
+  contains: "'sits front and center'"
+
+- name: on the fence
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Pricing sits on the fence about the rewrite.
+  contains: "'sits on the fence'"
+
+- name: layer-stack placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Caching sits above the database tier.
+  contains: "'sits above the database tier'"
+
+- name: ranking placement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Migration sits at the top of the backlog.
+  contains: "'sits at the top of the backlog'"
+
+- name: abstract subject in a config
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The entry sits in the config block.
+  contains: "'The entry sits in'"
+
+- name: past tense abstract subject
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The word changelog sat in the proper-noun list.
+  contains: "'The word changelog sat in'"
+
+- name: open subject slot with a plural
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: The rules sit in the config.
+  contains: "'The rules sit in'"
+
+- name: pronoun subject
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: It sits in the queue.
+  contains: "'It sits in'"
+
+- name: inverted word order
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Over each column sits an index.
+  contains: "'Over each column sits an'"
+
+- name: state complement
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: A value sits quoted and escaped in the raw bytes.
+  contains: "'sits quoted'"
+
+- name: literal sitting on a mat
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Cats sit on mats.
+  absent: ai-tells.FigurativeSits
+
+- name: literal sitting still
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Please sit still while the scan runs.
+  absent: ai-tells.FigurativeSits
+
+- name: literal shelf above a sink
+  rule: ../../styles/ai-tells/FigurativeSits.yml
+  input: Shelves sit above sinks.
+  absent: ai-tells.FigurativeSits

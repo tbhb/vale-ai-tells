@@ -1,0 +1,43 @@
+---
+- name: full-noun subject after so
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: The styles ship as release assets, so the version pins itself.
+  contains:
+    - ai-tells.ConsequenceClause
+    - "', so the version pins'"
+
+- name: determiner and a noun phrase before the verb
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: Each test file names its subject, so a rename fails the test.
+  contains:
+    - ai-tells.ConsequenceClause
+
+- name: pronoun subject
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: The cache is warm, so it returns quickly.
+  absent: ai-tells.ConsequenceClause
+
+- name: purpose clause
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: Pass the flag first, so that the parser sees it.
+  absent: ai-tells.ConsequenceClause
+
+- name: determiner subject with a copula
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: The writes are independent, so the order is irrelevant.
+  absent: ai-tells.ConsequenceClause
+
+- name: plural noun before an auxiliary
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: The runs differ in size, so the results are not comparable.
+  absent: ai-tells.ConsequenceClause
+
+- name: hyphenated compound subject
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: The model has no ordering, so the happens-before model isn't enough.
+  absent: ai-tells.ConsequenceClause
+
+- name: two sentences
+  rule: ../../styles/ai-tells/ConsequenceClause.yml
+  input: The styles ship as release assets. The version pins itself.
+  absent: ai-tells.ConsequenceClause

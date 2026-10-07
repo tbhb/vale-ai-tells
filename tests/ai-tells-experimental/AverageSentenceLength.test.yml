@@ -1,0 +1,16 @@
+---
+- name: long sentences push the average over 25 words
+  rule: ../../styles/ai-tells-experimental/AverageSentenceLength.yml
+  input: The installer copies the binary into the local bin directory of the user, sets the permissions on the file so that the shell can run it, and then prints a short note that explains how to confirm the install worked.
+  contains: ai-tells-experimental.AverageSentenceLength
+
+- name: short sentences stay under the threshold
+  rule: ../../styles/ai-tells-experimental/AverageSentenceLength.yml
+  input: The installer copies the binary. It sets the permissions. Run the doctor command to confirm the install.
+  absent: ai-tells-experimental.AverageSentenceLength
+
+- name: a long sentence averaged with short ones stays under
+  about: The metric is a document average, so one long sentence among short ones does not trip it.
+  rule: ../../styles/ai-tells-experimental/AverageSentenceLength.yml
+  input: The installer copies the binary into the local bin directory of the user, sets the permissions on the file so that the shell can run it, and then prints a short note. It works. It is fast. Try it. Run it now.
+  absent: ai-tells-experimental.AverageSentenceLength

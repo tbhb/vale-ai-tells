@@ -1,0 +1,101 @@
+---
+- name: this commit adds
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    This commit adds a flag that skips empty files.
+  contains:
+    - ai-tells-commits.CommitSelfReference
+    - "'This commit adds'"
+
+- name: this commit cleans up
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    chore(parser): tidy the lexer
+
+    This commit cleans up two unused helpers.
+  contains: "'This commit cleans up'"
+
+- name: this change fixes
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This change fixes a crash on an empty file.
+  contains: "'This change fixes'"
+
+- name: this PR adds
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    This PR adds a flag that skips empty files.
+  contains: "'This PR adds'"
+
+- name: this update introduces
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    This update introduces a flag that skips empty files.
+  contains: "'This update introduces'"
+
+- name: these changes add
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    These changes add a flag that skips empty files.
+  contains: "'These changes add'"
+
+- name: this patch fixes
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    This patch fixes a crash on an empty file.
+  contains: "'This patch fixes'"
+
+- name: in this commit
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    In this commit the parser gains a flag that skips empty files.
+  contains: "'In this commit'"
+
+- name: in this pull request
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    feat(parser): add a flag
+
+    In this pull request the parser gains a flag.
+  contains: "'In this pull request'"
+
+- name: commit reference without a narrating verb
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    revert: undo the lexer split
+
+    Reverts the earlier commit that split the lexer, which broke the build.
+  absent: ai-tells-commits.CommitSelfReference
+
+- name: imperative description
+  rule: ../../styles/ai-tells-commits/CommitSelfReference.yml
+  format: txt
+  input: |
+    fix(parser): handle empty input
+
+    Return an error before building the tree, so the caller never sees nil.
+  absent: ai-tells-commits.CommitSelfReference

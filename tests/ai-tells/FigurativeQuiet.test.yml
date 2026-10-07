@@ -1,0 +1,74 @@
+---
+- name: stays quiet
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The check stays quiet on clean input.
+  contains:
+    - ai-tells.FigurativeQuiet
+    - "'stays quiet'"
+
+- name: remains silent
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The handler remains silent on retries.
+  contains: "'remains silent'"
+
+- name: goes quiet
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The log goes quiet after startup.
+  contains: "'goes quiet'"
+
+- name: falls quiet
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The alarm falls quiet once the queue drains.
+  contains: "'falls quiet'"
+
+- name: quiets down
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The build log quiets down after the first run.
+  contains: "'quiets down'"
+
+- name: keeps quiet about
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The tool keeps quiet about missing files.
+  contains: "'keeps quiet about'"
+
+- name: keeps the console quiet
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The flag keeps the console quiet during the run.
+  contains: "'keeps the console quiet'"
+
+- name: quietly drops
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The parser quietly drops the trailing error.
+  contains: "'quietly drops'"
+
+- name: quietly falls back
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The client quietly falls back to HTTP.
+  contains: "'quietly falls back'"
+
+- name: the quiet part out loud
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The changelog says the quiet part out loud.
+  contains: "'the quiet part out loud'"
+
+- name: silences a warning
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The flag silences the warning for every file.
+  contains: "'silences the'"
+
+- name: literal quiet adjective
+  about: A bare adjective with no gating verb is the literal sense.
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The office is a quiet room with a closed door.
+  absent: ai-tells.FigurativeQuiet
+
+- name: quietly with an unlisted verb
+  about: The adverb is gated on the action-verb list.
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: She quietly walked to the door.
+  absent: ai-tells.FigurativeQuiet
+
+- name: silence as a noun
+  rule: ../../styles/ai-tells/FigurativeQuiet.yml
+  input: The silence in the meeting lasted a minute.
+  absent: ai-tells.FigurativeQuiet

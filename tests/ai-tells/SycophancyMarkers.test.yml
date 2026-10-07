@@ -1,0 +1,57 @@
+---
+- name: great question
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: Great question, the answer is in the config file.
+  contains:
+    - ai-tells.SycophancyMarkers
+    - "'Great question'"
+
+- name: excellent question
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: That's an excellent question about caching.
+  contains: "'That's an excellent question'"
+
+- name: glad you asked
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: I'm glad you asked, because the docs skip this.
+  contains: "'I'm glad you asked'"
+
+- name: happy to help
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: I'd be happy to help with the migration.
+  contains: "'I'd be happy to help'"
+
+- name: absolutely
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: Absolutely, the parser accepts that flag.
+  contains: "'Absolutely'"
+
+- name: certainly
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: Certainly, here is the updated config.
+  contains: "'Certainly'"
+
+- name: of course
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: Of course, the flag is optional.
+  contains: "'Of course'"
+
+- name: you're absolutely right
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: You're absolutely right about the race.
+  contains: "'You're absolutely right'"
+
+- name: wonderful idea
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: That's a wonderful idea for the cache.
+  contains: "'That's a wonderful idea'"
+
+- name: could not agree more
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: I couldn't agree more with the proposal.
+  contains: "'I couldn't agree more'"
+
+- name: plain answer
+  rule: ../../styles/ai-tells/SycophancyMarkers.yml
+  input: The answer is in the config file.
+  absent: ai-tells.SycophancyMarkers
