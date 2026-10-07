@@ -1,0 +1,33 @@
+---
+- name: paragraph repeated in a section
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the user's local bin directory and sets its permissions.
+
+    The installer copies the binary into the local bin directory of the user and sets permissions.
+  contains: ai-tells-experimental.ContentDuplication
+
+- name: distinct paragraphs
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Setup
+
+    The installer copies the binary into the user's local bin directory and sets its permissions.
+
+    Run the doctor command afterwards to confirm the shell can find the new binary on its path.
+  absent: ai-tells-experimental.ContentDuplication
+
+- name: same paragraph in different sections
+  about: The script compares paragraphs within one section only.
+  rule: ../../styles/ai-tells-experimental/ContentDuplication.yml
+  input: |
+    # Linux
+
+    The installer copies the binary into the user's local bin directory and sets its permissions.
+
+    # macOS
+
+    The installer copies the binary into the user's local bin directory and sets its permissions.
+  absent: ai-tells-experimental.ContentDuplication

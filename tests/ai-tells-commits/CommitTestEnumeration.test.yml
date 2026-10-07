@@ -1,0 +1,37 @@
+---
+- name: test counts
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  input: |
+    fix(parser): handle empty input
+
+    All 42 tests pass.
+  contains:
+    - ai-tells-commits.CommitTestEnumeration
+    - "'All 42 tests pass'"
+
+- name: coverage label
+  about: >-
+    The percent sign is written as \x25 in the rule, because Vale 3.24
+    reads a %% escape literally.
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  input: |
+    fix(parser): handle empty input
+
+    Coverage: 87%
+  contains: "'Coverage: 87%'"
+
+- name: coverage figure
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  input: |
+    fix(parser): handle empty input
+
+    Reaches 100% test coverage.
+  contains: "'100% test coverage'"
+
+- name: describes the change
+  rule: ../../styles/ai-tells-commits/CommitTestEnumeration.yml
+  input: |
+    fix(parser): handle empty input
+
+    An empty file returned a nil tree, which the caller dereferenced.
+  absent: ai-tells-commits.CommitTestEnumeration

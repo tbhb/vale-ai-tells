@@ -13,7 +13,7 @@ tokens:
   # Bare adverbs only as sentence-initial discourse markers with a trailing
   # comma; the mid-sentence adjective/adverb senses ("overall design",
   # "ultimately responsible") are not the closer tell.
-  - '^Ultimately(?=,)'
+  - '(?:^|(?<=[.!?]\s))Ultimately(?=,)'
   - All in all
   - At the end of the day
   - When all is said and done
@@ -21,6 +21,6 @@ tokens:
   - In the final analysis
   - Taking everything into account
   - Taking all of this into account
-  - '^Overall(?=,)'
+  - '(?:^|(?<=[.!?]\s))Overall(?=,)'
   - On the whole
   - By way of conclusion

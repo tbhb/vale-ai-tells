@@ -3,14 +3,15 @@ extends: existence
 message: "AI commit tell: '%s'. Don't enumerate test results in commits. Link the CI run or describe what coverage actually changed."
 level: error
 # Vale concatenates raw entries without a separator, so wrap the
-# alternation in a single non-capturing group. Escape literal '%' as '%%'
-# because Vale runs the pattern through fmt formatting.
+# alternation in a single non-capturing group. Write a literal '%' as
+# '\x25': Vale 3.17 runs the pattern through fmt formatting, which needs
+# '%%', and Vale 3.24 reads '%%' as two percent signs.
 raw:
   - '(?i)(?:'
   - '\b(?:all\s+)?\d+\s*/?\s*\d*\s*tests?\s+(?:pass(?:ing|ed)?|fail(?:ing|ed)?)\b'
   - '|\b\d+\s+(?:passed|failed)\s*,\s*\d+\s+(?:passed|failed)\b'
-  - '|\bcoverage\s*:\s*\d+(?:\.\d+)?\s*%%'
-  - '|\b\d+(?:\.\d+)?\s*%%\s+(?:coverage|code coverage|test coverage|line coverage|branch coverage)\b'
+  - '|\bcoverage\s*:\s*\d+(?:\.\d+)?\s*\x25'
+  - '|\b\d+(?:\.\d+)?\s*\x25\s+(?:coverage|code coverage|test coverage|line coverage|branch coverage)\b'
   - '|\ball\s+tests?\s+(?:pass(?:ing|ed)?|are passing|green)\b'
   - '|✅\s*all\s+tests?'
   - ')'

@@ -14,7 +14,8 @@ vale-ai-tells/
 │   ├── ai-tells/               # Core prose rules (*.yml)
 │   ├── ai-tells-commits/       # Commit-message rules (*.yml)
 │   ├── ai-tells-experimental/  # Opt-in structural and metric rules (*.yml)
-│   └── config/                 # Tengo scripts, the agent template, the message view, vocabularies
+│   └── config/                 # Tengo scripts, the agent template, vocabularies
+├── tests/                      # Per-rule vale test cases (<style>/<Rule>.test.yml)
 ├── .github/workflows/          # CI, security, release, and Renovate automation
 ├── .config/mise/conf.d/        # Vendored repotools tool pins (vendir owns this)
 ├── .repotools/tasks/           # Vendored repotools shared tasks (vendir owns this)
@@ -48,8 +49,11 @@ A clone already contains the vendored payload, because it is committed. Delete i
 
 ```bash
 vale --config=.vale.ini test-document.md
-mise run test    # the fixture guard: tells fire, subjects smoke-test, no false positives
+mise run test-rules   # the per-rule cases under tests/
+mise run test         # the rule cases, then the fixture guard: tells fire, subjects smoke-test, no false positives
 ```
+
+Cases for a rule go in `tests/<style>/<Rule>.test.yml`, with `rule: ../../styles/<style>/<Rule>.yml` isolating it. Assert with `contains` (the check name and the quoted match) and `absent`. Keep them out of `styles/`: vale before 3.24 loads every `.yml` there as a rule, and a test file breaks `vale sync` for consumers.
 
 **Measuring a candidate token:**
 
@@ -104,7 +108,7 @@ All rules use `error` level by default. Users can override this in their `.vale.
 - `tokens` or `swap`: The patterns to match
 - A comment recording what the tokens cost on the pre-LLM corpora and what was measured out, from the corpus tasks above
 
-Messages must pass the `ai-tells` style themselves. Avoid em-dashes and anthropomorphic or cliché idioms. Give the good word rather than quoting the flagged one. Write each message as `AI <label>: '%s'. <concrete action>.` so agents can act on it. `mise run lint-messages` enforces this via the `RuleMessage` View (selects the `message` field with Dasel and lints it as prose). It runs as part of `mise run lint`.
+Messages must pass the `ai-tells` style themselves. Avoid em-dashes and anthropomorphic or cliché idioms. Give the good word rather than quoting the flagged one. Write each message as `AI <label>: '%s'. <concrete action>.` so agents can act on it. `mise run lint-messages` enforces this: `tools/lint-messages.sh` copies each `message` field into a scratch Markdown file and lints it as prose. It runs as part of `mise run lint`.
 
 ## Tone
 

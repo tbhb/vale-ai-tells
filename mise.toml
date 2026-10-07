@@ -43,6 +43,10 @@ lockfile = true
 # a payload bump moves the very pins that sync writes. The pin lives
 # here, ahead of the payload.
 vendir = "0.46.1"
+# Overrides the payload's vale pin, which trails 3.24.0, the release
+# that introduced `vale test`. Drop this once the vendored payload pins
+# 3.24.0 or later.
+vale = "3.24.0"
 
 # The platform list this repository's two lockfiles cover. The shared
 # repotools:check-toolchain task reads it for its failure hint.
@@ -181,11 +185,12 @@ extends = "repotools:lint-prose"
 run = "vale --output=ai-tells-agent.tmpl --glob='!{LICENSE,CHANGELOG.md,test-*.md,styles/*,pkg/*,tmp/*,.claude/worktrees/*,.repotools/*,COMMIT_AGENTMSG,PR_AGENTDESC.md,SQUASH_AGENTMSG,apm.yml,apm.lock.yaml,apm_modules/*}' $usage_paths"
 
 # Lint each rule file's own `message:` field with the ai-tells prose style, so
-# the package's diagnostics don't contain the patterns they flag. Uses the
-# RuleMessage View (styles/config/views/RuleMessage.yml) to select the field.
+# the package's diagnostics don't contain the patterns they flag. The script
+# lints a scratch copy of each message rather than the rule files, whose
+# comments vale 3.24 would lint too; its header says why.
 [tasks.lint-messages]
 description = "Lint each rule's own message field with the ai-tells style"
-run = "vale --config=.vale-messages.ini --output=ai-tells-agent.tmpl styles/ai-tells styles/ai-tells-commits styles/ai-tells-experimental"
+run = "bash tools/lint-messages.sh"
 
 # The lint-toml and lint-mise gates come from the vendored task files,
 # alongside lint-yaml, lint-markdown, lint-config, lint-spelling, and the
@@ -255,12 +260,21 @@ run = "bash tools/lint-draft.sh $usage_file"
 # --- Test ---
 
 [tasks.test]
-description = "Run the fixture guard: tells fire, past-tense subjects smoke-test, no false positives"
+description = "Run the rule cases and the fixture guard: tells fire, past-tense subjects smoke-test, no false positives"
 run = [
+  "mise run test-rules",
   "mise run test-fires",
   "mise run test-commit-past-tense",
   "mise run test-clean",
 ]
+
+# Run the per-rule cases under tests/, one <Rule>.test.yml per rule, each
+# isolating its rule through a relative `rule:` path. They live outside
+# styles/ because vale before 3.24 loads any .yml there as a rule and
+# refuses a .test.yml, which would break `vale sync` for consumers.
+[tasks.test-rules]
+description = "Run the per-rule vale test cases under tests/"
+run = "vale test tests"
 
 # Assert the tell corpus fires a healthy volume of errors under the test gate.
 # .vale-test.ini binds ai-tells + ai-tells-experimental to test-document.md and

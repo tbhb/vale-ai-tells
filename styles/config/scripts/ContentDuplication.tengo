@@ -92,6 +92,14 @@ for section in sections {
         return (0.0 + intersection_count) / union_count
     }
 
+    // Build each paragraph's word set once rather than once per pair:
+    // Vale 3.24 stops a script after 2s, and the per-pair rebuild ran
+    // README.md past it.
+    para_sets := []
+    for p in paragraphs {
+        para_sets = append(para_sets, make_word_set(p))
+    }
+
     // Track which paragraphs we already flagged to avoid duplicate matches.
     flagged := {}
 
@@ -101,9 +109,7 @@ for section in sections {
         j := i + 1
         for j < len(paragraphs) {
             if flagged[j] == undefined {
-                set_a := make_word_set(paragraphs[i])
-                set_b := make_word_set(paragraphs[j])
-                sim := jaccard(set_a, set_b)
+                sim := jaccard(para_sets[i], para_sets[j])
                 if sim > 0.60 {
                     // Flag the later paragraph (the duplicate).
                     pos := text.index(scope, paragraphs[j])
@@ -136,13 +142,16 @@ for section in sections {
             }
         }
 
+        sent_sets := []
+        for st in sent_texts {
+            sent_sets = append(sent_sets, make_word_set(st))
+        }
+
         si := 0
         for si < len(sent_texts) {
             sj := si + 1
             for sj < len(sent_texts) {
-                set_a := make_word_set(sent_texts[si])
-                set_b := make_word_set(sent_texts[sj])
-                sim := jaccard(set_a, set_b)
+                sim := jaccard(sent_sets[si], sent_sets[sj])
                 if sim > 0.70 {
                     pos := text.index(scope, sent_texts[sj])
                     if pos >= 0 {

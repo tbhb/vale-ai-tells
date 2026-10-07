@@ -1,0 +1,25 @@
+---
+- name: phrase closer
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: In conclusion, the parser handles every case.
+  contains:
+    - ai-tells.ConclusionMarkers
+    - "'In conclusion'"
+
+- name: adverb opening a paragraph
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: Ultimately, the parser handles every case.
+  contains: "'Ultimately'"
+
+- name: adverb opening a later sentence
+  about: >-
+    Vale 3.24 matches ^ only at the start of a paragraph, so the
+    sentence-start alternative carries this one.
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: The tests pass. Overall, the parser handles every case.
+  contains: "'Overall'"
+
+- name: adverb inside a sentence
+  rule: ../../styles/ai-tells/ConclusionMarkers.yml
+  input: The owner is ultimately responsible, and the overall design holds.
+  absent: ai-tells.ConclusionMarkers
