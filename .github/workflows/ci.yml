@@ -54,7 +54,7 @@ jobs:
       # and the rest from the vendored conf.d drop-in -- at the version and
       # digest recorded in the lockfile beside each config.
       - name: Set up the toolchain
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+        uses: jdx/mise-action@2d8d4cafcbd33be2ea37d2b6f5ad595363d1f1ca # v5.1.1
 
       # Resyncs the repotools payload and fails on any difference from the
       # committed tree, so a vendored file edited in place or a sync nobody
@@ -87,7 +87,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up the toolchain
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+        uses: jdx/mise-action@2d8d4cafcbd33be2ea37d2b6f5ad595363d1f1ca # v5.1.1
 
       - name: Sync Vale styles
         run: mise run install-tools
