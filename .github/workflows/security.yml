@@ -49,7 +49,7 @@ jobs:
       # Installs gitleaks at the version and digest the vendored payload
       # pins, the same way every other gate here resolves its binary.
       - name: Set up the toolchain
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+        uses: jdx/mise-action@2d8d4cafcbd33be2ea37d2b6f5ad595363d1f1ca # v5.1.1
 
       - name: Scan for committed secrets
         run: mise run repotools:gitleaks
