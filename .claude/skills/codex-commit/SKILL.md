@@ -6,7 +6,7 @@ description: >-
 
 # Commit workflow
 
-Run from the repository that holds the changes. Start with `.agents/skills/codex-commit/scripts/preflight.sh`.
+Run from the repository that contains the changes. Start with `.agents/skills/codex-commit/scripts/preflight.sh`.
 
 Stop on an interrupted Git operation or missing precondition. Create and maintain an `update_plan` checklist for base, grouping, staging, draft, prose, review, gates, confirmation, commit, and rebase.
 

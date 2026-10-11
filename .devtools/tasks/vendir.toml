@@ -1,7 +1,7 @@
 # The vendir drift gate. Same task-file syntax, namespace, selection,
 # and pin rules as format.toml in this directory -- with two twists.
 #
-# repotools itself does not include this file: it is the publisher, so
+# devtools itself does not include this file: it is the publisher, so
 # it has no vendir.yml and nothing vendored to check. Selection working
 # in both directions is the point of the includes channel.
 #
@@ -29,8 +29,8 @@
 # What that does next depends on the consumer. Where origin already
 # exists the add fails and the sync dies on `remote origin already
 # exists`, which is the loud case. Where it doesn't, the add succeeds
-# and the sync goes on to fetch repotools into the consuming repository
-# and check it out, leaving HEAD detached on a repotools commit with
+# and the sync goes on to fetch devtools into the consuming repository
+# and check it out, leaving HEAD detached on a devtools commit with
 # origin rewritten -- a silent one, and the reason this is scrubbed
 # rather than worked around. The task passes from a shell and under
 # `prek run --all-files`, and fails only when git itself runs the hook,
@@ -43,7 +43,7 @@
 # the gate can pass on the commit that updates the payload. GIT_DIR is
 # the variable observed to do the damage; the rest of the family goes
 # with it because any one of them redirects the same `git init`.
-["repotools:check-vendored"]
+["devtools:check-vendored"]
 description = "Resync the vendored payload and fail if it drifted from what git holds"
 run = '''
 #!/usr/bin/env bash
@@ -51,8 +51,8 @@ set -euo pipefail
 env -u GIT_DIR -u GIT_COMMON_DIR -u GIT_WORK_TREE -u GIT_INDEX_FILE \
     -u GIT_OBJECT_DIRECTORY vendir sync
 rc=0
-git diff --stat --exit-code -- vendir.yml vendir.lock.yml .config/mise/conf.d .repotools || rc=1
-untracked=$(git ls-files --others --exclude-standard -- .config/mise/conf.d .repotools)
+git diff --stat --exit-code -- vendir.yml vendir.lock.yml .config/mise/conf.d .devtools || rc=1
+untracked=$(git ls-files --others --exclude-standard -- .config/mise/conf.d .devtools)
 if [ -n "$untracked" ]; then
   printf '?? %s\n' $untracked
   rc=1

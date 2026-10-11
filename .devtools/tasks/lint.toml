@@ -8,23 +8,23 @@
 # tombi lint-checks every tracked *.toml, validated offline against
 # embedded SchemaStore schemas where one exists. The format gate runs in
 # --check --diff mode as well, so an unformatted TOML file fails the bar
-# without being rewritten (repotools:format-toml is the in-place fixer).
+# without being rewritten (devtools:format-toml is the in-place fixer).
 # --offline keeps the check hermetic against SchemaStore;
 # --error-on-warnings promotes warnings to hard failures. Scope lives in
 # the consumer's tombi.toml, so this task passes no path args.
-["repotools:lint-toml"]
+["devtools:lint-toml"]
 description = "Lint and format-check TOML via tombi"
 run = [
   "tombi format --check --diff",
   "tombi lint --offline --error-on-warnings",
 ]
 
-["repotools:lint-markdown"]
+["devtools:lint-markdown"]
 description = "Lint Markdown structure against .rumdl.toml"
 usage = 'arg "<paths>..." default="."'
 run = "rumdl check $usage_paths"
 
-["repotools:lint-config"]
+["devtools:lint-config"]
 description = "Lint JSON / JS / TS via biome"
 usage = 'arg "<paths>..." default="."'
 run = "biome check --files-ignore-unknown=true $usage_paths"
@@ -50,15 +50,18 @@ run = "biome check --files-ignore-unknown=true $usage_paths"
 # rather than the working directory. Both land on the repository root
 # here, since the config sits there and mise runs tasks from the project
 # root, so .gitignore and .yamllintignore resolve identically.
-["repotools:lint-yaml"]
+#
+# The `check` subcommand is the explicit form of bare `ryl <paths>`,
+# which ryl 0.24.0 deprecates with a warning on every run.
+["devtools:lint-yaml"]
 description = "Lint YAML via ryl (--strict; config in .yamllint.yaml)"
 usage = 'arg "<paths>..." default="."'
-run = "ryl --strict -c .yamllint.yaml -f auto -o - $usage_paths"
+run = "ryl check --strict -c .yamllint.yaml -f auto -o - $usage_paths"
 
 # The COMMIT_AGENTMSG exclusions keep a work-in-progress commit-message
 # draft out of the tree-wide check; the commit-msg stage owns those under
 # the stricter commit scope.
-["repotools:lint-spelling"]
+["devtools:lint-spelling"]
 description = "Check spelling against the project dictionary (.cspell-words.txt)"
 usage = 'arg "<paths>..." default="."'
 run = "cspell --config .cspell.jsonc --no-summary --no-progress --no-must-find-files --exclude COMMIT_AGENTMSG --exclude PR_AGENTDESC.md --exclude SQUASH_AGENTMSG $usage_paths"
@@ -72,7 +75,7 @@ run = "cspell --config .cspell.jsonc --no-summary --no-progress --no-must-find-f
 # `shellcheck` binary it finds: the container image this task replaces
 # bundled one, and without that pin the `run:`-block checks would
 # silently vanish on a machine with no shellcheck rather than fail.
-["repotools:lint-workflows"]
+["devtools:lint-workflows"]
 description = "Lint GitHub Actions workflow files via actionlint"
 run = "actionlint"
 
@@ -85,6 +88,6 @@ run = "actionlint"
 # the config files mise discovers -- mise.toml and the conf.d drop-ins.
 # It does not read included task files like this one; tombi is the
 # format gate for those.
-["repotools:lint-mise"]
+["devtools:lint-mise"]
 description = "Format-check the mise config with mise's own formatter"
 run = "mise fmt --check"

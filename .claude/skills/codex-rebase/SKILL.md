@@ -34,7 +34,7 @@ Preflight computed this under `== rebase base ==`. Take its recommendation.
 - Local default branch carries everything the remote has, so rebase onto the local branch.
 - Local default branch sits behind the remote, so rebase onto `origin/<default>` and skip the stale local copy.
 
-The `commit` skill's preflight makes the same decision, and both reach the same answer. Where the operator names a different base, use theirs and say why it differs.
+The `commit` skill's preflight makes the same decision, and both reach the same answer. Where the operator specifies a different base, use theirs and say why it differs.
 
 Nothing to replay means nothing to do. Say so and stop.
 
@@ -42,9 +42,9 @@ Nothing to replay means nothing to do. Say so and stop.
 
 `--autostash` handles a dirty tree, and `start-rebase.sh` passes it. It scopes the save to this rebase and never touches the shared stash stack, which is what makes it the sanctioned form here.
 
-The stashed work sits outside the worktree while you resolve a conflict, so nothing you see there reflects it. It can also conflict on the way back once the replay finishes. If that durability isn't enough, stop and let the operator settle the worktree before starting. Don't invent a temporary commit or reset sequence inside this workflow.
+The stashed work is outside the worktree while you resolve a conflict, so nothing you see there reflects it. It can also conflict on the way back once the replay finishes. If that durability isn't enough, stop and let the operator settle the worktree before starting. Don't invent a temporary commit or reset sequence inside this workflow.
 
-Never a bare `git stash pop` or `git stash apply`. Worktrees share one global stash stack whose indices shift whenever any worktree pushes, so a bare pop takes whatever sits at `stash@{0}` right then. The guard hook refuses it.
+Never a bare `git stash pop` or `git stash apply`. Worktrees share one global stash stack whose indices shift whenever any worktree pushes. A bare pop takes whatever entry is at `stash@{0}` right then. The guard hook refuses it.
 
 ## Step 3: start the rebase
 
@@ -52,7 +52,7 @@ Never a bare `git stash pop` or `git stash apply`. Worktrees share one global st
 bash .agents/skills/codex-rebase/scripts/start-rebase.sh <base>
 ```
 
-Don't type the `git rebase` yourself. The script pins off `rebase.updateRefs`, an operator preference that quietly moves other local branches pointing into the replayed range. It pins off `rebase.autoSquash` as well, which would otherwise collapse a `fixup!` commit that earned its own review. Recording the pre-rebase tip is the third thing it does. Without that record, step 5 has nothing to compare against.
+Don't type the `git rebase` yourself. The script pins off `rebase.updateRefs`, an operator preference that quietly moves other local branches pointing into the replayed range. It pins off `rebase.autoSquash` as well, which would otherwise collapse a `fixup!` commit that requires its own review. Recording the pre-rebase tip is the third thing it does. Without that record, step 5 has nothing to compare against.
 
 Exit `0` means the replay finished, so go to step 5. A `1` means it stopped, so go to step 4.
 
@@ -76,13 +76,13 @@ That reads the staged blobs for conflict markers before it advances. git checks 
 
 Repeat from `rebase-status.sh` at each further stop. Where git calls a commit empty because the change is already in the base, `continue-rebase.sh --skip-empty` drops it after proving the index matches `HEAD`.
 
-Giving up stays available, and it costs nothing:
+You can still give up, and doing so doesn't cost anything:
 
 ```text
 git rebase --abort
 ```
 
-Reach for it when the conflicts say somebody cut this branch from the wrong place. Resolving thirty of them to reach that conclusion helps nobody.
+Use it when the conflicts say somebody cut this branch from the wrong place. Resolving thirty of them to reach that conclusion helps nobody.
 
 ## Step 5: verify the result
 
@@ -112,17 +112,17 @@ Where the branch runs long enough for a mid-history break to matter, the thoroug
 git -c rebase.updateRefs=false rebase --exec 'mise run lint' <base>
 ```
 
-The script also names any path the repository declares generated through `rebase-resolve=regenerate`. The resolution took one side of those whole, on the understanding that the generator would overwrite it. Run the generator now, and commit what it changes.
+The script also lists any path the repository declares generated through `rebase-resolve=regenerate`. The resolution took one side of those whole, on the understanding that the generator would overwrite it. Run the generator now, and commit what it changes.
 
 ## Step 6: report
 
 Say what the base was, how many commits replayed, which paths conflicted, and how you settled each one. Give what the gates reported, and name anything the `range-diff` flagged.
 
-Then hand back. Pushing is the caller's call. A rebase rewrites the branch, so the push needs `git push --force-with-lease origin HEAD`. The guard refuses a bare `--force`, because the lease is what keeps the push from discarding whatever arrived while this session worked. Where a pull request is open, `pr` and `watch-pr` take it from there.
+Then hand back. Pushing is the caller's call. Because a rebase rewrites the branch, the push needs `git push --force-with-lease origin HEAD`. The guard refuses a bare `--force`, because the lease is what keeps the push from discarding whatever arrived while this session worked. Where a pull request is open, `pr` and `watch-pr` take it from there.
 
 ## Where this sits
 
-The `commit` skill rebases onto the base itself as its last step, and for a clean replay that's the whole story. Come here when that rebase stops on a conflict, when the branch needs moving without a commit in hand, or when the result needs the verification step this skill runs.
+The `commit` skill rebases onto the base itself as its last step, and for a clean replay that rebase is all the branch needs. Come here when that rebase stops on a conflict, when the branch needs moving without a commit in hand, or when the result needs the verification step this skill runs.
 
 ## Preconditions
 

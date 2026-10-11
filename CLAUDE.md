@@ -17,13 +17,13 @@ vale-ai-tells/
 │   └── config/                 # Tengo scripts, the agent template, vocabularies
 ├── tests/                      # Per-rule vale test cases (<style>/<Rule>.test.yml)
 ├── .github/workflows/          # CI, security, release, and Renovate automation
-├── .config/mise/conf.d/        # Vendored repotools tool pins (vendir owns this)
-├── .repotools/tasks/           # Vendored repotools shared tasks (vendir owns this)
+├── .config/mise/conf.d/        # Vendored devtools tool pins (vendir owns this)
+├── .devtools/tasks/             # Vendored devtools shared tasks (vendir owns this)
 ├── .pre-commit-config.yaml
 ├── .vale.ini                   # Repo dev config (enables all three styles)
 ├── mise.toml                   # Repo-specific pins and tasks; selects the shared ones
 ├── mise.lock                   # Resolved versions, URLs, and digests
-├── vendir.yml                  # The repotools payload: source, tag, target directories
+├── vendir.yml                  # The devtools payload: source, tag, target directories
 ├── vendir.lock.yml             # The commit each directory resolved to
 ├── README.md
 ├── AGENTS.md                   # Commit and prose-output contract for agents
@@ -66,30 +66,30 @@ A token is counted against human technical prose written before the models befor
 
 **Running the gates:**
 
-Gates from the vendored payload use a `repotools:` prefix. The rest belong to this repository.
+Gates from the vendored payload use a `devtools:` prefix. The rest belong to this repository.
 
 ```bash
 mise run lint                        # every linter below, in one pass
-mise run repotools:check-vendored    # the vendored payload matches what git holds
-mise run repotools:check-pins        # every tbhb/repotools pin site names one release
-mise run repotools:lint-yaml         # ryl
-mise run repotools:lint-markdown     # rumdl
-mise run repotools:lint-config       # biome on JSON
-mise run repotools:lint-spelling     # cspell
+mise run devtools:check-vendored    # the vendored payload matches what git holds
+mise run devtools:check-pins        # every tbhb-dev/devtools pin site names one release
+mise run devtools:lint-yaml         # ryl
+mise run devtools:lint-markdown     # rumdl
+mise run devtools:lint-config       # biome on JSON
+mise run devtools:lint-spelling     # cspell
 mise run lint-prose                  # Vale on the docs
 mise run lint-messages               # Vale on each rule's own message: field (dogfooding)
-mise run repotools:lint-toml         # tombi
-mise run repotools:lint-mise         # mise fmt --check
+mise run devtools:lint-toml         # tombi
+mise run devtools:lint-mise         # mise fmt --check
 mise run lint-editorconfig
-mise run repotools:lint-workflows    # actionlint
+mise run devtools:lint-workflows    # actionlint
 mise run check-all                   # lint, test, and the full-history gitleaks scan
 ```
 
 **Pre-commit hooks:**
 
 ```bash
-mise run repotools:prek          # run hooks on staged files
-mise run repotools:prek-all      # run hooks on all files
+mise run devtools:prek          # run hooks on staged files
+mise run devtools:prek-all      # run hooks on all files
 ```
 
 **Building and releasing:**

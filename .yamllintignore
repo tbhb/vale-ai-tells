@@ -1,4 +1,4 @@
 tmp/
 apm.lock.yaml
-.repotools/
+.devtools/
 vendir.lock.yml

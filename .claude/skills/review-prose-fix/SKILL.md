@@ -32,13 +32,13 @@ From `$REPO`, run these before judging anything:
 - `bash .claude/skills/fix-prose/scripts/check-suppressions.sh --verify` for edits outside the target
 - `cat` the target for the result in one piece
 
-The diff is the review. Where it comes back empty, the fixer changed nothing, and that's a finding unless its report said so.
+The diff is the review. Where it comes back empty, the fixer didn't change anything, and that's a finding unless its report said so.
 
 Where the caller passed the fixer's report, read it too. A claim there that the diff doesn't support is a finding in itself.
 
 ## What to check
 
-Every finding names the exact text and the correction.
+Quote the exact text in each finding and give the correction.
 
 ### Meaning
 
@@ -47,11 +47,11 @@ The document says what it said before.
 - Flag any claim that changed. A dropped qualifier, an added hedge, or an absolute turned conditional edits the argument while looking like a reword.
 - Flag any number, path, identifier, filename, flag, or proper noun that differs. These are never a style matter.
 - Flag precision traded for a clean run. Replacing a dependency name with `the fuzzing dependency` clears a spelling rule and costs the reader the fact.
-- Flag a clause or sentence that went missing. Deleting text clears a distributional rule and takes content with it.
+- Flag a clause or sentence that the edit deleted. Deleting text clears a distributional rule and takes content with it.
 
 ### Language the linter can't score
 
-The rule set names a few figurative verbs and misses the category around them.
+The rule set lists a few figurative verbs and misses the category around them.
 
 - Flag metaphor, idiom, and personification that the edit introduced. Rules don't fight, checks don't bite, and a document doesn't sail anywhere.
 - Flag a sentence that got longer without getting clearer. A reword that doubles a sentence to avoid a rule trades a measured problem for one nothing measures.
@@ -61,7 +61,7 @@ The rule set names a few figurative verbs and misses the category around them.
 ### The unresolved list
 
 - Flag a finding reported as unresolvable that a plain reword clears. Say what the reword is.
-- Accept an unresolvable finding that holds up. A rule misfiring on correct text is a real outcome, and demanding a fix for one is how documents get worse.
+- Accept an unresolvable finding that holds up. A rule that wrongly matches correct text is a real outcome, and demanding a fix for one is how documents get worse.
 
 ### Silenced checkers
 
@@ -69,7 +69,7 @@ The mechanical check already reports this, so read its output rather than re-der
 
 ## Sweep before you write the verdict
 
-One editing pass produces one class of damage in more than one place at once, because the writer cleared a rule the same way everywhere it fired. Take each finding you have and read the rest of the diff for the same damage. A pronoun the reorder stranded, a clause a reword reattached to the wrong thing, an identifier paraphrased away, a parallel the edit broke on one item and kept on the next. Where the diff holds one, look for the second.
+One editing pass produces one class of damage in more than one place at once, because the writer cleared a rule the same way everywhere it matched. Take each finding you have and read the rest of the diff for the same damage. A pronoun the reorder left without its referent, a clause a reword reattached to the wrong thing, an identifier paraphrased away, a parallel the edit broke on one item and kept on the next. Where the diff holds one, look for the second.
 
 Report every instance. Handing back one at a time costs a fixing round and a review round to say what this verdict could have said, and the writer only sweeps the list you give it.
 

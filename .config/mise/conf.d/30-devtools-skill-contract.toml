@@ -10,7 +10,7 @@
 # work is repo-specific:
 #
 #   [tasks.lint-draft]
-#   extends = "repotools:lint-draft"
+#   extends = "devtools:lint-draft"
 #   run = "bash tools/lint-draft.sh $usage_file"
 #
 # Templates are inert until extended, so delivering them costs a
@@ -25,28 +25,28 @@
 # is exactly what varies between repos, and the prose three differ in
 # vale output template and scoped paths.
 
-[task_templates."repotools:lint-commit-msg"]
+[task_templates."devtools:lint-commit-msg"]
 description = "Pre-validate a drafted commit message against the commit-msg gates"
 run = "prek run --stage commit-msg --commit-msg-filename COMMIT_AGENTMSG"
 
-[task_templates."repotools:lint-squash-msg"]
+[task_templates."devtools:lint-squash-msg"]
 description = "Pre-validate a drafted squash commit message against the commit-msg gates"
 run = "prek run --stage commit-msg --commit-msg-filename SQUASH_AGENTMSG"
 
-[task_templates."repotools:lint-pr-description"]
+[task_templates."devtools:lint-pr-description"]
 description = "Validate a drafted pull request description"
 
-[task_templates."repotools:lint"]
+[task_templates."devtools:lint"]
 description = "Run every linter that operates on the source tree"
 
-[task_templates."repotools:lint-prose"]
+[task_templates."devtools:lint-prose"]
 description = "Lint prose via vale"
 usage = 'arg "<paths>..." default="."'
 
-[task_templates."repotools:lint-draft"]
+[task_templates."devtools:lint-draft"]
 description = "Lint one drafted document through every prose gate at once"
 usage = 'arg "<file>"'
 
-[task_templates."repotools:fix-prose-replacements"]
+[task_templates."devtools:fix-prose-replacements"]
 description = "Apply every vale finding that carries its own replacement"
 usage = 'arg "<file>"'

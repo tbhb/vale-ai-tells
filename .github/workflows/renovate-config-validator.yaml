@@ -3,7 +3,7 @@
 # The cron Renovate workflow only runs on schedule, so a malformed config
 # on main can sit unnoticed until the next firing.
 #
-# Delegates to the shared reusable workflow in tbhb/repotools,
+# Delegates to the shared reusable workflow in tbhb-dev/devtools,
 # which runs renovate-config-validator from the same SHA-pinned image the
 # actual Renovate workflow uses, keeping the two in lockstep. Pinned by
 # commit SHA; the trailing tag comment marks the matching release for
@@ -24,6 +24,6 @@ jobs:
     permissions:
       contents: read
     # yamllint disable-line rule:line-length
-    uses: tbhb/repotools/.github/workflows/renovate-config-validator.yaml@cf79409736ca25234b224d4580ed13cd82be0b75 # v0.9.0
+    uses: tbhb-dev/devtools/.github/workflows/renovate-config-validator.yaml@d80265aa04fd10bbfe3965200ddbe3d5d1563c38 # v0.10.0
     with:
       config_path: .github/renovate.json5

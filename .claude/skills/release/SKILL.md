@@ -40,7 +40,7 @@ Use `grep -n "releases/download" README.md` to enumerate every occurrence before
 
 Run:
 
-- `mise run repotools:lint-yaml`: confirm any new YAML files pass
+- `mise run devtools:lint-yaml`: confirm any new YAML files pass
 - `mise run test-clean`: confirm false positives file remains clean
 
 ## 5. Commit

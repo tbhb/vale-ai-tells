@@ -3,7 +3,7 @@
 # main, where it would quietly route reviews to the wrong owners. The check
 # self-tests: it validates the CODEOWNERS file that arrives in this very PR.
 #
-# Delegates to the shared reusable workflow in tbhb/repotools,
+# Delegates to the shared reusable workflow in tbhb-dev/devtools,
 # which runs both checks against the caller's checked-out tree: owners and
 # syntax via GitHub's `codeowners/errors` endpoint, and rule-path existence
 # via a local tree walk. The reusable workflow reads the caller's context
@@ -26,4 +26,4 @@ jobs:
     permissions:
       contents: read
     # yamllint disable-line rule:line-length
-    uses: tbhb/repotools/.github/workflows/lint-codeowners.yml@cf79409736ca25234b224d4580ed13cd82be0b75 # v0.9.0
+    uses: tbhb-dev/devtools/.github/workflows/lint-codeowners.yml@d80265aa04fd10bbfe3965200ddbe3d5d1563c38 # v0.10.0

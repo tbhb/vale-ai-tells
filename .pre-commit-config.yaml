@@ -11,10 +11,10 @@ exclude: ^styles/(Google|write-good|proselint)/
 # 3.15.2 here and 3.17.0 through the task runner, so a prose finding could
 # appear in one gate and not the other. yamllint and rumdl drifted the same
 # way. The mise config is now the only place any of those versions appears,
-# and the `repotools:` entries below name tasks the vendored payload
+# and the `devtools:` entries below name tasks the vendored payload
 # defines rather than tasks this repo writes.
 #
-# The tbhb/repotools block below keeps its own `rev:`. Those are the
+# The tbhb-dev/devtools block below keeps its own `rev:`. Those are the
 # shared commit-msg gates rather than tool wrappers, and the consolidation
 # owns that pin.
 
@@ -36,15 +36,15 @@ repos:
   # plus the commit-message scope in .vale.ini and .cspell.jsonc. Pinned by
   # SHA with a `# frozen:` tag comment so Renovate's pre-commit manager
   # tracks it.
-  - repo: https://github.com/tbhb/repotools
-    rev: cf79409736ca25234b224d4580ed13cd82be0b75  # frozen: v0.9.0
+  - repo: https://github.com/tbhb-dev/devtools
+    rev: d80265aa04fd10bbfe3965200ddbe3d5d1563c38  # frozen: v0.10.0
     hooks:
       - id: commit-trailers
       - id: commitlint
       - id: vale-commit-msg
       - id: cspell-commit-msg
 
-      # The one post-commit hook, and the reason `mise run repotools:prek-install`
+      # The one post-commit hook, and the reason `mise run devtools:prek-install`
       # installs that stage. It deletes the COMMIT_AGENTMSG draft once a
       # commit succeeds, so the next commit starts from an absent path
       # rather than a stale draft.
@@ -54,7 +54,7 @@ repos:
     hooks:
       - id: ryl
         name: ryl
-        entry: mise run repotools:lint-yaml
+        entry: mise run devtools:lint-yaml
         language: system
         types: [yaml]
 
@@ -74,13 +74,13 @@ repos:
 
       - id: rumdl-fmt
         name: rumdl fmt
-        entry: mise run repotools:format-markdown
+        entry: mise run devtools:format-markdown
         language: system
         types_or: [markdown]
 
       - id: rumdl
         name: rumdl check
-        entry: mise run repotools:lint-markdown
+        entry: mise run devtools:lint-markdown
         language: system
         types_or: [markdown]
 
@@ -96,7 +96,7 @@ repos:
       # worktree's dictionary rather than the main checkout's.
       - id: cspell
         name: cspell
-        entry: mise run repotools:lint-spelling
+        entry: mise run devtools:lint-spelling
         language: system
         stages: [pre-commit, pre-push]
         types: [text]
@@ -115,7 +115,7 @@ repos:
 
       - id: tombi
         name: tombi (TOML lint + format-check)
-        entry: mise run repotools:lint-toml
+        entry: mise run devtools:lint-toml
         language: system
         types: [toml]
         pass_filenames: false
@@ -124,11 +124,11 @@ repos:
       # toolchain and every gate. mise fmt rewrites the config it
       # resolved, so this passes no filenames either. The conf.d drop-ins
       # are in scope because mise fmt reads them; the vendored task files
-      # under .repotools are not -- mise fmt never opens included task
+      # under .devtools are not -- mise fmt never opens included task
       # files, and tombi is their format gate in the publisher.
       - id: mise-fmt
         name: mise fmt --check
-        entry: mise run repotools:lint-mise
+        entry: mise run devtools:lint-mise
         language: system
         files: ^(mise\.toml|\.config/mise/conf\.d/.*\.toml)$
         pass_filenames: false
@@ -139,9 +139,9 @@ repos:
       # commit that introduces it.
       - id: check-vendored
         name: vendir drift check
-        entry: mise run repotools:check-vendored
+        entry: mise run devtools:check-vendored
         language: system
-        files: ^(vendir\.(yml|lock\.yml)$|\.config/mise/conf\.d/|\.repotools/)
+        files: ^(vendir\.(yml|lock\.yml)$|\.config/mise/conf\.d/|\.devtools/)
         pass_filenames: false
 
       # editorconfig-checker. Scope lives in .editorconfig-checker.json,

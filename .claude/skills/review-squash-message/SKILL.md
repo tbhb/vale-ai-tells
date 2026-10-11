@@ -2,7 +2,7 @@
 name: review-squash-message
 license: Apache-2.0
 description: >-
-  Review the squash commit message drafted in SQUASH_AGENTMSG against every commit it collapses, as an independent agent. Its distinct question is coverage. One message has to stand for a whole stack of commits, and this review asks what the collapse lost. Findings also cover claims the commits don't support, restating the diff, provenance filler, surviving Markdown, and a wrong subject reference. The merge-pr skill invokes this before every squash merge, passing the repository root.
+  Review the squash commit message drafted in SQUASH_AGENTMSG against every commit it collapses, as an independent agent. Its distinct question is coverage. One message has to stand for a whole stack of commits, and this review checks what the collapse lost. Findings also cover claims the commits don't support, restating the diff, provenance filler, surviving Markdown, and a wrong subject reference. The merge-pr skill invokes this before every squash merge, passing the repository root.
 context: fork
 agent: Explore
 background: false
@@ -16,7 +16,7 @@ Every other reviewer in this toolchain reads one text against one change, whethe
 
 ## The repository
 
-`$ARGUMENTS` carries the repository under review. An empty value means the current working directory.
+`$ARGUMENTS` specifies the repository under review. An empty value means the current working directory.
 
 ## Context
 
@@ -26,11 +26,11 @@ The preceding context carries everything the review needs. That means the draft,
 
 Read the commit bodies rather than skimming the subjects.
 
-A subject names what a commit did. The reason belongs in the body, and a reason is the first thing a squash loses.
+A subject states what a commit did. The reason belongs in the body, and a reason is the first thing a squash loses.
 
-Where the preceding context reports a missing or empty draft, a draft with an empty body, or a subject that doesn't name a pull request, that's itself a finding. Report it and stop.
+Where the preceding context reports a missing or empty draft, a draft with an empty body, or a subject that doesn't reference a pull request, that's itself a finding. Report it and stop.
 
-Reach for a tool call only where the preceding material ran out, and say what you went looking for. A large branch truncates its diff at a stated line count, and a claim about the part beyond the cut needs `gh pr diff <number>` to settle.
+Make a tool call only where the preceding material ran out, and say what you went looking for. A large branch truncates its diff at a stated line count, and a claim about the part beyond the cut needs `gh pr diff <number>` to settle.
 
 ## What's already settled
 
@@ -42,13 +42,13 @@ The published description already passed its own review against this branch. Jud
 
 ## What to check
 
-Work these four groups. Every finding names the exact offending text and the fix.
+Work these four groups. Quote the exact offending text in each finding and give the fix.
 
 ### Coverage
 
-This group is why the review exists. Take the commits one at a time and ask whether someone reading the message alone would know that work is in here.
+This group is why the review exists. Take the commits one at a time and check whether someone reading the message alone would know that work is in here.
 
-- Flag a commit whose reason the message drops. Not its diff, its reason, meaning the constraint, or the problem its body named. That sentence goes with the commit at the merge, and nothing else records it.
+- Flag a commit whose reason the message drops. Not its diff but its reason: the constraint, or the problem its body named. That sentence goes with the commit at the merge. A message that drops it loses it permanently.
 - Flag a message that describes one commit as though it were the branch. The last commit and the largest commit are the usual substitutes for the rest.
 - Flag a message that covers the early commits and stops. A branch that grew after someone published its description is the common case, and the message inherits the gap.
 - Flag two commits giving different reasons where the message keeps only one. Either it covers both, or it says which one subsumes the other.
@@ -59,7 +59,7 @@ This group is why the review exists. Take the commits one at a time and ask whet
 
 The body is new prose. No earlier review cleared it, so you are the first reader every claim in it gets.
 
-- Flag any claim the commits and the diff don't support. A message naming a file, a flag, a behavior, or a guarantee absent from the branch is wrong, whatever else it gets right.
+- Flag any claim the commits and the diff don't support. A message that mentions a file, a flag, a behavior, or a guarantee absent from the branch is wrong, whatever else it gets right.
 - Flag counts of any kind: files, lines, tests, commits, percentages. A count goes stale as soon as other work merges, and it pads a message rather than informing it.
 - Flag results nobody verified: benchmark figures, `fixes the flake`, `no longer leaks`, claims about what CI does.
 - Flag a claim the message inherited from the description that the branch has since outgrown. Commits pushed after publication are where this comes from.
@@ -73,7 +73,7 @@ The body answers why the branch exists. The diff already says what changed.
 - Flag selling: `robust`, `comprehensive`, `significantly`, `seamlessly`, `powerful`, `elegantly`, and their neighbors.
 - Flag a body that repeats the subject in longer words.
 - Verification notes belonged to the pull request, and their absence here is correct rather than a finding.
-- Risk belongs here only where it names a rollback the reader wouldn't guess. Flag a risk sentence that says the change could be wrong and stops.
+- Risk belongs here only where it describes a rollback the reader wouldn't guess. Flag a risk sentence that says the change could be wrong and stops.
 
 ### Form
 
@@ -85,7 +85,7 @@ The body answers why the branch exists. The diff already says what changed.
 
 ## Sweep before you write the verdict
 
-A gap you found once is rarely the only one. Take each finding you have and read the whole message again for the same kind of gap. A commit whose reason went missing, a claim the branch has outgrown, a count standing where a name belongs, a paragraph restating the diff. Where the message holds one, look for the second, and where instances share a fix, report them as one finding naming each.
+A gap you found once is rarely the only one. Take each finding you have and read the whole message again for the same kind of gap. A commit whose reason the message dropped, a claim the branch has outgrown, a count standing where a name belongs, a paragraph restating the diff. Where the message holds one, look for the second, and where instances share a fix, report them as one finding that lists each.
 
 A gap you leave for the next pass costs a drafting round and a review round to say what this verdict could have said. None of that invites padding. Everything in the verdict still has to be something you can point at in the commits.
 

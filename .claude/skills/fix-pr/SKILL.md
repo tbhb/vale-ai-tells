@@ -2,7 +2,7 @@
 name: fix-pr
 license: Apache-2.0
 description: >-
-  Diagnose the failing checks on a pull request and fix them. One call reads the failing logs and names the local task that reproduces each failure, so the work starts from a reproduction rather than a guess. The correction goes through the commit skill. Use this whenever a pull request is red, whenever the user asks to fix CI, and whenever watch-pr comes back with failures.
+  Diagnose the failing checks on a pull request and fix them. One call reads the failing logs and names the local task that reproduces each failure. The work then starts from a reproduction rather than a guess. The correction goes through the commit skill. Use this whenever a pull request is red, whenever the user asks to fix CI, and whenever watch-pr comes back with failures.
 hooks:
   PreToolUse:
     - matcher: Write|Edit
@@ -27,7 +27,7 @@ A guard hook runs alongside. It refuses a log sweep that goes around the diagnos
 
 ## Step 0: the checklist
 
-Track these steps with the session's task-list tools where it carries them. Newer harnesses leave those tools out by default, and a session without them works the list in order as written.
+Track these steps with the session's task-list tools where it provides them. Newer harnesses leave those tools out by default, and a session without them works the list in order as written.
 
 1. Diagnose the failures
 2. Reproduce each one locally
@@ -44,7 +44,7 @@ bash .claude/skills/fix-pr/scripts/diagnose.sh <number>
 
 One call gets the failing jobs, the tail of each failing step's log, and the local task the script maps each job to. Read that output before running anything else. Going straight to `gh run view` repeats work the script already did.
 
-The script also compares the local checkout against the commit CI tested. Stop when it reports a mismatch. The logs then describe code this worktree no longer carries, so a fix aimed at them reaches the wrong revision. Check out the branch the pull request names, or pull it forward, and diagnose again.
+The script also compares the local checkout against the commit CI tested. Stop when it reports a mismatch. The logs then describe code this worktree no longer contains, so a fix aimed at them applies to the wrong revision. Check out the branch the pull request names, or pull it forward, and diagnose again.
 
 ## Step 2: reproduce
 
@@ -54,26 +54,26 @@ The mapping from job name to task is a guess, so treat a task that passes locall
 
 - The job runs something the task doesn't. Read the workflow.
 - The failure depends on the environment, such as a pinned tool version or a container image the worktree isn't running.
-- The failure is a flake, which makes the run worth repeating before anything changes.
-- A stale branch. CI tested it merged with a base this worktree doesn't have, and the gate that fails arrived on that base. Nothing here reproduces it until the branch moves, so run the `rebase` skill and diagnose again.
+- The failure is a flake. Repeat the run before anything changes.
+- A stale branch. CI tested it merged with a base this worktree doesn't have, and the gate that fails arrived on that base. No local task reproduces it until the branch moves, so run the `rebase` skill and diagnose again.
 
 Say which one applies rather than editing until the symptom moves.
 
-Recognizing that last shape matters, because it produces a failure no commit on the branch caused. The base added a gate and the branch added something that gate rejects, so neither side was red alone. Running the gates against the combined tree is what the `rebase` skill's verification step is for.
+Recognizing that last case matters, because it produces a failure no commit on the branch caused. The base added a gate and the branch added something that gate rejects, so neither side was red alone. Running the gates against the combined tree is what the `rebase` skill's verification step is for.
 
 ## Step 3: fix the cause
 
-Change what made the check fail, and nothing else. A red pull request is a poor moment for adjacent cleanup: it widens the diff a reviewer already has questions about, and it hides the fix inside unrelated edits.
+Change only what made the check fail. A red pull request is a poor moment for adjacent cleanup: it widens the diff a reviewer already has questions about, and it hides the fix inside unrelated edits.
 
-Where a lint gate failed, the finding names the file and the line, and often the replacement too. Apply it exactly. Where a test failed, read the assertion before changing either side, because a test that caught a real defect deserves the fix on the other side.
+Where a lint gate failed, the finding gives the file and the line, and often the replacement too. Apply it exactly. Where a test failed, read the assertion before changing either side, because a test that caught a real defect deserves the fix on the other side.
 
-Never silence a gate to make it pass. Excluding a path changes the project's standards, and so does a new rule exception or a lowered threshold. Any of those goes to the operator as a proposal rather than into the commit.
+Never turn off or loosen a gate to make it pass. Excluding a path changes the project's standards, and so does a new rule exception or a lowered threshold. Any of those goes to the operator as a proposal rather than into the commit.
 
 Re-run the reproducer until it passes.
 
 ## Step 4: commit
 
-The caller decides how the fix reaches the branch. `$ARGUMENTS` holds that answer when `pr` routed here, and where it doesn't, ask before committing with `AskUserQuestion`: `question` set to `How should this fix land?`, `header` set to `Fixes`, `multiSelect` set to `false`, and these options:
+The caller decides how the fix gets onto the branch. `$ARGUMENTS` holds that answer when `pr` routed here, and where it doesn't, ask before committing with `AskUserQuestion`: `question` set to `How should this fix land?`, `header` set to `Fixes`, `multiSelect` set to `false`, and these options:
 
 | Label | Description |
 | --- | --- |
@@ -92,7 +92,7 @@ bash .claude/skills/fix-pr/scripts/populate-description.sh <number>
 
 That rebuilds `PR_AGENTDESC.md` from what the pull request currently says, reassembling the frontmatter from the properties set on the pull request. It refuses to overwrite an existing draft without `--force`, because a `pr` workflow further up the stack may have one in flight.
 
-A fix changes what the branch does, so the published description now describes a branch that has moved. Where the change is worth a reader's attention, invoke `write-pr-description` with the repository root and a note saying which commits arrived since the last publish.
+A fix changes what the branch does, so the published description now describes a branch that has moved. Where the change alters what a reader needs to know, invoke `write-pr-description` with the repository root and a note saying which commits arrived since the last publish.
 
 Then invoke `review-pr-description` and loop on its verdict the same way the `pr` skill does, bounded at three rounds. Publish the result with `bash .claude/skills/pr/scripts/create-pr.sh`, which updates the open pull request rather than opening another.
 
@@ -120,10 +120,10 @@ Report what failed, what caused it, and what the fix changed. Then say the check
 
 Where the caller asked for a fix and nothing more, stop here. Where the caller asked to see it through, invoke `watch-pr` with the same number and repeat from step 1 on a fresh failure.
 
-Bound the loop. After three rounds on the same check, stop, then report what each attempt changed and why the check still fails. A fourth attempt at the same shape of fix is rarely the one that works.
+Bound the loop. After three rounds on the same check, stop, then report what each attempt changed and why the check still fails. A fourth attempt at the same kind of fix is rarely the one that works.
 
 ## Preconditions
 
 - `gh` installed and authenticated
-- the pull request's branch checked out, so a fix reaches the code CI tested
+- the pull request's branch checked out, because a fix has to apply to the code CI tested
 - the `commit` skill deployed alongside this one

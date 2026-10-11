@@ -1,6 +1,6 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 # The payload anchors itself. Anything that references the vendored
-# .repotools directory -- a task invoking a shared script, a consumer
+# .devtools directory -- a task invoking a shared script, a consumer
 # aggregate, documentation -- goes through this variable rather than a
 # literal relative path. A literal works in a flat repo and breaks in a
 # monorepo, because {{ config_root }} inside a task body is evaluated
@@ -14,4 +14,4 @@
 # its own.
 
 [env]
-REPOTOOLS_DIR = "{{ config_root }}/.repotools"
+DEVTOOLS_DIR = "{{ config_root }}/.devtools"

@@ -3,7 +3,7 @@
     "^styles/(Google|write-good|proselint)/",
     "^CHANGELOG\\.md$",
     "^\\.config/mise/conf\\.d/",
-    "^\\.repotools/",
+    "^\\.devtools/",
     "^vendir\\.lock\\.yml$"
   ]
 }

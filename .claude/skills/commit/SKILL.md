@@ -20,7 +20,7 @@ hooks:
 
 Work the steps in order. A guard hook runs alongside them and refuses whole-tree staging along with any `git commit` you write out yourself. Step 8 names the one script that commits, and that script refuses an inline `-m` message, a `--no-verify`, and a draft the reviewer hasn't seen in its current form.
 
-Those hooks stay registered for the rest of the session so they carry a scope. Preflight records the commit `HEAD` sits on now, and the guard refuses while `HEAD` is still there. Step 8 moves `HEAD` past that mark, and the guard refuses nothing after that. Work later in the session is none of the guard's business. A second commit means invoking this skill again rather than carrying on from here.
+Because those hooks remain registered for the rest of the session, each one applies only within a scope. Preflight records the commit `HEAD` sits on now, and the guard refuses while `HEAD` is still there. Step 8 moves `HEAD` past that mark, and the guard refuses nothing after that. Work later in the session is none of the guard's business. A second commit means invoking this skill again rather than carrying on from here.
 
 ## Preflight
 
@@ -28,7 +28,7 @@ Those hooks stay registered for the rest of the session so they carry a scope. P
 
 ## Step 0: the checklist
 
-Track these steps with the session's task-list tools where it carries them. Newer harnesses leave those tools out by default, and a session without them works the list in order as written. They're the checklist the rest of this document expands.
+Track these steps with the session's task-list tools where it provides them. Newer harnesses leave those tools out by default, and a session without them works the list in order as written. They're the checklist the rest of this document expands.
 
 1. Choose the rebase base
 2. Group the changes into atomic commits
@@ -53,7 +53,7 @@ Record the base now. Step 9 rebases onto it without asking again. Worktrees unde
 
 ## Step 2: group the changes into atomic commits
 
-Read the diff before deciding anything. One commit carries one logical change: the reader can state its purpose in a sentence, and reverting it undoes that purpose and nothing else.
+Read the diff before deciding anything. One commit contains one logical change: the reader can state its purpose in a sentence, and reverting it undoes that purpose and nothing else.
 
 Split when the outstanding work covers more than one of these:
 
@@ -70,7 +70,7 @@ When one file mixes two logical changes, stage the relevant hunks with `git add 
 
 ## Step 3: stage the paths for this commit
 
-Name every path:
+List every path explicitly:
 
 ```text
 git add -- path/one path/two
@@ -97,16 +97,16 @@ Write:
 - The problem, the constraint, or the tradeoff that made this the answer
 - Why this approach rather than the obvious alternative
 - What breaks without it, or where the need came from
-- A decision worth recording, so nobody relitigates it later
+- A decision you're recording so nobody relitigates it later
 
 Avoid:
 
 - Restating the diff. `Adds a helper to foo.go and calls it from bar.go` is the diff, spelled out longer.
 - Counting. No file, line, test, function, or commit counts. A count goes stale as soon as other work merges, and it reads as padding.
-- Provenance filler. Nothing about requests, review rounds, sessions, prompts, models, or tools. The `Assisted-by` trailer carries attribution.
+- Provenance filler. Nothing about requests, review rounds, sessions, prompts, models, or tools. The `Assisted-by` trailer records attribution.
 - Claims you haven't checked. Leave out benchmark numbers you didn't measure and a `fixes the flake` for a flake you never reproduced.
 - Selling it. Drop `robust`, `comprehensive`, `significantly`, `seamlessly`, and their neighbors.
-- Markdown. No fenced blocks, headings, emphasis, links, or tables. Backticks around a literal identifier are fine.
+- Markdown. Leave out fenced blocks, headings, emphasis, links, and tables. Backticks around a literal identifier are fine.
 
 Hard wrap the body at the width preflight reported. Wrap trailers at the footer width.
 
@@ -130,9 +130,9 @@ Where it returns `PROSE: PARTIAL`, a finding needs a decision rather than anothe
 
 ## Step 6: review the draft
 
-Invoke the `review-commit-message` skill, passing the repo root from preflight as its argument. It runs as an independent agent that hasn't watched you work, which is the point: it reads the draft against the staged diff with no memory of what you meant to write.
+Invoke the `review-commit-message` skill, passing the repo root from preflight as its argument. It runs as an independent agent that hasn't watched you work. That independence is deliberate: it reads the draft against the staged diff with no memory of what you meant to write.
 
-This step is mandatory, and the script in step 8 enforces it. A clean verdict signs the exact bytes of the draft, and a finding erases any earlier signature, so the commit stays blocked until a review clears the text as it stands. Editing the draft afterward voids the signature the same way.
+This step is mandatory, and the script in step 8 enforces it. A clean verdict signs the exact bytes of the draft, and a finding erases any earlier signature. The script refuses the commit until a review clears the text as it stands. Editing the draft afterward voids the signature the same way.
 
 Fix everything it returns. Push back only when it's demonstrably wrong about the diff, and say why.
 
@@ -157,7 +157,7 @@ Whatever this task reports, `.git/COMMIT_EDITMSG` and its commit-msg hook stay t
 
 ## Step 8: confirm with the operator
 
-`AskUserQuestion` truncates its options, so the operator reads the message in your message text rather than in the widget. Print this first, verbatim:
+`AskUserQuestion` truncates its options. The operator reads the message in your message text rather than in the widget. Print this first, verbatim:
 
 ```text
 Staged: <paths, comma separated>
@@ -165,14 +165,14 @@ Staged: <paths, comma separated>
 <the entire COMMIT_AGENTMSG contents, verbatim>
 ```
 
-Preflight answered this under `== pre-approval ==`. Where it reported `commit: GRANTED`, the operator answered this question for the whole session in advance, through `mise run preapprove`. Print the preceding block so the message still reaches them, name the grant this commit goes under, and move to step 9 without calling `AskUserQuestion`.
+Preflight answered this under `== pre-approval ==`. Where it reported `commit: GRANTED`, the operator answered this question for the whole session in advance, through `mise run preapprove`. Print the preceding block so the operator still sees the message, state the grant this commit goes under, and move to step 9 without calling `AskUserQuestion`.
 
 The grant answers one question, commit this message, and says nothing about whether this is the right commit. Ask anyway where any of these holds:
 
 - the review returned a finding nobody acted on
 - a gate needed more than a mechanical fix
 - the grouping changed after step 2
-- the commit reaches past what the session set out to do
+- the commit goes beyond what the session set out to do
 
 The operator withdraws a grant with `mise run revoke-preapproval`. Say so where a run keeps arriving at one of those exceptions.
 
@@ -193,11 +193,11 @@ Follow the answer. Revising or restaging sends you back through the review, beca
 bash .claude/skills/commit/scripts/commit.sh
 ```
 
-Nothing else commits. The guard hook refuses a `git commit` you write out yourself whatever flags it carries, because every gate named below lives in the script and a hook on the tool call can't reach inside one.
+Commit only through this script. The guard hook refuses a `git commit` you write out yourself whatever flags it passes, because the script runs every gate named below and a hook on the tool call can't inspect a script's contents.
 
-That script checks the review signature and records what the staging area holds before it commits, then reads the commit back and compares. prek stashes and restores the worktree around the pre-commit hooks. A failed run can leave a path unstaged that you staged before the attempt, and the retry then commits part of the group without reporting it. The script prints every path it expected and didn't find and then fails. Its output is the check, so nothing needs a `git show --stat` after it.
+That script checks the review signature and records what the staging area contains before it commits, then reads the commit back and compares. prek stashes and restores the worktree around the pre-commit hooks. A failed run can leave a path unstaged that you staged before the attempt, and the retry then commits part of the group without reporting it. The script prints every path it expected and didn't find and then fails. Its output is the check, so nothing needs a `git show --stat` after it.
 
-The script pins `commit.cleanup=whitespace` for you. At the default of `strip`, git drops every body line opening with a number sign, and it does so after `review-commit-message` has hashed the file, so the bytes the reviewer cleared stop matching the bytes git records.
+The script pins `commit.cleanup=whitespace` for you. At the default of `strip`, git drops every body line opening with a number sign, and it does so after `review-commit-message` has hashed the file. The bytes the reviewer cleared would then stop matching the bytes git records.
 
 Only `--amend` passes through, which is the form `fix-pr` routes here for. The script refuses every other flag, because a hook reading the tool call sees `bash commit.sh` and none of the flags underneath it.
 
@@ -207,7 +207,7 @@ Then rebase onto the base from step 1, without asking:
 git -c rebase.updateRefs=false -c rebase.autoSquash=false rebase --autostash <base>
 ```
 
-Same reasoning, two more knobs. `rebase.updateRefs` quietly moves other local branches that point into the replayed range. `rebase.autoSquash` collapses any `fixup!` commit, each of which earned its own review.
+Same reasoning, two more settings. `rebase.updateRefs` quietly moves other local branches that point into the replayed range. `rebase.autoSquash` collapses any `fixup!` commit, each of which passed its own review.
 
 `--autostash` scopes the save to the rebase itself. Never a bare `git stash pop`: worktrees share one stash stack, so a bare pop can take another session's entry.
 
@@ -226,4 +226,4 @@ This skill assumes the shared tbhb toolchain:
 
 Preflight checks each. When one is missing, tell the operator rather than improvising a substitute.
 
-The workflow commits the repository holding the session. `review-commit-message` reads its draft and its diff from that root, and step 8's script reads the draft and the signature from whichever repository it runs in. A sibling checkout has no signature of its own, so the script stops there rather than committing on a review that read another tree. To commit a different repository, open a session there.
+The workflow commits the repository holding the session. `review-commit-message` reads its draft and its diff from that root, and step 8's script reads the draft and the signature from whichever repository it runs in. A sibling checkout has no signature of its own. The script stops there rather than committing on a review that read another tree. To commit a different repository, open a session there.

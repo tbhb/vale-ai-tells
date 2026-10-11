@@ -8,7 +8,7 @@ It has a uv script shebang and declares which Python version it needs, so it run
 .claude/skills/analyze-session/scripts/session.py <subcommand> <transcript> [options]
 ```
 
-The preflight already runs `index`, `errors`, `loops` and `lint`, and leaves the full output in the retro's `artifacts/`. Run the tool directly when a report needs more detail than the preflight printed, or when the reports point at something worth searching for.
+The preflight already runs `index`, `errors`, `loops` and `lint`, and leaves the full output in the retro's `artifacts/`. Run the tool directly when a report needs more detail than the preflight printed, or when the reports point at something to search for.
 
 ## `locate`
 
@@ -18,7 +18,7 @@ session.py locate --contains 'some-distinctive-string' [--project SUBSTRING]
 
 Finds transcripts by content instead of by a guessed directory name. Output is size, path, and match count, newest first.
 
-Worktrees complicate this. A session running inside a git worktree writes its transcript under the main repository's project directory, and the worktree's own directory may exist while holding no `.jsonl` at all, so guessing that path finds an empty directory that looks identical to a missing transcript.
+Worktrees complicate this. A session running inside a git worktree writes its transcript under the main repository's project directory, and the worktree's own directory may exist without containing any `.jsonl` at all, so guessing that path finds an empty directory that looks identical to a missing transcript.
 
 A search with no hits proves nothing on its own. Confirm the same string matches some other transcript before concluding this session is absent.
 
@@ -36,7 +36,7 @@ The counts here answer different questions. The `is_error` flag counts what the 
 
 ## `loops`
 
-Clusters repeated calls of the same shape, ranked by rounds. `--min-rounds N` sets how few rounds still count, default 3.
+Clusters repeated calls that follow the same pattern, ranked by rounds. `--min-rounds N` sets how few rounds still count, default 3.
 
 A pair of calls counts as one attempt when the signature matches. For Bash that signature is the tasks and commands invoked rather than the arguments, so repeated edit-then-relint rounds group into one cluster. Calls more than 40 records apart start a new cluster.
 

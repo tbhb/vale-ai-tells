@@ -1,39 +1,39 @@
 lockfile_version: '1'
-generated_at: '2026-08-17T22:59:11.618342+00:00'
+generated_at: '2026-10-11T17:13:44.818819+00:00'
 apm_version: 0.26.0
 dependencies:
-- repo_url: tbhb/repotools
-  name: repotools
+- repo_url: tbhb-dev/devtools
+  name: devtools
   host: github.com
-  resolved_commit: cf79409736ca25234b224d4580ed13cd82be0b75
-  resolved_ref: v0.9.0
-  version: 0.9.0
+  resolved_commit: d80265aa04fd10bbfe3965200ddbe3d5d1563c38
+  resolved_ref: v0.10.0
+  version: 0.10.0
   package_type: apm_package
-  content_hash: sha256:08953538e71567bc3d52aa9ff0c536ace068a1599b7a17b3d60e60c5b465e79e
+  content_hash: sha256:aee5e2f8dbf353442b442c00c399e1af420193f9eb45a8fadd0c8e166f13e395
   declared_license: Apache-2.0
-- repo_url: tbhb/repotools
-  name: repotools-agents-agy
+- repo_url: tbhb-dev/devtools
+  name: devtools-agents-agy
   host: github.com
-  resolved_commit: cf79409736ca25234b224d4580ed13cd82be0b75
-  resolved_ref: v0.9.0
-  version: 0.9.0
+  resolved_commit: d80265aa04fd10bbfe3965200ddbe3d5d1563c38
+  resolved_ref: v0.10.0
+  version: 0.10.0
   virtual_path: packages/agents/agy
   is_virtual: true
   depth: 2
-  resolved_by: tbhb/repotools
+  resolved_by: tbhb-dev/devtools
   package_type: apm_package
-  content_hash: sha256:51b7cc9575a0f6433d1112e9bbb4bf218a26a6311e2e07b62bcacf68dec46ed8
+  content_hash: sha256:03c308a7155ce91bfea6d5fa2263446f7b4a92cac374416e5e0b12a600d15ea2
   declared_license: Apache-2.0
-- repo_url: tbhb/repotools
-  name: repotools-agents-claude
+- repo_url: tbhb-dev/devtools
+  name: devtools-agents-claude
   host: github.com
-  resolved_commit: cf79409736ca25234b224d4580ed13cd82be0b75
-  resolved_ref: v0.9.0
-  version: 0.9.0
+  resolved_commit: d80265aa04fd10bbfe3965200ddbe3d5d1563c38
+  resolved_ref: v0.10.0
+  version: 0.10.0
   virtual_path: packages/agents/claude
   is_virtual: true
   depth: 2
-  resolved_by: tbhb/repotools
+  resolved_by: tbhb-dev/devtools
   package_type: apm_package
   deployed_files:
   - .claude/skills/analyze-session
@@ -133,52 +133,52 @@ dependencies:
   - .claude/skills/write-prose-fix/scripts/context.sh
   - .claude/skills/write-prose-fix/tokens.json
   deployed_file_hashes:
-    .claude/skills/analyze-session/SKILL.md: sha256:f16be7d5b2fc2d35802f2c74c075f5dcd21b6f3debdeecba62fe0028047d59ba
-    .claude/skills/analyze-session/references/FIX_SURFACES.md: sha256:37da1ae850e75d69e9681070f93e2284fbba5477fedb5484cd28f17f0d1a6346
-    .claude/skills/analyze-session/references/LOCATE_SESSION.md: sha256:a4e6b4b4981effd3025753224890eb3f1570d3d9c8738d8409354d2ab2871c86
-    .claude/skills/analyze-session/references/SESSION_CLI.md: sha256:1128f27554f28a895d4e7eafa8e21ffcb561399168a12eea3cb634197a92d665
-    .claude/skills/analyze-session/references/VERIFY_FIGURES.md: sha256:e6bd7152f630f67aa9564c0615781f7827ba0df5d2d53775c51dfca54491a313
-    .claude/skills/analyze-session/references/WRITING_THE_RETRO.md: sha256:38e1f04f153ff8fa3b3196119e34a2e114443ce147e276344d86f20a2a2965b3
+    .claude/skills/analyze-session/SKILL.md: sha256:6619d688416e2d15e036d02deff44c7669c99044f20557b64f6296a861c20387
+    .claude/skills/analyze-session/references/FIX_SURFACES.md: sha256:8412565e7a43b293355d36241d05f3fcc64915b81ff18365e30576f2eea4c101
+    .claude/skills/analyze-session/references/LOCATE_SESSION.md: sha256:e17040ccefd630fbd0d4a641b3899cd40d7d59ab26fa86977c403bd7e3752d08
+    .claude/skills/analyze-session/references/SESSION_CLI.md: sha256:d582d8b801314e3782ecd71dd18d9fd01dffd488b4afb25a849a55923f24c8b2
+    .claude/skills/analyze-session/references/VERIFY_FIGURES.md: sha256:27e489c48cd05a8a648f8e76698bc284730f66279de052e0adf82206f31598a9
+    .claude/skills/analyze-session/references/WRITING_THE_RETRO.md: sha256:13853f367e1eced082323ea80d741b98e502f49c8287b4647df9754a65a751e0
     .claude/skills/analyze-session/scripts/new-retro.sh: sha256:1c594ccd66c9d97c830f34a326c98cdb892a2237f98e256340fb647f4f7fb6c9
-    .claude/skills/analyze-session/scripts/preflight.sh: sha256:ff021bce33efc02454ac8a07004f1e681fb0388d3dd160a581c206bb660212be
-    .claude/skills/analyze-session/scripts/session.py: sha256:6e79efa8c241521effd22bf926a43c28d86c5e04cce14fa0ee6ca84e2fcf3c82
-    .claude/skills/analyze-session/templates/RETRO.md: sha256:0703f7f280c2e506c50fc9d3de4c03a8b0b1315f197c612e87471de65d726162
-    .claude/skills/analyze-session/tokens.json: sha256:2ae683e48217bd4741cd4f8e5a72637f3fae85a0423ca3a48c3d78f4a8b53ae5
-    .claude/skills/commit/SKILL.md: sha256:66c681663e47af0024d9a83a05d41793e39638f268b7b5b4232bc5620e757572
+    .claude/skills/analyze-session/scripts/preflight.sh: sha256:e65e05793087f459e1a4c3300c705df59d6d1f94bdef41521ea5e2c730b4f520
+    .claude/skills/analyze-session/scripts/session.py: sha256:d68229eaa69e3847bf455f4624eb140df978569c62848f43cf7135841d71e91e
+    .claude/skills/analyze-session/templates/RETRO.md: sha256:1882079c8697f33c62fd00f59e0f103a56d6a1133394a1f40f82522e8f60ae44
+    .claude/skills/analyze-session/tokens.json: sha256:daa08072743127ed5ee050dd34a4b5f9a072d8877f3cf3a507d33e6ed9ed7468
+    .claude/skills/commit/SKILL.md: sha256:6e106937040e28d93425ebc84478d9817259a89520482f990ccd9fd40b200a19
     .claude/skills/commit/scripts/commit.sh: sha256:a7447f831dc940c676a0a76d8644b4c2325ea1a69fe82d1c59ec5b632818ac81
     .claude/skills/commit/scripts/guard-git.sh: sha256:c826480f50e8b10baff853467a5bcd33b838fb13bcb1e0c866a05122d1a74df1
-    .claude/skills/commit/scripts/preflight.sh: sha256:3eaf101e29813ca3896d22ad69c7cb9c501d185ec2c298c03be1360aa76165d5
+    .claude/skills/commit/scripts/preflight.sh: sha256:72cbf4e7182cdaa7087e23e976fbbdb446122cabe7b7409384bdd535051d8bb9
     .claude/skills/commit/scripts/stamp-review.sh: sha256:94d3b98d4273dbc012f0d1c69c668d9fd6542a3032df94e0994b1220e26e9ec8
-    .claude/skills/commit/tokens.json: sha256:15943a78ca7ae1a409788fefb02a75eb8c8556c838dcd6f6e0eb24b04d7e0352
-    .claude/skills/fix-pr/SKILL.md: sha256:95515d765339aef8b0e44edd6a82b0b82d39bcadcf3e3b4cb9e4cf548d417068
-    .claude/skills/fix-pr/scripts/diagnose.sh: sha256:54ed5032569419c9a49677822ce89cc253677fe4eee0b2334fc0fe1825cc1af8
+    .claude/skills/commit/tokens.json: sha256:eaa956fc8f68b9af262e93e56272890e679c74b0bc5ba71ada014af1d99cf6b9
+    .claude/skills/fix-pr/SKILL.md: sha256:778718fc5808b90eec06b73b09e6f46c95cf1bf22b491386cd6757c6415a582c
+    .claude/skills/fix-pr/scripts/diagnose.sh: sha256:c99a1fe65739d1e6f0739a3144a73c52b5babcc8ee18151a46de0d89fd51198f
     .claude/skills/fix-pr/scripts/guard-fix.sh: sha256:5a9b7ae499dc72ead469684b3b8dadf08b4d00371d2be14c96a462db43ca3b0b
     .claude/skills/fix-pr/scripts/populate-description.sh: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
-    .claude/skills/fix-pr/tokens.json: sha256:e765ed517c0bed92b68919824a89ea3e147ed7111abb89162c2e8c00226254f1
-    .claude/skills/fix-prose/SKILL.md: sha256:ad15ad4084b5e582593bb21c87f016e3c2c88ac3b4d79392d530db9c0035f817
+    .claude/skills/fix-pr/tokens.json: sha256:d65276970388f42dc79d4fd06f9471d659f2d06fce39c21b050e1ed8c8a6559b
+    .claude/skills/fix-prose/SKILL.md: sha256:67719596b6382142155456208b70de36894e8fa2699f47bc9ba693e5fcffc3f4
     .claude/skills/fix-prose/scripts/arm-guard.sh: sha256:b3a6a97ec8dd99136a65010aaa156f21f4d1321c2f03dd33c3fa85cefea3d23b
     .claude/skills/fix-prose/scripts/check-suppressions.sh: sha256:4460b7803b94266fd8b191b5561e5b4b6c36015dec191679718577088c38bd14
     .claude/skills/fix-prose/scripts/guard-target.sh: sha256:90a27acd92779e4582bbf99c9956f62366fcb85c233e12a05c497292d5a14e4e
     .claude/skills/fix-prose/scripts/preflight.sh: sha256:de4ce16740adec37b29bceeb0e5adbf021dbabeedcd9c7efc63179be479658cc
     .claude/skills/fix-prose/scripts/release-once.sh: sha256:3f7935af5f97859066f49eccb2c9ce68322e419e6fa06a047f54442ab06e8912
-    .claude/skills/fix-prose/tokens.json: sha256:0edba727b2d40e65718ea87550c41fc762dd8d0e3d5caef25b2fb67c789ce159
-    .claude/skills/merge-pr/SKILL.md: sha256:49aef5aaaf5609f3eec83fdc352010ad04a75f56e21979577e9ce2da484488a4
+    .claude/skills/fix-prose/tokens.json: sha256:1ad3da4e3cbe52df7b9653a2f6d242af9a83a27c730acd2167208a71c78094bb
+    .claude/skills/merge-pr/SKILL.md: sha256:3f665e757c391864afe8bbb3436dfb8ea3c57997c07b85c5542da8a140690613
     .claude/skills/merge-pr/scripts/guard-merge.sh: sha256:4b8d3377751cf151d8a8bf3e6b79715e172bdea4742217b9653562c310b216ca
     .claude/skills/merge-pr/scripts/populate-description.sh: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
     .claude/skills/merge-pr/scripts/preflight.sh: sha256:164ee9756773d7c65c8da430309c42c2dd7b0553616d361c0bd7962c05d0f3d9
     .claude/skills/merge-pr/scripts/squash-merge.sh: sha256:4ad8fcd535fbc37524cf89baa42632eb40c156c23d0dfff47d22b9aa9caa930a
     .claude/skills/merge-pr/scripts/squash-message.sh: sha256:eeaca25d0bce0dc874ad389854e2bd4de77669cfed3da97c9999513652b7011a
     .claude/skills/merge-pr/scripts/stamp-review.sh: sha256:b54430e9cacb8045163dbc35c73be61de8f69fa236e1b41620fe1b10d0eaca0e
-    .claude/skills/merge-pr/tokens.json: sha256:1c8e2500af01e83c431c8f3985d5e8d052a6bd514b652ce96bb6e9188da28760
-    .claude/skills/pr/SKILL.md: sha256:d324086fad1a7fc8fbda3906016e2f1e72bfc8f58215caf22e8f31e35f99c5e2
+    .claude/skills/merge-pr/tokens.json: sha256:a7939d0511f4f6c782fc2cb3a5360a0aa300d039ceb600a9423a6559d8865929
+    .claude/skills/pr/SKILL.md: sha256:dcb910ffb27d36ad7428696e0ddc8af037dd715cc1ec317ae5f97885c25cac35
     .claude/skills/pr/scripts/create-pr.sh: sha256:e4aba4ec72fcc682d6d362c590269358ad295300917a0c25d106d290f3cd7b82
     .claude/skills/pr/scripts/guard-gh.sh: sha256:48849363413f51369df0eabce051afc97109033a8ad50666e685b1160b4f624a
     .claude/skills/pr/scripts/preflight.sh: sha256:eabf109e3c6e24ff0185dfb6d6f90bc95bd5bb44c8642887c9e8b0085c089829
     .claude/skills/pr/scripts/scaffold-description.sh: sha256:e8a7e913e21a56f29851e614033dcbff888cc7863e70446f2ce8dfc3fe77dedb
     .claude/skills/pr/scripts/stamp-review.sh: sha256:0836faf6bbb81ef45d612034e6fb67f2de9475a499aac1d5f44f2507c803a953
     .claude/skills/pr/scripts/validate-description.sh: sha256:06798be90499be5695209f93076bc8bf6ce1fb4c8145dbd3f85c951488be2575
-    .claude/skills/pr/tokens.json: sha256:71c6244658ba11f701d85b38c30828b2e96a1111f45610c37628895f06d49618
-    .claude/skills/rebase/SKILL.md: sha256:4dc106aa999148c333391591f0007c683b3abf631a5081074aa371289ef33f40
+    .claude/skills/pr/tokens.json: sha256:98f3947a2ee0855c38a9e7c57dfd963e17db1d9a130ced0a646c9eb3b4a7d7b0
+    .claude/skills/rebase/SKILL.md: sha256:8573b4648aca66261a0ee58eba87d59edf82902825713c6e62a1c5052ae0901d
     .claude/skills/rebase/scripts/continue-rebase.sh: sha256:0cb326c120efab5b50969b29e21dacb08d655264b80ccd43ef9b7db7ae7b26db
     .claude/skills/rebase/scripts/guard-rebase.sh: sha256:dafe9b3b12a713dc14a32ce48ad1baf93be9bcba62f04e815e57667a746e1efd
     .claude/skills/rebase/scripts/marker-scan.sh: sha256:3125779320b71bfabed81ea9ef4457bce81499a3c7d5f0b2d77e7711a517300d
@@ -186,46 +186,46 @@ dependencies:
     .claude/skills/rebase/scripts/rebase-status.sh: sha256:0e9445ed48bde9c5353f2af537efd803c14982d8d10a21742892b106096aaf8a
     .claude/skills/rebase/scripts/start-rebase.sh: sha256:2a495bd4719d0f6e65612bbdec700bf7cb9bad7458394743f17927f4c1cd4ce2
     .claude/skills/rebase/scripts/verify-rebase.sh: sha256:42567bac9bddcb97d16607f0ecde703ccf8aba10cbc89cb32983be5cd88ebb5d
-    .claude/skills/rebase/tokens.json: sha256:f8d089167cb2ef516c8610796f8ab87eca5e90d9ae89e31067e79d9fb323c17f
-    .claude/skills/resolve-rebase-conflicts/SKILL.md: sha256:5878528ba5d49f72485a9212f55e1ca7e3404db475ce6addf1a07f9debfd59fe
+    .claude/skills/rebase/tokens.json: sha256:72ebac64cf6ffdaa807cfb9eb3b6512378c884dcf7b64ee2d7abc69962f68914
+    .claude/skills/resolve-rebase-conflicts/SKILL.md: sha256:02dd69c7e94830f963a4eca0095dcae43da6b373dbea9aaee00cb95b7d0200b3
     .claude/skills/resolve-rebase-conflicts/scripts/classify-conflicts.sh: sha256:e4c96dfc3a69e0c44982d3bfe011805ee64ec41acb6c44cb1d117be81c4a2dad
     .claude/skills/resolve-rebase-conflicts/scripts/conflict_shape.py: sha256:9b97797ebb0174960454aed1a49901e4dbd8d24c078f33168229c6f1eda07008
     .claude/skills/resolve-rebase-conflicts/scripts/guard-resolve.sh: sha256:defe2056c3b123d8b9cff870454bf940554f25d5eceaa4ab8630d9c93d89d77c
     .claude/skills/resolve-rebase-conflicts/scripts/resolve-union.sh: sha256:a64762cb87341cb1c4050820790f2eff0b50c07ae6d62e7995136d0ffc070b71
     .claude/skills/resolve-rebase-conflicts/scripts/take-side.sh: sha256:93f47713021834b6f5b138c42f48e26c40e41ed760a06a4a268787d25ce3a092
-    .claude/skills/resolve-rebase-conflicts/tokens.json: sha256:5533417d996e3fc4203bab105f331ea42cc0c850d7fe3a017b101d126424d65b
-    .claude/skills/review-commit-message/SKILL.md: sha256:1e1d03a5fde6c7169f2e6f685b0a84b0fa88f10fd18085dd5740eaf2da8b7f0e
-    .claude/skills/review-commit-message/tokens.json: sha256:98b02b3dbb02d03ecfee43ece56b4f83fdad95bce7d9325d5a7fca104aeb2576
-    .claude/skills/review-pr-description/SKILL.md: sha256:273af83c04f4a82b0f4c41faaecba7c24eae7c74804cd8c393544cb152fa142e
-    .claude/skills/review-pr-description/tokens.json: sha256:4c27fb9430cf323cb0ca26f1325ca0400226d7156ff2220bd9c7eb61f95b614c
-    .claude/skills/review-prose-fix/SKILL.md: sha256:5061db9a99d1833b565047f7888e3c889c5608baf9bb33e0b27ada936d6e7c8a
-    .claude/skills/review-prose-fix/tokens.json: sha256:a8199b47458d65d5964a27d0f7cc96e61a0ff45f0dd10344abb21a0c92904e58
-    .claude/skills/review-squash-message/SKILL.md: sha256:e7d39f189ba3b24afb058394059557f4dba2ceeb3fde9171fc1ab902daefa73b
+    .claude/skills/resolve-rebase-conflicts/tokens.json: sha256:d2237bcddd0eeef1c901498cd72bc81b2712851233a7fb5666bd1fae60cb67ee
+    .claude/skills/review-commit-message/SKILL.md: sha256:93b57f55c388d8220340dafc0874fc2f85833b30998f0bf18e0862003905f80b
+    .claude/skills/review-commit-message/tokens.json: sha256:f3f3223002c8c902d1b8e098c78cd3a218f76e3d8fc41e1e9dd9b00c9427866c
+    .claude/skills/review-pr-description/SKILL.md: sha256:0b4b17565bfe3d29a607946d66b4a8d6aebb87caa057c537eff99103970e8909
+    .claude/skills/review-pr-description/tokens.json: sha256:7b6571c8e2b2df8ca20879dc594d75167d35bb8c4042bfc88b0e0b82682bebd0
+    .claude/skills/review-prose-fix/SKILL.md: sha256:1320a65d75fdeeaa069f7879c7520795e9679bd16915090a2e573ce8bcf9db0b
+    .claude/skills/review-prose-fix/tokens.json: sha256:3346f7cf62bbdd6aa41578ad6e082a7462b2c76509a4bc1012705430e2f094d5
+    .claude/skills/review-squash-message/SKILL.md: sha256:52dbbfaf1f86a212e0c0a600d834cb46e428917e95d736b356b4a93812e6dcb9
     .claude/skills/review-squash-message/scripts/context.sh: sha256:c8feff629fee467eaf0240582f0a30eb54c3b12ee97e5ba205859dabb6951b3c
-    .claude/skills/review-squash-message/tokens.json: sha256:e54e1b572add41e540b85f84b26963679ca163ec72fa37e17b94e65f38ef8289
-    .claude/skills/watch-pr/SKILL.md: sha256:144c7de3c52bfdb7c51b0d7c6c3d18cd792151b41d36846f7449d18fd193feac
+    .claude/skills/review-squash-message/tokens.json: sha256:c873935ff68120e22e96a6b0e1a2bdf18692c7664c29e1a1dd697ec56fe9f96b
+    .claude/skills/watch-pr/SKILL.md: sha256:7b03d539da0e330b705bdc4aeab91af2c4680e90979b1c94dd25455d76547f70
     .claude/skills/watch-pr/scripts/guard-watch.sh: sha256:6fc489a3c60f9b669fa9290d871532ddf0dbae056f4ce50a7335238030fccba8
     .claude/skills/watch-pr/scripts/watch-checks.sh: sha256:341a13a8e9ddf14f3adadfc2c905ee848357c61a0375bd539edea6710bb49c76
-    .claude/skills/watch-pr/tokens.json: sha256:f595482b0bd5d836ba393b7a2d4e3646ee97eba390f60fe0d5d4a932aa8d5aab
-    .claude/skills/write-pr-description/SKILL.md: sha256:509d1f9c89286a8737bbc17a0df9e5b36762fd50390cd59682d3442d145292e4
+    .claude/skills/watch-pr/tokens.json: sha256:ec3c3401cc2585c4e6ddc7306aad4a46ebf3a196398d70507a73c31daf6e11c6
+    .claude/skills/write-pr-description/SKILL.md: sha256:7a8ec5cacc9753bf26656592e8dedef075a5d035ceac71e2f0838bff48d2e4dd
     .claude/skills/write-pr-description/scripts/context.sh: sha256:8f2963be66de209a31573696847645f7252028a5648ed2b0f97a71cc39ff72d6
     .claude/skills/write-pr-description/scripts/guard-draft.sh: sha256:8c0a80c080fa29e231745de949d5821f273f062fc6ae0ed78b6cc4167da8d443
-    .claude/skills/write-pr-description/tokens.json: sha256:91f40292e5db8fec5e2a09136bb1dbdfedef69fd2eb3f68a6a7182ed337053a5
-    .claude/skills/write-prose-fix/SKILL.md: sha256:da29ee08247b06863c10a55a759d9b6b7405c1d7def15a8e33954933541349cd
+    .claude/skills/write-pr-description/tokens.json: sha256:c0bfd38502a9a678bde518b558135b4328d8629f3110a9b5f3deb40938da1b2a
+    .claude/skills/write-prose-fix/SKILL.md: sha256:57eb5b5390e3e2f44828cf65d72a56b4100e732e706fc8a3b79e1db2f894b072
     .claude/skills/write-prose-fix/scripts/context.sh: sha256:a8f111896e3a438307b1c7467724f8ad43ee25c0234fae7b0939e256ae333aca
-    .claude/skills/write-prose-fix/tokens.json: sha256:38ee03536cd286dd9e51ff4342e574c2e2d62ce5c89dcab5ec368c95d94f23de
-  content_hash: sha256:0e527a8c6fe210431e0559342df18ed67a376e1c35861f2309cc5e8cd18e6c65
+    .claude/skills/write-prose-fix/tokens.json: sha256:d9f8f35924f703eb8d473df9dd1fc7fc858af74f44b07e96f4c686e5a015fa29
+  content_hash: sha256:ec7843b2be85f4c6f2b4331c3c9b80ca9b5c392397bcf92419a3d77d55e21d53
   declared_license: Apache-2.0
-- repo_url: tbhb/repotools
-  name: repotools-agents-codex
+- repo_url: tbhb-dev/devtools
+  name: devtools-agents-codex
   host: github.com
-  resolved_commit: cf79409736ca25234b224d4580ed13cd82be0b75
-  resolved_ref: v0.9.0
-  version: 0.9.0
+  resolved_commit: d80265aa04fd10bbfe3965200ddbe3d5d1563c38
+  resolved_ref: v0.10.0
+  version: 0.10.0
   virtual_path: packages/agents/codex
   is_virtual: true
   depth: 2
-  resolved_by: tbhb/repotools
+  resolved_by: tbhb-dev/devtools
   package_type: apm_package
   deployed_files:
   - .claude/skills/codex-analyze-session
@@ -314,94 +314,94 @@ dependencies:
   - .claude/skills/codex-write-prose-fix/scripts/context.sh
   - .claude/skills/codex-write-prose-fix/tokens.json
   deployed_file_hashes:
-    .claude/skills/codex-analyze-session/SKILL.md: sha256:736b99a3084d25439116df2276cb2c89131d181c6df10b451afc07b794cd65f6
-    .claude/skills/codex-analyze-session/references/FIX_SURFACES.md: sha256:dc66941226f224366dc8d6c8ac230462bd3f49613db71b3446c4c1ccb342db8e
-    .claude/skills/codex-analyze-session/references/LOCATE_SESSION.md: sha256:36f3c40d3761dd076c5d961ba88cd3c0dab6c4a55313663d10d1f2069d47ca27
-    .claude/skills/codex-analyze-session/references/SESSION_CLI.md: sha256:77160d043e8e958deb99f2e0f963bdf15b69edb7c6a8635a5464114a3b740715
-    .claude/skills/codex-analyze-session/references/VERIFY_FIGURES.md: sha256:28c360f73b85cae8d8751ab7a725a20532612d6056144d9e6772f50431ae375f
-    .claude/skills/codex-analyze-session/references/WRITING_THE_RETRO.md: sha256:38e1f04f153ff8fa3b3196119e34a2e114443ce147e276344d86f20a2a2965b3
+    .claude/skills/codex-analyze-session/SKILL.md: sha256:118069d82ed8edf8e0a8d595050cb0ecaf0c6634663b466c66bc7bfc17b0f3c1
+    .claude/skills/codex-analyze-session/references/FIX_SURFACES.md: sha256:a3024f7b03b544c0f5ec1465b4b8c27fc8121e2b4d67e60373ea7a38cad64aba
+    .claude/skills/codex-analyze-session/references/LOCATE_SESSION.md: sha256:bf0ed02f0612f9b1fc919ab5b1eb8147218c652fd6309e9e6725e890e0a3c398
+    .claude/skills/codex-analyze-session/references/SESSION_CLI.md: sha256:7a008a05b2dc40578b630442ddaafc07a61fee3dfda25259e015f508722c43ce
+    .claude/skills/codex-analyze-session/references/VERIFY_FIGURES.md: sha256:f145df301b3127600a2849c96f3fa759b176f0cb72f79da1a3b074ef6e289b5c
+    .claude/skills/codex-analyze-session/references/WRITING_THE_RETRO.md: sha256:13853f367e1eced082323ea80d741b98e502f49c8287b4647df9754a65a751e0
     .claude/skills/codex-analyze-session/scripts/new-retro.sh: sha256:be65ccd005227b92b305abe2ace122f7b9bc94d406f948507ec16489c7514bc8
-    .claude/skills/codex-analyze-session/scripts/preflight.sh: sha256:f3cbb324db593816e9956cf595937bbc459ca3c8551159c909d31b8cd93b116c
-    .claude/skills/codex-analyze-session/scripts/session.py: sha256:3ca7831c2e8927d63ccb551717f910973a103afdc64b81a43279db831cf196ac
-    .claude/skills/codex-analyze-session/templates/RETRO.md: sha256:e65ceac0ec839e63669cab8dea671530de5d521dd568e5380d602f4e4ce03b93
-    .claude/skills/codex-analyze-session/tokens.json: sha256:182dc0cb075e2562d25f1bcb4b4e4ed5b7dd09ad9b589b22d2a8a2dacc1f0de2
-    .claude/skills/codex-commit/SKILL.md: sha256:0a90b7b3b335fce89a05f42405ba92a2e6c01fe40c38c38f4b6cf910c1aee802
+    .claude/skills/codex-analyze-session/scripts/preflight.sh: sha256:3427d0fce82ff17e875d69bed2dc4eb1f601b0695f50b019a77a1760d7cc7cea
+    .claude/skills/codex-analyze-session/scripts/session.py: sha256:3a91cec33c753fca30a93585f2d33abfc61c6b4bffc5d136c64de0407b886787
+    .claude/skills/codex-analyze-session/templates/RETRO.md: sha256:d32e61e95a2631b3f5867ea4180a5446d41767ad564969e1574d134938d24036
+    .claude/skills/codex-analyze-session/tokens.json: sha256:b85eb8c37555a694bf2bcf240dbfa210b74d75d4be526457180f09c004888b35
+    .claude/skills/codex-commit/SKILL.md: sha256:255989765baa103f62bf0db0b00d9c0d7664f8e7db79a42acd87688f0b7c5374
     .claude/skills/codex-commit/scripts/commit.sh: sha256:978a18393c2c41e2c06e9a72d2433ed01f23ac90e6b9a3393b263d78bd17f4c5
-    .claude/skills/codex-commit/scripts/preflight.sh: sha256:031bc49987aceb1d114dbbe93de536f913ce922fadc071d4491cef45c1beeae2
+    .claude/skills/codex-commit/scripts/preflight.sh: sha256:724bcf2652ad69104a45d87eb2c8db6ade06ce594b2390b02d9f89743685087e
     .claude/skills/codex-commit/scripts/stamp-review.sh: sha256:daf2f7bc481d11f8339ae29db92b00529a1a4c27b6da417687cac0b985ae88a2
-    .claude/skills/codex-commit/tokens.json: sha256:1d1bc8c5d0fd1d4297fbe600b4f54926ab1eacceba7323ec40261be4f4f2e10a
-    .claude/skills/codex-fix-pr/SKILL.md: sha256:f58e65eb600c537c77c4545cafb31b9164df2f1c21f365c7ec8eaa2aeb7739ef
-    .claude/skills/codex-fix-pr/scripts/diagnose.sh: sha256:54ed5032569419c9a49677822ce89cc253677fe4eee0b2334fc0fe1825cc1af8
+    .claude/skills/codex-commit/tokens.json: sha256:5629507a1c567d6edbcb9c1aa353161d7301bbc747d1f48960a351772a0456fd
+    .claude/skills/codex-fix-pr/SKILL.md: sha256:a3fb38928c69d0dc6bb94276593cd0e4f3a1aa6205ebc8f5483ea46f30b32d45
+    .claude/skills/codex-fix-pr/scripts/diagnose.sh: sha256:c99a1fe65739d1e6f0739a3144a73c52b5babcc8ee18151a46de0d89fd51198f
     .claude/skills/codex-fix-pr/scripts/populate-description.sh: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
-    .claude/skills/codex-fix-pr/tokens.json: sha256:70e9217ae2ed8c2b6d83298152da91e44706e46165ff9dbc0ceb196489d4f270
-    .claude/skills/codex-fix-prose/SKILL.md: sha256:7cf3ebd9c6b75b20e7e933bd1c2ddf1d72b8a5bf4911c56f2b25ddc56c9f54c2
+    .claude/skills/codex-fix-pr/tokens.json: sha256:3aad5786551c2ce4eb92d7a38fb72dec5d3429f5ace746c6115d8f02bff3d1bd
+    .claude/skills/codex-fix-prose/SKILL.md: sha256:660bd1139d3413399dd24e7f09d0384d1ef9ffb7d85121cb7b716312f00fd0c8
     .claude/skills/codex-fix-prose/scripts/check-suppressions.sh: sha256:950b610fd4822d2241d15f014c1e712b21d8ec961b72f756bc37913605c409e6
     .claude/skills/codex-fix-prose/scripts/preflight.sh: sha256:42898c31535e0da5939e856b2355f7d66a48b03f114ab5924d2abc428c65b9da
-    .claude/skills/codex-fix-prose/tokens.json: sha256:844eb86f61a968b1afade1f7750fd688afe314023edf8f62f609123a4f37f938
-    .claude/skills/codex-merge-pr/SKILL.md: sha256:008b248509f75ba368597ce46506aebc03555ded27cca2b81f7fe85a66ad183d
+    .claude/skills/codex-fix-prose/tokens.json: sha256:8a6b196084fbc8580c248b7329ba690982995d07fd305ac31b5c6401188d44a2
+    .claude/skills/codex-merge-pr/SKILL.md: sha256:e30b4a4edeba5a8850661501ea979f5b2b389a8490d54fbd55dcff2d7720753a
     .claude/skills/codex-merge-pr/scripts/populate-description.sh: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
     .claude/skills/codex-merge-pr/scripts/preflight.sh: sha256:39cbfb653edbb106f6a8f2e9f63c2e61e5ec52ce51cfab9a5d87c3c6c0ae736d
     .claude/skills/codex-merge-pr/scripts/squash-merge.sh: sha256:3943556eacb3b790d7e83fb30d6589b1d413397fd2cc2688ebb55179d85f9011
     .claude/skills/codex-merge-pr/scripts/squash-message.sh: sha256:f611aefdba89ebce52f6e4683b4c087742d271e009d5386f75b284e7b1d4915d
     .claude/skills/codex-merge-pr/scripts/stamp-review.sh: sha256:f11919448af7f892e300e97ebca968f9e97808330bb44d99ae0cc92e7ba0d50c
-    .claude/skills/codex-merge-pr/tokens.json: sha256:4e4a39b8f47525fdda0cd169a924ea703967793211bd2e210342f6fd383b2198
-    .claude/skills/codex-pr/SKILL.md: sha256:9ec84b28b6a36ef52b4dc5122be84229a522a3c6bbfec6fadbca87bb1a84b820
+    .claude/skills/codex-merge-pr/tokens.json: sha256:2ca14074c3d53e33f3102e8bdd28cbf30f5297036d3553d42ad1e352981d5ef3
+    .claude/skills/codex-pr/SKILL.md: sha256:fc0f1c033d4c2d2b61f1dfa4b975ece556e081d79d32fd97a9f4640287b36fc9
     .claude/skills/codex-pr/scripts/create-pr.sh: sha256:1a4d6e68b5bf562f0876a34d3ccb69b74e0bc848dc42058ee46683d7bba389fe
     .claude/skills/codex-pr/scripts/preflight.sh: sha256:3ce306acc9ee1a7a5bc136749d60e1b9cad742484fd52ae2ce59b6b4f91b0ac9
     .claude/skills/codex-pr/scripts/record-review.sh: sha256:a9c02aa03dc44e7303b5fbe7e69e952bacb95ac36d53e56d9adcdff9fb2893a2
     .claude/skills/codex-pr/scripts/scaffold-description.sh: sha256:e8a7e913e21a56f29851e614033dcbff888cc7863e70446f2ce8dfc3fe77dedb
     .claude/skills/codex-pr/scripts/validate-description.sh: sha256:06798be90499be5695209f93076bc8bf6ce1fb4c8145dbd3f85c951488be2575
-    .claude/skills/codex-pr/tokens.json: sha256:b89b5b3635354afd2b324847b0fbce8e9688edbad5b12ec1c2bb5c81b55b07ce
-    .claude/skills/codex-rebase/SKILL.md: sha256:09934c8ac244a437c27e23047ce401588fefd62cb34a1260e166bdfc9fd7901f
+    .claude/skills/codex-pr/tokens.json: sha256:11f7b00b4614ce2a97ff3d1de96daa9992e659dd509e95796c63de7deaf80110
+    .claude/skills/codex-rebase/SKILL.md: sha256:bf727abef474dd607d749540707393bd345a8d5de319480cf1f56234856788a9
     .claude/skills/codex-rebase/scripts/continue-rebase.sh: sha256:477257bf592accf2c4bbf3c67ba8f48a1738cca6e2b9f806fe38a082d38f9554
     .claude/skills/codex-rebase/scripts/marker-scan.sh: sha256:c3ac87dd0352a8bdbd70f05c4febd7d11b5cc0e2576c30d896003360e7f268df
     .claude/skills/codex-rebase/scripts/preflight.sh: sha256:00f2be2c4ad78ae44f501273e4df1a160dc169c5140ce9455f287df5b2b3ffb9
     .claude/skills/codex-rebase/scripts/rebase-status.sh: sha256:f1c9da43d61decd4e1dc6c321efa71e03548c1455acfd70d1437e06b1ab68d8f
     .claude/skills/codex-rebase/scripts/start-rebase.sh: sha256:42f56f78d535f599103d20ba2e8462163bdc5973903101318e7a7ffe75ad9496
     .claude/skills/codex-rebase/scripts/verify-rebase.sh: sha256:2c509fb84aa88aec261473df5396bfcb7b017b6480643eebadd6cafe91b2b88d
-    .claude/skills/codex-rebase/tokens.json: sha256:2c2edde6e247e8d8594ffeb17c6cdbbf6d23fa9509e13c0dbe603694debb252b
-    .claude/skills/codex-resolve-rebase-conflicts/SKILL.md: sha256:7056ff9d353cde01bde86425128c5b09220e791e3ec2d1ccf3dd323fc0852646
+    .claude/skills/codex-rebase/tokens.json: sha256:c0736660962ac7bf8c05e9f712ed16ef73239e6106751d4da975116e1f7d779b
+    .claude/skills/codex-resolve-rebase-conflicts/SKILL.md: sha256:abcf6003d9e84262ae08a742c47f3cd21a9fe06c5003a1fbd7822c3e131b79a6
     .claude/skills/codex-resolve-rebase-conflicts/scripts/classify-conflicts.sh: sha256:78300f099cba926c97cc224e37bf8a9e8846722115378b9fb0001009605a7588
     .claude/skills/codex-resolve-rebase-conflicts/scripts/conflict_shape.py: sha256:cc2b87c5b9d7de560bda3a5b6be623b8fbd35c35f4c9dac19e13af694dc3dd29
     .claude/skills/codex-resolve-rebase-conflicts/scripts/resolve-union.sh: sha256:3c9b29d25e24d891b71bade29d14dfbc11d5d0f2243fa4d44db2a52a8e2d9c32
     .claude/skills/codex-resolve-rebase-conflicts/scripts/take-side.sh: sha256:93f47713021834b6f5b138c42f48e26c40e41ed760a06a4a268787d25ce3a092
-    .claude/skills/codex-resolve-rebase-conflicts/tokens.json: sha256:ef50155511da93dce484ccd6f39b7c5b5c2a600afc4dfe02698ea367ea392e04
-    .claude/skills/codex-review-commit-message/SKILL.md: sha256:a08f61c97226a510cce3d3922321df3b0fed6f4ec8ec11e354e4b0e6ab89731a
-    .claude/skills/codex-review-commit-message/tokens.json: sha256:768f15901db529681539fe9a213ed7f255fc26c1dc485de18f33b925e46a60cd
+    .claude/skills/codex-resolve-rebase-conflicts/tokens.json: sha256:718ff0aa3fe0474a1e21cbde05d3bdbe2eb41aa04d84c9980094015cddfcc953
+    .claude/skills/codex-review-commit-message/SKILL.md: sha256:950e4c94c85add0bdef19ada827b1708a3fa683260935d2661b0b2a7e0b4a9e4
+    .claude/skills/codex-review-commit-message/tokens.json: sha256:a8710d28caaa62a5cfafedfa8fdd9d6d100017590e38d2441f975b58423f7e45
     .claude/skills/codex-review-pr-description/SKILL.md: sha256:4c8935eac7a01a78f6da338eaa12a33b01318134fcc5e7f13dbaa9a3e8741628
     .claude/skills/codex-review-pr-description/tokens.json: sha256:c76013f53e4e899456da286ff278bf3911bff955d52c9d781d144c4122f5aa5c
     .claude/skills/codex-review-prose-fix/SKILL.md: sha256:318b98bc5e74076926bb910a91f431784a11b98a74004bccaf9bd95e3105856f
     .claude/skills/codex-review-prose-fix/tokens.json: sha256:394011ce303b7ae3984450484e36f06e361b2cf547031132713012ebeec066fb
-    .claude/skills/codex-review-squash-message/SKILL.md: sha256:96d8f57210ed5b674d5a3797142d95db4d0e4cd6152bf574b6e624d5a12f6cc2
+    .claude/skills/codex-review-squash-message/SKILL.md: sha256:9f8bc325e751fe7b056e0ab078d59d7b02f365ccacd6c75262f0e0e3d84eff0d
     .claude/skills/codex-review-squash-message/scripts/context.sh: sha256:a58b83173e9183eaab70784df2981acfd8ae3755570e6c01abc95b10f63d91db
-    .claude/skills/codex-review-squash-message/tokens.json: sha256:86da8ef28e13701384a2f482fea54ded329c378a50c03dc4696eb391807b53f2
+    .claude/skills/codex-review-squash-message/tokens.json: sha256:573da7b2d6fc6ec79a58d63395d59db733fc44fcee86d0ff76a95111568ce626
     .claude/skills/codex-watch-pr/SKILL.md: sha256:f5e9b9ea7907a94e7d9ce8276fefab901e365059e2f147683cd6c1ea31ac2b0b
     .claude/skills/codex-watch-pr/scripts/watch-checks.sh: sha256:a72b832a3a9d7e9924dbbacc07c3df48bce470489978e4b447fb967b4c31b2f2
     .claude/skills/codex-watch-pr/tokens.json: sha256:c4f7854a6e657cfd1fdd73ebf90b29517041b8dbc40af4e52793ade85cebaf63
-    .claude/skills/codex-write-pr-description/SKILL.md: sha256:1eec02eeab5e7042db5956408948fb8279a5ec008cfc9e3b85fcbd871379d983
+    .claude/skills/codex-write-pr-description/SKILL.md: sha256:63699ecf4644b6313ae9fda1167adc433a347ae42a25848d9c85de51e7ee459e
     .claude/skills/codex-write-pr-description/scripts/context.sh: sha256:8f2963be66de209a31573696847645f7252028a5648ed2b0f97a71cc39ff72d6
-    .claude/skills/codex-write-pr-description/tokens.json: sha256:2644b5fb800e1ff63d42ca1e3368da14830af7444c3df0e8cee62401dff6c5df
+    .claude/skills/codex-write-pr-description/tokens.json: sha256:bdf80a351671a5e4313dbaf9bfad1b0393a6192307a335d59cbdb4f654baff77
     .claude/skills/codex-write-prose-fix/SKILL.md: sha256:ae42b51e2abc4c68ebf65cea9cde15690489caeba97cf93f895e5b04ecaab160
     .claude/skills/codex-write-prose-fix/scripts/context.sh: sha256:e570195e0affaf50d758828f3211af3902ce99730b405667f68e5ad6d96e8ff2
     .claude/skills/codex-write-prose-fix/tokens.json: sha256:49d6462614cea13e4e16a95bb98674f5761011bde37791b52fea4bed3205b761
-  content_hash: sha256:283c5e61669ef5365410566ba8f6afb422cd41b6b3f065db13301b971b612eeb
+  content_hash: sha256:085a98db5ac70df9a0fcc7adf6197b0199f9c0c6057f1b714e54d49a07a72c3d
   declared_license: Apache-2.0
-- repo_url: tbhb/repotools
-  name: repotools-agents-common
+- repo_url: tbhb-dev/devtools
+  name: devtools-agents-common
   host: github.com
-  resolved_commit: cf79409736ca25234b224d4580ed13cd82be0b75
-  resolved_ref: v0.9.0
-  version: 0.9.0
+  resolved_commit: d80265aa04fd10bbfe3965200ddbe3d5d1563c38
+  resolved_ref: v0.10.0
+  version: 0.10.0
   virtual_path: packages/agents/common
   is_virtual: true
   depth: 2
-  resolved_by: tbhb/repotools
+  resolved_by: tbhb-dev/devtools
   package_type: apm_package
   deployed_files:
   - .claude/rules/worktree-wip.md
   deployed_file_hashes:
-    .claude/rules/worktree-wip.md: sha256:053bdfeec6a58fa3a81f2d5749c096069ad4c012262ef71a3bebb08dfb35f740
-  content_hash: sha256:39c47f2621f05255f1267bf421de20999b8e7597963bb7f27b2cc137b4a0b4bf
+    .claude/rules/worktree-wip.md: sha256:cd5ab694ce595f611a5793627606f96a8d346ee9fd067f24578c3a86232a8200
+  content_hash: sha256:845ce5e4e479e0b37b34ff1de30f622b2f879d40b1c636e73f50c2c373e5dab5
   declared_license: Apache-2.0
 deployments:
 - kind: project-relative
@@ -410,17 +410,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/common
-  active_owner: tbhb/repotools/packages/agents/common
-  content_hash: sha256:053bdfeec6a58fa3a81f2d5749c096069ad4c012262ef71a3bebb08dfb35f740
+  - tbhb-dev/devtools/packages/agents/common
+  active_owner: tbhb-dev/devtools/packages/agents/common
+  content_hash: sha256:cd5ab694ce595f611a5793627606f96a8d346ee9fd067f24578c3a86232a8200
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -428,62 +428,62 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:f16be7d5b2fc2d35802f2c74c075f5dcd21b6f3debdeecba62fe0028047d59ba
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:6619d688416e2d15e036d02deff44c7669c99044f20557b64f6296a861c20387
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/references/FIX_SURFACES.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:37da1ae850e75d69e9681070f93e2284fbba5477fedb5484cd28f17f0d1a6346
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:8412565e7a43b293355d36241d05f3fcc64915b81ff18365e30576f2eea4c101
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/references/LOCATE_SESSION.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:a4e6b4b4981effd3025753224890eb3f1570d3d9c8738d8409354d2ab2871c86
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:e17040ccefd630fbd0d4a641b3899cd40d7d59ab26fa86977c403bd7e3752d08
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/references/SESSION_CLI.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:1128f27554f28a895d4e7eafa8e21ffcb561399168a12eea3cb634197a92d665
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:d582d8b801314e3782ecd71dd18d9fd01dffd488b4afb25a849a55923f24c8b2
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/references/VERIFY_FIGURES.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:e6bd7152f630f67aa9564c0615781f7827ba0df5d2d53775c51dfca54491a313
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:27e489c48cd05a8a648f8e76698bc284730f66279de052e0adf82206f31598a9
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/references/WRITING_THE_RETRO.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:38e1f04f153ff8fa3b3196119e34a2e114443ce147e276344d86f20a2a2965b3
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:13853f367e1eced082323ea80d741b98e502f49c8287b4647df9754a65a751e0
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/scripts/new-retro.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:1c594ccd66c9d97c830f34a326c98cdb892a2237f98e256340fb647f4f7fb6c9
 - kind: project-relative
   target: claude
@@ -491,44 +491,44 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:ff021bce33efc02454ac8a07004f1e681fb0388d3dd160a581c206bb660212be
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:e65e05793087f459e1a4c3300c705df59d6d1f94bdef41521ea5e2c730b4f520
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/scripts/session.py
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:6e79efa8c241521effd22bf926a43c28d86c5e04cce14fa0ee6ca84e2fcf3c82
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:d68229eaa69e3847bf455f4624eb140df978569c62848f43cf7135841d71e91e
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/templates/RETRO.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:0703f7f280c2e506c50fc9d3de4c03a8b0b1315f197c612e87471de65d726162
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:1882079c8697f33c62fd00f59e0f103a56d6a1133394a1f40f82522e8f60ae44
 - kind: project-relative
   target: claude
   value: .claude/skills/analyze-session/tokens.json
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:2ae683e48217bd4741cd4f8e5a72637f3fae85a0423ca3a48c3d78f4a8b53ae5
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:daa08072743127ed5ee050dd34a4b5f9a072d8877f3cf3a507d33e6ed9ed7468
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -536,62 +536,62 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:736b99a3084d25439116df2276cb2c89131d181c6df10b451afc07b794cd65f6
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:118069d82ed8edf8e0a8d595050cb0ecaf0c6634663b466c66bc7bfc17b0f3c1
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/references/FIX_SURFACES.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:dc66941226f224366dc8d6c8ac230462bd3f49613db71b3446c4c1ccb342db8e
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:a3024f7b03b544c0f5ec1465b4b8c27fc8121e2b4d67e60373ea7a38cad64aba
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/references/LOCATE_SESSION.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:36f3c40d3761dd076c5d961ba88cd3c0dab6c4a55313663d10d1f2069d47ca27
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:bf0ed02f0612f9b1fc919ab5b1eb8147218c652fd6309e9e6725e890e0a3c398
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/references/SESSION_CLI.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:77160d043e8e958deb99f2e0f963bdf15b69edb7c6a8635a5464114a3b740715
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:7a008a05b2dc40578b630442ddaafc07a61fee3dfda25259e015f508722c43ce
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/references/VERIFY_FIGURES.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:28c360f73b85cae8d8751ab7a725a20532612d6056144d9e6772f50431ae375f
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:f145df301b3127600a2849c96f3fa759b176f0cb72f79da1a3b074ef6e289b5c
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/references/WRITING_THE_RETRO.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:38e1f04f153ff8fa3b3196119e34a2e114443ce147e276344d86f20a2a2965b3
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:13853f367e1eced082323ea80d741b98e502f49c8287b4647df9754a65a751e0
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/scripts/new-retro.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:be65ccd005227b92b305abe2ace122f7b9bc94d406f948507ec16489c7514bc8
 - kind: project-relative
   target: claude
@@ -599,44 +599,44 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:f3cbb324db593816e9956cf595937bbc459ca3c8551159c909d31b8cd93b116c
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:3427d0fce82ff17e875d69bed2dc4eb1f601b0695f50b019a77a1760d7cc7cea
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/scripts/session.py
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:3ca7831c2e8927d63ccb551717f910973a103afdc64b81a43279db831cf196ac
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:3a91cec33c753fca30a93585f2d33abfc61c6b4bffc5d136c64de0407b886787
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/templates/RETRO.md
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:e65ceac0ec839e63669cab8dea671530de5d521dd568e5380d602f4e4ce03b93
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:d32e61e95a2631b3f5867ea4180a5446d41767ad564969e1574d134938d24036
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-analyze-session/tokens.json
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:182dc0cb075e2562d25f1bcb4b4e4ed5b7dd09ad9b589b22d2a8a2dacc1f0de2
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:b85eb8c37555a694bf2bcf240dbfa210b74d75d4be526457180f09c004888b35
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-commit
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -644,17 +644,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:0a90b7b3b335fce89a05f42405ba92a2e6c01fe40c38c38f4b6cf910c1aee802
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:255989765baa103f62bf0db0b00d9c0d7664f8e7db79a42acd87688f0b7c5374
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-commit/scripts/commit.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:978a18393c2c41e2c06e9a72d2433ed01f23ac90e6b9a3393b263d78bd17f4c5
 - kind: project-relative
   target: claude
@@ -662,17 +662,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:031bc49987aceb1d114dbbe93de536f913ce922fadc071d4491cef45c1beeae2
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:724bcf2652ad69104a45d87eb2c8db6ade06ce594b2390b02d9f89743685087e
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-commit/scripts/stamp-review.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:daf2f7bc481d11f8339ae29db92b00529a1a4c27b6da417687cac0b985ae88a2
 - kind: project-relative
   target: claude
@@ -680,17 +680,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:1d1bc8c5d0fd1d4297fbe600b4f54926ab1eacceba7323ec40261be4f4f2e10a
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:5629507a1c567d6edbcb9c1aa353161d7301bbc747d1f48960a351772a0456fd
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-fix-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -698,26 +698,26 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:f58e65eb600c537c77c4545cafb31b9164df2f1c21f365c7ec8eaa2aeb7739ef
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:a3fb38928c69d0dc6bb94276593cd0e4f3a1aa6205ebc8f5483ea46f30b32d45
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-fix-pr/scripts/diagnose.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:54ed5032569419c9a49677822ce89cc253677fe4eee0b2334fc0fe1825cc1af8
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:c99a1fe65739d1e6f0739a3144a73c52b5babcc8ee18151a46de0d89fd51198f
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-fix-pr/scripts/populate-description.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
 - kind: project-relative
   target: claude
@@ -725,17 +725,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:70e9217ae2ed8c2b6d83298152da91e44706e46165ff9dbc0ceb196489d4f270
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:3aad5786551c2ce4eb92d7a38fb72dec5d3429f5ace746c6115d8f02bff3d1bd
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-fix-prose
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -743,17 +743,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:7cf3ebd9c6b75b20e7e933bd1c2ddf1d72b8a5bf4911c56f2b25ddc56c9f54c2
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:660bd1139d3413399dd24e7f09d0384d1ef9ffb7d85121cb7b716312f00fd0c8
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-fix-prose/scripts/check-suppressions.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:950b610fd4822d2241d15f014c1e712b21d8ec961b72f756bc37913605c409e6
 - kind: project-relative
   target: claude
@@ -761,8 +761,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:42898c31535e0da5939e856b2355f7d66a48b03f114ab5924d2abc428c65b9da
 - kind: project-relative
   target: claude
@@ -770,17 +770,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:844eb86f61a968b1afade1f7750fd688afe314023edf8f62f609123a4f37f938
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:8a6b196084fbc8580c248b7329ba690982995d07fd305ac31b5c6401188d44a2
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-merge-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -788,17 +788,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:008b248509f75ba368597ce46506aebc03555ded27cca2b81f7fe85a66ad183d
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:e30b4a4edeba5a8850661501ea979f5b2b389a8490d54fbd55dcff2d7720753a
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-merge-pr/scripts/populate-description.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
 - kind: project-relative
   target: claude
@@ -806,8 +806,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:39cbfb653edbb106f6a8f2e9f63c2e61e5ec52ce51cfab9a5d87c3c6c0ae736d
 - kind: project-relative
   target: claude
@@ -815,8 +815,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:3943556eacb3b790d7e83fb30d6589b1d413397fd2cc2688ebb55179d85f9011
 - kind: project-relative
   target: claude
@@ -824,8 +824,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:f611aefdba89ebce52f6e4683b4c087742d271e009d5386f75b284e7b1d4915d
 - kind: project-relative
   target: claude
@@ -833,8 +833,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:f11919448af7f892e300e97ebca968f9e97808330bb44d99ae0cc92e7ba0d50c
 - kind: project-relative
   target: claude
@@ -842,17 +842,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:4e4a39b8f47525fdda0cd169a924ea703967793211bd2e210342f6fd383b2198
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:2ca14074c3d53e33f3102e8bdd28cbf30f5297036d3553d42ad1e352981d5ef3
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -860,17 +860,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:9ec84b28b6a36ef52b4dc5122be84229a522a3c6bbfec6fadbca87bb1a84b820
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:fc0f1c033d4c2d2b61f1dfa4b975ece556e081d79d32fd97a9f4640287b36fc9
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-pr/scripts/create-pr.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:1a4d6e68b5bf562f0876a34d3ccb69b74e0bc848dc42058ee46683d7bba389fe
 - kind: project-relative
   target: claude
@@ -878,8 +878,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:3ce306acc9ee1a7a5bc136749d60e1b9cad742484fd52ae2ce59b6b4f91b0ac9
 - kind: project-relative
   target: claude
@@ -887,8 +887,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:a9c02aa03dc44e7303b5fbe7e69e952bacb95ac36d53e56d9adcdff9fb2893a2
 - kind: project-relative
   target: claude
@@ -896,8 +896,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:e8a7e913e21a56f29851e614033dcbff888cc7863e70446f2ce8dfc3fe77dedb
 - kind: project-relative
   target: claude
@@ -905,8 +905,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:06798be90499be5695209f93076bc8bf6ce1fb4c8145dbd3f85c951488be2575
 - kind: project-relative
   target: claude
@@ -914,17 +914,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:b89b5b3635354afd2b324847b0fbce8e9688edbad5b12ec1c2bb5c81b55b07ce
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:11f7b00b4614ce2a97ff3d1de96daa9992e659dd509e95796c63de7deaf80110
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-rebase
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -932,17 +932,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:09934c8ac244a437c27e23047ce401588fefd62cb34a1260e166bdfc9fd7901f
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:bf727abef474dd607d749540707393bd345a8d5de319480cf1f56234856788a9
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-rebase/scripts/continue-rebase.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:477257bf592accf2c4bbf3c67ba8f48a1738cca6e2b9f806fe38a082d38f9554
 - kind: project-relative
   target: claude
@@ -950,8 +950,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:c3ac87dd0352a8bdbd70f05c4febd7d11b5cc0e2576c30d896003360e7f268df
 - kind: project-relative
   target: claude
@@ -959,8 +959,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:00f2be2c4ad78ae44f501273e4df1a160dc169c5140ce9455f287df5b2b3ffb9
 - kind: project-relative
   target: claude
@@ -968,8 +968,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:f1c9da43d61decd4e1dc6c321efa71e03548c1455acfd70d1437e06b1ab68d8f
 - kind: project-relative
   target: claude
@@ -977,8 +977,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:42f56f78d535f599103d20ba2e8462163bdc5973903101318e7a7ffe75ad9496
 - kind: project-relative
   target: claude
@@ -986,8 +986,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:2c509fb84aa88aec261473df5396bfcb7b017b6480643eebadd6cafe91b2b88d
 - kind: project-relative
   target: claude
@@ -995,17 +995,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:2c2edde6e247e8d8594ffeb17c6cdbbf6d23fa9509e13c0dbe603694debb252b
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:c0736660962ac7bf8c05e9f712ed16ef73239e6106751d4da975116e1f7d779b
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-resolve-rebase-conflicts
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1013,17 +1013,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:7056ff9d353cde01bde86425128c5b09220e791e3ec2d1ccf3dd323fc0852646
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:abcf6003d9e84262ae08a742c47f3cd21a9fe06c5003a1fbd7822c3e131b79a6
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-resolve-rebase-conflicts/scripts/classify-conflicts.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:78300f099cba926c97cc224e37bf8a9e8846722115378b9fb0001009605a7588
 - kind: project-relative
   target: claude
@@ -1031,8 +1031,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:cc2b87c5b9d7de560bda3a5b6be623b8fbd35c35f4c9dac19e13af694dc3dd29
 - kind: project-relative
   target: claude
@@ -1040,8 +1040,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:3c9b29d25e24d891b71bade29d14dfbc11d5d0f2243fa4d44db2a52a8e2d9c32
 - kind: project-relative
   target: claude
@@ -1049,8 +1049,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:93f47713021834b6f5b138c42f48e26c40e41ed760a06a4a268787d25ce3a092
 - kind: project-relative
   target: claude
@@ -1058,17 +1058,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:ef50155511da93dce484ccd6f39b7c5b5c2a600afc4dfe02698ea367ea392e04
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:718ff0aa3fe0474a1e21cbde05d3bdbe2eb41aa04d84c9980094015cddfcc953
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-review-commit-message
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1076,26 +1076,26 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:a08f61c97226a510cce3d3922321df3b0fed6f4ec8ec11e354e4b0e6ab89731a
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:950e4c94c85add0bdef19ada827b1708a3fa683260935d2661b0b2a7e0b4a9e4
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-review-commit-message/tokens.json
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:768f15901db529681539fe9a213ed7f255fc26c1dc485de18f33b925e46a60cd
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:a8710d28caaa62a5cfafedfa8fdd9d6d100017590e38d2441f975b58423f7e45
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-review-pr-description
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1103,8 +1103,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:4c8935eac7a01a78f6da338eaa12a33b01318134fcc5e7f13dbaa9a3e8741628
 - kind: project-relative
   target: claude
@@ -1112,8 +1112,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:c76013f53e4e899456da286ff278bf3911bff955d52c9d781d144c4122f5aa5c
 - kind: project-relative
   target: claude
@@ -1121,8 +1121,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1130,8 +1130,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:318b98bc5e74076926bb910a91f431784a11b98a74004bccaf9bd95e3105856f
 - kind: project-relative
   target: claude
@@ -1139,8 +1139,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:394011ce303b7ae3984450484e36f06e361b2cf547031132713012ebeec066fb
 - kind: project-relative
   target: claude
@@ -1148,8 +1148,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1157,17 +1157,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:96d8f57210ed5b674d5a3797142d95db4d0e4cd6152bf574b6e624d5a12f6cc2
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:9f8bc325e751fe7b056e0ab078d59d7b02f365ccacd6c75262f0e0e3d84eff0d
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-review-squash-message/scripts/context.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:a58b83173e9183eaab70784df2981acfd8ae3755570e6c01abc95b10f63d91db
 - kind: project-relative
   target: claude
@@ -1175,17 +1175,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:86da8ef28e13701384a2f482fea54ded329c378a50c03dc4696eb391807b53f2
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:573da7b2d6fc6ec79a58d63395d59db733fc44fcee86d0ff76a95111568ce626
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-watch-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1193,8 +1193,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:f5e9b9ea7907a94e7d9ce8276fefab901e365059e2f147683cd6c1ea31ac2b0b
 - kind: project-relative
   target: claude
@@ -1202,8 +1202,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:a72b832a3a9d7e9924dbbacc07c3df48bce470489978e4b447fb967b4c31b2f2
 - kind: project-relative
   target: claude
@@ -1211,8 +1211,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:c4f7854a6e657cfd1fdd73ebf90b29517041b8dbc40af4e52793ade85cebaf63
 - kind: project-relative
   target: claude
@@ -1220,8 +1220,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1229,17 +1229,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:1eec02eeab5e7042db5956408948fb8279a5ec008cfc9e3b85fcbd871379d983
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:63699ecf4644b6313ae9fda1167adc433a347ae42a25848d9c85de51e7ee459e
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-write-pr-description/scripts/context.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:8f2963be66de209a31573696847645f7252028a5648ed2b0f97a71cc39ff72d6
 - kind: project-relative
   target: claude
@@ -1247,17 +1247,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
-  content_hash: sha256:2644b5fb800e1ff63d42ca1e3368da14830af7444c3df0e8cee62401dff6c5df
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
+  content_hash: sha256:bdf80a351671a5e4313dbaf9bfad1b0393a6192307a335d59cbdb4f654baff77
 - kind: project-relative
   target: claude
   value: .claude/skills/codex-write-prose-fix
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1265,8 +1265,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:ae42b51e2abc4c68ebf65cea9cde15690489caeba97cf93f895e5b04ecaab160
 - kind: project-relative
   target: claude
@@ -1274,8 +1274,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:e570195e0affaf50d758828f3211af3902ce99730b405667f68e5ad6d96e8ff2
 - kind: project-relative
   target: claude
@@ -1283,8 +1283,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/codex
-  active_owner: tbhb/repotools/packages/agents/codex
+  - tbhb-dev/devtools/packages/agents/codex
+  active_owner: tbhb-dev/devtools/packages/agents/codex
   content_hash: sha256:49d6462614cea13e4e16a95bb98674f5761011bde37791b52fea4bed3205b761
 - kind: project-relative
   target: claude
@@ -1292,8 +1292,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1301,17 +1301,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:66c681663e47af0024d9a83a05d41793e39638f268b7b5b4232bc5620e757572
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:6e106937040e28d93425ebc84478d9817259a89520482f990ccd9fd40b200a19
 - kind: project-relative
   target: claude
   value: .claude/skills/commit/scripts/commit.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:a7447f831dc940c676a0a76d8644b4c2325ea1a69fe82d1c59ec5b632818ac81
 - kind: project-relative
   target: claude
@@ -1319,8 +1319,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:c826480f50e8b10baff853467a5bcd33b838fb13bcb1e0c866a05122d1a74df1
 - kind: project-relative
   target: claude
@@ -1328,17 +1328,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:3eaf101e29813ca3896d22ad69c7cb9c501d185ec2c298c03be1360aa76165d5
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:72cbf4e7182cdaa7087e23e976fbbdb446122cabe7b7409384bdd535051d8bb9
 - kind: project-relative
   target: claude
   value: .claude/skills/commit/scripts/stamp-review.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:94d3b98d4273dbc012f0d1c69c668d9fd6542a3032df94e0994b1220e26e9ec8
 - kind: project-relative
   target: claude
@@ -1346,17 +1346,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:15943a78ca7ae1a409788fefb02a75eb8c8556c838dcd6f6e0eb24b04d7e0352
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:eaa956fc8f68b9af262e93e56272890e679c74b0bc5ba71ada014af1d99cf6b9
 - kind: project-relative
   target: claude
   value: .claude/skills/fix-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1364,26 +1364,26 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:95515d765339aef8b0e44edd6a82b0b82d39bcadcf3e3b4cb9e4cf548d417068
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:778718fc5808b90eec06b73b09e6f46c95cf1bf22b491386cd6757c6415a582c
 - kind: project-relative
   target: claude
   value: .claude/skills/fix-pr/scripts/diagnose.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:54ed5032569419c9a49677822ce89cc253677fe4eee0b2334fc0fe1825cc1af8
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:c99a1fe65739d1e6f0739a3144a73c52b5babcc8ee18151a46de0d89fd51198f
 - kind: project-relative
   target: claude
   value: .claude/skills/fix-pr/scripts/guard-fix.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:5a9b7ae499dc72ead469684b3b8dadf08b4d00371d2be14c96a462db43ca3b0b
 - kind: project-relative
   target: claude
@@ -1391,8 +1391,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
 - kind: project-relative
   target: claude
@@ -1400,17 +1400,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:e765ed517c0bed92b68919824a89ea3e147ed7111abb89162c2e8c00226254f1
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:d65276970388f42dc79d4fd06f9471d659f2d06fce39c21b050e1ed8c8a6559b
 - kind: project-relative
   target: claude
   value: .claude/skills/fix-prose
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1418,17 +1418,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:ad15ad4084b5e582593bb21c87f016e3c2c88ac3b4d79392d530db9c0035f817
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:67719596b6382142155456208b70de36894e8fa2699f47bc9ba693e5fcffc3f4
 - kind: project-relative
   target: claude
   value: .claude/skills/fix-prose/scripts/arm-guard.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:b3a6a97ec8dd99136a65010aaa156f21f4d1321c2f03dd33c3fa85cefea3d23b
 - kind: project-relative
   target: claude
@@ -1436,8 +1436,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:4460b7803b94266fd8b191b5561e5b4b6c36015dec191679718577088c38bd14
 - kind: project-relative
   target: claude
@@ -1445,8 +1445,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:90a27acd92779e4582bbf99c9956f62366fcb85c233e12a05c497292d5a14e4e
 - kind: project-relative
   target: claude
@@ -1454,8 +1454,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:de4ce16740adec37b29bceeb0e5adbf021dbabeedcd9c7efc63179be479658cc
 - kind: project-relative
   target: claude
@@ -1463,8 +1463,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:3f7935af5f97859066f49eccb2c9ce68322e419e6fa06a047f54442ab06e8912
 - kind: project-relative
   target: claude
@@ -1472,17 +1472,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:0edba727b2d40e65718ea87550c41fc762dd8d0e3d5caef25b2fb67c789ce159
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:1ad3da4e3cbe52df7b9653a2f6d242af9a83a27c730acd2167208a71c78094bb
 - kind: project-relative
   target: claude
   value: .claude/skills/merge-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1490,17 +1490,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:49aef5aaaf5609f3eec83fdc352010ad04a75f56e21979577e9ce2da484488a4
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:3f665e757c391864afe8bbb3436dfb8ea3c57997c07b85c5542da8a140690613
 - kind: project-relative
   target: claude
   value: .claude/skills/merge-pr/scripts/guard-merge.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:4b8d3377751cf151d8a8bf3e6b79715e172bdea4742217b9653562c310b216ca
 - kind: project-relative
   target: claude
@@ -1508,8 +1508,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:ed9688d83433ff7e1700255ae02e3dc912faf34dc34bdd9edb22eb02b8032d3a
 - kind: project-relative
   target: claude
@@ -1517,8 +1517,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:164ee9756773d7c65c8da430309c42c2dd7b0553616d361c0bd7962c05d0f3d9
 - kind: project-relative
   target: claude
@@ -1526,8 +1526,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:4ad8fcd535fbc37524cf89baa42632eb40c156c23d0dfff47d22b9aa9caa930a
 - kind: project-relative
   target: claude
@@ -1535,8 +1535,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:eeaca25d0bce0dc874ad389854e2bd4de77669cfed3da97c9999513652b7011a
 - kind: project-relative
   target: claude
@@ -1544,8 +1544,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:b54430e9cacb8045163dbc35c73be61de8f69fa236e1b41620fe1b10d0eaca0e
 - kind: project-relative
   target: claude
@@ -1553,17 +1553,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:1c8e2500af01e83c431c8f3985d5e8d052a6bd514b652ce96bb6e9188da28760
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:a7939d0511f4f6c782fc2cb3a5360a0aa300d039ceb600a9423a6559d8865929
 - kind: project-relative
   target: claude
   value: .claude/skills/pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1571,17 +1571,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:d324086fad1a7fc8fbda3906016e2f1e72bfc8f58215caf22e8f31e35f99c5e2
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:dcb910ffb27d36ad7428696e0ddc8af037dd715cc1ec317ae5f97885c25cac35
 - kind: project-relative
   target: claude
   value: .claude/skills/pr/scripts/create-pr.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:e4aba4ec72fcc682d6d362c590269358ad295300917a0c25d106d290f3cd7b82
 - kind: project-relative
   target: claude
@@ -1589,8 +1589,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:48849363413f51369df0eabce051afc97109033a8ad50666e685b1160b4f624a
 - kind: project-relative
   target: claude
@@ -1598,8 +1598,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:eabf109e3c6e24ff0185dfb6d6f90bc95bd5bb44c8642887c9e8b0085c089829
 - kind: project-relative
   target: claude
@@ -1607,8 +1607,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:e8a7e913e21a56f29851e614033dcbff888cc7863e70446f2ce8dfc3fe77dedb
 - kind: project-relative
   target: claude
@@ -1616,8 +1616,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:0836faf6bbb81ef45d612034e6fb67f2de9475a499aac1d5f44f2507c803a953
 - kind: project-relative
   target: claude
@@ -1625,8 +1625,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:06798be90499be5695209f93076bc8bf6ce1fb4c8145dbd3f85c951488be2575
 - kind: project-relative
   target: claude
@@ -1634,17 +1634,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:71c6244658ba11f701d85b38c30828b2e96a1111f45610c37628895f06d49618
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:98f3947a2ee0855c38a9e7c57dfd963e17db1d9a130ced0a646c9eb3b4a7d7b0
 - kind: project-relative
   target: claude
   value: .claude/skills/rebase
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1652,17 +1652,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:4dc106aa999148c333391591f0007c683b3abf631a5081074aa371289ef33f40
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:8573b4648aca66261a0ee58eba87d59edf82902825713c6e62a1c5052ae0901d
 - kind: project-relative
   target: claude
   value: .claude/skills/rebase/scripts/continue-rebase.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:0cb326c120efab5b50969b29e21dacb08d655264b80ccd43ef9b7db7ae7b26db
 - kind: project-relative
   target: claude
@@ -1670,8 +1670,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:dafe9b3b12a713dc14a32ce48ad1baf93be9bcba62f04e815e57667a746e1efd
 - kind: project-relative
   target: claude
@@ -1679,8 +1679,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:3125779320b71bfabed81ea9ef4457bce81499a3c7d5f0b2d77e7711a517300d
 - kind: project-relative
   target: claude
@@ -1688,8 +1688,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:6360aba571f285c1fe98bca30819620524e26172581b20ddee151578243e9a92
 - kind: project-relative
   target: claude
@@ -1697,8 +1697,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:0e9445ed48bde9c5353f2af537efd803c14982d8d10a21742892b106096aaf8a
 - kind: project-relative
   target: claude
@@ -1706,8 +1706,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:2a495bd4719d0f6e65612bbdec700bf7cb9bad7458394743f17927f4c1cd4ce2
 - kind: project-relative
   target: claude
@@ -1715,8 +1715,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:42567bac9bddcb97d16607f0ecde703ccf8aba10cbc89cb32983be5cd88ebb5d
 - kind: project-relative
   target: claude
@@ -1724,17 +1724,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:f8d089167cb2ef516c8610796f8ab87eca5e90d9ae89e31067e79d9fb323c17f
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:72ebac64cf6ffdaa807cfb9eb3b6512378c884dcf7b64ee2d7abc69962f68914
 - kind: project-relative
   target: claude
   value: .claude/skills/resolve-rebase-conflicts
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1742,17 +1742,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:5878528ba5d49f72485a9212f55e1ca7e3404db475ce6addf1a07f9debfd59fe
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:02dd69c7e94830f963a4eca0095dcae43da6b373dbea9aaee00cb95b7d0200b3
 - kind: project-relative
   target: claude
   value: .claude/skills/resolve-rebase-conflicts/scripts/classify-conflicts.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:e4c96dfc3a69e0c44982d3bfe011805ee64ec41acb6c44cb1d117be81c4a2dad
 - kind: project-relative
   target: claude
@@ -1760,8 +1760,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:9b97797ebb0174960454aed1a49901e4dbd8d24c078f33168229c6f1eda07008
 - kind: project-relative
   target: claude
@@ -1769,8 +1769,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:defe2056c3b123d8b9cff870454bf940554f25d5eceaa4ab8630d9c93d89d77c
 - kind: project-relative
   target: claude
@@ -1778,8 +1778,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:a64762cb87341cb1c4050820790f2eff0b50c07ae6d62e7995136d0ffc070b71
 - kind: project-relative
   target: claude
@@ -1787,8 +1787,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:93f47713021834b6f5b138c42f48e26c40e41ed760a06a4a268787d25ce3a092
 - kind: project-relative
   target: claude
@@ -1796,17 +1796,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:5533417d996e3fc4203bab105f331ea42cc0c850d7fe3a017b101d126424d65b
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:d2237bcddd0eeef1c901498cd72bc81b2712851233a7fb5666bd1fae60cb67ee
 - kind: project-relative
   target: claude
   value: .claude/skills/review-commit-message
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1814,26 +1814,26 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:1e1d03a5fde6c7169f2e6f685b0a84b0fa88f10fd18085dd5740eaf2da8b7f0e
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:93b57f55c388d8220340dafc0874fc2f85833b30998f0bf18e0862003905f80b
 - kind: project-relative
   target: claude
   value: .claude/skills/review-commit-message/tokens.json
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:98b02b3dbb02d03ecfee43ece56b4f83fdad95bce7d9325d5a7fca104aeb2576
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:f3f3223002c8c902d1b8e098c78cd3a218f76e3d8fc41e1e9dd9b00c9427866c
 - kind: project-relative
   target: claude
   value: .claude/skills/review-pr-description
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1841,26 +1841,26 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:273af83c04f4a82b0f4c41faaecba7c24eae7c74804cd8c393544cb152fa142e
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:0b4b17565bfe3d29a607946d66b4a8d6aebb87caa057c537eff99103970e8909
 - kind: project-relative
   target: claude
   value: .claude/skills/review-pr-description/tokens.json
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:4c27fb9430cf323cb0ca26f1325ca0400226d7156ff2220bd9c7eb61f95b614c
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:7b6571c8e2b2df8ca20879dc594d75167d35bb8c4042bfc88b0e0b82682bebd0
 - kind: project-relative
   target: claude
   value: .claude/skills/review-prose-fix
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1868,26 +1868,26 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:5061db9a99d1833b565047f7888e3c889c5608baf9bb33e0b27ada936d6e7c8a
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:1320a65d75fdeeaa069f7879c7520795e9679bd16915090a2e573ce8bcf9db0b
 - kind: project-relative
   target: claude
   value: .claude/skills/review-prose-fix/tokens.json
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:a8199b47458d65d5964a27d0f7cc96e61a0ff45f0dd10344abb21a0c92904e58
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:3346f7cf62bbdd6aa41578ad6e082a7462b2c76509a4bc1012705430e2f094d5
 - kind: project-relative
   target: claude
   value: .claude/skills/review-squash-message
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1895,17 +1895,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:e7d39f189ba3b24afb058394059557f4dba2ceeb3fde9171fc1ab902daefa73b
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:52dbbfaf1f86a212e0c0a600d834cb46e428917e95d736b356b4a93812e6dcb9
 - kind: project-relative
   target: claude
   value: .claude/skills/review-squash-message/scripts/context.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:c8feff629fee467eaf0240582f0a30eb54c3b12ee97e5ba205859dabb6951b3c
 - kind: project-relative
   target: claude
@@ -1913,17 +1913,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:e54e1b572add41e540b85f84b26963679ca163ec72fa37e17b94e65f38ef8289
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:c873935ff68120e22e96a6b0e1a2bdf18692c7664c29e1a1dd697ec56fe9f96b
 - kind: project-relative
   target: claude
   value: .claude/skills/watch-pr
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1931,17 +1931,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:144c7de3c52bfdb7c51b0d7c6c3d18cd792151b41d36846f7449d18fd193feac
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:7b03d539da0e330b705bdc4aeab91af2c4680e90979b1c94dd25455d76547f70
 - kind: project-relative
   target: claude
   value: .claude/skills/watch-pr/scripts/guard-watch.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:6fc489a3c60f9b669fa9290d871532ddf0dbae056f4ce50a7335238030fccba8
 - kind: project-relative
   target: claude
@@ -1949,8 +1949,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:341a13a8e9ddf14f3adadfc2c905ee848357c61a0375bd539edea6710bb49c76
 - kind: project-relative
   target: claude
@@ -1958,17 +1958,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:f595482b0bd5d836ba393b7a2d4e3646ee97eba390f60fe0d5d4a932aa8d5aab
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:ec3c3401cc2585c4e6ddc7306aad4a46ebf3a196398d70507a73c31daf6e11c6
 - kind: project-relative
   target: claude
   value: .claude/skills/write-pr-description
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -1976,17 +1976,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:509d1f9c89286a8737bbc17a0df9e5b36762fd50390cd59682d3442d145292e4
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:7a8ec5cacc9753bf26656592e8dedef075a5d035ceac71e2f0838bff48d2e4dd
 - kind: project-relative
   target: claude
   value: .claude/skills/write-pr-description/scripts/context.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:8f2963be66de209a31573696847645f7252028a5648ed2b0f97a71cc39ff72d6
 - kind: project-relative
   target: claude
@@ -1994,8 +1994,8 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:8c0a80c080fa29e231745de949d5821f273f062fc6ae0ed78b6cc4167da8d443
 - kind: project-relative
   target: claude
@@ -2003,17 +2003,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:91f40292e5db8fec5e2a09136bb1dbdfedef69fd2eb3f68a6a7182ed337053a5
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:c0bfd38502a9a678bde518b558135b4328d8629f3110a9b5f3deb40938da1b2a
 - kind: project-relative
   target: claude
   value: .claude/skills/write-prose-fix
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: null
 - kind: project-relative
   target: claude
@@ -2021,17 +2021,17 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:da29ee08247b06863c10a55a759d9b6b7405c1d7def15a8e33954933541349cd
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:57eb5b5390e3e2f44828cf65d72a56b4100e732e706fc8a3b79e1db2f894b072
 - kind: project-relative
   target: claude
   value: .claude/skills/write-prose-fix/scripts/context.sh
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
   content_hash: sha256:a8f111896e3a438307b1c7467724f8ad43ee25c0234fae7b0939e256ae333aca
 - kind: project-relative
   target: claude
@@ -2039,6 +2039,6 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - tbhb/repotools/packages/agents/claude
-  active_owner: tbhb/repotools/packages/agents/claude
-  content_hash: sha256:38ee03536cd286dd9e51ff4342e574c2e2d62ce5c89dcab5ec368c95d94f23de
+  - tbhb-dev/devtools/packages/agents/claude
+  active_owner: tbhb-dev/devtools/packages/agents/claude
+  content_hash: sha256:d9f8f35924f703eb8d473df9dd1fc7fc858af74f44b07e96f4c686e5a015fa29

@@ -51,7 +51,7 @@ Show the branch, base, commit count, and complete draft. Unless preflight report
 - open and watch
 - open only
 
-Also ask whether fixes should be separate commits or amendments. A pre-approval chooses separate commits and routes through merge only when `merge: GRANTED`. Stop there: don't publish in the turn that asks for confirmation.
+Also ask whether fixes should be separate commits or amendments. A pre-approval chooses separate commits and routes through merge only when `merge: GRANTED`. Stop there: don't publish in the same turn as the confirmation question.
 
 ## Publish
 
