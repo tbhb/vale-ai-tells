@@ -9,6 +9,7 @@ owner = "tbhb"
 authors = [
   { username = "aitellsbot", signature = "AI Tells Bot" },
   { username = "tbhb", signature = "Tony Burns" },
+  { username = "tbhb-agent", signature = "tbhb.dev Agent" },
   { username = "theredspoon", signature = "Nim G" },
 ]
 
