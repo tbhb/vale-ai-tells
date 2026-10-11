@@ -46,7 +46,7 @@
 # three preflight scripts, and those run in consumer repos that pin no
 # jq. One scope per line keeps the read to a grep.
 
-["repotools:preapprove"]
+["devtools:preapprove"]
 description = "Pre-approve the operator confirmations in the commit, pr, and merge-pr skills"
 alias = "preapprove"
 # No usage spec: a spec declaring one argument rejects the trailing
@@ -121,7 +121,7 @@ if [ "$biometrics" = "1" ]; then
   # timestamped, so a payload update rebuilds and nothing else does.
   # swiftc takes several seconds, which is why this is not a per-run
   # cost.
-  cache="$(git rev-parse --git-common-dir)/repotools"
+  cache="$(git rev-parse --git-common-dir)/devtools"
   mkdir -p "$cache"
   cat >"$cache/touchid-confirm.swift.new" <<'SWIFT'
 import Foundation
@@ -207,7 +207,7 @@ grep -v '^#' "$file" | sed 's/^/  /'
 printf 'The commit, pr, and merge-pr preflights read this. Withdraw it with `mise run revoke-preapproval`.\n'
 '''
 
-["repotools:revoke-preapproval"]
+["devtools:revoke-preapproval"]
 description = "Withdraw the pre-approval held for this session, in whole or by scope"
 alias = "revoke-preapproval"
 run = '''

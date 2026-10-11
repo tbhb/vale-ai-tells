@@ -91,18 +91,18 @@ fi
 
 # reproducer maps a job name onto the local task covering the same
 # ground. The names come from this repository's own workflows, and an
-# unrecognized job says so rather than guessing. A repotools: prefix
+# unrecognized job says so rather than guessing. A devtools: prefix
 # marks a task the shared payload owns; the rest a repository defines
 # itself.
 reproducer() {
   case $(printf '%s' "$1" | tr '[:upper:]' '[:lower:]') in
   *prose* | *vale*) printf 'mise run lint-prose\n' ;;
-  *spell*) printf 'mise run repotools:lint-spelling\n' ;;
-  *markdown* | *rumdl*) printf 'mise run repotools:lint-markdown\n' ;;
+  *spell*) printf 'mise run devtools:lint-spelling\n' ;;
+  *markdown* | *rumdl*) printf 'mise run devtools:lint-markdown\n' ;;
   *shell*) printf 'mise run lint-shell && mise run lint-shell-fmt\n' ;;
-  *yaml*) printf 'mise run repotools:lint-yaml\n' ;;
-  *toml*) printf 'mise run repotools:lint-toml\n' ;;
-  *workflow* | *actionlint*) printf 'mise run repotools:lint-workflows\n' ;;
+  *yaml*) printf 'mise run devtools:lint-yaml\n' ;;
+  *toml*) printf 'mise run devtools:lint-toml\n' ;;
+  *workflow* | *actionlint*) printf 'mise run devtools:lint-workflows\n' ;;
   *editorconfig*) printf 'mise run lint-editorconfig\n' ;;
   *arch*) printf 'mise run lint-go-arch\n' ;;
   *deadcode*) printf 'mise run lint-go-deadcode\n' ;;
@@ -112,7 +112,7 @@ reproducer() {
   *test*) printf 'mise run test\n' ;;
   *vendor*) printf 'mise run vendor-check\n' ;;
   *vuln*) printf 'mise run vuln\n' ;;
-  *gitleaks* | *secret*) printf 'mise run repotools:gitleaks\n' ;;
+  *gitleaks* | *secret*) printf 'mise run devtools:gitleaks\n' ;;
   *apm* | *validate*) printf 'apm install --frozen && apm audit --ci\n' ;;
   *fuzz*) printf 'mise run fuzz\n' ;;
   *) printf '(no local task maps to this job; read the log)\n' ;;

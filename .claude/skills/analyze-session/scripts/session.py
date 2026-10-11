@@ -343,7 +343,7 @@ def signature(name: str, inp: dict) -> str:
     if name != "Bash":
         return f"{name}:{inp.get('file_path', '')}"
     cmd = str(inp.get("command", ""))
-    # Task names carry an optional namespace, as in repotools:lint-toml,
+    # Task names carry an optional namespace, as in devtools:lint-toml,
     # so the colon belongs in the class.
     tasks = re.findall(r"\bmise\s+run\s+([a-z0-9:-]+)", cmd)
     if tasks:

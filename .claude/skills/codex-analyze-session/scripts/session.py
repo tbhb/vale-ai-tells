@@ -363,7 +363,7 @@ def signature(name: str, inp: dict) -> str:
     and mise task names so unrelated exec calls do not collapse together.
     """
     cmd = str(inp.get("command", inp.get("source", "")))
-    # Task names carry an optional namespace, as in repotools:lint-toml,
+    # Task names carry an optional namespace, as in devtools:lint-toml,
     # so the colon belongs in the class.
     tasks = re.findall(r"\bmise\s+run\s+([a-z0-9:-]+)", cmd)
     if tasks:

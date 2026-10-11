@@ -7,7 +7,7 @@
 # config stays the single definition of what each gate runs: the lint job
 # runs the full bar via `mise run lint`, and the test job runs the fixture
 # suite via `mise run test` (vale must be present to evaluate the
-# fixtures). Gates named `repotools:` come from the vendored payload the
+# fixtures). Gates named `devtools:` come from the vendored payload the
 # lint job checks for drift first.
 # actionlint is absent from the lint bar: the standalone lint-workflows
 # workflow already covers it.
@@ -56,13 +56,13 @@ jobs:
       - name: Set up the toolchain
         uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
 
-      # Resyncs the repotools payload and fails on any difference from the
+      # Resyncs the devtools payload and fails on any difference from the
       # committed tree, so a vendored file edited in place or a sync nobody
       # committed is caught before the gates below run against it. The lint
       # bar runs this too; naming it here makes the failure its own step
       # rather than the first line of a lint run.
       - name: Check the vendored payload
-        run: mise run repotools:check-vendored
+        run: mise run devtools:check-vendored
 
       # mise installs the vale binary but does not fetch the style packages
       # .vale.ini declares.

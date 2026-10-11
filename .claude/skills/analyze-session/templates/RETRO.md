@@ -16,14 +16,14 @@ Rank by round trips wasted, which `artifacts/loops.txt` reports. List frequency 
 
 ## Claims table
 
-Every row went through three verifiers running the identical prompt. A row without a command in it never got replicated and doesn't belong here.
+Every row went through three verifiers running the identical prompt. Leave out any row without a command in it, because the verifiers couldn't have replicated it.
 
 | claim | figure | command | consensus |
 | ----- | ------ | ------- | --------- |
 
 ## Findings
 
-Cite a line number for every claim, in `L1938` form. Where the session reached a conclusion, say whether it holds. A retraction the session made is a claim like any other, and needs the same test.
+Cite a line number for every claim, in `L1938` form. Where the session drew a conclusion, say whether it holds. A retraction the session made is a claim like any other, and needs the same test.
 
 ## Mechanical fixes
 
@@ -31,7 +31,7 @@ Prefer a script, a task, or a hook over an instruction. Number them in the order
 
 ## Agent constructs
 
-What the harness itself could fix. Use a hook to enforce a rule that instruction can only request. Use a subagent to keep work out of the calling context. Name the event or type exactly. Confirm it still exists before recommending it. The `claude-code-guide` agent answers that, and so does the hooks reference at <https://code.claude.com/docs/en/hooks>.
+What the harness itself could fix. Use a hook to enforce a rule that instruction can only request. Use a subagent to keep work out of the calling context. Specify the event or type exactly. Confirm it still exists before recommending it. The `claude-code-guide` agent answers that, and so does the hooks reference at <https://code.claude.com/docs/en/hooks>.
 
 | finding | construct | event or type | buys | costs |
 | ------- | --------- | ------------- | ---- | ----- |
@@ -40,7 +40,7 @@ What the harness itself could fix. Use a hook to enforce a rule that instruction
 
 ## Inherent, accept rather than engineer around
 
-Name what a strict gate costs by design. Removing this class of repeated work would cost more than accepting it.
+State what a strict gate costs by design. Removing this class of repeated work would cost more than accepting it.
 
 ## Method note
 
@@ -48,7 +48,7 @@ Record anything about how the analysis ran that affects how much a reader should
 
 ## Artifacts
 
-The files under `artifacts/` are the evidence for this document. The canned reports come from `session.py`. Name any other evidence alongside them.
+The files under `artifacts/` are the evidence for this document. The canned reports come from `session.py`. List any other evidence alongside them.
 
 - `artifacts/transcript.jsonl` (the session transcript, copied for durability)
 - `artifacts/index.txt` (record counts, tool histogram, failing-result lines)

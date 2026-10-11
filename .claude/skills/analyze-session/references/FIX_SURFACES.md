@@ -2,7 +2,7 @@
 
 Verification runs identical prompts, because replication gains nothing from a division of labor. This step does the opposite. Each agent takes one area and reports only the fixes belonging to it, which keeps the recommendations distinct and the coverage wide.
 
-Give every agent the retro directory rather than the transcript. The canned reports under `artifacts/` already summarize the session, so each agent spends its context on analysis instead of re-deriving numbers.
+Give every agent the retro directory rather than the transcript. The canned reports under `artifacts/` already summarize the session. Each agent then spends its context on analysis instead of re-deriving numbers.
 
 ## The areas
 
@@ -49,7 +49,7 @@ Agent({
 
 ## The area blocks
 
-**Agent constructs.** Name the hook event, subagent type, or skill that removes a failure rather than reminding someone about it. Confirm what the harness offers before recommending it, because the event list changes between releases and naming an event that no longer exists wastes the reader's time. Spawn the `claude-code-guide` agent, or read the reference at <https://code.claude.com/docs/en/hooks> plus the guide at <https://code.claude.com/docs/en/hooks-guide>. Match the construct to the failure. Use `PostToolUse` for a check the agent keeps forgetting. Use `PreToolUse` to refuse a command outright, where exit 2 blocks the call. Use a subagent for work that would otherwise fill the calling context.
+**Agent constructs.** Specify the hook event, subagent type, or skill that removes a failure rather than reminding someone about it. Confirm what the harness offers before recommending it, because the event list changes between releases and naming an event that no longer exists wastes the reader's time. Spawn the `claude-code-guide` agent, or read the reference at <https://code.claude.com/docs/en/hooks> plus the guide at <https://code.claude.com/docs/en/hooks-guide>. Match the construct to the failure. Use `PostToolUse` for a check the agent keeps forgetting. Use `PreToolUse` to refuse a command outright, where exit 2 blocks the call. Use a subagent for work that would otherwise fill the calling context.
 
 **Commit-time gates.** Look at `.pre-commit-config.yaml`, the commit-msg chain, and the CI workflows. Find what a gate would have caught earlier, and what a gate is catching too late to be cheap. Check whether a gate enumerates files through `git ls-files`, which excludes anything an agent just created and reports success without inspecting untracked work.
 

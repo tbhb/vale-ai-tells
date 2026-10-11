@@ -2,7 +2,7 @@
 
 Verification runs identical prompts, because replication gains nothing from a division of labor. This step does the opposite. Each agent takes one area and reports only the fixes belonging to it, which keeps the recommendations distinct and the coverage wide.
 
-Give every agent the retro directory rather than the transcript. The canned reports under `artifacts/` already summarize the session, so each agent spends its context on analysis instead of re-deriving numbers.
+Give every agent the retro directory rather than the transcript. The canned reports under `artifacts/` already summarize the session. Each agent then spends its context on analysis instead of re-deriving numbers.
 
 ## The areas
 

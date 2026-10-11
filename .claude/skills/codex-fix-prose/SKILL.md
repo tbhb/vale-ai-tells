@@ -24,7 +24,7 @@ Save the absolute `state:` path that command prints. It identifies this workflow
 
 Delegate `codex-write-prose-fix` with `fork_turns: "none"`. Give it only the repository root, target, workflow state, lint command, and instruction to follow that skill. Wait for its terminal report. Never edit the target in the parent.
 
-Run `check-suppressions.sh --verify <state> <target>`. Any finding means the run isn't clean. Delegate `codex-review-prose-fix` with `fork_turns: "none"`, giving it the repository root, target, and workflow state. If it returns changes required, save those findings in `<state>/notes`, delegate the writer again with the same minimal prompt, and repeat verification and review. Bound this writer/reviewer loop at three review rounds.
+Run `check-suppressions.sh --verify <state> <target>`. Any finding means the run isn't clean. Delegate `codex-review-prose-fix` with `fork_turns: "none"`, and give it the repository root, target, and workflow state. If it returns changes required, save those findings in `<state>/notes`, delegate the writer again with the same minimal prompt, and repeat verification and review. Bound this writer/reviewer loop at three review rounds.
 
 Finally run the complete lint command once in the parent. Always run `check-suppressions.sh --cleanup <state>` before returning once no delegated agent needs the state, even when the outcome is unresolved or blocked. Report `PROSE: CLEAN` only when the writer reported clean, the suppression check is silent, the independent reviewer returned `REVIEW: CLEAN`, and the final lint command passes. Otherwise return the short unresolved or blocked report. Mark each plan item as it completes.
 

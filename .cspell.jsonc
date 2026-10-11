@@ -2,17 +2,17 @@
   "language": "en",
   "ignorePaths": [
     "**/*.log",
-    // Agent primitives, mostly deployed from tbhb/repotools and pinned
+    // Agent primitives, mostly deployed from tbhb-dev/devtools and pinned
     // by content hash in apm.lock.yaml. Shell builtins and awk variables
     // carry a vocabulary of their own that upstream owns, and the same
     // scope is exempt from the prose rules in .vale.ini.
     ".claude/hooks/**/*",
     ".claude/skills/**/*",
     ".claude/worktrees/**/*",
-    // The vendored repotools payload. Its comments answer to the
+    // The vendored devtools payload. Its comments answer to the
     // publisher's dictionary, not this repo's.
     ".config/mise/conf.d/**/*",
-    ".repotools/**/*",
+    ".devtools/**/*",
     ".rumdl_cache/**/*",
     ".vale-config/**/*",
     "LICENSE",

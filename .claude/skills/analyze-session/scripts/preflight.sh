@@ -132,7 +132,7 @@ sed -n '1,14p' "$artifacts/lint.txt" 2>/dev/null || printf '(missing)\n'
 
 section "artifacts"
 printf '%s\n' "$artifacts"
-find "$artifacts" -maxdepth 1 -type f -exec basename {} \; 2>/dev/null | sort | sed 's/^/  /'
+find "$artifacts" -maxdepth 1 -type f 2>/dev/null | sed 's|.*/||' | sort | sed 's/^/  /'
 
 section "next"
 cat <<'NEXT'

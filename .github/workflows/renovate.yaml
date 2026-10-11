@@ -4,7 +4,7 @@
 # stock Mend hosted App commits as renovate[bot], which can't match this
 # repo's gitAuthor + gitSignOff pair).
 #
-# Delegates to the shared reusable workflow in tbhb/repotools,
+# Delegates to the shared reusable workflow in tbhb-dev/devtools,
 # which mints the App token, checks out this repo, and runs the pinned
 # Renovate image against this repo's .github/renovate.json5. Pinned by commit
 # SHA; the trailing tag comment marks the matching release for Renovate.
@@ -36,7 +36,7 @@ jobs:
     permissions:
       contents: read
     # yamllint disable-line rule:line-length
-    uses: tbhb/repotools/.github/workflows/renovate.yaml@cf79409736ca25234b224d4580ed13cd82be0b75 # v0.9.0
+    uses: tbhb-dev/devtools/.github/workflows/renovate.yaml@d80265aa04fd10bbfe3965200ddbe3d5d1563c38 # v0.10.0
     with:
       renovate_log_level_debug: ${{ inputs.renovate_log_level_debug || false }}
     secrets:

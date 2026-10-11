@@ -1,7 +1,7 @@
 # Shared security tasks. Same task-file syntax, namespace, selection,
 # and pin rules as format.toml in this directory -- in particular, no
 # tools block: gitleaks is pinned once in
-# .config/mise/conf.d/10-repotools-tools.toml, where Renovate can see
+# .config/mise/conf.d/10-devtools-tools.toml, where Renovate can see
 # it. A task-scoped pin would override that table while staying outside
 # every automated bump, so the first bump would land green with the gate
 # still running the old scanner.
@@ -20,7 +20,7 @@
 # the walk reached at least one commit so an empty scan fails loudly.
 # The output goes to a file rather than through a pipe so gitleaks' own
 # exit code survives.
-["repotools:gitleaks"]
+["devtools:gitleaks"]
 description = "Scan the working tree and full git history for committed secrets"
 run = '''
 #!/usr/bin/env bash

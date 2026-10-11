@@ -1,7 +1,7 @@
 ---
 name: codex-write-pr-description
 description: >-
-  Write or revise PR_AGENTDESC.md from the branch, its commits, and the repository template, then run the mechanical validator until it reports nothing. Use as a delegated writer from codex-pr, codex-fix-pr, or codex-merge-pr. Pass review findings or branch-drift notes in the task.
+  Write or revise PR_AGENTDESC.md from the branch, its commits, and the repository template, then run the mechanical validator until it passes. Use as a delegated writer from codex-pr, codex-fix-pr, or codex-merge-pr. Pass review findings or branch-drift notes in the task.
 ---
 
 # Write a pull request description

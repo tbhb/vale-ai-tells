@@ -15,7 +15,7 @@ Check:
 - The diff must support every claim. Reject counts, unverified results, selling language, and provenance about requests, sessions, prompts, models, or tools.
 - The body explains why the change exists instead of spelling out the diff or repeating the subject.
 - The subject is Conventional Commits form, imperative, present tense, 10 to 80 characters, and has no trailing period.
-- Body lines are at most 72 characters, footer lines at most 100, and the message is plain text. `Assisted-by` precedes `Signed-off-by`. No assistant appears as `Co-authored-by`.
+- Body lines are at most 72 characters, footer lines at most 100, and the message is plain text. `Assisted-by` precedes `Signed-off-by`. `Co-authored-by` doesn't credit an assistant.
 - The staged change is one logical, independently revertible change. Name separate groups when it isn't.
 
 Return exactly one form:

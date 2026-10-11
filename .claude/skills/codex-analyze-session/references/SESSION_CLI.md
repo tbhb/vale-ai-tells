@@ -8,7 +8,7 @@ It has a uv script shebang and declares which Python version it needs, so it run
 .agents/skills/codex-analyze-session/scripts/session.py <subcommand> <transcript> [options]
 ```
 
-The preflight already runs `index`, `errors`, `loops` and `lint`, and leaves the full output in the retro's `artifacts/`. Run the tool directly when a report needs more detail than the preflight printed, or when the reports point at something worth searching for.
+The preflight already runs `index`, `errors`, `loops` and `lint`, and leaves the full output in the retro's `artifacts/`. Run the tool directly when a report needs more detail than the preflight printed, or when the reports point at something to search for.
 
 ## `locate`
 
@@ -30,11 +30,11 @@ The tool histogram shows what kind of session ran. Counting process calls agains
 
 Every likely failing result, one per line, classified as `permission`, `environment`, `lint`, or `nonzero`.
 
-Codex transcript results don't expose a stable structured exit code, so this command recognizes failure text in the result envelope. Use its count to locate lines for inspection. Name the command behind every reported figure.
+Codex transcript results don't expose a stable structured exit code, so this command recognizes failure text in the result envelope. Use its count to locate lines for inspection. State the command behind every reported figure.
 
 ## `loops`
 
-Clusters repeated calls of the same shape, ranked by rounds. `--min-rounds N` sets how few rounds still count, default 3.
+Clusters repeated calls that follow the same pattern, ranked by rounds. `--min-rounds N` sets how few rounds still count, default 3.
 
 A pair of calls counts as one attempt when the signature matches. For `exec`, that signature uses the nested tool plus the shell command or mise task shape rather than treating every process call alike. Calls more than 40 records apart start a new cluster.
 

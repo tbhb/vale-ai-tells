@@ -34,6 +34,7 @@ lowercased
 [Mm]etacommentary
 [Nn]ominalizations
 proselint
+devtools
 repotools
 rumdl
 cspell

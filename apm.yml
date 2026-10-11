@@ -1,6 +1,6 @@
 ---
 # APM consumer manifest. Pulls the shared agent primitives from
-# tbhb/repotools: the worktree rules, the go-lint and guard-markdown
+# tbhb-dev/devtools: the worktree rules, the go-lint and guard-markdown
 # hooks, and the commit and pull request lifecycle skills.
 #
 # Bump the pin with `mise run apm-sync` rather than a bare `apm install`,
@@ -12,5 +12,5 @@ target:
   - claude
 dependencies:
   apm:
-    - tbhb/repotools#v0.9.0
+    - tbhb-dev/devtools#v0.10.0
   mcp: []

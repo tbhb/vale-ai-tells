@@ -2,7 +2,7 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
 
   // This repo's Renovate config pulls the shared policy from the
-  // renovate-config.json5 preset in tbhb/repotools via extends — the
+  // renovate-config.json5 preset in tbhb-dev/devtools via extends — the
   // repository-level rules, the grouping rules, and the custom managers
   // covering the pin sites no built-in manager reads: the vale package
   // pins in .vale.ini, the apm.yml dependency, and the extends pin
@@ -23,9 +23,9 @@
   // Pinned to a commit rather than the default branch, so the one file
   // governing every other pin answers to the same discipline. The
   // trailing comment is the only human-readable version at this site,
-  // and `mise run repotools:check-pins` reads it.
+  // and `mise run devtools:check-pins` reads it.
   extends: [
-    "github>tbhb/repotools//.github/renovate-config.json5#cf79409736ca25234b224d4580ed13cd82be0b75", // v0.9.0
+    "github>tbhb-dev/devtools//.github/renovate-config.json5#d80265aa04fd10bbfe3965200ddbe3d5d1563c38", // v0.10.0
   ],
 
   // Single-repo scope. Differs per repo.

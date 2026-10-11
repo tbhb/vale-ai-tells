@@ -22,7 +22,7 @@ Treat the first word as the repository under review. An empty value means the cu
 REPO="${ARGUMENTS:-$(pwd)}"
 ```
 
-A second word of `--amend` says this commit replaces the one at `HEAD` instead of following it. That changes which diff you read, and nothing else about your job.
+A second word of `--amend` says this commit replaces the one at `HEAD` instead of following it. That changes which diff you read. The rest of your job is unchanged.
 
 ## Gather the inputs
 
@@ -38,13 +38,13 @@ Where the caller passed `--amend`, swap the two staged-diff commands for these:
 - `git -C "$REPO" diff --cached --name-status HEAD~1`
 - `git -C "$REPO" diff --cached HEAD~1`
 
-Those show the amended commit's full contents, meaning the existing commit plus whatever the author has staged since. Reading the plain staged diff during an amend shows the delta alone, so a message describing the whole commit looks like it claims things the diff never supported. That mistake produces confident, wrong findings.
+Those show the amended commit's full contents: the existing commit plus whatever the author has staged since. Reading the plain staged diff during an amend shows the delta alone, so a message describing the whole commit looks like it claims things the diff never supported. That mistake produces confident, wrong findings.
 
 A missing or empty draft, or an empty staged diff, is itself a finding. Report it and stop.
 
 ## What to check
 
-Work these four groups. Every finding names the exact offending text and the fix.
+Work these four groups. Quote the exact offending text in each finding and give the fix.
 
 ### Truthfulness
 
@@ -61,7 +61,7 @@ The body answers why the change exists. The diff already says what changed.
 - Flag body text that restates the diff. `Adds a helper to foo.go and calls it from bar.go` describes a diff the reader can already read.
 - Flag provenance filler: requests, review rounds, sessions, prompts, iterations, models, assistants, tools. Attribution belongs in the `Assisted-by` trailer and nowhere else.
 - Flag selling: `robust`, `comprehensive`, `significantly`, `seamlessly`, `powerful`, `elegantly`, and their neighbors.
-- Flag a body that repeats the subject in longer words, or that explains nothing the reader couldn't recover from the diff.
+- Flag a body that repeats the subject in longer words, or that doesn't explain anything the reader couldn't recover from the diff.
 
 ### Form
 
@@ -77,7 +77,7 @@ The body answers why the change exists. The diff already says what changed.
 Judge the staged diff, not the message.
 
 - Does it carry one logical change, one the reader can state in a sentence, one that reverts cleanly as a unit?
-- Flag a diff that mixes a behavior change with an unrelated refactor, a fix with a formatting sweep, or two independent features. Name the groups it should split into.
+- Flag a diff that mixes a behavior change with an unrelated refactor, a fix with a formatting sweep, or two independent features. List the groups it should split into.
 - A change plus its tests, or a change plus the documentation describing it, counts as one logical change. Leave that alone.
 
 ## What to return

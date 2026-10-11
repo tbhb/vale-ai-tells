@@ -2,19 +2,19 @@
 
 The preflight created `RETRO.md` from `templates/RETRO.md` and filled in its header. Write the rest.
 
-Someone reads a retrospective once and acts on it, but the evidence has to remain available afterwards. A summary that exists only in a closed conversation helps nobody, so this gets written to disk.
+Someone reads a retrospective once and acts on it, but the evidence has to remain available afterwards. A summary that exists only in a closed conversation helps nobody. This skill writes the retrospective to disk.
 
 ## Lead with the cost
 
 Open with what the session actually cost and why, not with an impression. `artifacts/loops.txt` gives the number, since rounds beyond the first, added up, are the wasted round trips.
 
-The operator already knows the session went badly. What they can't see without this document is how much of that waste was avoidable.
+The operator already knows the session went badly. Without this document, they can't see how much of that waste was avoidable.
 
 ## Cite a line number for every claim
 
 Use `L1938` form. An assertion without a line number is one nobody checked.
 
-Where the session reached a conclusion, say whether it holds. A retraction the session made is a claim like any other and needs the same test. One session here retracted a correct finding because its test had silently stopped checking anything, which made the retraction wrong rather than the original claim.
+Where the session drew a conclusion, say whether it holds. A retraction the session made is a claim like any other and needs the same test. One session here retracted a correct finding because its test had silently stopped checking anything, which made the retraction wrong rather than the original claim.
 
 ## Rank by round trips, not by irritation
 
@@ -40,7 +40,7 @@ Anything affecting how much a reader should trust the findings belongs in the me
 
 Readers trust this section most. A document stating where its own process failed is more credible than one reporting only successes.
 
-## Name every artifact
+## List every artifact
 
 List the files in `artifacts/` and say what each one shows. Add anything else the analysis depended on by passing extra paths to `new-retro.sh`, which copies them in next to the canned reports.
 

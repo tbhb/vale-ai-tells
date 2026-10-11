@@ -24,7 +24,7 @@ hooks:
 
 Work the steps in order. A pair of hooks runs alongside them and refuses the shortcut: a direct `gh pr merge`, and any merge whose message the reviewer hasn't seen in its current form.
 
-Left alone, GitHub writes the squash message by concatenating every commit on the branch. That text has never passed a commit-msg hook, and it arrives on the default branch where the rest of the toolchain assumes those hooks ran. Nothing lints it afterwards. This workflow writes the message itself and puts it through what a commit answers to.
+Left alone, GitHub writes the squash message by concatenating every commit on the branch. That text has never passed a commit-msg hook, and it arrives on the default branch where the rest of the toolchain assumes those hooks ran. The toolchain never lints it after the merge, either. This workflow writes the message itself and puts it through the same checks a commit must pass.
 
 ## Preflight
 
@@ -32,7 +32,7 @@ Left alone, GitHub writes the squash message by concatenating every commit on th
 
 ## Step 0: the checklist
 
-Track these steps with the session's task-list tools where it carries them. Newer harnesses leave those tools out by default, and a session without them works the list in order as written.
+Track these steps with the session's task-list tools where the session provides them. Newer harnesses leave those tools out by default, and a session without them works the list in order as written.
 
 1. Confirm the pull request is mergeable
 2. Settle the published description
@@ -64,7 +64,7 @@ bash .claude/skills/merge-pr/scripts/populate-description.sh <number>
 
 That rebuilds `PR_AGENTDESC.md` from what the pull request currently says, reassembling the frontmatter from the properties set on the pull request. It refuses to overwrite an existing draft without `--force`, because a `pr` workflow further up the stack may have one in flight.
 
-Merging is the last moment the description can change, and the squash message gets written from it, so a wrong description propagates that error into history.
+Merging is the last moment the description can change, and you write the squash message from it, so a wrong description propagates that error into history.
 
 Read what preflight printed under `== description as published ==` against the commits it collapses. Where it no longer describes the branch, invoke `write-pr-description` with the repository root and a note on what drifted, then `review-pr-description`, then republish with `bash .claude/skills/pr/scripts/create-pr.sh`.
 
@@ -76,15 +76,15 @@ Most merges skip this. A description that still fits doesn't need a pass, and a 
 bash .claude/skills/merge-pr/scripts/squash-message.sh <number>
 ```
 
-That prints a briefing and writes a skeleton. Nothing in it converts the description into a message, because no rewriting rule produces one. The commit that merges here is the one a whole branch leaves behind, so writing it means reading everything that landed and deciding what a reader years from now still needs.
+That prints a briefing and writes a skeleton, but it doesn't convert the description into a message, because no rewriting rule produces one. The commit that merges here is the one a whole branch leaves behind, so writing it means reading every commit on the branch and working out what a reader years from now still needs.
 
-Your briefing carries the description as published, every commit message the squash collapses in full, the diffstat, and the trailers those commits carry. Read it before writing a word. Commit bodies matter most. Each one already argued for itself once, and this is the last place that argument survives. Run the command on its own and read the whole thing. Piping it through `head` or `tail` keeps the trailing skeleton and drops those bodies, which nothing else in this workflow prints, and the script caps nothing on purpose, so a cap you add is one nobody downstream can see you added.
+Your briefing carries the description as published, every commit message the squash collapses in full, the diffstat, and the trailers on those commits. Read it before writing a word. Commit bodies matter most. Each one already argued for itself once, and this is the last place that argument still appears. Run the command on its own and read the whole thing. Piping it through `head` or `tail` keeps the trailing skeleton and drops those bodies, which nothing else in this workflow prints, and the script caps nothing on purpose, so a cap you add is one nobody downstream can see you added.
 
-`SQUASH_AGENTMSG` at the repository root holds the skeleton, which a gitignore entry keeps out of history. Subject and footer come filled in. The body stays empty until you write it.
+Its skeleton goes to `SQUASH_AGENTMSG` at the repository root, a file a gitignore entry keeps out of history. Subject and footer come filled in, and the body is empty until you write it.
 
 ### Subject
 
-The script sets `<pull request title> (#<number>)`. Keep the reference, because `squash-merge.sh` reads it back to confirm the draft belongs to this pull request. Fix the rest where the title described one commit rather than the branch. A squash leaves one commit behind, so the subject names what the whole stack did.
+The script sets `<pull request title> (#<number>)`. Keep the reference, because `squash-merge.sh` reads it back to confirm the draft belongs to this pull request. Fix the rest where the title described one commit rather than the branch. A squash leaves one commit behind. Its subject has to describe what the whole stack did.
 
 ### Body
 
@@ -92,15 +92,15 @@ The description was Markdown, written for a reviewer with the diff open beside i
 
 Take from the description:
 
-- Summary and Why, which carry the reason the branch exists
-- Risk, but only where it names a rollback the reader wouldn't guess
+- Summary and Why, which state the reason the branch exists
+- Risk, but only where it describes a rollback the reader wouldn't guess
 
 Leave behind:
 
 - Verification, entirely. It reported what a reviewer needed at the time, and the moment the suite changes it describes a run nobody can repeat.
 - Risk that only says the change could be wrong.
 
-Then read the result back against the commits. The commits outrank it. Descriptions get published early while branches keep growing, so the commits record what landed rather than what someone expected to land. Where a commit body gives a reason the description never stated, that reason belongs in the message. Otherwise it goes at the merge, with the commit that held it.
+Then read the result back against the commits. Trust the commits over it. Authors publish descriptions early while branches keep growing, and the commits record what landed rather than what someone expected to land. Where a commit body gives a reason the description never stated, that reason belongs in the message. Otherwise it goes at the merge, with the commit that held it.
 
 Avoid:
 
@@ -108,7 +108,7 @@ Avoid:
 - Walking the stack. A branch of eight commits becomes one account rather than eight paragraphs.
 - Counting. No file, line, test, or commit counts.
 - Provenance filler. Nothing about requests, review rounds, sessions, prompts, models, or tools.
-- Markdown. No fenced blocks, headings, emphasis, links, or tables. Backticks around a literal identifier are fine.
+- Markdown, meaning fenced blocks, headings, emphasis, links, or tables. Backticks around a literal identifier are fine.
 
 Hard wrap the body at 72 characters and the trailers at 100.
 
@@ -116,17 +116,17 @@ Hard wrap the body at 72 characters and the trailers at 100.
 
 The script fills this in. `Closes` lines come from the description's Related section, and the trailers come from the commits themselves, ordered with attribution first and sign-off last.
 
-Check the closing references before going on. Related lists whatever the author put there, so a number that names a pull request or a document rather than an issue this branch closes comes out of the footer.
+Check the closing references before going on. Related lists whatever the author put there, so a number that refers to a pull request or a document rather than an issue this branch closes comes out of the footer.
 
 ## Step 4: review the message
 
-Invoke the `review-squash-message` skill, passing the repository root as its argument. It runs as an independent agent that hasn't watched you work, and it reads the message against every commit the squash collapses. Its first question is the one you can no longer ask yourself by this point: whether anything that mattered in those commits failed to reach the message.
+Invoke the `review-squash-message` skill, passing the repository root as its argument. It runs as an independent agent that hasn't watched you work, and it reads the message against every commit the squash collapses. Its first question is the one you can no longer ask yourself by this point: whether the message left out anything that mattered in those commits.
 
 This step is mandatory, and the merge script enforces it. A clean verdict signs the exact bytes of the draft, a finding erases any earlier signature, and editing the draft afterward voids it the same way.
 
 Fix everything it returns. Push back only where it's demonstrably wrong about the commits, and say why.
 
-A finding names one instance rather than the fault itself. Fix the instance, then read the rest of the message for the same fault, because a reviewer that found one instance finds the next one on the next round.
+A finding cites one instance rather than the fault itself. Fix the instance, then read the rest of the message for the same fault, because a reviewer that found one instance finds the next one on the next round.
 
 ## Step 5: run the commit-msg gates
 
@@ -134,7 +134,7 @@ A finding names one instance rather than the fault itself. Fix the instance, the
 mise run lint-squash-msg
 ```
 
-The same four hooks a commit answers to:
+The same four hooks a commit must pass:
 
 - vale under the commit scope, which catches AI tells through `ai-tells-commits`
 - cspell with the commit dictionary
@@ -145,7 +145,7 @@ Resolve every finding. Edited the draft to clear them? Then step 4 runs again, b
 
 ## Step 6: confirm with the operator
 
-`AskUserQuestion` truncates its options, so the operator reads the message in your message text rather than in the widget. Print this first, verbatim:
+`AskUserQuestion` truncates its options. The operator has to read the message in your message text rather than in the widget. Print this first, verbatim:
 
 ```text
 Merging: #<number> <title>
@@ -155,7 +155,7 @@ Commits: <count> collapsing into one
 <the entire SQUASH_AGENTMSG contents, verbatim>
 ```
 
-Preflight answered this under `== pre-approval ==`. Where it reported `merge: GRANTED`, the operator answered this question for the whole session in advance, through `mise run preapprove merge`. Print the preceding block so the message still reaches them, name the grant this merge goes under, and move to step 7 without calling `AskUserQuestion`.
+Preflight answered this under `== pre-approval ==`. Where it reported `merge: GRANTED`, the operator answered this question for the whole session in advance, through `mise run preapprove merge`. Print the preceding block so the operator still sees the message, state the grant this merge goes under, and move to step 7 without calling `AskUserQuestion`.
 
 The grant answers one question, merge under this message. Ask anyway where any of these holds:
 
@@ -180,9 +180,9 @@ Follow the answer. Revising sends you back through the review, because the gate 
 bash .claude/skills/merge-pr/scripts/squash-merge.sh <number>
 ```
 
-That script re-runs every gate before it touches anything. It checks that the message names this pull request, that the signature matches the bytes on disk, that the linters pass, and that the pull request is open, ready, and green. Then it merges, removes `SQUASH_AGENTMSG` and `PR_AGENTDESC.md` along with their signatures, and deletes the merged branch.
+That script re-runs every gate before it touches anything. It checks that the message references this pull request, that the signature matches the bytes on disk, that the linters pass, and that the pull request is open, ready, and green. Then it merges, removes `SQUASH_AGENTMSG` and `PR_AGENTDESC.md` along with their signatures, and deletes the merged branch.
 
-No post-merge hook exists to hang that cleanup on, so the script that watched the merge succeed does it.
+Cleanup falls to the script that watched the merge succeed, because there's no post-merge hook to run it from.
 
 Report the merged commit. Where this worktree stands on the branch that merged, the script says so rather than deleting the branch out from under the session. The operator decides whether to switch or drop the worktree.
 

@@ -1,7 +1,7 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 # The repo-specific half of the task and toolchain definitions. The shared
-# half arrives through vendir as the vendored repotools payload: tool pins
-# in .config/mise/conf.d/, tasks under .repotools/tasks/ selected by the
+# half arrives through vendir as the vendored devtools payload: tool pins
+# in .config/mise/conf.d/, tasks under .devtools/tasks/ selected by the
 # task_config includes below. See vendir.yml.
 #
 # This is now the only task definition in the repository. The APM
@@ -27,7 +27,7 @@ lockfile = true
 # is dash and does not.
 
 # The toolchain now arrives through the vendored baseline drop-in at
-# .config/mise/conf.d/10-repotools-tools.toml, which pins every tool the
+# .config/mise/conf.d/10-devtools-tools.toml, which pins every tool the
 # shared tasks invoke. This table holds only what this repository needs
 # ahead of that payload, and any entry here overrides the same-named
 # baseline pin -- root config beats conf.d, which is the consumer-override
@@ -49,25 +49,25 @@ vendir = "0.46.1"
 vale = "3.24.0"
 
 # The platform list this repository's two lockfiles cover. The shared
-# repotools:check-toolchain task reads it for its failure hint.
+# devtools:check-toolchain task reads it for its failure hint.
 [env]
-REPOTOOLS_LOCK_PLATFORMS = "linux-x64,macos-arm64"
+DEVTOOLS_LOCK_PLATFORMS = "linux-x64,macos-arm64"
 
 # The live half of the shared payload, selected file by file from the
-# vendored .repotools/tasks directory. vendir delivers every task file;
+# vendored .devtools/tasks directory. vendir delivers every task file;
 # this table names the ones this repository takes -- today, all of them,
 # including the drift gate the publisher itself cannot run.
 [task_config]
 includes = [
-  ".repotools/tasks/fix.toml",
-  ".repotools/tasks/format.toml",
-  ".repotools/tasks/git-hooks.toml",
-  ".repotools/tasks/lint.toml",
-  ".repotools/tasks/pins.toml",
-  ".repotools/tasks/preapproval.toml",
-  ".repotools/tasks/security.toml",
-  ".repotools/tasks/toolchain.toml",
-  ".repotools/tasks/vendir.toml",
+  ".devtools/tasks/fix.toml",
+  ".devtools/tasks/format.toml",
+  ".devtools/tasks/git-hooks.toml",
+  ".devtools/tasks/lint.toml",
+  ".devtools/tasks/pins.toml",
+  ".devtools/tasks/preapproval.toml",
+  ".devtools/tasks/security.toml",
+  ".devtools/tasks/toolchain.toml",
+  ".devtools/tasks/vendir.toml",
 ]
 
 # --- Setup ---
@@ -84,7 +84,7 @@ run = [
   "vendir sync",
   "mise run install-toolchain",
   "mise run install-tools",
-  "mise run repotools:prek-install",
+  "mise run devtools:prek-install",
 ]
 
 [tasks.install-toolchain]
@@ -95,8 +95,8 @@ run = "mise install"
 description = "Refresh non-mise tooling (today: Vale's synced style packages)"
 run = "vale sync"
 
-# The lockfile gate is the shared repotools:check-toolchain task, whose
-# failure hint reads REPOTOOLS_LOCK_PLATFORMS above.
+# The lockfile gate is the shared devtools:check-toolchain task, whose
+# failure hint reads DEVTOOLS_LOCK_PLATFORMS above.
 
 # APM merges hook declarations into .claude/settings.json additively and
 # never reconciles, while `apm audit --ci` replays the same merge from an
@@ -121,9 +121,9 @@ apm install
 '''
 
 # --- Format ---
-# The format and fix tasks (repotools:format-markdown, format-config,
+# The format and fix tasks (devtools:format-markdown, format-config,
 # format-toml, fix-markdown) come from the vendored task files under
-# .repotools/tasks/, selected above.
+# .devtools/tasks/, selected above.
 
 # --- Fix ---
 
@@ -140,7 +140,7 @@ apm install
 # vendored conf.d; the body stays local because the script is this
 # repository's own.
 [tasks.fix-prose-replacements]
-extends = "repotools:fix-prose-replacements"
+extends = "devtools:fix-prose-replacements"
 run = "bash tools/fix-prose-replacements.sh $usage_file"
 
 # --- Lint ---
@@ -151,25 +151,25 @@ run = "bash tools/fix-prose-replacements.sh $usage_file"
 # scrambling the order defeats it. actionlint is absent from the bar --
 # the standalone lint-workflows workflow already covers it. The name comes
 # from the skill-contract template; the member list is exactly what varies
-# per repo, which is why the body stays local. The repotools: members are
+# per repo, which is why the body stays local. The devtools: members are
 # the vendored shared tasks, and the drift gate runs first so every gate
 # after it reads a payload that matches the committed tree. check-pins
-# follows it: both ask whether this repo's picture of repotools is
+# follows it: both ask whether this repo's picture of devtools is
 # current, and answering that before any linter runs says so in one line
 # rather than through a confusing downstream failure.
 [tasks.lint]
-extends = "repotools:lint"
+extends = "devtools:lint"
 run = [
-  "mise run repotools:check-vendored",
-  "mise run repotools:check-pins",
-  "mise run repotools:lint-yaml",
-  "mise run repotools:lint-markdown",
-  "mise run repotools:lint-config",
-  "mise run repotools:lint-spelling",
+  "mise run devtools:check-vendored",
+  "mise run devtools:check-pins",
+  "mise run devtools:lint-yaml",
+  "mise run devtools:lint-markdown",
+  "mise run devtools:lint-config",
+  "mise run devtools:lint-spelling",
   "mise run lint-prose",
   "mise run lint-messages",
-  "mise run repotools:lint-toml",
-  "mise run repotools:lint-mise",
+  "mise run devtools:lint-toml",
+  "mise run devtools:lint-mise",
   "mise run lint-editorconfig",
 ]
 
@@ -181,8 +181,8 @@ run = [
 # the APM manifest, lockfile, and gitignored package cache, none of which
 # carry prose to lint.
 [tasks.lint-prose]
-extends = "repotools:lint-prose"
-run = "vale --output=ai-tells-agent.tmpl --glob='!{LICENSE,CHANGELOG.md,test-*.md,styles/*,pkg/*,tmp/*,.claude/worktrees/*,.repotools/*,COMMIT_AGENTMSG,PR_AGENTDESC.md,SQUASH_AGENTMSG,apm.yml,apm.lock.yaml,apm_modules/*}' $usage_paths"
+extends = "devtools:lint-prose"
+run = "vale --output=ai-tells-agent.tmpl --glob='!{LICENSE,CHANGELOG.md,test-*.md,styles/*,pkg/*,tmp/*,.claude/worktrees/*,.devtools/*,COMMIT_AGENTMSG,PR_AGENTDESC.md,SQUASH_AGENTMSG,apm.yml,apm.lock.yaml,apm_modules/*}' $usage_paths"
 
 # Lint each rule file's own `message:` field with the ai-tells prose style, so
 # the package's diagnostics don't contain the patterns they flag. The script
@@ -221,14 +221,14 @@ run = "apm audit --ci --no-policy"
 # whole from the skill-contract templates: name, interface, and body.
 # prek needs .pre-commit-config.yaml staged to run.
 [tasks.lint-commit-msg]
-extends = "repotools:lint-commit-msg"
+extends = "devtools:lint-commit-msg"
 
 # Check a drafted pull request description. The validator settles the
 # mechanical questions (frontmatter, title shape, the template's
 # sections, paths that exist); vale and cspell then read the prose the
 # same way they read any other Markdown in the tree.
 [tasks.lint-pr-description]
-extends = "repotools:lint-pr-description"
+extends = "devtools:lint-pr-description"
 run = [
   "bash .claude/skills/pr/scripts/validate-description.sh",
   "vale --output=ai-tells-agent.tmpl PR_AGENTDESC.md",
@@ -240,7 +240,7 @@ run = [
 # the same four hooks over the draft here is what keeps a squash commit
 # answerable to the rules every other commit meets.
 [tasks.lint-squash-msg]
-extends = "repotools:lint-squash-msg"
+extends = "devtools:lint-squash-msg"
 
 # Every other prose task runs one checker over many files, so a document
 # that clears `lint-prose` can still fail spelling and structure afterwards,
@@ -254,7 +254,7 @@ extends = "repotools:lint-squash-msg"
 # text through vale under the target's own path and reports an unscoped path
 # rather than a pass.
 [tasks.lint-draft]
-extends = "repotools:lint-draft"
+extends = "devtools:lint-draft"
 run = "bash tools/lint-draft.sh $usage_file"
 
 # --- Test ---
@@ -406,10 +406,10 @@ run = ["mise run lint", "mise run test"]
 # baseline, which is the duplication the move removes.
 [tasks.check-all]
 description = "Deeper bar: check plus the full-history gitleaks scan"
-run = ["mise run check", "mise run repotools:gitleaks"]
+run = ["mise run check", "mise run devtools:gitleaks"]
 
 # --- Utilities ---
-# The prek entry points (repotools:prek, prek-all, prek-install) come
+# The prek entry points (devtools:prek, prek-all, prek-install) come
 # from the vendored task files.
 
 [tasks.vale-sync]

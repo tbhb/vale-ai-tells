@@ -6,7 +6,7 @@ description: >-
 
 # Fix a failing pull request
 
-Use `update_plan` for diagnosis, reproduction, fix, commit, description refresh, and push. The argument may name a pull request and the chosen commit strategy.
+Use `update_plan` for diagnosis, reproduction, fix, commit, description refresh, and push. The argument may specify a pull request and the chosen commit strategy.
 
 ## Diagnose and reproduce
 

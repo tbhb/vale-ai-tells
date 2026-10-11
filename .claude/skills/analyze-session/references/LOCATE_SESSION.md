@@ -1,6 +1,6 @@
 # Locating a session
 
-Use this when the operator named a session without giving a usable path. Searching the projects directory in the calling session costs more context than the analysis that follows, so a cheap agent does it and returns one line.
+Use this when the operator identified a session without giving a usable path. Searching the projects directory in the calling session costs more context than the analysis that follows, so a cheap agent does it and returns one line.
 
 Haiku is enough. Matching a file by its contents doesn't need judgment, and the answer is one path.
 
@@ -52,6 +52,6 @@ Give the agent a second string to try before concluding the session doesn't exis
 
 ## A common mistake
 
-A session running inside a git worktree writes its transcript under the main repository's project directory. The worktree's own directory under `~/.claude/projects/` may exist while holding no `.jsonl` at all.
+A session running inside a git worktree writes its transcript under the main repository's project directory. The worktree's own directory under `~/.claude/projects/` may exist without containing any `.jsonl` at all.
 
 Guessing the path from the working directory finds an empty directory, which looks the same as a missing transcript. Searching by content answers it correctly.

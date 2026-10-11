@@ -197,7 +197,7 @@ for hook in commit-msg pre-commit post-commit; do
   if [ -x "$hooks_dir/$hook" ]; then
     printf '%s hook: installed\n' "$hook"
   else
-    printf '%s hook: not installed — run mise run repotools:prek-install\n' "$hook"
+    printf '%s hook: not installed — run mise run devtools:prek-install\n' "$hook"
   fi
 done
 if [ -s COMMIT_AGENTMSG ]; then
