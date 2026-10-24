@@ -15,15 +15,15 @@ url = "https://github.com/vale-cli/vale/releases/download/v3.24.0/vale_3.24.0_ma
 url_api = "https://api.github.com/repos/vale-cli/vale/releases/assets/603879362"
 
 [[tools.vendir]]
-version = "0.46.1"
+version = "0.46.3"
 backend = "aqua:carvel-dev/vendir"
 
 [tools.vendir."platforms.linux-x64"]
-checksum = "sha256:96318c8f2f6ed8b0853b5fac50e22e400af6d8fb2699835e5a8b1663db65c6a9"
-url = "https://github.com/carvel-dev/vendir/releases/download/v0.46.1/vendir-linux-amd64"
-url_api = "https://api.github.com/repos/carvel-dev/vendir/releases/assets/528793585"
+checksum = "sha256:5af8823ecc67b3ce2359bb0b70e72a5dbd765135722ca0ff42c16bc4d7409847"
+url = "https://github.com/carvel-dev/vendir/releases/download/v0.46.3/vendir-linux-amd64"
+url_api = "https://api.github.com/repos/carvel-dev/vendir/releases/assets/655447795"
 
 [tools.vendir."platforms.macos-arm64"]
-checksum = "sha256:b0ed7ffa337b4964e5a0b865b786e97b75e7777fb4a289f06193671b81e320a9"
-url = "https://github.com/carvel-dev/vendir/releases/download/v0.46.1/vendir-darwin-arm64"
-url_api = "https://api.github.com/repos/carvel-dev/vendir/releases/assets/528793587"
+checksum = "sha256:52b3c224329c11f7189847fc9687a7e9f319626f893dd9a8bcc3704dbc89cc25"
+url = "https://github.com/carvel-dev/vendir/releases/download/v0.46.3/vendir-darwin-arm64"
+url_api = "https://api.github.com/repos/carvel-dev/vendir/releases/assets/655447796"
