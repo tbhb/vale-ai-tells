@@ -38,7 +38,7 @@ concurrency:
 jobs:
   lint:
     name: lint
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Harden the runner
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
@@ -54,7 +54,7 @@ jobs:
       # and the rest from the vendored conf.d drop-in -- at the version and
       # digest recorded in the lockfile beside each config.
       - name: Set up the toolchain
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+        uses: jdx/mise-action@fc42bcc7ddbf51124c30f95a877a0c5168a3bfde # v5.2.1
 
       # Resyncs the devtools payload and fails on any difference from the
       # committed tree, so a vendored file edited in place or a sync nobody
@@ -74,7 +74,7 @@ jobs:
 
   test:
     name: test
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Harden the runner
         uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
@@ -87,7 +87,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up the toolchain
-        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+        uses: jdx/mise-action@fc42bcc7ddbf51124c30f95a877a0c5168a3bfde # v5.2.1
 
       - name: Sync Vale styles
         run: mise run install-tools
