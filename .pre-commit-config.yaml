@@ -37,7 +37,7 @@ repos:
   # SHA with a `# frozen:` tag comment so Renovate's pre-commit manager
   # tracks it.
   - repo: https://github.com/tbhb-dev/devtools
-    rev: d80265aa04fd10bbfe3965200ddbe3d5d1563c38  # frozen: v0.10.0
+    rev: 1621e6a9e8416bf801732996a104a3b5b7a99fdb  # frozen: v0.22.1
     hooks:
       - id: commit-trailers
       - id: commitlint

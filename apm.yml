@@ -12,5 +12,5 @@ target:
   - claude
 dependencies:
   apm:
-    - tbhb-dev/devtools#v0.10.0
+    - tbhb-dev/devtools#v0.22.1
   mcp: []
