@@ -9,7 +9,7 @@
           "timeout": 10
         }
       ],
-      "_apm_source": "claude"
+      "_apm_source": "tbhb-dev/devtools/packages/agents/claude"
     }
   ]
 }
