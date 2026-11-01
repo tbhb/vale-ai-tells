@@ -46,7 +46,7 @@ vendir = "0.46.1"
 # Overrides the payload's vale pin, which trails 3.24.0, the release
 # that introduced `vale test`. Drop this once the vendored payload pins
 # 3.24.0 or later.
-vale = "3.24.0"
+vale = "3.25.1"
 
 # The platform list this repository's two lockfiles cover. The shared
 # devtools:check-toolchain task reads it for its failure hint.
