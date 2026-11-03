@@ -24,6 +24,6 @@ jobs:
     permissions:
       contents: read
     # yamllint disable-line rule:line-length
-    uses: tbhb-dev/devtools/.github/workflows/renovate-config-validator.yaml@d80265aa04fd10bbfe3965200ddbe3d5d1563c38 # v0.10.0
+    uses: tbhb-dev/devtools/.github/workflows/renovate-config-validator.yaml@41675a654872474b096e094aa3a5853d52f1becf # v0.23.0
     with:
       config_path: .github/renovate.json5
